@@ -390,7 +390,7 @@ footer{
     margin: 0 auto;
     transition: all 1s;
     background-color: #ececec;
-    background-image: url(img/loading2.svg);
+    background-image: url(img/loading.svg);
     background-repeat: no-repeat;
     background-size: 70px;
     background-position:50% 50% ;
@@ -548,7 +548,7 @@ footer{
     background-repeat: no-repeat;
  }
  .img-01{
-    background-image: url('img/scroll/21.jpg');
+    background-image: url('img/scroll/22.jpg');
     animation: slide-animation-01 24s infinite;
  }
  .img-02{
