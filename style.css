@@ -317,7 +317,7 @@ margin-bottom:1rem
         margin-right:2%;
         font-family:'Montserrat', sans-serif ;
         font-weight: 500;
-        display:flex
+        display:flex;
     
     }
 
@@ -443,6 +443,7 @@ footer{
 
 .m-topview-p{
     margin-left:2%;
+    font-size: 0.85rem;
     
 }
 
@@ -510,6 +511,7 @@ footer{
 
 }
 /* slide */
+
 @media (min-width: 960px) {
 .m-top-img{
     display: none;
@@ -644,33 +646,66 @@ h6{
     color:#a13e3e
 }
 
-.youtube{ 
-    position: relative;
-    left:0;
-    width:50%;
-    height:0;
-    padding-top:28.125%;
-    margin-top:1.5rem;
-    margin-bottom:3rem;
+.pj-about{
+    font-family:'Montserrat', 'Noto Sans JP', sans-serif ;
+    font-size:2.5rem;
+    margin-top:70px;
+    margin-left:3%
+}
+
+.pj-about span{
+    font-size:1.3rem
+}
+
+@media (max-width: 959px) {
+    .youtube{ 
+        position: relative;
+        left:0;
+        width:96%;
+        padding-top:54%;
+        margin-top:1.5rem;
+        margin-bottom:3rem;
+    
+    }
+    .youtube iframe{
+        position:absolute;
+        top:0;
+        left:0%;
+        width:100%;
+        height:100%;
+        border-radius: 10px;
+    }
 
 }
-.youtube iframe{
-    position:absolute;
-    top:0;
-    left:0%;
-    width:100%;
-    height:100%;
-    border-radius: 10px;
+
+@media (min-width: 960px) {
+    .youtube{ 
+        position: relative;
+        left:0;
+        width:50%;
+        height:0;
+        padding-top:28.125%;
+        margin-top:1.5rem;
+        margin-bottom:3rem;
+    
+    }
+    .youtube iframe{
+        position:absolute;
+        top:0;
+        left:0%;
+        width:100%;
+        height:100%;
+        border-radius: 10px;
+    }
+
 }
+
 
 .s-readmore-index .pj-index-num span{
     font-size:1.5rem
 }
 
 /* project flex */
-@media (max-width: 959px) {
-
-}
 @media (max-width: 425px) {
     .pj-flex{
         display:block
@@ -708,8 +743,8 @@ h6{
     margin-left:2%;
     margin-right: 2%;
     margin-bottom:2.4rem;
-    box-shadow:  7px 7px 13px #d2d2d2,
-    -7px -7px 13px #ffffff;
+    box-shadow:  5px 5px 10px #d4d4d4,
+    -5px -5px 10px #ffffff;
     border-radius: 20px;
     transition: 0.3s;
     }
@@ -782,6 +817,7 @@ h6{
 
 /* project flex クリックしたとき */
 
+
 @media (max-width: 959px) {
 .pj-index-1,.pj-index-2,.pj-index-3,.pj-index-4,.pj-index-5,.pj-index-6,.pj-index-7,.pj-index-8,.pj-index-9,.pj-index-10,.s-readmore-index,
 .pj-index-11,.pj-index-12,.pj-index-13,.pj-index-14,.pj-index-15,.pj-index-16,.pj-index-17,.pj-index-18,.pj-index-19,.pj-index-20,
@@ -793,7 +829,7 @@ h6{
 .pj-index-71,.pj-index-72,.pj-index-73,.pj-index-74,.pj-index-75,.pj-index-76,.pj-index-77,.pj-index-78,.pj-index-79,.pj-index-80,
 .pj-index-81,.pj-index-82,.pj-index-83,.pj-index-84,.pj-index-85,.pj-index-86,.pj-index-87,.pj-index-88,.pj-index-89,.pj-index-90,
 .pj-index-91,.pj-index-92,.pj-index-93,.pj-index-94,.pj-index-95,.pj-index-96,.pj-index-97,.pj-index-98,.pj-index-99,.pj-index-100{
-    opacity: 0;
+    display: none;
     transition: 0.3s;
     background:#ececec;
 
@@ -979,6 +1015,7 @@ h6{
     margin-left:3%;
     margin-top:2rem;
 }
+
 .pj-index-place{
     font-family:'Montserrat','Noto Sans JP', sans-serif ;
     margin-left:3%;
@@ -1049,8 +1086,13 @@ box-shadow:  3px 3px 6px #d2d2d2,
 
     .tag{
         overflow: scroll;
-        white-space:nowrap
+        white-space:nowrap;
+        scrollbar-width: none;
     }
+
+    .tag::-webkit-scrollbar{
+        display:none;
+      }
 
     .pj-index-num{
         font-family:'Montserrat', sans-serif ;
