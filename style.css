@@ -4,6 +4,7 @@
     margin-right:0;
     margin:auto
 }
+
 img{
     vertical-align:top;
 }
@@ -11,6 +12,7 @@ img{
 body{
     background:#ececec ;
 }
+
 /* =====  header  ===== */
 
 header {
@@ -76,7 +78,7 @@ header a:hover{
 }
 
 @media (max-width: 959px) {
-    /* =======ヘッダー======= */
+
     header {
       position: fixed;
       height: 50px;
@@ -118,7 +120,8 @@ header a:hover{
       color: #232323;
     }
     
-/* =======ハンバーガー======= */
+/* ハンバーガー */
+
 .hamburger {
 display : block;
 position: fixed;
@@ -131,6 +134,7 @@ cursor: pointer;
 text-align: center;
 background-color:#ececec;
 }
+
 .hamburger span {
 display : block;
 position: absolute;
@@ -142,19 +146,21 @@ background: #232323;
 -moz-transition   : 0.1s ease-in-out;
 transition        : 0.1s ease-in-out;
 }
+
 .hamburger span:nth-child(1) {
 top: 22px;
 right:10px;
 width: 50%;
 }
+
 .hamburger span:nth-child(2) {
 top: 29px;
 right:0;
 width: 30%;
 }
 
+/* ハンバーガー --- open */
 
-/* スマホメニューを開いてる時のボタン */
 .hamburger.active span:nth-child(1) {
 top : 25px;
 width: 50%;
@@ -164,6 +170,7 @@ background: #232323;
 -moz-transform   : rotate(-45deg);
 transform        : rotate(-45deg);
 }
+
 .hamburger.active span:nth-child(2) {
 top: 25px;
 right:16px;
@@ -174,7 +181,8 @@ background: #232323;
 transform        : rotate(45deg);
 }
 
-/* メニュー背景　*/
+/* ハンバーガー --- メニュー　*/
+
 nav.globalMenuSp {
 position: fixed;
 z-index : 2;
@@ -209,8 +217,6 @@ height: 100vh;
 nav.globalMenuSp ul li:last-child {
 padding-bottom: 0;
 }
-
-/* バーガーメニュー　ーー　flex以下 */
 
 .sp-menu{
 color: #232323;
@@ -259,6 +265,7 @@ background:#f1f1f1 ;
 border-radius: 15px;
 position: relative;
 }
+
 .sp-menu5{
 margin-left:3%;
 margin-right:3%;
@@ -269,9 +276,11 @@ background-image: linear-gradient(90deg, rgba(71, 176, 237, 1), rgba(184, 245, 2
 border-radius: 15px;
 position: relative;
 }
+
 .sp-menu2-1{
 position: relative;
 }
+
 .sp-menu .link2{
 display: block;
 position: absolute;
@@ -281,22 +290,23 @@ width: 100%;
 height: 100%;
 }
 
-/* バーガーメニュー　ーー　SNS */
-
 .sp-menu-sns{
 margin-top:3rem;
 margin-top:5rem
 }
+
 .sp-menu-sns i{
 font-size:1.5rem;
 color: #232323;
 }
+
 .sp-menu-sns .slash{
 margin-left:1rem;
 margin-right:1rem;
 color:#232323;
 font-size:2rem
 }
+
 .sp-line{
 background:#232323;
 width: 96%;
@@ -304,12 +314,12 @@ height: 2.5px;
 margin-top:1rem;
 margin-bottom:1rem
 }
-
 }
 
 /* =====  footer  ===== */
 
 @media (max-width: 959px) {
+
     footer{
         margin-top:3rem;
         margin-bottom:1rem;
@@ -341,6 +351,7 @@ margin-bottom:1rem
 }
 
 @media (min-width: 960px) {
+
 footer{
     margin-top:3rem;
     margin-bottom:1rem;
@@ -386,7 +397,7 @@ footer{
 
   #loading {
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     margin: 0 auto;
     transition: all 1s;
     background-color: #ececec;
@@ -404,7 +415,8 @@ footer{
     opacity: 0;
     visibility: hidden;
   }
-  /* ローディングアニメーション */
+
+  /* ローディング --- アニメーション */
   @keyframes sk-scaleout {
     0% {
       transform: scale(0);
