@@ -501,12 +501,15 @@
   
   @media (max-width: 959px) {
 
+    .main-topview{
+      height: 100vh;
+      position: relative;      
+      border-radius: 20px;
+  }
+
     .m-topview {
-      background: #ddd;
-      width: 96%;
-      height: calc(100% - 50px);
-      border-radius: 30px;
-      padding-bottom: 1rem;
+      width: 100%;
+      height: 100%;
       z-index: 90;
       margin-top: 50px;
     }
@@ -516,14 +519,345 @@
     }
   
     .m-topview-ex {
-      margin: 0.5rem 1.5% 0 1.5%;
+      display: none;
     }
   }
   
   //////////////////* slide *//////////////////
   
-  @media (min-width: 960px) {
 
+  .img-01 {
+    background-image: url('img/scroll/6.jpg');
+    animation: slide-animation-01 100s infinite;
+    background-position: center;
+  }
+
+  .img-02 {
+    background-image: url('img/scroll/7.jpg');
+    animation: slide-animation-02 100s infinite;
+    background-position: center;
+  }
+
+  .img-03 {
+    background-image: url('img/scroll/8.jpg');
+    animation: slide-animation-03 100s infinite;
+    background-position: center;
+  }
+
+  .img-04 {
+    background-image: url('img/scroll/15.jpg');
+    animation: slide-animation-04 100s infinite;
+    background-position: center;
+  }
+
+  .img-05 {
+    background-image: url('img/scroll/11.jpg');
+    animation: slide-animation-05 100s infinite;
+    background-position: center;
+  }
+
+  .img-06 {
+    background-image: url('img/scroll/12.jpg');
+    animation: slide-animation-06 100s infinite;
+    background-position: center;
+  }
+  
+  .img-07 {
+    background-image: url('img/scroll/14.jpg');
+    animation: slide-animation-07 100s infinite;
+    background-position: center;
+  }
+
+  .img-08 {
+    background-image: url('img/scroll/4.jpg');
+    animation: slide-animation-08 100s infinite;
+    background-position: center;
+  }
+
+  .img-09 {
+    background-image: url('img/scroll/9.jpg');
+    animation: slide-animation-09 100s infinite;
+    background-position: center;
+  }
+
+  .img-10 {
+    background-image: url('img/scroll/10.jpg');
+    animation: slide-animation-10 100s infinite;
+    background-position: center;
+  }
+
+
+  @keyframes slide-animation-01 {
+    0% {
+      opacity: 1;
+           }
+
+    8% {
+      opacity: 1;
+    }
+
+    10% {
+      opacity: 0;
+      ;
+    }
+
+    90% {
+      opacity: 0;
+    }
+
+    98% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+           }
+  }
+
+  @keyframes slide-animation-02 {
+    0% {
+      opacity: 0;
+    }
+
+    8% {
+      opacity: 0;
+    }
+
+    10% {
+      opacity: 1;
+      
+    }
+
+    18% {
+      opacity: 1;
+    }
+
+    20% {
+      opacity: 0;
+           }
+
+    70% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes slide-animation-03 {
+    0% {
+      opacity: 0;
+    }
+
+    18% {
+      opacity: 0;
+    }
+
+    20% {
+      opacity: 1;
+           }
+
+    28% {
+      opacity: 1;
+    }
+
+    30% {
+      opacity: 0;
+      
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes slide-animation-04 {
+    0% {
+      opacity: 0;
+    }
+
+    28% {
+      opacity: 0;
+    }
+
+    30% {
+      opacity: 1;
+      
+    }
+
+    38% {
+      opacity: 1;
+    }
+
+    40% {
+      opacity: 0;
+           }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes slide-animation-05 {
+    0% {
+      opacity: 0;
+    }
+
+    38% {
+      opacity: 0;
+    }
+
+    40% {
+      opacity: 1;
+           }
+
+    48% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0;
+      
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes slide-animation-06 {
+    0% {
+      opacity: 0;
+    }
+
+    48% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+      
+    }
+
+    58% {
+      opacity: 1;
+    }
+
+    60% {
+      opacity: 0;
+           }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes slide-animation-07 {
+    0% {
+      opacity: 0;
+    }
+
+    58% {
+      opacity: 0;
+    }
+
+    60% {
+      opacity: 1;
+           }
+
+    68% {
+      opacity: 1;
+    }
+
+    70% {
+      opacity: 0;
+      
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes slide-animation-08 {
+    0% {
+      opacity: 0;
+    }
+
+    68% {
+      opacity: 0;
+    }
+
+    70% {
+      opacity: 1;
+      
+    }
+
+    78% {
+      opacity: 1;
+    }
+
+    80% {
+      opacity: 0;
+           }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes slide-animation-09 {
+    0% {
+      opacity: 0;
+    }
+
+    78% {
+      opacity: 0;
+    }
+
+    80% {
+      opacity: 1;
+      
+    }
+
+    88% {
+      opacity: 1;
+    }
+
+    90% {
+      opacity: 0;
+           }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes slide-animation-10 {
+    0% {
+      opacity: 0;
+    }
+
+    88% {
+      opacity: 0;
+    }
+
+    90% {
+      opacity: 1;
+           }
+
+    98% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+      
+    }
+  }
+
+  
     #about{
       height: 100vh;
       position: relative;
@@ -542,14 +876,6 @@
       display: none;
     }
   
-    .img-frame {
-      position: relative;
-      width: 98%;
-      height: 600px;
-      overflow: hidden;
-      margin: 0 auto;
-      border-radius: 15px;
-    }
   
     .img-01, .img-02, .img-03, .img-04, .img-05, .img-06, .img-07, .img-08, .img-09, .img-10{
       position: absolute;
@@ -561,327 +887,6 @@
       background-repeat: no-repeat;
     }
   
-    .img-01 {
-      background-image: url('img/scroll/6.jpg');
-      animation: slide-animation-01 100s infinite;
-    }
-  
-    .img-02 {
-      background-image: url('img/scroll/7.jpg');
-      animation: slide-animation-02 100s infinite;
-    }
-  
-    .img-03 {
-      background-image: url('img/scroll/8.jpg');
-      animation: slide-animation-03 100s infinite;
-    }
-
-    .img-04 {
-      background-image: url('img/scroll/15.jpg');
-      animation: slide-animation-04 100s infinite;
-    }
-
-    .img-05 {
-      background-image: url('img/scroll/11.jpg');
-      animation: slide-animation-05 100s infinite;
-    }
-
-    .img-06 {
-      background-image: url('img/scroll/12.jpg');
-      animation: slide-animation-06 100s infinite;
-    }
-    
-    .img-07 {
-      background-image: url('img/scroll/14.jpg');
-      animation: slide-animation-07 100s infinite;
-    }
-
-    .img-08 {
-      background-image: url('img/scroll/4.jpg');
-      animation: slide-animation-08 100s infinite;
-    }
-
-    .img-09 {
-      background-image: url('img/scroll/9.jpg');
-      animation: slide-animation-09 100s infinite;
-    }
-
-    .img-10 {
-      background-image: url('img/scroll/10.jpg');
-      animation: slide-animation-10 100s infinite;
-    }
-
-  
-    @keyframes slide-animation-01 {
-      0% {
-        opacity: 1;
-             }
-  
-      8% {
-        opacity: 1;
-      }
-  
-      10% {
-        opacity: 0;
-        ;
-      }
-  
-      90% {
-        opacity: 0;
-      }
-
-      98% {
-        opacity: 0;
-      }
-  
-      100% {
-        opacity: 1;
-             }
-    }
-  
-    @keyframes slide-animation-02 {
-      0% {
-        opacity: 0;
-      }
-
-      8% {
-        opacity: 0;
-      }
-  
-      10% {
-        opacity: 1;
-        
-      }
-  
-      18% {
-        opacity: 1;
-      }
-  
-      20% {
-        opacity: 0;
-             }
-  
-      70% {
-        opacity: 0;
-      }
-  
-      100% {
-        opacity: 0;
-      }
-    }
-  
-    @keyframes slide-animation-03 {
-      0% {
-        opacity: 0;
-      }
-
-      18% {
-        opacity: 0;
-      }
-  
-      20% {
-        opacity: 1;
-             }
-  
-      28% {
-        opacity: 1;
-      }
-  
-      30% {
-        opacity: 0;
-        
-      }
-  
-      100% {
-        opacity: 0;
-      }
-    }
-
-    @keyframes slide-animation-04 {
-      0% {
-        opacity: 0;
-      }
-
-      28% {
-        opacity: 0;
-      }
-  
-      30% {
-        opacity: 1;
-        
-      }
-  
-      38% {
-        opacity: 1;
-      }
-  
-      40% {
-        opacity: 0;
-             }
-  
-      100% {
-        opacity: 0;
-      }
-    }
-
-    @keyframes slide-animation-05 {
-      0% {
-        opacity: 0;
-      }
-
-      38% {
-        opacity: 0;
-      }
-  
-      40% {
-        opacity: 1;
-             }
-  
-      48% {
-        opacity: 1;
-      }
-  
-      50% {
-        opacity: 0;
-        
-      }
-  
-      100% {
-        opacity: 0;
-      }
-    }
-
-    @keyframes slide-animation-06 {
-      0% {
-        opacity: 0;
-      }
-
-      48% {
-        opacity: 0;
-      }
-  
-      50% {
-        opacity: 1;
-        
-      }
-  
-      58% {
-        opacity: 1;
-      }
-  
-      60% {
-        opacity: 0;
-             }
-  
-      100% {
-        opacity: 0;
-      }
-    }
-
-    @keyframes slide-animation-07 {
-      0% {
-        opacity: 0;
-      }
-
-      58% {
-        opacity: 0;
-      }
-  
-      60% {
-        opacity: 1;
-             }
-  
-      68% {
-        opacity: 1;
-      }
-  
-      70% {
-        opacity: 0;
-        
-      }
-  
-      100% {
-        opacity: 0;
-      }
-    }
-
-    @keyframes slide-animation-08 {
-      0% {
-        opacity: 0;
-      }
-
-      68% {
-        opacity: 0;
-      }
-  
-      70% {
-        opacity: 1;
-        
-      }
-  
-      78% {
-        opacity: 1;
-      }
-  
-      80% {
-        opacity: 0;
-             }
-  
-      100% {
-        opacity: 0;
-      }
-    }
-
-    @keyframes slide-animation-09 {
-      0% {
-        opacity: 0;
-      }
-
-      78% {
-        opacity: 0;
-      }
-  
-      80% {
-        opacity: 1;
-        
-      }
-  
-      88% {
-        opacity: 1;
-      }
-  
-      90% {
-        opacity: 0;
-             }
-  
-      100% {
-        opacity: 0;
-      }
-    }
-
-    @keyframes slide-animation-10 {
-      0% {
-        opacity: 0;
-      }
-
-      88% {
-        opacity: 0;
-      }
-  
-      90% {
-        opacity: 1;
-             }
-  
-      98% {
-        opacity: 1;
-      }
-  
-      100% {
-        opacity: 0;
-        
-      }
-    }
-
     .progBar{
       width:96%;
       height:2px;
@@ -916,9 +921,20 @@
       background-image: linear-gradient(180deg, rgba(255, 255, 255, 0), 50%, rgba(0, 0, 0, 0.53) 80%);
     }
   
+  
+
+  @media (max-width: 959px) {
+    .img-frame {
+      position: relative;
+      width: 100%;
+      height: 600px;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+
     .m-topview-text-jp{
       position: absolute;
-      left:2%;
+      left:4%;
       bottom:2.4rem;
       font-family: "Montserrat", 'Noto Sans JP', sans-serif;
       font-size:1.3rem;
@@ -929,7 +945,7 @@
   
     .m-topview-text-en{
       position: absolute;
-      left:2%;
+      left:4%;
       bottom:1.45rem;
       font-family: "Montserrat", 'Noto Sans JP', sans-serif;
       font-size:0.8rem;
@@ -940,35 +956,63 @@
   
     .m-topview-count{
       position: absolute;
-      right:2%;
+      right:4%;
       bottom:1.45rem;
       font-family: "Montserrat", sans-serif;
       font-weight: 500;
       color: #ddd;
       z-index: 91;
     }
-  }
 
-  @media (max-width: 959px) {
-
-    .img-01, .img-02, .img-03, .img-04, .img-05, .img-06, .img-07, .img-08, .img-09, .img-10{
-      display: none;
-
-    }
-
-    .m-top-img {
-      width: 96%;
-      margin: 2% 2%;
-      height: 550px;
-      border-radius: 20px;
-      object-fit: cover;
-    }
   }
   
+  @media (min-width: 960px) {
+
+    .img-frame {
+      position: relative;
+      width: 98%;
+      height: 600px;
+      overflow: hidden;
+      margin: 0 auto;
+      border-radius: 15px;
+  }
+
   .m-top-margin {
     padding-top: 1%;
   }
-  
+
+  .m-topview-text-jp{
+    position: absolute;
+    left:2%;
+    bottom:2.4rem;
+    font-family: "Montserrat", 'Noto Sans JP', sans-serif;
+    font-size:1.3rem;
+    font-weight: 500;
+    color: #ddd;
+    z-index: 91;
+  }
+
+  .m-topview-text-en{
+    position: absolute;
+    left:2%;
+    bottom:1.45rem;
+    font-family: "Montserrat", 'Noto Sans JP', sans-serif;
+    font-size:0.8rem;
+    font-weight: 500;
+    color: #ddd;
+    z-index: 91;
+  }
+
+  .m-topview-count{
+    position: absolute;
+    right:2%;
+    bottom:1.45rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #ddd;
+    z-index: 91;
+  }
+}
   /* section aboutus */
   
   .about-index{
