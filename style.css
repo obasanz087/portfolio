@@ -776,7 +776,7 @@ header a:hover {
   .img-frame {
     position: relative;
     width: 100%;
-    height: calc(100vh - 50px);
+    height: calc(100dvh - 50px);
     overflow: hidden;
     margin: 0 auto;
   }
