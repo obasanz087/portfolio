@@ -13,32 +13,34 @@
     background: #ececec;
   }
   
-  /* =====  header  ===== */
+  /* =================================================================  header  ================================================================= */
   
   header {
     position: fixed;
-    height: 70px;
+    line-height: 70px;
     width: 100%;
-    top: 0;
+    top: 0px;
     z-index: 100;
   
     a {
       text-decoration: none;
+      transition: 0.2s;
   
       &:hover {
         color: #a13e3e;
+        background: #cdcdcd;
+        border-radius: 20px;
       }
     }
   }
   
   .h-title {
-    line-height: 70px;
     font-size: 1.5rem;
     letter-spacing: 0.02rem;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     color: #232323;
-    margin-left: 3%;
+
   
     span {
       font-size: 1rem;
@@ -49,7 +51,7 @@
   }
   
   .nav-list {
-    margin-top: -70px;
+    margin-top:-70px;
     line-height: 70px;
     text-align: right;
     margin-right: 3%;
@@ -61,16 +63,23 @@
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     display: inline-block;
-    margin-left: 2%;
+    margin-left: 1%;
+    
   
     a {
       color: #232323;
-      padding-top: 23px;
-      padding-bottom: 23px;
     }
   }
   
   @media (min-width: 960px) {
+    a{
+      padding:0.5rem;
+    }
+
+    .h-title{
+      margin-left: 3%;
+    }
+
     .globalMenuSp, .hamburger {
       display: none;
     }
@@ -94,7 +103,6 @@
       font-family: "Montserrat", sans-serif;
       font-weight: 500;
       color: #232323;
-      margin-left: 1%;
   
       span {
         font-size: 0.8rem;
@@ -131,7 +139,8 @@
         display: block;
         position: absolute;
         width: 30px;
-        height: 2px;
+        height: 4px;
+        transform: scaleY(0.5) translateY(2px);
         left: 6px;
         background: #232323;
         -webkit-transition: 0.1s ease-in-out;
@@ -148,6 +157,7 @@
           top: 29px;
           right: 0;
           width: 30%;
+
         }
       }
   
@@ -160,6 +170,7 @@
           -webkit-transform: rotate(-45deg);
           -moz-transform: rotate(-45deg);
           transform: rotate(-45deg);
+          height: 2px;
         }
   
         &:nth-child(2) {
@@ -170,13 +181,12 @@
           -webkit-transform: rotate(45deg);
           -moz-transform: rotate(45deg);
           transform: rotate(45deg);
+          height: 2px;
         }
       }
     }
-  
-    /* ハンバーガー --- open */
-  
-    /* ハンバーガー --- メニュー　*/
+
+    /* ハンバーガー --- open　*/
   
     nav.globalMenuSp {
       position: fixed;
@@ -212,6 +222,14 @@
         }
       }
     }
+
+    .sp-menu-position{
+      position: absolute;
+      width: 100%;
+      top:50%;
+      left:0;
+      transform: (translate(0,-50%));
+    }
   
     .sp-menu {
       color: #232323;
@@ -227,6 +245,35 @@
       box-shadow: 4px 4px 8px #d2d2d2, -4px -4px 8px #ffffff;
       border-radius: 20px;
     }
+
+    .sp-about::after,.sp-projects::after, .sp-update::after, .sp-contact::after{
+      display:block;
+      font-size:0.5rem;
+      line-height: 0.5rem;
+      
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.05rem;
+      margin-top:-10px;
+      padding-bottom:1rem
+
+    }
+
+    .sp-about::after{
+      content: '私について';
+    }
+
+    .sp-projects::after{
+      content: 'つくったものたち';
+    }
+
+    .sp-update::after{
+      content: '更新情報';
+    }
+
+    .sp-contact::after{
+      content: 'ご連絡';
+    }
   
     .sp-menu-p {
       color: #232323;
@@ -235,45 +282,19 @@
       padding-left: 1rem;
       position: relative;
       font-family: "Montserrat", sans-serif;
-      font-size: 0.9rem;
+      font-size: 1.2rem;
       letter-spacing: 0.05em;
-      margin-top: 0.7rem;
       margin-right: 1rem;
   
       i {
         font-size: 1rem;
         position: absolute;
         right: 0;
-        top: 33%;
+        top: 50%;
+        transform: translate(0,-50%);
       }
     }
-  
-    .sp-menu2 {
-      margin-left: 3%;
-      margin-right: 3%;
-      margin-top: 1.1rem;
-      margin-bottom: 1.1rem;
-      padding: 0.5rem;
-      background: #f1f1f1;
-      border-radius: 15px;
-      position: relative;
-    }
-  
-    .sp-menu5 {
-      margin-left: 3%;
-      margin-right: 3%;
-      margin-top: 1.1rem;
-      margin-bottom: 1.1rem;
-      padding: 0.5rem;
-      background-image: linear-gradient(90deg, rgba(71, 176, 237, 1), rgba(184, 245, 255, 1));
-      border-radius: 15px;
-      position: relative;
-    }
-  
-    .sp-menu2-1 {
-      position: relative;
-    }
-  
+      
     .sp-menu .link2 {
       display: block;
       position: absolute;
@@ -309,7 +330,7 @@
     }
   }
   
-  /* =====  footer  ===== */
+  /* =================================================================  footer  ================================================================= */
   
   @media (max-width: 959px) {
     footer {
@@ -386,7 +407,7 @@
     }
   }
   
-  /* =====  loading  ===== */
+  /* =================================================================  loading  ================================================================= */
   
   #loading {
     width: 100vw;
@@ -420,8 +441,10 @@
     }
   }
   
-  /* =====  main  ===== */
+  /* =================================================================  main  ================================================================= */
   
+  /* top */ 
+
   @media (min-width: 960px) {
 
     .main-topview{
@@ -499,33 +522,12 @@
     }
   }
   
+  /* top slide */
+
   @media (max-width: 959px) {
 
-    .main-topview{
-      height: 100vh;
-      position: relative;      
-      border-radius: 20px;
-  }
-
-    .m-topview {
-      width: 100%;
-      height: 100vh;
-      z-index: 90;
-      margin-top: 50px;
-    }
-  
-    .m-topview-X {
-      display: none;
-    }
-  
-    .m-topview-ex {
-      display: none;
-    }
   }
   
-  //////////////////* slide *//////////////////
-  
-
   .img-01 {
     background-image: url('img/scroll/6.jpg');
     animation: slide-animation-01 100s infinite;
@@ -856,50 +858,7 @@
       
     }
   }
-
-  
-    #about{
-      height: 100vh;
-      position: relative;
-    }
-
-    .main-about-content{
-      position: absolute;
-      top:50%;
-      left:50%;
-      transform: translate(-50%, -50%);
-      width: 98%;
-
-    }
-
-    .m-top-img {
-      display: none;
-    }
-  
-  
-    .img-01, .img-02, .img-03, .img-04, .img-05, .img-06, .img-07, .img-08, .img-09, .img-10{
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-  
-    .progBar{
-      width:96%;
-      height:2px;
-      background-color:none;
-      position:relative;
-      overflow: hidden;
-      position: absolute;
-      bottom:0.5rem;
-      left:2%;
-      z-index: 91;
-      
-    } 
-  
+    
     .progBar .bar{
       position:absolute;
       height:100%;
@@ -919,18 +878,65 @@
       height: 200px;
       width: 100%;
       background-image: linear-gradient(180deg, rgba(255, 255, 255, 0), 50%, rgba(0, 0, 0, 0.53) 80%);
+      border-radius: 15px;
     }
   
   
 
   @media (max-width: 959px) {
+
+    .main-topview{
+      height: calc(100vh - 50px);
+      position: relative;      
+      border-radius: 20px;
+      border-radius: 15px;
+  }
+
+    .m-topview {
+      width: 100%;
+      height: 100vh;
+      z-index: 90;
+      margin-top: 50px;
+    }
+  
+    .m-topview-X {
+      display: none;
+    }
+  
+    .m-topview-ex {
+      display: none;
+    }
+    
     .img-frame {
       position: relative;
       width: 100%;
-      height: calc(100vh - 50px);
+      height: calc(100dvh - 50px);
       overflow: hidden;
       margin: 0 auto;
     }
+
+    .img-01, .img-02, .img-03, .img-04, .img-05, .img-06, .img-07, .img-08, .img-09, .img-10{
+      position: absolute;
+      bottom: 1.5%;
+      left: 3%;
+      width: 94%;
+      height: 98.5%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 15px;
+    }
+
+    .progBar{
+      width:88%;
+      height:2px;
+      background-color:none;
+      position:relative;
+      overflow: hidden;
+      position: absolute;
+      bottom:1.5rem;
+      left:6%;
+      z-index: 91;
+    } 
 
     .m-topview-text-jp{
       position: absolute;
@@ -971,11 +977,33 @@
     .img-frame {
       position: relative;
       width: 98%;
-      height: 600px;
+      height: 38rem;
       overflow: hidden;
       margin: 0 auto;
       border-radius: 15px;
   }
+
+  .img-01, .img-02, .img-03, .img-04, .img-05, .img-06, .img-07, .img-08, .img-09, .img-10{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .progBar{
+    width:96%;
+    height:2px;
+    background-color:none;
+    position:relative;
+    overflow: hidden;
+    position: absolute;
+    bottom:0.70rem;
+    left:2%;
+    z-index: 91;
+  } 
 
   .m-top-margin {
     padding-top: 1%;
@@ -1013,7 +1041,85 @@
     z-index: 91;
   }
 }
-  /* section aboutus */
+  /* top 文字関連 */
+
+  .se-title {
+    margin-top:-1rem;
+    font-size: 3rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    padding-top: 11rem;
+    object-fit: cover;
+  }
+
+  .se-title span {
+    color: #a13e3e;
+  }
+
+  .about-caption::after, .projects-caption::after, .update-caption::after, .contact-caption::after{
+    display:block;
+    font-size:0.85rem;
+    line-height: 0.85rem;
+    margin-top:0.5rem;
+    
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    margin-bottom:1rem;
+    margin-left:1.5rem
+  }
+
+  .about-caption::before, .projects-caption::before, .update-caption::before, .contact-caption::before{
+    content: 'ー';
+    color:#a13e3e;
+    display:block;
+    font-size:0.85rem;
+    line-height: 0.85rem;
+    margin-bottom:-95px;
+    margin-left:0.2rem;
+
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    padding-bottom:1rem
+  }
+
+  .about-caption::after{
+    content: '私について';
+  }
+
+  .projects-caption::after{
+    content: 'つくったものたち';
+  }
+  
+
+  .update-caption::after{
+    content: '更新情報';
+  }
+  
+
+  .contact-caption::after{
+    content: 'ご連絡';
+  }
+
+  .se-ex {
+    letter-spacing: 0.07rem;
+    line-height: 1.8rem;
+    margin: 0 1rem 0 1rem;
+  }
+  
+  h6 {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-left: solid 6px #a13e3e;
+    margin: 1rem 0 1rem 3%;
+    padding-left: 0.4rem;
+  }
+
+  
+  /* top aboutus */
   
   .about-index{
     max-width: 600px;
@@ -1022,35 +1128,6 @@
   .main-section{
     margin: 0 3% 0 3%;
   }
-  
-  .se-title {
-    font-size: 3rem;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    margin-bottom: 0.7rem;
-    padding-top: 3rem;
-    object-fit: cover;
-  }
-  
-  .se-ex {
-    letter-spacing: 0.05rem;
-    line-height: 1.8rem;
-    margin-left: 1rem;
-  }
-  
-  h6 {
-    font-family: 'Noto Sans JP', sans-serif;
-    font-weight: 700;
-    font-size: 1.3rem;
-    border-left: solid 7px #a13e3e;
-    margin: 1rem 0 1rem 3%;
-    padding-left: 0.4rem;
-  }
-  
-  .se-title span {
-    color: #a13e3e;
-  }
-
 
   .about-img-flex{
     display: flex;
@@ -1105,15 +1182,33 @@
     }
   }
 
+  .readmore-img{
+    width: 96%;
+    border-radius: 10px;
+    margin:1rem 2% 0
+  }
+
     .pj-about {
       font-family: "Montserrat", "Noto Sans JP", sans-serif;
+      font-weight: 500;
       font-size: 3rem;
       margin-top: 70px;
       margin-left: 3%;
       letter-spacing: -0.02rem;
 
-    span {
-      font-size: 1rem;
+      span {
+        display:block;
+        font-size: 0.85rem;
+        font-weight: 600;
+        margin-top:-5px;
+
+        span{
+          display:inline;
+          font-weight: 500;
+          color: #a13e3e;
+          margin: 0 0.3rem;
+          margin-top:-5px;
+      }
     }
     }
     .youtube {
@@ -1141,14 +1236,30 @@
 
   @media (max-width: 425px) {
     .pj-flex {
-      display: block;
+      display: grid;
+      grid-template-columns:1fr;
     }
   }
-  
+
   @media (min-width: 426px) {
     .pj-flex {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns:1fr 1fr;
+    }
+  }
+
+  @media (width: 426px) {
+    .pj-flex {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 960px) {
+    .pj-flex {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
       width: 100%;
     }
   }
@@ -1164,7 +1275,7 @@
   
   @media (max-width: 959px) {
     .pj-sam-1, .pj-sam-2, .pj-sam-3, .pj-sam-4, .pj-sam-5, .pj-sam-6, .pj-sam-7, .pj-sam-8, .pj-sam-9, .pj-sam-10, .pj-sam-11, .pj-sam-12, .pj-sam-13, .pj-sam-14, .pj-sam-15, .pj-sam-16, .pj-sam-17, .pj-sam-18, .pj-sam-19, .pj-sam-20, .pj-sam-21, .pj-sam-22, .pj-sam-23, .pj-sam-24, .pj-sam-25, .pj-sam-26, .pj-sam-27, .pj-sam-28, .pj-sam-29, .pj-sam-30, .pj-sam-31, .pj-sam-32, .pj-sam-33, .pj-sam-34, .pj-sam-35, .pj-sam-36, .pj-sam-37, .pj-sam-38, .pj-sam-39, .pj-sam-40, .pj-sam-41, .pj-sam-42, .pj-sam-43, .pj-sam-44, .pj-sam-45, .pj-sam-46, .pj-sam-47, .pj-sam-48, .pj-sam-49, .pj-sam-50, .pj-sam-51, .pj-sam-52, .pj-sam-53, .pj-sam-54, .pj-sam-55, .pj-sam-56, .pj-sam-57, .pj-sam-58, .pj-sam-59, .pj-sam-60, .pj-sam-61, .pj-sam-62, .pj-sam-63, .pj-sam-64, .pj-sam-65, .pj-sam-66, .pj-sam-67, .pj-sam-68, .pj-sam-69, .pj-sam-70, .pj-sam-71, .pj-sam-72, .pj-sam-73, .pj-sam-74, .pj-sam-75, .pj-sam-76, .pj-sam-77, .pj-sam-78, .pj-sam-79, .pj-sam-80, .pj-sam-81, .pj-sam-82, .pj-sam-83, .pj-sam-84, .pj-sam-85, .pj-sam-86, .pj-sam-87, .pj-sam-88, .pj-sam-89, .pj-sam-90, .pj-sam-91, .pj-sam-92, .pj-sam-93, .pj-sam-94, .pj-sam-95, .pj-sam-96, .pj-sam-97, .pj-sam-98, .pj-sam-99, .pj-sam-100 {
-      width: 96%;
+      width: 1fr;
       margin-left: 2%;
       margin-right: 2%;
       margin-bottom: 2.4rem;
@@ -1176,7 +1287,7 @@
   
   @media (min-width: 960px) {
     .pj-sam-1, .pj-sam-2, .pj-sam-3, .pj-sam-4, .pj-sam-5, .pj-sam-6, .pj-sam-7, .pj-sam-8, .pj-sam-9, .pj-sam-10, .pj-sam-11, .pj-sam-12, .pj-sam-13, .pj-sam-14, .pj-sam-15, .pj-sam-16, .pj-sam-17, .pj-sam-18, .pj-sam-19, .pj-sam-20, .pj-sam-21, .pj-sam-22, .pj-sam-23, .pj-sam-24, .pj-sam-25, .pj-sam-26, .pj-sam-27, .pj-sam-28, .pj-sam-29, .pj-sam-30, .pj-sam-31, .pj-sam-32, .pj-sam-33, .pj-sam-34, .pj-sam-35, .pj-sam-36, .pj-sam-37, .pj-sam-38, .pj-sam-39, .pj-sam-40, .pj-sam-41, .pj-sam-42, .pj-sam-43, .pj-sam-44, .pj-sam-45, .pj-sam-46, .pj-sam-47, .pj-sam-48, .pj-sam-49, .pj-sam-50, .pj-sam-51, .pj-sam-52, .pj-sam-53, .pj-sam-54, .pj-sam-55, .pj-sam-56, .pj-sam-57, .pj-sam-58, .pj-sam-59, .pj-sam-60, .pj-sam-61, .pj-sam-62, .pj-sam-63, .pj-sam-64, .pj-sam-65, .pj-sam-66, .pj-sam-67, .pj-sam-68, .pj-sam-69, .pj-sam-70, .pj-sam-71, .pj-sam-72, .pj-sam-73, .pj-sam-74, .pj-sam-75, .pj-sam-76, .pj-sam-77, .pj-sam-78, .pj-sam-79, .pj-sam-80, .pj-sam-81, .pj-sam-82, .pj-sam-83, .pj-sam-84, .pj-sam-85, .pj-sam-86, .pj-sam-87, .pj-sam-88, .pj-sam-89, .pj-sam-90, .pj-sam-91, .pj-sam-92, .pj-sam-93, .pj-sam-94, .pj-sam-95, .pj-sam-96, .pj-sam-97, .pj-sam-98, .pj-sam-99, .pj-sam-100 {
-      width: 368.8px;
+      width: 1fr;
       margin-left: 1.2rem;
       margin-right: 1.2rem;
       margin-bottom: 2.4rem;
@@ -1270,6 +1381,34 @@
       z-index: 99;
       overflow: auto;
     }
+
+    .pj-img-grid{
+      display:grid;
+      grid-template-columns: 1fr ;
+      margin:0 3% 0 3%;
+      width: 94%;
+    }
+
+    .pj-index-img {
+      width: 100%;
+      margin-top: 1.5rem;
+      border-radius: 10px;
+    }
+  
+    .pj-index-map {
+      position: relative;
+      width: 94%;
+      height: 0;
+      padding-top: 80%;
+      margin-top: 1.5rem;
+      margin-bottom: 3rem;
+    }
+  
+    .pj-index-title {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 2rem;
+      top: calc(70px + 97px);
+    }
   }
   
   @media (min-width: 960px) {
@@ -1287,9 +1426,39 @@
       z-index: 99;
       overflow: auto;
     }
+
+    .pj-index-num {
+      font-family: "Montserrat", sans-serif;
+      font-size: 5rem;
+      margin-top: 70px;
+      margin-left: 3%;
+    }
+
+    .pj-img-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      flex-wrap: 20px;
+      margin: 0 3% 0 3%;
+    }
+  
+    .pj-index-img {
+      height:auto;
+      width:97%;
+      border-radius: 10px;
+      margin-top:1rem
+    }
+  
+    .pj-index-map {
+      position: relative;
+      width: 94%;
+      height: 0;
+      padding-top: 35%;
+      margin-top: 1.5rem;
+      margin-bottom: 3rem;
+    }
   }
   
-  /* =====  scroll  ===== */
+  /* =====  scroll-bar  ===== */
   @media (min-width: 960px) {
     .pj-index-1::-webkit-scrollbar, .pj-index-2::-webkit-scrollbar, .pj-index-3::-webkit-scrollbar, .pj-index-4::-webkit-scrollbar, .pj-index-5::-webkit-scrollbar, .pj-index-6::-webkit-scrollbar, .pj-index-7::-webkit-scrollbar, .pj-index-8::-webkit-scrollbar, .pj-index-9::-webkit-scrollbar, .pj-index-10::-webkit-scrollbar, .s-readmore-index::-webkit-scrollbar, .pj-index-11::-webkit-scrollbar, .pj-index-12::-webkit-scrollbar, .pj-index-13::-webkit-scrollbar, .pj-index-14::-webkit-scrollbar, .pj-index-15::-webkit-scrollbar, .pj-index-16::-webkit-scrollbar, .pj-index-17::-webkit-scrollbar, .pj-index-18::-webkit-scrollbar, .pj-index-19::-webkit-scrollbar, .pj-index-20::-webkit-scrollbar, .pj-index-21::-webkit-scrollbar, .pj-index-22::-webkit-scrollbar, .pj-index-23::-webkit-scrollbar, .pj-index-24::-webkit-scrollbar, .pj-index-25::-webkit-scrollbar, .pj-index-26::-webkit-scrollbar, .pj-index-27::-webkit-scrollbar, .pj-index-28::-webkit-scrollbar, .pj-index-29::-webkit-scrollbar, .pj-index-30::-webkit-scrollbar, .pj-index-31::-webkit-scrollbar, .pj-index-32::-webkit-scrollbar, .pj-index-33::-webkit-scrollbar, .pj-index-34::-webkit-scrollbar, .pj-index-35::-webkit-scrollbar, .pj-index-36::-webkit-scrollbar, .pj-index-37::-webkit-scrollbar, .pj-index-38::-webkit-scrollbar, .pj-index-39::-webkit-scrollbar, .pj-index-40::-webkit-scrollbar, .pj-index-41::-webkit-scrollbar, .pj-index-42::-webkit-scrollbar, .pj-index-43::-webkit-scrollbar, .pj-index-44::-webkit-scrollbar, .pj-index-45::-webkit-scrollbar, .pj-index-46::-webkit-scrollbar, .pj-index-47::-webkit-scrollbar, .pj-index-48::-webkit-scrollbar, .pj-index-49::-webkit-scrollbar, .pj-index-50::-webkit-scrollbar, .pj-index-51::-webkit-scrollbar, .pj-index-52::-webkit-scrollbar, .pj-index-53::-webkit-scrollbar, .pj-index-54::-webkit-scrollbar, .pj-index-55::-webkit-scrollbar, .pj-index-56::-webkit-scrollbar, .pj-index-57::-webkit-scrollbar, .pj-index-58::-webkit-scrollbar, .pj-index-59::-webkit-scrollbar, .pj-index-60::-webkit-scrollbar, .pj-index-61::-webkit-scrollbar, .pj-index-62::-webkit-scrollbar, .pj-index-63::-webkit-scrollbar, .pj-index-64::-webkit-scrollbar, .pj-index-65::-webkit-scrollbar, .pj-index-66::-webkit-scrollbar, .pj-index-67::-webkit-scrollbar, .pj-index-68::-webkit-scrollbar, .pj-index-69::-webkit-scrollbar, .pj-index-70::-webkit-scrollbar, .pj-index-71::-webkit-scrollbar, .pj-index-72::-webkit-scrollbar, .pj-index-73::-webkit-scrollbar, .pj-index-74::-webkit-scrollbar, .pj-index-75::-webkit-scrollbar, .pj-index-76::-webkit-scrollbar, .pj-index-77::-webkit-scrollbar, .pj-index-78::-webkit-scrollbar, .pj-index-79::-webkit-scrollbar, .pj-index-80::-webkit-scrollbar, .pj-index-81::-webkit-scrollbar, .pj-index-82::-webkit-scrollbar, .pj-index-83::-webkit-scrollbar, .pj-index-84::-webkit-scrollbar, .pj-index-85::-webkit-scrollbar, .pj-index-86::-webkit-scrollbar, .pj-index-87::-webkit-scrollbar, .pj-index-88::-webkit-scrollbar, .pj-index-89::-webkit-scrollbar, .pj-index-90::-webkit-scrollbar, .pj-index-91::-webkit-scrollbar, .pj-index-92::-webkit-scrollbar, .pj-index-93::-webkit-scrollbar, .pj-index-94::-webkit-scrollbar, .pj-index-95::-webkit-scrollbar, .pj-index-96::-webkit-scrollbar, .pj-index-97::-webkit-scrollbar, .pj-index-98::-webkit-scrollbar, .pj-index-99::-webkit-scrollbar, .pj-index-100::-webkit-scrollbar {
       width: 7.5px;
@@ -1319,7 +1488,11 @@
       top: 70px;
       right: calc((100vw - 1300px) / 2 + 34px);
       font-size: 1.5rem;
-      padding: 10px 17px 6px 17px;
+      width: 55px;
+      height: 55px;
+      line-height: 55px;
+      text-align: center;
+      font-weight: bold;
       background: #e6e6e6;
       border-radius: 50%;
       z-index: 101;
@@ -1333,8 +1506,11 @@
       position: fixed;
       top: 70px;
       right: 3%;
-      font-size: 1.5rem;
-      padding: 10px 17px 6px 17px;
+      font-size: 1rem;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
       background: #e6e6e6;
       border-radius: 50%;
       z-index: 101;
@@ -1409,6 +1585,19 @@
     display:none;
     overflow: scroll;
   }
+
+  .search-box{
+    span{
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 600;
+      font-size:0.85rem;
+      letter-spacing: 0.05rem;
+      margin-left:0.5rem
+
+    }
+  }
+
+
   
   label{
     display: inline-block;
@@ -1452,12 +1641,6 @@
     display: none;
   }
   
-  .line{
-    width: 50%;
-    height: 2px;
-    background: #ddd;
-    margin:0.5rem 0 0.5rem 0
-  }
 
   @media (max-width: 959px) {
     .label {
@@ -1477,11 +1660,13 @@
       overflow: scroll;
       white-space: nowrap;
       scrollbar-width: none;
+      position: relative;
   
       &::-webkit-scrollbar {
         display: none;
       }
     }
+
   
     .pj-index-num {
       font-family: "Montserrat", sans-serif;
@@ -1502,27 +1687,12 @@
       margin-top: -0.25rem;
       display: inline-block;
     }
-  
-    .pj-index-img {
-      width: 94%;
-      margin-top: 1.5rem;
-      border-radius: 10px;
-      margin-left: 3%;
-    }
-  
-    .pj-index-map {
-      position: relative;
-      width: 94%;
-      height: 0;
-      padding-top: 80%;
-      margin-top: 1.5rem;
-      margin-bottom: 3rem;
-    }
-  
-    .pj-index-title {
-      font-family: 'Noto Sans JP', sans-serif;
-      font-size: 2rem;
-      top: calc(70px + 97px);
+
+    .line{
+      width: 100%;
+      height: 2px;
+      background: #ddd;
+      margin:0.5rem 0 0.5rem 0
     }
   }
   
@@ -1546,22 +1716,12 @@
       margin-top: -0.25rem;
       display: inline-block;
     }
-  
-    .pj-index-img {
-      height: 300px;
-      width: auto;
-      margin-top: 1.5rem;
-      border-radius: 10px;
-      margin-left: 3%;
-    }
-  
-    .pj-index-map {
-      position: relative;
-      width: 94%;
-      height: 0;
-      padding-top: 35%;
-      margin-top: 1.5rem;
-      margin-bottom: 3rem;
+
+    .line{
+      width: 50%;
+      height: 2px;
+      background: #ddd;
+      margin:0.5rem 0 0.5rem 0
     }
   }
   
@@ -1609,7 +1769,7 @@
     }
   }
   
-  .up-date-content {
+  .up-date-title {
     font-family: "Montserrat", "Noto Sans JP", sans-serif;
     line-height: 2rem;
     display: block;
@@ -1617,8 +1777,33 @@
     font-weight: 600;
     margin: 0 1rem 0 1rem;
   }
+
+  .up-date-box {
+    padding: 0.5em 1em;
+    margin:0.5rem 0;
+    border: solid 3px #ddd;
+    border-radius: 15px;
+
+    p {
+    margin: 0; 
+    padding: 0;
+    }
+
+    li {
+      list-style: none;
+      margin:0;
+      padding:0;
+
+      &::before{
+        content:'・';
+        color:#a13e3e;
+        font-weight:bold ;
+        margin-right:0.3rem
+      }
+    }
+  }
   
-  .up-date-content-index {
+  .up-date-content {
     font-family: "Montserrat", "Noto Sans JP", sans-serif;
     line-height: 1.7rem;
     font-size: 0.9rem;
@@ -1627,4 +1812,5 @@
     font-weight: 500;
     margin: 0 1rem 0 1rem;
   }
+
   
