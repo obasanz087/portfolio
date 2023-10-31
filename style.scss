@@ -29,7 +29,7 @@
       &:hover {
         color: #a13e3e;
         background: #cdcdcd;
-        border-radius: 20px;
+        border-radius: 25px;
       }
     }
   }
@@ -260,7 +260,7 @@
     }
 
     .sp-about::after{
-      content: '私について';
+      content: 'おばさんずについて';
     }
 
     .sp-projects::after{
@@ -1086,7 +1086,7 @@
   }
 
   .about-caption::after{
-    content: '私について';
+    content: 'おばさんずについて';
   }
 
   .projects-caption::after{

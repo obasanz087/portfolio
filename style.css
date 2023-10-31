@@ -29,7 +29,7 @@ header a {
 header a:hover {
   color: #a13e3e;
   background: #cdcdcd;
-  border-radius: 20px;
+  border-radius: 25px;
 }
 
 .h-title {
@@ -220,7 +220,7 @@ header a:hover {
     padding-bottom: 1rem;
   }
   .sp-about::after {
-    content: "私について";
+    content: "おばさんずについて";
   }
   .sp-projects::after {
     content: "つくったものたち";
@@ -911,7 +911,7 @@ header a:hover {
 }
 
 .about-caption::after {
-  content: "私について";
+  content: "おばさんずについて";
 }
 
 .projects-caption::after {
