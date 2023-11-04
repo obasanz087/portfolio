@@ -21,6 +21,7 @@ header {
   width: 100%;
   top: 0px;
   z-index: 100;
+  background: #ececec;
 }
 header a {
   text-decoration: none;
@@ -810,7 +811,7 @@ header a:hover {
   .img-frame {
     position: relative;
     width: 98%;
-    height: 38rem;
+    height: 65dvh;
     overflow: hidden;
     margin: 0 auto;
     border-radius: 15px;
@@ -871,7 +872,7 @@ header a:hover {
 /* top 文字関連 */
 .se-title {
   margin-top: -1rem;
-  font-size: 3rem;
+  font-size: 3em;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   margin-bottom: 1.5rem;
@@ -1044,19 +1045,19 @@ h6 {
 }
 
 /* project flex */
-@media (max-width: 425px) {
+@media (max-width: 525px) {
   .pj-flex {
     display: grid;
     grid-template-columns: 1fr;
   }
 }
-@media (min-width: 426px) {
+@media (min-width: 526px) {
   .pj-flex {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 }
-@media (width: 426px) {
+@media (width: 526px) {
   .pj-flex {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1169,7 +1170,9 @@ h6 {
   .pj-index-1, .pj-index-2, .pj-index-3, .pj-index-4, .pj-index-5, .pj-index-6, .pj-index-7, .pj-index-8, .pj-index-9, .pj-index-10, .s-readmore-index, .pj-index-11, .pj-index-12, .pj-index-13, .pj-index-14, .pj-index-15, .pj-index-16, .pj-index-17, .pj-index-18, .pj-index-19, .pj-index-20, .pj-index-21, .pj-index-22, .pj-index-23, .pj-index-24, .pj-index-25, .pj-index-26, .pj-index-27, .pj-index-28, .pj-index-29, .pj-index-30, .pj-index-31, .pj-index-32, .pj-index-33, .pj-index-34, .pj-index-35, .pj-index-36, .pj-index-37, .pj-index-38, .pj-index-39, .pj-index-40, .pj-index-41, .pj-index-42, .pj-index-43, .pj-index-44, .pj-index-45, .pj-index-46, .pj-index-47, .pj-index-48, .pj-index-49, .pj-index-50, .pj-index-51, .pj-index-52, .pj-index-53, .pj-index-54, .pj-index-55, .pj-index-56, .pj-index-57, .pj-index-58, .pj-index-59, .pj-index-60, .pj-index-61, .pj-index-62, .pj-index-63, .pj-index-64, .pj-index-65, .pj-index-66, .pj-index-67, .pj-index-68, .pj-index-69, .pj-index-70, .pj-index-71, .pj-index-72, .pj-index-73, .pj-index-74, .pj-index-75, .pj-index-76, .pj-index-77, .pj-index-78, .pj-index-79, .pj-index-80, .pj-index-81, .pj-index-82, .pj-index-83, .pj-index-84, .pj-index-85, .pj-index-86, .pj-index-87, .pj-index-88, .pj-index-89, .pj-index-90, .pj-index-91, .pj-index-92, .pj-index-93, .pj-index-94, .pj-index-95, .pj-index-96, .pj-index-97, .pj-index-98, .pj-index-99, .pj-index-100 {
     display: none;
     transition: 0.3s;
-    background: #ececec;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    background: rgba(230, 230, 230, 0.78);
     position: fixed;
     bottom: 0;
     left: 0;
@@ -1204,39 +1207,60 @@ h6 {
     font-size: 2rem;
     top: 167px;
   }
+  .pj-index-num {
+    font-family: "Montserrat", sans-serif;
+    font-size: 3.5rem;
+    margin-top: 70px;
+    margin-left: 3%;
+  }
+  .pj-index-tag {
+    margin-left: 0.8rem;
+    padding: 0.25rem 1rem 0.25rem 1rem;
+    font-size: 0.8rem;
+    background: #ddd;
+    color: #a13e3e;
+    border-radius: 25px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 500;
+    margin-top: -0.25rem;
+    display: inline-block;
+  }
 }
 @media (min-width: 960px) {
   .pj-index-1, .pj-index-2, .pj-index-3, .pj-index-4, .pj-index-5, .pj-index-6, .pj-index-7, .pj-index-8, .pj-index-9, .pj-index-10, .s-readmore-index, .pj-index-11, .pj-index-12, .pj-index-13, .pj-index-14, .pj-index-15, .pj-index-16, .pj-index-17, .pj-index-18, .pj-index-19, .pj-index-20, .pj-index-21, .pj-index-22, .pj-index-23, .pj-index-24, .pj-index-25, .pj-index-26, .pj-index-27, .pj-index-28, .pj-index-29, .pj-index-30, .pj-index-31, .pj-index-32, .pj-index-33, .pj-index-34, .pj-index-35, .pj-index-36, .pj-index-37, .pj-index-38, .pj-index-39, .pj-index-40, .pj-index-41, .pj-index-42, .pj-index-43, .pj-index-44, .pj-index-45, .pj-index-46, .pj-index-47, .pj-index-48, .pj-index-49, .pj-index-50, .pj-index-51, .pj-index-52, .pj-index-53, .pj-index-54, .pj-index-55, .pj-index-56, .pj-index-57, .pj-index-58, .pj-index-59, .pj-index-60, .pj-index-61, .pj-index-62, .pj-index-63, .pj-index-64, .pj-index-65, .pj-index-66, .pj-index-67, .pj-index-68, .pj-index-69, .pj-index-70, .pj-index-71, .pj-index-72, .pj-index-73, .pj-index-74, .pj-index-75, .pj-index-76, .pj-index-77, .pj-index-78, .pj-index-79, .pj-index-80, .pj-index-81, .pj-index-82, .pj-index-83, .pj-index-84, .pj-index-85, .pj-index-86, .pj-index-87, .pj-index-88, .pj-index-89, .pj-index-90, .pj-index-91, .pj-index-92, .pj-index-93, .pj-index-94, .pj-index-95, .pj-index-96, .pj-index-97, .pj-index-98, .pj-index-99, .pj-index-100 {
     opacity: 0;
     display: none;
-    background: rgba(230, 230, 230, 0.981);
+    border-radius: 40px 40px 0 0;
     position: fixed;
     bottom: 0;
     left: 0;
-    right: 0;
     width: 100%;
     margin: 0 auto;
-    height: 100%;
+    height: calc(100vh - 70px);
     z-index: 99;
     overflow: auto;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    background: rgba(230, 230, 230, 0.78);
   }
   .pj-index-num {
     font-family: "Montserrat", sans-serif;
     font-size: 5rem;
-    margin-top: 70px;
+    margin-top: 1.8rem;
     margin-left: 3%;
   }
   .pj-img-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    flex-wrap: 20px;
+    -moz-column-gap: 1.3rem;
+         column-gap: 1.3rem;
+    row-gap: 1.3rem;
     margin: 0 3% 0 3%;
   }
   .pj-index-img {
     height: auto;
-    width: 97%;
+    width: 100%;
     border-radius: 10px;
-    margin-top: 1rem;
   }
   .pj-index-map {
     position: relative;
@@ -1250,38 +1274,27 @@ h6 {
 /* =====  scroll-bar  ===== */
 @media (min-width: 960px) {
   .pj-index-1::-webkit-scrollbar, .pj-index-2::-webkit-scrollbar, .pj-index-3::-webkit-scrollbar, .pj-index-4::-webkit-scrollbar, .pj-index-5::-webkit-scrollbar, .pj-index-6::-webkit-scrollbar, .pj-index-7::-webkit-scrollbar, .pj-index-8::-webkit-scrollbar, .pj-index-9::-webkit-scrollbar, .pj-index-10::-webkit-scrollbar, .s-readmore-index::-webkit-scrollbar, .pj-index-11::-webkit-scrollbar, .pj-index-12::-webkit-scrollbar, .pj-index-13::-webkit-scrollbar, .pj-index-14::-webkit-scrollbar, .pj-index-15::-webkit-scrollbar, .pj-index-16::-webkit-scrollbar, .pj-index-17::-webkit-scrollbar, .pj-index-18::-webkit-scrollbar, .pj-index-19::-webkit-scrollbar, .pj-index-20::-webkit-scrollbar, .pj-index-21::-webkit-scrollbar, .pj-index-22::-webkit-scrollbar, .pj-index-23::-webkit-scrollbar, .pj-index-24::-webkit-scrollbar, .pj-index-25::-webkit-scrollbar, .pj-index-26::-webkit-scrollbar, .pj-index-27::-webkit-scrollbar, .pj-index-28::-webkit-scrollbar, .pj-index-29::-webkit-scrollbar, .pj-index-30::-webkit-scrollbar, .pj-index-31::-webkit-scrollbar, .pj-index-32::-webkit-scrollbar, .pj-index-33::-webkit-scrollbar, .pj-index-34::-webkit-scrollbar, .pj-index-35::-webkit-scrollbar, .pj-index-36::-webkit-scrollbar, .pj-index-37::-webkit-scrollbar, .pj-index-38::-webkit-scrollbar, .pj-index-39::-webkit-scrollbar, .pj-index-40::-webkit-scrollbar, .pj-index-41::-webkit-scrollbar, .pj-index-42::-webkit-scrollbar, .pj-index-43::-webkit-scrollbar, .pj-index-44::-webkit-scrollbar, .pj-index-45::-webkit-scrollbar, .pj-index-46::-webkit-scrollbar, .pj-index-47::-webkit-scrollbar, .pj-index-48::-webkit-scrollbar, .pj-index-49::-webkit-scrollbar, .pj-index-50::-webkit-scrollbar, .pj-index-51::-webkit-scrollbar, .pj-index-52::-webkit-scrollbar, .pj-index-53::-webkit-scrollbar, .pj-index-54::-webkit-scrollbar, .pj-index-55::-webkit-scrollbar, .pj-index-56::-webkit-scrollbar, .pj-index-57::-webkit-scrollbar, .pj-index-58::-webkit-scrollbar, .pj-index-59::-webkit-scrollbar, .pj-index-60::-webkit-scrollbar, .pj-index-61::-webkit-scrollbar, .pj-index-62::-webkit-scrollbar, .pj-index-63::-webkit-scrollbar, .pj-index-64::-webkit-scrollbar, .pj-index-65::-webkit-scrollbar, .pj-index-66::-webkit-scrollbar, .pj-index-67::-webkit-scrollbar, .pj-index-68::-webkit-scrollbar, .pj-index-69::-webkit-scrollbar, .pj-index-70::-webkit-scrollbar, .pj-index-71::-webkit-scrollbar, .pj-index-72::-webkit-scrollbar, .pj-index-73::-webkit-scrollbar, .pj-index-74::-webkit-scrollbar, .pj-index-75::-webkit-scrollbar, .pj-index-76::-webkit-scrollbar, .pj-index-77::-webkit-scrollbar, .pj-index-78::-webkit-scrollbar, .pj-index-79::-webkit-scrollbar, .pj-index-80::-webkit-scrollbar, .pj-index-81::-webkit-scrollbar, .pj-index-82::-webkit-scrollbar, .pj-index-83::-webkit-scrollbar, .pj-index-84::-webkit-scrollbar, .pj-index-85::-webkit-scrollbar, .pj-index-86::-webkit-scrollbar, .pj-index-87::-webkit-scrollbar, .pj-index-88::-webkit-scrollbar, .pj-index-89::-webkit-scrollbar, .pj-index-90::-webkit-scrollbar, .pj-index-91::-webkit-scrollbar, .pj-index-92::-webkit-scrollbar, .pj-index-93::-webkit-scrollbar, .pj-index-94::-webkit-scrollbar, .pj-index-95::-webkit-scrollbar, .pj-index-96::-webkit-scrollbar, .pj-index-97::-webkit-scrollbar, .pj-index-98::-webkit-scrollbar, .pj-index-99::-webkit-scrollbar, .pj-index-100::-webkit-scrollbar {
-    width: 7.5px;
-  }
-  .pj-index-1::-webkit-scrollbar-track, .pj-index-2::-webkit-scrollbar-track, .pj-index-3::-webkit-scrollbar-track, .pj-index-4::-webkit-scrollbar-track, .pj-index-5::-webkit-scrollbar-track, .pj-index-6::-webkit-scrollbar-track, .pj-index-7::-webkit-scrollbar-track, .pj-index-8::-webkit-scrollbar-track, .pj-index-9::-webkit-scrollbar-track, .pj-index-10::-webkit-scrollbar-track, .s-readmore-index::-webkit-scrollbar-track, .pj-index-11::-webkit-scrollbar-track, .pj-index-12::-webkit-scrollbar-track, .pj-index-13::-webkit-scrollbar-track, .pj-index-14::-webkit-scrollbar-track, .pj-index-15::-webkit-scrollbar-track, .pj-index-16::-webkit-scrollbar-track, .pj-index-17::-webkit-scrollbar-track, .pj-index-18::-webkit-scrollbar-track, .pj-index-19::-webkit-scrollbar-track, .pj-index-20::-webkit-scrollbar-track, .pj-index-21::-webkit-scrollbar-track, .pj-index-22::-webkit-scrollbar-track, .pj-index-23::-webkit-scrollbar-track, .pj-index-24::-webkit-scrollbar-track, .pj-index-25::-webkit-scrollbar-track, .pj-index-26::-webkit-scrollbar-track, .pj-index-27::-webkit-scrollbar-track, .pj-index-28::-webkit-scrollbar-track, .pj-index-29::-webkit-scrollbar-track, .pj-index-30::-webkit-scrollbar-track, .pj-index-31::-webkit-scrollbar-track, .pj-index-32::-webkit-scrollbar-track, .pj-index-33::-webkit-scrollbar-track, .pj-index-34::-webkit-scrollbar-track, .pj-index-35::-webkit-scrollbar-track, .pj-index-36::-webkit-scrollbar-track, .pj-index-37::-webkit-scrollbar-track, .pj-index-38::-webkit-scrollbar-track, .pj-index-39::-webkit-scrollbar-track, .pj-index-40::-webkit-scrollbar-track, .pj-index-41::-webkit-scrollbar-track, .pj-index-42::-webkit-scrollbar-track, .pj-index-43::-webkit-scrollbar-track, .pj-index-44::-webkit-scrollbar-track, .pj-index-45::-webkit-scrollbar-track, .pj-index-46::-webkit-scrollbar-track, .pj-index-47::-webkit-scrollbar-track, .pj-index-48::-webkit-scrollbar-track, .pj-index-49::-webkit-scrollbar-track, .pj-index-50::-webkit-scrollbar-track, .pj-index-51::-webkit-scrollbar-track, .pj-index-52::-webkit-scrollbar-track, .pj-index-53::-webkit-scrollbar-track, .pj-index-54::-webkit-scrollbar-track, .pj-index-55::-webkit-scrollbar-track, .pj-index-56::-webkit-scrollbar-track, .pj-index-57::-webkit-scrollbar-track, .pj-index-58::-webkit-scrollbar-track, .pj-index-59::-webkit-scrollbar-track, .pj-index-60::-webkit-scrollbar-track, .pj-index-61::-webkit-scrollbar-track, .pj-index-62::-webkit-scrollbar-track, .pj-index-63::-webkit-scrollbar-track, .pj-index-64::-webkit-scrollbar-track, .pj-index-65::-webkit-scrollbar-track, .pj-index-66::-webkit-scrollbar-track, .pj-index-67::-webkit-scrollbar-track, .pj-index-68::-webkit-scrollbar-track, .pj-index-69::-webkit-scrollbar-track, .pj-index-70::-webkit-scrollbar-track, .pj-index-71::-webkit-scrollbar-track, .pj-index-72::-webkit-scrollbar-track, .pj-index-73::-webkit-scrollbar-track, .pj-index-74::-webkit-scrollbar-track, .pj-index-75::-webkit-scrollbar-track, .pj-index-76::-webkit-scrollbar-track, .pj-index-77::-webkit-scrollbar-track, .pj-index-78::-webkit-scrollbar-track, .pj-index-79::-webkit-scrollbar-track, .pj-index-80::-webkit-scrollbar-track, .pj-index-81::-webkit-scrollbar-track, .pj-index-82::-webkit-scrollbar-track, .pj-index-83::-webkit-scrollbar-track, .pj-index-84::-webkit-scrollbar-track, .pj-index-85::-webkit-scrollbar-track, .pj-index-86::-webkit-scrollbar-track, .pj-index-87::-webkit-scrollbar-track, .pj-index-88::-webkit-scrollbar-track, .pj-index-89::-webkit-scrollbar-track, .pj-index-90::-webkit-scrollbar-track, .pj-index-91::-webkit-scrollbar-track, .pj-index-92::-webkit-scrollbar-track, .pj-index-93::-webkit-scrollbar-track, .pj-index-94::-webkit-scrollbar-track, .pj-index-95::-webkit-scrollbar-track, .pj-index-96::-webkit-scrollbar-track, .pj-index-97::-webkit-scrollbar-track, .pj-index-98::-webkit-scrollbar-track, .pj-index-99::-webkit-scrollbar-track, .pj-index-100::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
-  }
-  .pj-index-1::-webkit-scrollbar-thumb, .pj-index-2::-webkit-scrollbar-thumb, .pj-index-3::-webkit-scrollbar-thumb, .pj-index-4::-webkit-scrollbar-thumb, .pj-index-5::-webkit-scrollbar-thumb, .pj-index-6::-webkit-scrollbar-thumb, .pj-index-7::-webkit-scrollbar-thumb, .pj-index-8::-webkit-scrollbar-thumb, .pj-index-9::-webkit-scrollbar-thumb, .pj-index-10::-webkit-scrollbar-thumb, .s-readmore-index::-webkit-scrollbar-thumb, .pj-index-11::-webkit-scrollbar-thumb, .pj-index-12::-webkit-scrollbar-thumb, .pj-index-13::-webkit-scrollbar-thumb, .pj-index-14::-webkit-scrollbar-thumb, .pj-index-15::-webkit-scrollbar-thumb, .pj-index-16::-webkit-scrollbar-thumb, .pj-index-17::-webkit-scrollbar-thumb, .pj-index-18::-webkit-scrollbar-thumb, .pj-index-19::-webkit-scrollbar-thumb, .pj-index-20::-webkit-scrollbar-thumb, .pj-index-21::-webkit-scrollbar-thumb, .pj-index-22::-webkit-scrollbar-thumb, .pj-index-23::-webkit-scrollbar-thumb, .pj-index-24::-webkit-scrollbar-thumb, .pj-index-25::-webkit-scrollbar-thumb, .pj-index-26::-webkit-scrollbar-thumb, .pj-index-27::-webkit-scrollbar-thumb, .pj-index-28::-webkit-scrollbar-thumb, .pj-index-29::-webkit-scrollbar-thumb, .pj-index-30::-webkit-scrollbar-thumb, .pj-index-31::-webkit-scrollbar-thumb, .pj-index-32::-webkit-scrollbar-thumb, .pj-index-33::-webkit-scrollbar-thumb, .pj-index-34::-webkit-scrollbar-thumb, .pj-index-35::-webkit-scrollbar-thumb, .pj-index-36::-webkit-scrollbar-thumb, .pj-index-37::-webkit-scrollbar-thumb, .pj-index-38::-webkit-scrollbar-thumb, .pj-index-39::-webkit-scrollbar-thumb, .pj-index-40::-webkit-scrollbar-thumb, .pj-index-41::-webkit-scrollbar-thumb, .pj-index-42::-webkit-scrollbar-thumb, .pj-index-43::-webkit-scrollbar-thumb, .pj-index-44::-webkit-scrollbar-thumb, .pj-index-45::-webkit-scrollbar-thumb, .pj-index-46::-webkit-scrollbar-thumb, .pj-index-47::-webkit-scrollbar-thumb, .pj-index-48::-webkit-scrollbar-thumb, .pj-index-49::-webkit-scrollbar-thumb, .pj-index-50::-webkit-scrollbar-thumb, .pj-index-51::-webkit-scrollbar-thumb, .pj-index-52::-webkit-scrollbar-thumb, .pj-index-53::-webkit-scrollbar-thumb, .pj-index-54::-webkit-scrollbar-thumb, .pj-index-55::-webkit-scrollbar-thumb, .pj-index-56::-webkit-scrollbar-thumb, .pj-index-57::-webkit-scrollbar-thumb, .pj-index-58::-webkit-scrollbar-thumb, .pj-index-59::-webkit-scrollbar-thumb, .pj-index-60::-webkit-scrollbar-thumb, .pj-index-61::-webkit-scrollbar-thumb, .pj-index-62::-webkit-scrollbar-thumb, .pj-index-63::-webkit-scrollbar-thumb, .pj-index-64::-webkit-scrollbar-thumb, .pj-index-65::-webkit-scrollbar-thumb, .pj-index-66::-webkit-scrollbar-thumb, .pj-index-67::-webkit-scrollbar-thumb, .pj-index-68::-webkit-scrollbar-thumb, .pj-index-69::-webkit-scrollbar-thumb, .pj-index-70::-webkit-scrollbar-thumb, .pj-index-71::-webkit-scrollbar-thumb, .pj-index-72::-webkit-scrollbar-thumb, .pj-index-73::-webkit-scrollbar-thumb, .pj-index-74::-webkit-scrollbar-thumb, .pj-index-75::-webkit-scrollbar-thumb, .pj-index-76::-webkit-scrollbar-thumb, .pj-index-77::-webkit-scrollbar-thumb, .pj-index-78::-webkit-scrollbar-thumb, .pj-index-79::-webkit-scrollbar-thumb, .pj-index-80::-webkit-scrollbar-thumb, .pj-index-81::-webkit-scrollbar-thumb, .pj-index-82::-webkit-scrollbar-thumb, .pj-index-83::-webkit-scrollbar-thumb, .pj-index-84::-webkit-scrollbar-thumb, .pj-index-85::-webkit-scrollbar-thumb, .pj-index-86::-webkit-scrollbar-thumb, .pj-index-87::-webkit-scrollbar-thumb, .pj-index-88::-webkit-scrollbar-thumb, .pj-index-89::-webkit-scrollbar-thumb, .pj-index-90::-webkit-scrollbar-thumb, .pj-index-91::-webkit-scrollbar-thumb, .pj-index-92::-webkit-scrollbar-thumb, .pj-index-93::-webkit-scrollbar-thumb, .pj-index-94::-webkit-scrollbar-thumb, .pj-index-95::-webkit-scrollbar-thumb, .pj-index-96::-webkit-scrollbar-thumb, .pj-index-97::-webkit-scrollbar-thumb, .pj-index-98::-webkit-scrollbar-thumb, .pj-index-99::-webkit-scrollbar-thumb, .pj-index-100::-webkit-scrollbar-thumb {
-    background-color: #afafaf;
-  }
-  .pj-index-1::-webkit-scrollbar-thumb:hover, .pj-index-2::-webkit-scrollbar-thumb:hover, .pj-index-3::-webkit-scrollbar-thumb:hover, .pj-index-4::-webkit-scrollbar-thumb:hover, .pj-index-5::-webkit-scrollbar-thumb:hover, .pj-index-6::-webkit-scrollbar-thumb:hover, .pj-index-7::-webkit-scrollbar-thumb:hover, .pj-index-8::-webkit-scrollbar-thumb:hover, .pj-index-9::-webkit-scrollbar-thumb:hover, .pj-index-10::-webkit-scrollbar-thumb:hover, .s-readmore-index::-webkit-scrollbar-thumb:hover, .pj-index-11::-webkit-scrollbar-thumb:hover, .pj-index-12::-webkit-scrollbar-thumb:hover, .pj-index-13::-webkit-scrollbar-thumb:hover, .pj-index-14::-webkit-scrollbar-thumb:hover, .pj-index-15::-webkit-scrollbar-thumb:hover, .pj-index-16::-webkit-scrollbar-thumb:hover, .pj-index-17::-webkit-scrollbar-thumb:hover, .pj-index-18::-webkit-scrollbar-thumb:hover, .pj-index-19::-webkit-scrollbar-thumb:hover, .pj-index-20::-webkit-scrollbar-thumb:hover, .pj-index-21::-webkit-scrollbar-thumb:hover, .pj-index-22::-webkit-scrollbar-thumb:hover, .pj-index-23::-webkit-scrollbar-thumb:hover, .pj-index-24::-webkit-scrollbar-thumb:hover, .pj-index-25::-webkit-scrollbar-thumb:hover, .pj-index-26::-webkit-scrollbar-thumb:hover, .pj-index-27::-webkit-scrollbar-thumb:hover, .pj-index-28::-webkit-scrollbar-thumb:hover, .pj-index-29::-webkit-scrollbar-thumb:hover, .pj-index-30::-webkit-scrollbar-thumb:hover, .pj-index-31::-webkit-scrollbar-thumb:hover, .pj-index-32::-webkit-scrollbar-thumb:hover, .pj-index-33::-webkit-scrollbar-thumb:hover, .pj-index-34::-webkit-scrollbar-thumb:hover, .pj-index-35::-webkit-scrollbar-thumb:hover, .pj-index-36::-webkit-scrollbar-thumb:hover, .pj-index-37::-webkit-scrollbar-thumb:hover, .pj-index-38::-webkit-scrollbar-thumb:hover, .pj-index-39::-webkit-scrollbar-thumb:hover, .pj-index-40::-webkit-scrollbar-thumb:hover, .pj-index-41::-webkit-scrollbar-thumb:hover, .pj-index-42::-webkit-scrollbar-thumb:hover, .pj-index-43::-webkit-scrollbar-thumb:hover, .pj-index-44::-webkit-scrollbar-thumb:hover, .pj-index-45::-webkit-scrollbar-thumb:hover, .pj-index-46::-webkit-scrollbar-thumb:hover, .pj-index-47::-webkit-scrollbar-thumb:hover, .pj-index-48::-webkit-scrollbar-thumb:hover, .pj-index-49::-webkit-scrollbar-thumb:hover, .pj-index-50::-webkit-scrollbar-thumb:hover, .pj-index-51::-webkit-scrollbar-thumb:hover, .pj-index-52::-webkit-scrollbar-thumb:hover, .pj-index-53::-webkit-scrollbar-thumb:hover, .pj-index-54::-webkit-scrollbar-thumb:hover, .pj-index-55::-webkit-scrollbar-thumb:hover, .pj-index-56::-webkit-scrollbar-thumb:hover, .pj-index-57::-webkit-scrollbar-thumb:hover, .pj-index-58::-webkit-scrollbar-thumb:hover, .pj-index-59::-webkit-scrollbar-thumb:hover, .pj-index-60::-webkit-scrollbar-thumb:hover, .pj-index-61::-webkit-scrollbar-thumb:hover, .pj-index-62::-webkit-scrollbar-thumb:hover, .pj-index-63::-webkit-scrollbar-thumb:hover, .pj-index-64::-webkit-scrollbar-thumb:hover, .pj-index-65::-webkit-scrollbar-thumb:hover, .pj-index-66::-webkit-scrollbar-thumb:hover, .pj-index-67::-webkit-scrollbar-thumb:hover, .pj-index-68::-webkit-scrollbar-thumb:hover, .pj-index-69::-webkit-scrollbar-thumb:hover, .pj-index-70::-webkit-scrollbar-thumb:hover, .pj-index-71::-webkit-scrollbar-thumb:hover, .pj-index-72::-webkit-scrollbar-thumb:hover, .pj-index-73::-webkit-scrollbar-thumb:hover, .pj-index-74::-webkit-scrollbar-thumb:hover, .pj-index-75::-webkit-scrollbar-thumb:hover, .pj-index-76::-webkit-scrollbar-thumb:hover, .pj-index-77::-webkit-scrollbar-thumb:hover, .pj-index-78::-webkit-scrollbar-thumb:hover, .pj-index-79::-webkit-scrollbar-thumb:hover, .pj-index-80::-webkit-scrollbar-thumb:hover, .pj-index-81::-webkit-scrollbar-thumb:hover, .pj-index-82::-webkit-scrollbar-thumb:hover, .pj-index-83::-webkit-scrollbar-thumb:hover, .pj-index-84::-webkit-scrollbar-thumb:hover, .pj-index-85::-webkit-scrollbar-thumb:hover, .pj-index-86::-webkit-scrollbar-thumb:hover, .pj-index-87::-webkit-scrollbar-thumb:hover, .pj-index-88::-webkit-scrollbar-thumb:hover, .pj-index-89::-webkit-scrollbar-thumb:hover, .pj-index-90::-webkit-scrollbar-thumb:hover, .pj-index-91::-webkit-scrollbar-thumb:hover, .pj-index-92::-webkit-scrollbar-thumb:hover, .pj-index-93::-webkit-scrollbar-thumb:hover, .pj-index-94::-webkit-scrollbar-thumb:hover, .pj-index-95::-webkit-scrollbar-thumb:hover, .pj-index-96::-webkit-scrollbar-thumb:hover, .pj-index-97::-webkit-scrollbar-thumb:hover, .pj-index-98::-webkit-scrollbar-thumb:hover, .pj-index-99::-webkit-scrollbar-thumb:hover, .pj-index-100::-webkit-scrollbar-thumb:hover {
-    background-color: #8f8f8f;
+    display: none;
   }
 }
 .pj-index-1.active, .pj-index-2.active, .pj-index-3.active, .pj-index-4.active, .pj-index-5.active, .pj-index-6.active, .pj-index-7.active, .pj-index-8.active, .pj-index-9.active, .pj-index-10.active, .s-readmore-index.active, .pj-index-11.active, .pj-index-12.active, .pj-index-13.active, .pj-index-14.active, .pj-index-15.active, .pj-index-16.active, .pj-index-17.active, .pj-index-18.active, .pj-index-19.active, .pj-index-20.active, .pj-index-21.active, .pj-index-22.active, .pj-index-23.active, .pj-index-24.active, .pj-index-25.active, .pj-index-26.active, .pj-index-27.active, .pj-index-28.active, .pj-index-29.active, .pj-index-30.active, .pj-index-31.active, .pj-index-32.active, .pj-index-33.active, .pj-index-34.active, .pj-index-35.active, .pj-index-36.active, .pj-index-37.active, .pj-index-38.active, .pj-index-39.active, .pj-index-40.active, .pj-index-41.active, .pj-index-42.active, .pj-index-43.active, .pj-index-44.active, .pj-index-45.active, .pj-index-46.active, .pj-index-47.active, .pj-index-48.active, .pj-index-49.active, .pj-index-50.active, .pj-index-51.active, .pj-index-52.active, .pj-index-53.active, .pj-index-54.active, .pj-index-55.active, .pj-index-56.active, .pj-index-57.active, .pj-index-58.active, .pj-index-59.active, .pj-index-60.active, .pj-index-61.active, .pj-index-62.active, .pj-index-63.active, .pj-index-64.active, .pj-index-65.active, .pj-index-66.active, .pj-index-67.active, .pj-index-68.active, .pj-index-69.active, .pj-index-70.active, .pj-index-71.active, .pj-index-72.active, .pj-index-73.active, .pj-index-74.active, .pj-index-75.active, .pj-index-76.active, .pj-index-77.active, .pj-index-78.active, .pj-index-79.active, .pj-index-80.active, .pj-index-81.active, .pj-index-82.active, .pj-index-83.active, .pj-index-84.active, .pj-index-85.active, .pj-index-86.active, .pj-index-87.active, .pj-index-88.active, .pj-index-89.active, .pj-index-90.active, .pj-index-91.active, .pj-index-92.active, .pj-index-93.active, .pj-index-94.active, .pj-index-95.active, .pj-index-96.active, .pj-index-97.active, .pj-index-98.active, .pj-index-99.active, .pj-index-100.active {
   opacity: 100;
   display: block;
 }
+.pj-index-1.active header, .pj-index-2.active header, .pj-index-3.active header, .pj-index-4.active header, .pj-index-5.active header, .pj-index-6.active header, .pj-index-7.active header, .pj-index-8.active header, .pj-index-9.active header, .pj-index-10.active header, .s-readmore-index.active header, .pj-index-11.active header, .pj-index-12.active header, .pj-index-13.active header, .pj-index-14.active header, .pj-index-15.active header, .pj-index-16.active header, .pj-index-17.active header, .pj-index-18.active header, .pj-index-19.active header, .pj-index-20.active header, .pj-index-21.active header, .pj-index-22.active header, .pj-index-23.active header, .pj-index-24.active header, .pj-index-25.active header, .pj-index-26.active header, .pj-index-27.active header, .pj-index-28.active header, .pj-index-29.active header, .pj-index-30.active header, .pj-index-31.active header, .pj-index-32.active header, .pj-index-33.active header, .pj-index-34.active header, .pj-index-35.active header, .pj-index-36.active header, .pj-index-37.active header, .pj-index-38.active header, .pj-index-39.active header, .pj-index-40.active header, .pj-index-41.active header, .pj-index-42.active header, .pj-index-43.active header, .pj-index-44.active header, .pj-index-45.active header, .pj-index-46.active header, .pj-index-47.active header, .pj-index-48.active header, .pj-index-49.active header, .pj-index-50.active header, .pj-index-51.active header, .pj-index-52.active header, .pj-index-53.active header, .pj-index-54.active header, .pj-index-55.active header, .pj-index-56.active header, .pj-index-57.active header, .pj-index-58.active header, .pj-index-59.active header, .pj-index-60.active header, .pj-index-61.active header, .pj-index-62.active header, .pj-index-63.active header, .pj-index-64.active header, .pj-index-65.active header, .pj-index-66.active header, .pj-index-67.active header, .pj-index-68.active header, .pj-index-69.active header, .pj-index-70.active header, .pj-index-71.active header, .pj-index-72.active header, .pj-index-73.active header, .pj-index-74.active header, .pj-index-75.active header, .pj-index-76.active header, .pj-index-77.active header, .pj-index-78.active header, .pj-index-79.active header, .pj-index-80.active header, .pj-index-81.active header, .pj-index-82.active header, .pj-index-83.active header, .pj-index-84.active header, .pj-index-85.active header, .pj-index-86.active header, .pj-index-87.active header, .pj-index-88.active header, .pj-index-89.active header, .pj-index-90.active header, .pj-index-91.active header, .pj-index-92.active header, .pj-index-93.active header, .pj-index-94.active header, .pj-index-95.active header, .pj-index-96.active header, .pj-index-97.active header, .pj-index-98.active header, .pj-index-99.active header, .pj-index-100.active header {
+  background: #e6e6e6;
+}
 
 @media (min-width: 1125px) {
   .pj-index-close {
     position: fixed;
-    top: 70px;
-    right: calc((100vw - 1300px) / 2 + 34px);
-    font-size: 1.5rem;
-    width: 55px;
-    height: 55px;
-    line-height: 55px;
-    text-align: center;
+    top: 2rem;
+    right: 3%;
+    font-size: 2.5rem;
     font-weight: bold;
-    background: #e6e6e6;
     border-radius: 50%;
     z-index: 101;
-    box-shadow: 2px 2px 5px #cdcdcd, -2px -2px 5px #ffffff;
+    color: #4d4d4d;
     transition: 0.3s;
   }
 }
@@ -1290,22 +1303,18 @@ h6 {
     position: fixed;
     top: 70px;
     right: 3%;
-    font-size: 1rem;
+    font-size: 2.5rem;
     width: 40px;
     height: 40px;
     line-height: 40px;
     text-align: center;
-    background: #e6e6e6;
     border-radius: 50%;
     z-index: 101;
-    box-shadow: 2px 2px 5px #cdcdcd, -2px -2px 5px #ffffff;
     transition: 0.3s;
   }
 }
 .pj-index-close:hover {
-  background: #d3d3d3;
   color: #a13e3e;
-  box-shadow: none;
 }
 
 .pj-index-in {
@@ -1439,24 +1448,6 @@ label:hover {
   .search-box::-webkit-scrollbar {
     display: none;
   }
-  .pj-index-num {
-    font-family: "Montserrat", sans-serif;
-    font-size: 3.5rem;
-    margin-top: 70px;
-    margin-left: 3%;
-  }
-  .pj-index-tag {
-    margin-left: 0.8rem;
-    padding: 0.25rem 1rem 0.25rem 1rem;
-    font-size: 0.8rem;
-    background: #ddd;
-    color: #a13e3e;
-    border-radius: 25px;
-    font-family: "Noto Sans JP", sans-serif;
-    font-weight: 500;
-    margin-top: -0.25rem;
-    display: inline-block;
-  }
   .line {
     width: 100%;
     height: 2px;
@@ -1465,12 +1456,6 @@ label:hover {
   }
 }
 @media (min-width: 960px) {
-  .pj-index-num {
-    font-family: "Montserrat", sans-serif;
-    font-size: 5rem;
-    margin-top: 70px;
-    margin-left: 3%;
-  }
   .pj-index-tag {
     margin-left: 1rem;
     padding: 0.25rem 1rem 0.25rem 1rem;
@@ -1568,4 +1553,11 @@ label:hover {
   letter-spacing: 0.05rem;
   font-weight: 500;
   margin: 0 1rem 0 1rem;
+}
+
+.update-line {
+  width: 100%;
+  height: 2px;
+  background-color: #cdcdcd;
+  margin: 2rem 0;
 }/*# sourceMappingURL=style.css.map */
