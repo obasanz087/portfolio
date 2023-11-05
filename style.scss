@@ -227,7 +227,7 @@
     .sp-menu-position{
       position: absolute;
       width: 100%;
-      top:50%;
+      top:calc(50dvh - 50px);
       left:0;
       transform: (translate(0,-50%));
     }
@@ -864,7 +864,7 @@
       position:absolute;
       height:100%;
       background-color:#fff;
-      animation: progress 10s infinite;
+      animation: progress 9.9s -1s linear infinite;
      }
   
     @keyframes progress {
@@ -1194,8 +1194,7 @@
       font-family: "Montserrat", "Noto Sans JP", sans-serif;
       font-weight: 500;
       font-size: 3rem;
-      margin-top: 70px;
-      margin-left: 3%;
+      margin: -2rem 0 2rem 3%;
       letter-spacing: -0.02rem;
 
       span {
@@ -1296,6 +1295,7 @@
       box-shadow: 5px 5px 10px #d4d4d4, -5px -5px 10px #ffffff;
       border-radius: 20px;
       transition: 0.3s;
+      animation: fadein 0.3s ease-out forwards
     }
 
     .pj-sam-1:hover,.pj-sam-2:hover,.pj-sam-3:hover,.pj-sam-4:hover,.pj-sam-5:hover,.pj-sam-6:hover,.pj-sam-7:hover,.pj-sam-8:hover,.pj-sam-9:hover,.pj-sam-10:hover,
@@ -1374,16 +1374,30 @@
       transition: 0.3s;
       -webkit-backdrop-filter: blur(30px);
       backdrop-filter: blur(30px);
-      background: rgba(230, 230, 230, 0.78);
+      background: rgba(230, 230, 230, 0.68);
       position: fixed;
       bottom: 0;
       left: 0;
       right: 0;
       width: 100%;
-      margin: 0 auto;
       height: 100%;
       z-index: 99;
       overflow: auto;
+      animation: fadein 0.2s ease-out forwards
+    }
+
+    .pj-index-close {
+      position: sticky;
+      top: 55px;
+      left:88%;
+      font-size: 2.5rem;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      border-radius: 50%;
+      z-index: 101;
+      transition: 0.3s;
     }
 
     .pj-img-grid{
@@ -1410,14 +1424,14 @@
   
     .pj-index-title {
       font-family: 'Noto Sans JP', sans-serif;
-      font-size: 2rem;
+      font-size: 2.5rem;
       top: calc(70px + 97px);
     }
 
     .pj-index-num {
       font-family: "Montserrat", sans-serif;
       font-size: 3.5rem;
-      margin-top: 70px;
+      margin-top: 1.5rem;
       margin-left: 3%;
     }
   
@@ -1435,6 +1449,11 @@
     }
 
   }
+
+  @keyframes fadein{
+    0%{opacity:0}
+    100%{opacity:100}
+  }
   
   @media (min-width: 960px) {
     .pj-index-1, .pj-index-2, .pj-index-3, .pj-index-4, .pj-index-5, .pj-index-6, .pj-index-7, .pj-index-8, .pj-index-9, .pj-index-10, .s-readmore-index, .pj-index-11, .pj-index-12, .pj-index-13, .pj-index-14, .pj-index-15, .pj-index-16, .pj-index-17, .pj-index-18, .pj-index-19, .pj-index-20, .pj-index-21, .pj-index-22, .pj-index-23, .pj-index-24, .pj-index-25, .pj-index-26, .pj-index-27, .pj-index-28, .pj-index-29, .pj-index-30, .pj-index-31, .pj-index-32, .pj-index-33, .pj-index-34, .pj-index-35, .pj-index-36, .pj-index-37, .pj-index-38, .pj-index-39, .pj-index-40, .pj-index-41, .pj-index-42, .pj-index-43, .pj-index-44, .pj-index-45, .pj-index-46, .pj-index-47, .pj-index-48, .pj-index-49, .pj-index-50, .pj-index-51, .pj-index-52, .pj-index-53, .pj-index-54, .pj-index-55, .pj-index-56, .pj-index-57, .pj-index-58, .pj-index-59, .pj-index-60, .pj-index-61, .pj-index-62, .pj-index-63, .pj-index-64, .pj-index-65, .pj-index-66, .pj-index-67, .pj-index-68, .pj-index-69, .pj-index-70, .pj-index-71, .pj-index-72, .pj-index-73, .pj-index-74, .pj-index-75, .pj-index-76, .pj-index-77, .pj-index-78, .pj-index-79, .pj-index-80, .pj-index-81, .pj-index-82, .pj-index-83, .pj-index-84, .pj-index-85, .pj-index-86, .pj-index-87, .pj-index-88, .pj-index-89, .pj-index-90, .pj-index-91, .pj-index-92, .pj-index-93, .pj-index-94, .pj-index-95, .pj-index-96, .pj-index-97, .pj-index-98, .pj-index-99, .pj-index-100 {
@@ -1447,18 +1466,38 @@
       right: 0;
       width: 100%;
       margin: 0 auto;
-      height: calc(100vh - 70px);
+      height: calc(100vh - 71px);
       z-index: 99;
       overflow: auto;
       -webkit-backdrop-filter: blur(30px);
       backdrop-filter: blur(30px);
-      background: rgba(230, 230, 230, 0.78);
+      background: rgba(230, 230, 230, 0.68);
+      animation:fadein 0.2s ease forwards 
     }
+
+    .pj-index-title {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 3rem;
+      top: calc(70px + 97px);
+    }
+
+    .pj-index-close {
+      position: sticky;
+      top: 2.2rem;
+      left:94%;
+      font-size: 2.5rem;
+      font-weight: bold;
+      border-radius: 50%;
+      z-index: 101;
+      color:#4d4d4d;
+      transition: 0.3s;
+    }
+
 
     .pj-index-num {
       font-family: "Montserrat", sans-serif;
       font-size: 5rem;
-      margin-top: 1.8rem;
+      margin-top: -1.8rem;
       margin-left: 3%;
     }
 
@@ -1502,36 +1541,7 @@
       background:#e6e6e6;
     }
   }
-  
-  @media (min-width: 1125px) {
-    .pj-index-close {
-      position: fixed;
-      top: 2rem;
-      right:3%;
-      font-size: 2.5rem;
-      font-weight: bold;
-      border-radius: 50%;
-      z-index: 101;
-      color:#4d4d4d;
-      transition: 0.3s;
-    }
-  }
-  
-  @media (max-width: 1124px) {
-    .pj-index-close {
-      position: fixed;
-      top: 70px;
-      right: 3%;
-      font-size: 2.5rem;
-      width: 40px;
-      height: 40px;
-      line-height: 40px;
-      text-align: center;
-      border-radius: 50%;
-      z-index: 101;
-      transition: 0.3s;
-    }
-  }
+
   
   .pj-index-close:hover {
     color: #a13e3e;
@@ -1541,12 +1551,7 @@
     margin-left: 3%;
     margin-right: 3%;
   }
-  
-  .pj-index-title {
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 3rem;
-    top: calc(70px + 97px);
-  }
+
   
   .pj-index-explain {
     font-family: 'Noto Sans JP', sans-serif;
