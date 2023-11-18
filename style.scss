@@ -26,6 +26,7 @@
     a {
       text-decoration: none;
       transition: 0.2s;
+      padding:0.5rem;
   
       &:hover {
         color: #a13e3e;
@@ -73,9 +74,6 @@
   }
   
   @media (min-width: 960px) {
-    a{
-      padding:0.5rem;
-    }
 
     .h-title{
       margin-left: 3%;
@@ -341,20 +339,15 @@
       margin-right: 2%;
       font-family: "Montserrat", sans-serif;
       font-weight: 500;
-      display: flex;
     }
   
     .f-copy {
-      flex: 80;
       font-size: 0.8rem;
     }
   
     .f-sns {
-      flex: 20;
-      font-size: 1.3rem;
-      text-align: right;
-      padding-right: 2%;
-      color: #232323;
+      display: none;
+      
   
       a {
         transition: 0.3s;
@@ -373,23 +366,20 @@
       margin-right: 3%;
       font-family: "Montserrat", sans-serif;
       font-weight: 500;
-      display: flex;
     }
   
     .f-copy {
       flex: 90;
+      margin-bottom:-1.5rem
     }
   
     .f-sns {
-      flex: 10;
       font-size: 1.3rem;
       padding-left: 0.5rem;
       padding-right: 0.5rem;
       text-align: right;
   
       .fa-brands {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
         padding: 0.6rem 0.65rem 0.5rem 0.6rem;
         transition: 0.3s;
         border-radius: 50%;
