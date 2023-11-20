@@ -1104,10 +1104,11 @@
   h6 {
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.08rem;
     border-left: solid 6px #a13e3e;
     margin: 1rem 0 1rem 3%;
-    padding-left: 0.4rem;
+    padding-left: 0.45rem;
   }
 
   
@@ -1134,6 +1135,105 @@
     
   }
 
+  .about-sns-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3%;
+    row-gap:1.1rem;
+  }
+  
+  .about-sns{
+    width:100%;
+    height: 120px;
+    background: #ddd;
+    border-radius: 15px;
+    position: relative;
+    transition: 0.3s;
+
+    .fa-x-twitter, .fa-youtube{
+      position: absolute;
+      top:10px;
+      left:10px;
+    }
+
+    .fa-circle-arrow-right{
+      position: absolute;
+      bottom:10px;
+      right:10px;
+      }
+    
+    a{
+      position: absolute;
+      top:0;
+      left:0;
+      width: 100%;
+       height: 100%;
+      }
+  }
+
+  .x:hover{
+    background: #4e4e4e;
+    color: #dddddd;
+  }
+
+  .yt:hover{
+    background: #bb6663;
+    color: #dddddd;
+  }
+
+  .about-sns-tx{
+    width:97%;
+    font-family: "Montserrat",sans-serif;
+    font-weight: 600;
+    background: #ddd;
+    border-radius: 15px;
+    padding:0.75rem 0 0.75rem 10px;
+    position: relative;
+    transition: 0.3s;
+    text-decoration-line: none;
+
+    .fa-circle-arrow-right{
+      position: absolute;
+      right:10px;
+      top:50%;
+      transform: translateY(-50%);
+    }
+
+    &:hover{
+      background: #4e4e4e;
+      color:#ddd
+    }
+
+    &:visited{
+      color:#232323
+    }
+
+    &:visited:hover{
+      background: #4e4e4e;
+      color:#ddd
+    }
+
+  }
+  
+  .about-sns-id{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left:10px;
+    font-family: "Montserrat",sans-serif;
+    font-weight: 500;
+    font-size:1.5rem;
+    letter-spacing: 0.04rem;
+  }
+
+  .about-sns-caption{
+    position: absolute;
+    bottom:10px;
+    left:10px;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    font-weight: 500;
+    font-size:0.8rem
+  }
 
   @media (max-width: 959px) {
 
@@ -1202,6 +1302,7 @@
       }
     }
     }
+
     .youtube {
       position: relative;
       left: 0;
@@ -1218,7 +1319,7 @@
       }
     }
   
-  
+
   .s-readmore-index .pj-index-num span {
     font-size: 1.5rem;
   }
