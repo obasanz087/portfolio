@@ -1140,6 +1140,7 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 3%;
     row-gap:1.1rem;
+    margin:0 3% 0 3%
   }
   
   .about-sns{
@@ -1222,7 +1223,7 @@
     left:10px;
     font-family: "Montserrat",sans-serif;
     font-weight: 500;
-    font-size:1.5rem;
+    font-size:clamp(1rem, calc(1.25vw + 1.3rem), 1.3rem);
     letter-spacing: 0.04rem;
   }
 
@@ -1280,12 +1281,31 @@
     margin:1rem 2% 0
   }
 
+  @media (max-width: 959px) {
+    .pj-about{
+      margin:2rem 0 2rem 3%
+    }
+    .about-sns-br{
+      display:block
+    }
+  }
+
+  @media (min-width: 960px) {
+    .pj-about{
+      margin:-2rem 0 2rem 3%
+    }
+    .about-sns-br{
+      display:inline
+    }
+  }
+
     .pj-about {
       font-family: "Montserrat", "Noto Sans JP", sans-serif;
       font-weight: 500;
       font-size: 3rem;
-      margin: -2rem 0 2rem 3%;
       letter-spacing: -0.02rem;
+      
+      
 
       span {
         display:block;
