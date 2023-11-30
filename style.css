@@ -953,24 +953,93 @@ h6 {
   width: 48%;
 }
 
-.about-sns-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  -moz-column-gap: 3%;
-       column-gap: 3%;
-  row-gap: 1.1rem;
-  margin: 0 3% 0 3%;
+@media (min-width: 801px) {
+  .about-sns-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px;
+    -moz-column-gap: 1.1rem;
+         column-gap: 1.1rem;
+    row-gap: 1.1rem;
+    margin: 0 1rem 0 1rem;
+  }
+  .about-sns-id {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.04rem;
+  }
+  .about-sns-id.normal {
+    font-size: 1.7rem;
+  }
+  .about-sns-id.small {
+    font-size: 1.3rem;
+  }
+  .about-sns-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    font-weight: 500;
+  }
+  .about-sns-caption.normal {
+    font-size: 0.8rem;
+  }
+  .about-sns-caption.small {
+    font-size: 0.65rem;
+  }
 }
-
+@media (max-width: 800px) {
+  .about-sns-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 130px 90px;
+    -moz-column-gap: 3%;
+         column-gap: 3%;
+    row-gap: 1.1rem;
+    margin: 0 3% 0 3%;
+  }
+  .about-sns-id {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.04rem;
+  }
+  .about-sns-id.normal {
+    font-size: 1.2rem;
+  }
+  .about-sns-id.small {
+    font-size: 1.1rem;
+  }
+  .about-sns-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    font-weight: 500;
+  }
+  .about-sns-caption.normal {
+    font-size: 0.65rem;
+  }
+  .about-sns-caption.small {
+    font-size: 0.65rem;
+  }
+}
 .about-sns {
   width: 100%;
-  height: 120px;
+  height: 100%;
   background: #ddd;
   border-radius: 15px;
   position: relative;
   transition: 0.3s;
 }
-.about-sns .fa-x-twitter, .about-sns .fa-youtube {
+.about-sns .fa-x-twitter, .about-sns .fa-youtube, .about-sns .fa-github {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -988,6 +1057,24 @@ h6 {
   height: 100%;
 }
 
+@media (min-width: 801px) {
+  .item1 {
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+  .item2 {
+    grid-column: 2/3;
+    grid-row: 1/3;
+  }
+  .item3 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  .item4 {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+}
 .x:hover {
   background: #4e4e4e;
   color: #dddddd;
@@ -998,68 +1085,48 @@ h6 {
   color: #dddddd;
 }
 
-.about-sns-tx {
-  width: 97%;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  background: #ddd;
-  color: #232323;
+.misskey:hover {
+  background: #99ac5c;
+  color: #ddd;
+}
+
+.item4:hover {
+  background: #4e4e4e;
+  color: #ddd;
+}
+
+.about-img-foot {
+  width: calc(100% - 2rem);
+  margin: 2rem 1rem 0 1rem;
+  height: 200px;
   border-radius: 15px;
-  padding: 0.75rem 0 0.75rem 10px;
   position: relative;
-  transition: 0.3s;
-  text-decoration-line: none;
-}
-.about-sns-tx .fa-circle-arrow-right {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.about-sns-tx:hover {
-  background: #4e4e4e;
-  color: #ddd;
-}
-.about-sns-tx:visited {
-  color: #232323;
-}
-.about-sns-tx:visited:hover {
-  background: #4e4e4e;
-  color: #ddd;
 }
 
-.about-sns-id {
+.about-img-back {
+  background: #232323;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 10px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  font-size: clamp(1rem, 1.25vw + 1.3rem, 1.3rem);
-  letter-spacing: 0.04rem;
+  top: 0;
+  left: 0;
+  z-index: 91;
+  border-radius: 15px;
 }
 
-.about-sns-caption {
+.about-img-foot-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
   position: absolute;
-  bottom: 10px;
-  left: 10px;
-  font-family: "Montserrat", "Noto Sans JP", sans-serif;
-  font-weight: 500;
-  font-size: 0.8rem;
+  top: 0;
+  left: 0;
+  z-index: 90;
 }
 
-@media (max-width: 959px) {
-  .about-img-flex {
-    display: block;
-    margin: 0 1rem 0 1rem;
-  }
-  .about-img {
-    display: block;
-    border-radius: 15px;
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-}
 .s-readmore {
   transition: 0.3s;
   background: #ececec;
@@ -1070,7 +1137,7 @@ h6 {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   border-radius: 20px;
-  margin: 2rem 0 2rem 0;
+  margin: 2rem 0 2rem 1rem;
 }
 .s-readmore:hover {
   color: #a13e3e;
@@ -1199,7 +1266,6 @@ h6 {
     box-shadow: 5px 5px 10px #d4d4d4, -5px -5px 10px #ffffff;
     border-radius: 20px;
     transition: 0.3s;
-    animation: fadein 0.3s ease-out forwards;
   }
   .pj-sam-1:hover, .pj-sam-2:hover, .pj-sam-3:hover, .pj-sam-4:hover, .pj-sam-5:hover, .pj-sam-6:hover, .pj-sam-7:hover, .pj-sam-8:hover, .pj-sam-9:hover, .pj-sam-10:hover,
   .pj-sam-11:hover, .pj-sam-12:hover, .pj-sam-13:hover, .pj-sam-14:hover, .pj-sam-15:hover, .pj-sam-16:hover, .pj-sam-17:hover, .pj-sam-18:hover, .pj-sam-19:hover, .pj-sam-20:hover,
