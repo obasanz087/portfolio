@@ -5,6 +5,14 @@
   margin-right: 0;
   margin: auto;
 }
+* ::-moz-selection {
+  background: #a13e3e;
+  color: #ececec;
+}
+* ::selection {
+  background: #a13e3e;
+  color: #ececec;
+}
 
 img {
   vertical-align: top;
