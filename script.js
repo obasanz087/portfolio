@@ -23,9 +23,26 @@ $(function() {
 
 //ページ内リンク
 
+$(function () {
+  $(window).on("load scroll resize", function () {
 
+    var st = $(window).scrollTop();
+    var wh = $(window).height();
 
+    $('.section-point').each(function (i) {
+      var tg = $(this).offset().top;
+      var id = $(this).attr('id');
 
+      if (st > tg  - wh + (wh / 2)) {
+        $(".header-link").removeClass("active");
+        var link = $(".header-link[href *= " + id +"]");
+        $(link).addClass("active");
+      }
+    });
+
+  });
+
+});
 
 // projects
 
