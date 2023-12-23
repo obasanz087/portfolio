@@ -35,15 +35,31 @@ header a {
   text-decoration: none;
   padding: 23px 0.5rem 23px 0.5rem;
   line-height: 70px;
+  transition: 0.2s;
+  position: relative;
 }
 header a:hover {
   color: #a13e3e;
-  border-top: 5px solid #a13e3e;
 }
-
-.header-link.active {
+header .header-link::after {
+  content: " ";
+  display: block;
+  background: #a13e3e;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  height: 5px;
+  width: 0%;
+  transition: 0.3s;
+}
+header .header-link:hover::after {
+  width: 100%;
+}
+header .header-link.active {
   color: #a13e3e;
-  border-top: 5px solid #a13e3e;
+}
+header .header-link.active::after {
+  width: 100%;
 }
 
 .nav-list {

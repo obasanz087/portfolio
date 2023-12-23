@@ -32,18 +32,37 @@
       text-decoration: none;
       padding: 23px 0.5rem 23px 0.5rem ;
       line-height: 70px;
+      transition: 0.2s;
+      position: relative;
 
       &:hover{
-        color: #a13e3e;
-        border-top:5px solid #a13e3e
+        color:#a13e3e
       }
+    }
+    
+    .header-link::after{
+        content:" ";
+        display: block;
+        background: #a13e3e;
+        position: absolute;
+        top:-5px;
+        left:0;
+        height: 5px;
+        width:0%;
+        transition: 0.3s;
+      }
+    .header-link:hover::after{
+      width: 100%;
+    }
 
+    .header-link.active{
+      color: #a13e3e;
+      &::after{
+        width: 100%;
+      }
     }
   }
-  .header-link.active{
-    color: #a13e3e;
-    border-top:5px solid #a13e3e
-  }
+
 
   .nav-list {
     margin-top:-70px;
@@ -1664,7 +1683,7 @@
       -webkit-backdrop-filter: blur(30px);
       backdrop-filter: blur(30px);
       background: rgba(230, 230, 230, 0.68);
-      animation:fadein 0.2s ease forwards 
+      animation:fadein 0.2s ease forwards;
     }
 
     .pj-index-title {
