@@ -233,7 +233,7 @@
       margin-top: 50px;
       -webkit-overflow-scrolling: touch;
       margin-bottom: 5rem;
-      height: calc(100vh - 50px);
+      height: calc(100dvh - 50px);
       overflow: auto;
   
       &.active {
