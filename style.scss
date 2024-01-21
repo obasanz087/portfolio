@@ -1,11 +1,11 @@
 * {
-    max-width: 1300px;
     margin-left: 0;
     margin-right: 0;
     margin: auto;
+    max-width: 1920px;
 
     ::selection{
-      background:#a13e3e;
+      background:#3f4c59;
       color:#ececec;
     }
   }
@@ -13,20 +13,100 @@
   img {
     vertical-align: top;
   }
+/* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 共通要素 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ */ 
+
+.se-title {
+  margin-top:-1rem;
+  letter-spacing: 0.15rem;
+  font-size: 2em;
+  font-family: "Lato", sans-serif;
+  margin-bottom: 1.5rem;
+  padding-top: 20vh;
+  object-fit: cover;
+}
+
+
+.se-title span {
+  color: #a13e3e;
+}
+
+.about-caption::after, .projects-caption::after, .update-caption::after, .contact-caption::after{
+  display:block;
+  font-size:0.85rem;
+  line-height: 0.85rem;
+  margin-top:0.5rem;
   
-  body {
-    background: #ececec;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  margin-bottom:1rem;
+  margin-left:1.5rem
+}
+
+.about-caption::before, .projects-caption::before, .update-caption::before, .contact-caption::before{
+  content: 'ー';
+  color:#3f4c59;
+  display:block;
+  font-size:0.85rem;
+  line-height: 0.85rem;
+  margin-left:0.2rem;
+  margin-bottom:-61px;
+
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+}
+
+.about-caption::after{
+  content: 'おばさんずについて';
+}
+
+.projects-caption::after{
+  content: 'つくったものたち';
+}
+
+
+.update-caption::after{
+  content: '更新情報';
+}
+
+
+.contact-caption::after{
+  content: 'ご連絡';
+}
+
+.se-ex {
+  letter-spacing: 0.07rem;
+  line-height: 1.8rem;
+  margin: 0 1rem;
+  font-family: 'Lato','Noto Sans JP', sans-serif;
+}
+@media (max-width: 959px) {
+  .se-ex{
+    margin:0
   }
-  
-  /* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  header  ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ */
+}
+
+h6 {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.08rem;
+  border-left: solid 6px #a13e3e;
+  margin: 1rem 0 1rem 3%;
+  padding-left: 0.45rem;
+}
+
+/* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ ヘッダー ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ */ 
   
   header {
     position: fixed;
     line-height: 70px;
-    width: 100%;
+    width: 88%;
     top: 0px;
     z-index: 100;
-    background: #ececec;
+    padding:0 6%;
+    background:#fff;
   
     a {
       text-decoration: none;
@@ -35,7 +115,7 @@
       position: relative;
 
       &:hover{
-        color:#a13e3e
+        color:#3f4c59
       }
     }
 
@@ -46,7 +126,7 @@
     .header-link::after{
         content:" ";
         display: block;
-        background: #a13e3e;
+        background: #3f4c59;
         position: absolute;
         top:-5px;
         left:0;
@@ -59,7 +139,7 @@
     }
 
     .header-link.active{
-      color: #a13e3e;
+      color: #3f4c59;
       &::after{
         width: 100%;
       }
@@ -71,15 +151,14 @@
     margin-top:-70px;
     line-height: 70px;
     text-align: right;
-    margin-right: 3%;
     color: #232323;
   }
   
   .nav-list-item {
     list-style: none;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 600;
-    letter-spacing: 0.03rem;
+    letter-spacing: 0.13rem;
     display: inline-block;
     margin-left: 1%;
     
@@ -90,17 +169,17 @@
     }
   }
   
-  .h-title {
-    font-size: 1.5rem;
-    letter-spacing: 0.02rem;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
+  .h-logo {
+    font-size: 1.4rem;
+    letter-spacing: 0.13rem;
+    font-weight: 600;
+    font-family: "LATO", sans-serif;
     color: #232323;
 
   
     span {
-      font-size: 1rem;
-      margin-left: 0.75rem;
+      font-size: 0.8rem;
+      margin-left: 0.5rem;
       font-weight: 500;
       color: #8b8b8b;
     }
@@ -108,11 +187,6 @@
 
   
   @media (min-width: 960px) {
-
-    .h-title{
-      margin-left: 3%;
-    }
-
     .globalMenuSp, .hamburger {
       display: none;
     }
@@ -125,15 +199,15 @@
       line-height: 50px;
       width: 97%;
       top: 0;
-      padding-left: 3%;
+      padding-left: 5%;
       z-index: 1000;
       background: #ececec;
     }
   
-    .h-title {
+    .h-logo {
       line-height: 50px;
-      font-size: 1.4rem;
-      font-family: "Montserrat", sans-serif;
+      font-size: 1.2rem;
+      font-family: "Lato", sans-serif;
       font-weight: 500;
       color: #232323;
   
@@ -278,7 +352,7 @@
       font-weight: 500;
       text-align: left;
       position: relative;
-      font-family: "Montserrat", sans-serif;
+      font-family: "Lato", sans-serif;
       font-size: 1.2rem;
       letter-spacing: 0.05em;
       margin-left: 4%;
@@ -325,7 +399,7 @@
       text-align: left;
       padding-left: 1rem;
       position: relative;
-      font-family: "Montserrat", sans-serif;
+      font-family: "Lato", sans-serif;
       font-size: 1.2rem;
       letter-spacing: 0.05em;
       margin-right: 1rem;
@@ -382,7 +456,7 @@
       margin-bottom: 1rem;
       margin-left: 2%;
       margin-right: 2%;
-      font-family: "Montserrat", sans-serif;
+      font-family: "Lato", sans-serif;
       font-weight: 500;
     }
   
@@ -405,17 +479,15 @@
   
   @media (min-width: 960px) {
     footer {
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-      margin-left: 3%;
-      margin-right: 3%;
-      font-family: "Montserrat", sans-serif;
+      margin: 1rem 6%;
+      font-family: "Lato", sans-serif;
       font-weight: 500;
     }
   
     .f-copy {
       flex: 90;
-      margin-bottom:-1.5rem
+      margin-bottom:-1.5rem;
+      letter-spacing: 0.13rem;
     }
   
     .f-sns {
@@ -478,92 +550,6 @@
   }
   
   /*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ main ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
-  
-  /* ■■■■■■■■■■■■■■■■■ topview ■■■■■■■■■■■■■■■■■ */ 
-
-  @media (min-width: 960px) {
-
-    .main-topview{
-        height: 100vh;
-        position: relative;
-    }
-
-    .m-topview {
-      background: #ececec;
-      box-shadow: 6px 6px 12px #d2d2d2, -6px -6px 12px #ffffff;
-      width: 98%;
-      border-radius: 30px;
-      padding-bottom: 2.2rem;
-      position: absolute;
-      left:50%;
-      top:50%;
-      z-index: 90;
-
-      transform: translate(-50%, -50%);
-    }
-  
-    .m-topview-ex {
-      margin: 2rem 1.5% 0 1.5%;
-    }
-  }
-  
-  .m-topview-p {
-
-    span {
-      color: #a13e3e;
-    }
-  
-    margin-left: 2%;
-    font-size: 0.85rem;
-
-  }
-  
-  .jp {
-    font-family: 'Noto Sans JP', sans-serif;
-    font-weight: 400;
-    letter-spacing: 0.05rem;
-  }
-  
-  .en {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 2.2rem;
-  }
-  
-  .m-topview-X {
-    padding: 1rem 2rem 1rem 2rem;
-    background-color: #ffffff;
-    color: #232323;
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-    font-size: 1.2rem;
-    border-radius: 15px;
-    transition: 0.2s;
-    text-decoration: none;
-
-    &:visited {
-      color: #232323;
-    }
-
-    span {
-      font-family: "Montserrat", sans-serif;
-      font-weight: 500;
-      margin: 0 1rem 0 1rem;
-    }
-  
-    &:hover {
-      background-color: #232323;
-      color:#fff
-    }
-  }
-  
-    /* ■■■■■■■■■■■■■■■■■ slide ■■■■■■■■■■■■■■■■■ */ 
-
-  @media (max-width: 959px) {
-
-  }
-  
   .img-01 {
     background-image: url('img/scroll/6.jpg');
     animation: slide-animation-01 100s infinite;
@@ -893,55 +879,35 @@
       
     }
   }
-    
-    .progBar .bar{
-      position:absolute;
-      height:100%;
-      background-color:#fff;
-      animation: progress 10s -1.5s linear infinite;
-     }
-  
-    @keyframes progress {
-      0% {width: 0}
-      100% {width: 100%}
-    }
-  
-    .m-topview-gradient {
-      position: absolute;
-      bottom:0;
-      left:0;
-      height: 200px;
-      width: 100%;
-      background-image: linear-gradient(180deg, rgba(255, 255, 255, 0), 50%, rgba(0, 0, 0, 0.53) 80%);
-      border-radius: 15px;
-    }
-  
-  
-
+  /* ■■■■■■■■■■■■■■■■■ スマホ用トップ画面 ■■■■■■■■■■■■■■■■■ */ 
   @media (max-width: 959px) {
-
     .main-topview{
-      height: calc(100vh - 50px);
+      height: calc(100dvh - 50px);
+      margin-top:50px;
       position: relative;      
       border-radius: 20px;
-      border-radius: 15px;
-  }
-
+      border-radius: 20px 20px 0 20px;
+    }
     .m-topview {
       width: 100%;
       height: 100vh;
       z-index: 90;
       margin-top: 50px;
     }
-  
-    .m-topview-X {
-      display: none;
+  }
+  /* ■■■■■■■■■■■■■■■■■ スライドのフレーム ■■■■■■■■■■■■■■■■■ */ 
+
+  @media (min-width: 960px) {
+    .img-frame {
+      position: relative;
+      width: 88%;
+      height: calc(95dvh - 70px);
+      overflow: hidden;
+      margin: 74px auto 0;
+      border-radius: 50px 50px 0 50px;
     }
-  
-    .m-topview-ex {
-      display: none;
-    }
-    
+  }
+  @media (max-width: 959px) {
     .img-frame {
       position: relative;
       width: 100%;
@@ -949,378 +915,286 @@
       overflow: hidden;
       margin: 0 auto;
     }
-
+  }
+  /* ■■■■■■■■■■■■■■■■■ スライドの画像たち ■■■■■■■■■■■■■■■■■ */ 
+  @media (min-width: 960px) {
+    .img-01, .img-02, .img-03, .img-04, .img-05, .img-06, .img-07, .img-08, .img-09, .img-10{
+      position: absolute;
+      bottom: 0%;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+  @media (max-width: 959px) {
     .img-01, .img-02, .img-03, .img-04, .img-05, .img-06, .img-07, .img-08, .img-09, .img-10{
       position: absolute;
       bottom: 1.5%;
+      top:1.5%;
       left: 3%;
       width: 94%;
-      height: 98.5%;
+      height: 96%;
       background-size: cover;
       background-repeat: no-repeat;
-      border-radius: 15px;
+      border-radius: 20px 20px 0 20px;
     }
-
-    .progBar{
-      width:88%;
-      height:2px;
-      background-color:none;
-      position:relative;
-      overflow: hidden;
-      position: absolute;
-      bottom:1.5rem;
-      left:6%;
-      z-index: 91;
-    } 
-
+  }
+  /* ■■■■■■■■■■■■■■■■■ 黒色グラデーション ■■■■■■■■■■■■■■■■■ */ 
+  .m-topview-gradient {
+    position: absolute;
+    bottom:0;
+    left:0;
+    height: 200px;
+    width: 100%;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0), 50%, rgba(0, 0, 0, 0.53) 80%);
+    border-radius: 20px 20px 0 20px;
+  }
+  /* ■■■■■■■■■■■■■■■■■ キャプション・カウンター ■■■■■■■■■■■■■■■■■ */
+  @media (min-width: 960px) {
     .m-topview-text-jp{
       position: absolute;
-      left:4%;
-      bottom:2.4rem;
-      font-family: "Montserrat", 'Noto Sans JP', sans-serif;
+      left:2.5vw;
+      bottom:3vw;
+      font-family: "Lato", 'Noto Sans JP', sans-serif;
       font-size:1.3rem;
       font-weight: 500;
       color: #ddd;
       z-index: 91;
     }
-  
+    .m-topview-text-en{
+      position: absolute;
+      left:2.5vw;
+      bottom:2vw;
+      font-family: "Lato", 'Noto Sans JP', sans-serif;
+      font-size:0.8rem;
+      letter-spacing: 0.05rem;
+      font-weight: 500;
+      color: #ddd;
+      z-index: 91;
+    }
+    .m-topview-count{
+      position: absolute;
+      right:2.5vw;
+      bottom:2vw;
+      font-family: "Lato", sans-serif;
+      font-weight: 500;
+      color: #ddd;
+      z-index: 91;
+    }
+  }
+  @media (max-width: 959px) {
+    .m-topview-text-jp{
+      position: absolute;
+      left:4%;
+      bottom:2.4rem;
+      font-family: "Lato", 'Noto Sans JP', sans-serif;
+      font-size:1.3rem;
+      font-weight: 500;
+      color: #ddd;
+      z-index: 91;
+    }
     .m-topview-text-en{
       position: absolute;
       left:4%;
       bottom:1.45rem;
-      font-family: "Montserrat", 'Noto Sans JP', sans-serif;
+      font-family: "Lato", 'Noto Sans JP', sans-serif;
       font-size:0.8rem;
       font-weight: 500;
       color: #ddd;
       z-index: 91;
     }
-  
     .m-topview-count{
       position: absolute;
       right:4%;
       bottom:1.45rem;
-      font-family: "Montserrat", sans-serif;
+      font-family: "Lato", sans-serif;
       font-weight: 500;
       color: #ddd;
       z-index: 91;
     }
-
   }
-  
+  /* ■■■■■■■■■■■■■■■■■ プログレスバー ■■■■■■■■■■■■■■■■■ */
+  .progBar .bar{
+    position:absolute;
+    height:100%;
+    background-color:#fff;
+    animation: progress 10s -1.5s linear infinite;
+  }
+  @keyframes progress {
+    0% {width: 0}
+    100% {width: 100%}
+  }
   @media (min-width: 960px) {
-
-    .img-frame {
-      position: relative;
-      width: 98%;
-      height: 65dvh;
+    .progBar{
+      width:calc(100% - 5vw);
+      height:2px;
+      background-color:none;
+      position:relative;
       overflow: hidden;
-      margin: 0 auto;
-      border-radius: 15px;
+      position: absolute;
+      bottom:1vw;
+      left:2.5vw;
+      right:2.2vw;
+      z-index: 91;
+    } 
   }
-
-  .img-01, .img-02, .img-03, .img-04, .img-05, .img-06, .img-07, .img-08, .img-09, .img-10{
-    position: absolute;
-    bottom: 0%;
-    left: 0%;
+  @media (max-width: 959px) {
+    .progBar{
+      width:90%;
+      height:2px;
+      background-color:none;
+      position:relative;
+      overflow: hidden;
+      position: absolute;
+      bottom:1.75rem;
+      left:7%;
+      z-index: 91;
+    } 
+  }
+  /* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ about ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ */ 
+  /* ■■■■■■■■■■■■■■■■■ max-width ■■■■■■■■■■■■■■■■■ */
+  #about{
+    background: #fff;
     width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
+    padding-bottom:20vh
   }
-
-  .progBar{
-    width:96%;
-    height:2px;
-    background-color:none;
-    position:relative;
-    overflow: hidden;
-    position: absolute;
-    bottom:0.70rem;
-    left:2%;
-    z-index: 91;
-  } 
-
-  .m-top-margin {
-    padding-top: 1%;
+  @media (max-width: 959px) {
+    #about{
+      background: #fff;
+      width: 90%;
+      padding:0 5% 20vh 5%
+    }
   }
-
-  .m-topview-text-jp{
-    position: absolute;
-    left:2%;
-    bottom:2.4rem;
-    font-family: "Montserrat", 'Noto Sans JP', sans-serif;
-    font-size:1.3rem;
-    font-weight: 500;
-    color: #ddd;
-    z-index: 91;
+  .section1{
+    max-width: 1366px;
+    margin:0 auto
   }
-
-  .m-topview-text-en{
-    position: absolute;
-    left:2%;
-    bottom:1.45rem;
-    font-family: "Montserrat", 'Noto Sans JP', sans-serif;
-    font-size:0.8rem;
-    font-weight: 500;
-    color: #ddd;
-    z-index: 91;
+  /* ■■■■■■■■■■■■■■■■■ about-flex ■■■■■■■■■■■■■■■■■ */
+  .about-flex{
+    display:flex;
+    gap:1rem
   }
-
-  .m-topview-count{
-    position: absolute;
-    right:2%;
-    bottom:1.45rem;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    color: #ddd;
-    z-index: 91;
+  @media (max-width: 959px) {
+    .about-flex{
+      display: block;
+    }
   }
-}
-  /* ■■■■■■■■■■■■■■■■■ 文字関連 ■■■■■■■■■■■■■■■■■ */ 
-
-  .se-title {
-    margin-top:-1rem;
-    font-size: 3em;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    margin-bottom: 1.5rem;
-    padding-top: 11rem;
-    object-fit: cover;
-  }
-
-
-  .se-title span {
-    color: #a13e3e;
-  }
-
-  .about-caption::after, .projects-caption::after, .update-caption::after, .contact-caption::after{
-    display:block;
-    font-size:0.85rem;
-    line-height: 0.85rem;
-    margin-top:0.5rem;
-    
-    font-family: 'Noto Sans JP', sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.05rem;
-    margin-bottom:1rem;
-    margin-left:1.5rem
-  }
-
-  .about-caption::before, .projects-caption::before, .update-caption::before, .contact-caption::before{
-    content: 'ー';
-    color:#a13e3e;
-    display:block;
-    font-size:0.85rem;
-    line-height: 0.85rem;
-    margin-bottom:-95px;
-    margin-left:0.2rem;
-
-    font-family: 'Noto Sans JP', sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.05rem;
-    padding-bottom:1rem
-  }
-
-  .about-caption::after{
-    content: 'おばさんずについて';
-  }
-
-  .projects-caption::after{
-    content: 'つくったものたち';
-  }
-  
-
-  .update-caption::after{
-    content: '更新情報';
-  }
-  
-
-  .contact-caption::after{
-    content: 'ご連絡';
-  }
-
-  .se-ex {
-    letter-spacing: 0.07rem;
-    line-height: 1.8rem;
-    margin: 0 1rem 0 1rem;
-  }
-  
-  h6 {
-    font-family: 'Noto Sans JP', sans-serif;
-    font-weight: 700;
-    font-size: 1.2rem;
-    letter-spacing: 0.08rem;
-    border-left: solid 6px #a13e3e;
-    margin: 1rem 0 1rem 3%;
-    padding-left: 0.45rem;
-  }
-
-  
-  /* ■■■■■■■■■■■■■■■■■ aboutme ■■■■■■■■■■■■■■■■■ */ 
-  
-  .about-index{
-    max-width: 600px;
-  }
-  
-  .main-section{
-    margin: 0 3% 0 3%;
-  }
-
-  .about-img-flex{
-    display: flex;
-    gap:0 1.5rem;
-    margin:0 1rem 0 1rem
-  }
-
-  .about-img{
+  .about-flex-item{
     flex:1;
-    border-radius: 15px;
-    width: 48%;
-    
+    img{
+      height: 100%;
+      width:100%;
+      object-fit: cover;
+      border-radius: 50px 50px 0 50px;
+    }
   }
-
-  @media (min-width: 801px) {
-  .about-sns-grid{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows:100px 100px;
-    column-gap: 1.1rem;
-    row-gap:1.1rem;
-    margin:0 1rem 0 1rem
+  @media (max-width: 959px) {
+    .about-flex-item img{
+      margin-top:1rem
+    }
   }
-
-  .about-sns-id{
-    position: absolute;
-    top:50%;
-    transform: translateY(-50%);
-    left:10px;
-    font-family: "Montserrat",sans-serif;
+  /* ■■■■■■■■■■■■■■■■■ readmoreボタン ■■■■■■■■■■■■■■■■■ */
+  .s-readmore {
+    transition: 0.2s;
+    background: #ececec;
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size:1.1rem;
+    font-family: "Lato", sans-serif;
     font-weight: 500;
-    letter-spacing: 0.04rem;
-
-    &.normal{
-      font-size:1.7rem;
-    }
-
-    &.small{
-      font-size:1.3rem;
-    }
-  }
-
-  .about-sns-caption{
-    position: absolute;
-    bottom:10px;
-    left:10px;
-    font-family: "Montserrat", "Noto Sans JP", sans-serif;
-    font-weight: 500;
-
-    &.normal{
-      font-size:0.8rem
-    }
-
-    &.small{
-      font-size:0.65rem
-    }
-  }
-}
-
-@media (max-width: 800px) {
-  .about-sns-grid{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows:130px 90px;
-    column-gap: 3%;
-    row-gap:1.1rem;
-    margin:0 3% 0 3%
-  }
-
-  .about-sns-id{
-    position: absolute;
-    top:50%;
-    transform: translateY(-50%);
-    left:10px;
-    font-family: "Montserrat",sans-serif;
-    font-weight: 500;
-    letter-spacing: 0.04rem;
-
-    &.normal{
-      font-size:1.2rem;
-    }
-
-    &.small{
-      font-size:1.1rem;
-    }
-  }
-
-  .about-sns-caption{
-    position: absolute;
-    bottom:10px;
-    left:10px;
-    font-family: "Montserrat", "Noto Sans JP", sans-serif;
-    font-weight: 500;
-
-    &.normal{
-      font-size:0.65rem
-    }
-
-    &.small{
-      font-size:0.65rem
-    }
-  }
-}
+    border-radius: 20px 20px 0 20px;
+    margin: 2rem 0 2rem 1rem;
+    letter-spacing: 0.13rem;
   
+    &:hover {
+      color:#ececec;
+      background: #3f4c59;
+      box-shadow: none;
+    }
+  
+    i {
+      margin: 0 0 0 1rem;
+    }
+  }
+  @media (max-width: 959px) {
+    .s-readmore{
+      margin:1.5rem 0
+    }
+  }
+  /* ■■■■■■■■■■■■■■■■■ SNSグリッド ■■■■■■■■■■■■■■■■■ */
+  @media (min-width: 801px) {
+    .about-sns-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows:100px 100px;
+      column-gap: 1.1rem;
+      row-gap:1.1rem;
+      margin:0 1rem 0 1rem
+    }
+  }
+  @media (max-width: 800px) {
+    .about-sns-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows:130px 90px;
+      column-gap: 3%;
+      row-gap:1.1rem;
+    }
+  }
+  /* ■■■■■■■■■■■■■■■■■ SNSグリッド - ベース・大きさ・色 ■■■■■■■■■■■■■■■■■ */
   .about-sns{
     width:100%;
     height: 100%;
-    background: #ddd;
-    border-radius: 15px;
+    background: #ececec;
+    border-radius: 20px 20px 0 20px;
     position: relative;
     transition: 0.2s;
 
     .fa-x-twitter, .fa-youtube, .fa-github{
       position: absolute;
-      top:10px;
-      left:10px;
+      top:15px;
+      left:15px;
     }
 
     .fa-circle-arrow-right{
       position: absolute;
-      bottom:10px;
-      right:10px;
+      bottom:15px;
+      right:15px;
       }
     
     a{
       position: absolute;
       top:0;
       left:0;
-      width: 100%;
+      width:100%;
        height: 100%;
       }
   }
 
   @media (min-width: 801px) {
 
-  .item1{
-    grid-column: 1 / 2;
-    grid-row: 1 / 3
+    .item1{
+      grid-column: 1 / 2;
+      grid-row: 1 / 3
+    }
+    
+    .item2{
+      grid-column: 2 / 3;
+      grid-row: 1 / 3
+    }
+    
+    .item3{
+      grid-column:3 / 4;
+      grid-row:1 / 2
+    }
+    
+    .item4{
+      grid-column:3 / 4;
+      grid-row:2/ 3
+    }
   }
-  
-  .item2{
-    grid-column: 2 / 3;
-    grid-row: 1 / 3
-  }
-  
-  .item3{
-    grid-column:3 / 4;
-    grid-row:1 / 2
-  }
-  
-  .item4{
-    grid-column:3 / 4;
-    grid-row:2/ 3
-  }
-}
-
   .x:hover{
     background: #4e4e4e;
     color: #dddddd;
@@ -1340,133 +1214,174 @@
     background: #4e4e4e;
     color:#ddd
   }
-
-
-  .about-img-foot{
-    width: calc(100% - 2rem);
-    margin: 2rem 1rem 0 1rem ;
-    height: 200px;
-    border-radius: 15px;
-    position: relative;
-  }
-
-  .about-img-back{
-    background: #232323;
-    width: 100%;
-    height: 100%;
-    opacity: 0.3;
-    position: absolute;
-    top:0;
-    left:0;
-    z-index:91;
-    border-radius: 15px;
-  }
-
-  .about-img-foot-img{
-    width:100%;
-    height: 100%;
-    object-fit:cover;
-    border-radius: 15px;
-    position: absolute;
-    top:0;
-    left:0;
-    z-index:90
-  }
-
-  .s-readmore {
-    transition: 0.2s;
-    background: #ececec;
-    box-shadow: 6px 6px 12px #d2d2d2, -6px -6px 12px #ffffff;
-    display: inline-block;
-    padding: 0.5rem 0 0.5rem 1rem;
-    font-size: 1.2rem;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    border-radius: 20px;
-    margin: 2rem 0 2rem 1rem;
+  /* ■■■■■■■■■■■■■■■■■ SNSグリッド - id ■■■■■■■■■■■■■■■■■ */
+  @media (min-width: 801px) {
+    .about-sns-id{
+      position: absolute;
+      top:50%;
+      transform: translateY(-50%);
+      left:15px;
+      font-family: "Lato",sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.04rem;
   
-    &:hover {
-      color: #a13e3e;
-      background: #dddddd;
-      box-shadow: none;
-    }
+      &.normal{
+        font-size:1.2rem;
+      }
   
-    i {
-      margin: 0 1rem 0 1rem;
-      color: #a13e3e;
+      &.small{
+        font-size:1.1rem;
+        letter-spacing: 0.11rem;
+      }
     }
   }
-
-  .readmore-img{
-    width: 96%;
-    border-radius: 10px;
-    margin:1rem 2% 0
-  }
-
-  @media (max-width: 959px) {
-    .pj-about{
-      margin:2rem 0 2rem 3%
+  @media (max-width: 800px) {
+    .about-sns-id{
+      position: absolute;
+      top:50%;
+      transform: translateY(-50%);
+      left:15px;
+      font-family: "Lato",sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.04rem;
+  
+      &.normal{
+        font-size:1rem;
+      }
+  
+      &.small{
+        font-size:0.9rem;
+      }
     }
-    .about-sns-br{
-      display:block
-    }
   }
-
   @media (min-width: 960px) {
-    .pj-about{
-      margin:-2rem 0 2rem 3%
-    }
     .about-sns-br{
       display:inline
     }
   }
-
-    .pj-about {
-      font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  @media (max-width: 959px) {
+    .about-sns-br{
+      display:block
+    }
+  }
+  /* ■■■■■■■■■■■■■■■■■ SNSグリッド - キャプション ■■■■■■■■■■■■■■■■■ */
+  @media (min-width: 801px) {
+    .about-sns-caption{
+      position: absolute;
+      bottom:15px;
+      left:15px;
+      font-family: "Lato", "Noto Sans JP", sans-serif;
       font-weight: 500;
-      font-size: 3rem;
-      letter-spacing: -0.02rem;
-      
-      
-
-      span {
-        display:block;
-        font-size: 0.85rem;
-        font-weight: 600;
-        margin-top:-5px;
-
-        span{
-          display:inline;
-          font-weight: 500;
-          color: #a13e3e;
-          margin: 0 0.3rem;
-          margin-top:-5px;
+  
+      &.normal{
+        font-size:0.7rem
+      }
+  
+      &.small{
+        font-size:0.6rem
       }
     }
+  }
+  @media (max-width: 800px) {
+    .about-sns-caption{
+      position: absolute;
+      bottom:15px;
+      left:15px;
+      font-family: "Lato", "Noto Sans JP", sans-serif;
+      font-weight: 500;
+  
+      &.normal{
+        font-size:0.65rem
+      }
+  
+      &.small{
+        font-size:0.65rem
+      }
     }
-
+  }
+  /* ■■■■■■■■■■■■■■■■■ readmore - index ■■■■■■■■■■■■■■■■■ */
+  .about-index{
+    max-width: 1100px;
+    margin:0 auto
+  }
+  .pj-about {
+    font-family: "Lato", "Noto Sans JP", sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    letter-spacing: 0.12rem;
+    margin:0 0 5rem 0;
+    span {
+      display:block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-top:-5px;
+      letter-spacing: 0.05rem;
+      span{
+        display:inline;
+        font-weight: 500;
+        color: #3f4c59;
+        margin: 0 0.3rem;
+        margin-top:-5px;
+      }
+    }
+  }
+  @media (max-width: 959px) {
+    .pj-about{
+      margin:2rem 0 2rem 3%
+    }
+  }
+  .readmore-img{
+    width: 50%;
+    border-radius: 10px;
+    margin:1rem 25%
+  }
+  @media (max-width: 959px) {
+    .readmore-img{
+      width: 94%;
+      border-radius: 20px 20px 0 20px;
+      margin:1rem 3%
+    }
+  }
+  .youtube {
+    position: relative;
+    left: 0;
+    width: 50%;
+    padding-top: 28%;
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px 20px 0 20px;
+    }
+  }
+  @media (max-width: 959px) {
     .youtube {
       position: relative;
       left: 0;
-      width: 96%;
-      padding-top: 54%;
-  
-      iframe {
-        position: absolute;
-        top: 0;
-        left: 0%;
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-      }
+      width: 94%;
+      padding-top: 55%;
     }
-  
-
+  }
   .s-readmore-index .pj-index-num span {
     font-size: 1.5rem;
   }
-  
-  /* ■■■■■■■■■■■■■■■■■ projects ■■■■■■■■■■■■■■■■■ */ 
+  /* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ projects ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ */ 
+
+  .section2{
+    background: #ececec;
+    border-radius: 50px 50px 0 50px;
+  }
+  #works{
+    max-width: 1366px;
+  }
+  @media (max-width: 959px) {
+    #works{
+      width: 90%;
+      padding:0 5% 0 5%
+    }
+  }
 
   @media (max-width: 525px) {
     .pj-flex {
@@ -1494,6 +1409,7 @@
     .pj-flex {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.5rem;
       width: 100%;
     }
   }
@@ -1501,6 +1417,7 @@
   .pj-flex {
     margin-left: -40px;
     list-style: none;
+    padding-bottom:3rem
   }
   
   .up {
@@ -1510,23 +1427,17 @@
   @media (max-width: 959px) {
     .pj-sam-1, .pj-sam-2, .pj-sam-3, .pj-sam-4, .pj-sam-5, .pj-sam-6, .pj-sam-7, .pj-sam-8, .pj-sam-9, .pj-sam-10, .pj-sam-11, .pj-sam-12, .pj-sam-13, .pj-sam-14, .pj-sam-15, .pj-sam-16, .pj-sam-17, .pj-sam-18, .pj-sam-19, .pj-sam-20, .pj-sam-21, .pj-sam-22, .pj-sam-23, .pj-sam-24, .pj-sam-25, .pj-sam-26, .pj-sam-27, .pj-sam-28, .pj-sam-29, .pj-sam-30, .pj-sam-31, .pj-sam-32, .pj-sam-33, .pj-sam-34, .pj-sam-35, .pj-sam-36, .pj-sam-37, .pj-sam-38, .pj-sam-39, .pj-sam-40, .pj-sam-41, .pj-sam-42, .pj-sam-43, .pj-sam-44, .pj-sam-45, .pj-sam-46, .pj-sam-47, .pj-sam-48, .pj-sam-49, .pj-sam-50, .pj-sam-51, .pj-sam-52, .pj-sam-53, .pj-sam-54, .pj-sam-55, .pj-sam-56, .pj-sam-57, .pj-sam-58, .pj-sam-59, .pj-sam-60, .pj-sam-61, .pj-sam-62, .pj-sam-63, .pj-sam-64, .pj-sam-65, .pj-sam-66, .pj-sam-67, .pj-sam-68, .pj-sam-69, .pj-sam-70, .pj-sam-71, .pj-sam-72, .pj-sam-73, .pj-sam-74, .pj-sam-75, .pj-sam-76, .pj-sam-77, .pj-sam-78, .pj-sam-79, .pj-sam-80, .pj-sam-81, .pj-sam-82, .pj-sam-83, .pj-sam-84, .pj-sam-85, .pj-sam-86, .pj-sam-87, .pj-sam-88, .pj-sam-89, .pj-sam-90, .pj-sam-91, .pj-sam-92, .pj-sam-93, .pj-sam-94, .pj-sam-95, .pj-sam-96, .pj-sam-97, .pj-sam-98, .pj-sam-99, .pj-sam-100 {
       width: 1fr;
-      margin-left: 2%;
-      margin-right: 2%;
       margin-bottom: 2.4rem;
-      box-shadow: 5px 5px 10px #d4d4d4, -5px -5px 10px #ffffff;
       border-radius: 20px;
       transition: 0.2s;
+      
     }
   }
   
   @media (min-width: 960px) {
     .pj-sam-1, .pj-sam-2, .pj-sam-3, .pj-sam-4, .pj-sam-5, .pj-sam-6, .pj-sam-7, .pj-sam-8, .pj-sam-9, .pj-sam-10, .pj-sam-11, .pj-sam-12, .pj-sam-13, .pj-sam-14, .pj-sam-15, .pj-sam-16, .pj-sam-17, .pj-sam-18, .pj-sam-19, .pj-sam-20, .pj-sam-21, .pj-sam-22, .pj-sam-23, .pj-sam-24, .pj-sam-25, .pj-sam-26, .pj-sam-27, .pj-sam-28, .pj-sam-29, .pj-sam-30, .pj-sam-31, .pj-sam-32, .pj-sam-33, .pj-sam-34, .pj-sam-35, .pj-sam-36, .pj-sam-37, .pj-sam-38, .pj-sam-39, .pj-sam-40, .pj-sam-41, .pj-sam-42, .pj-sam-43, .pj-sam-44, .pj-sam-45, .pj-sam-46, .pj-sam-47, .pj-sam-48, .pj-sam-49, .pj-sam-50, .pj-sam-51, .pj-sam-52, .pj-sam-53, .pj-sam-54, .pj-sam-55, .pj-sam-56, .pj-sam-57, .pj-sam-58, .pj-sam-59, .pj-sam-60, .pj-sam-61, .pj-sam-62, .pj-sam-63, .pj-sam-64, .pj-sam-65, .pj-sam-66, .pj-sam-67, .pj-sam-68, .pj-sam-69, .pj-sam-70, .pj-sam-71, .pj-sam-72, .pj-sam-73, .pj-sam-74, .pj-sam-75, .pj-sam-76, .pj-sam-77, .pj-sam-78, .pj-sam-79, .pj-sam-80, .pj-sam-81, .pj-sam-82, .pj-sam-83, .pj-sam-84, .pj-sam-85, .pj-sam-86, .pj-sam-87, .pj-sam-88, .pj-sam-89, .pj-sam-90, .pj-sam-91, .pj-sam-92, .pj-sam-93, .pj-sam-94, .pj-sam-95, .pj-sam-96, .pj-sam-97, .pj-sam-98, .pj-sam-99, .pj-sam-100 {
       width: 1fr;
-      margin-left: 1.2rem;
-      margin-right: 1.2rem;
-      margin-bottom: 2.4rem;
-      box-shadow: 5px 5px 10px #d4d4d4, -5px -5px 10px #ffffff;
-      border-radius: 20px;
+      border-radius: 30px;
       transition: 0.2s;
     }
 
@@ -1543,34 +1454,16 @@
 
         background: #ddd;
         box-shadow: none;
-
-
-        .pj-img{
-          border-radius: 50px 15px 50px 15px ; 
-
-        }
     }
 
-  }
-
-  .pj-img {
-    overflow: hidden;
-    border-radius: 20px 20px 0px 0px;
-    width: 95.5%;
-    margin: 2% 2% 0 2%;
-    border-radius: 15px;
-    transition: 0.2s;
-
-    &:hover{
-        overflow: hidden;
-
-    } 
   }
 
   @media (min-width: 426px) {
     .pj-img img {
       transition: 0.2s;
-      width: 100%;
+      border-radius: 20px 20px 0 20px;
+      width: calc(100% - 20px);
+      margin:10px 10px 0 10px;
       height: 100%;
       overflow: hidden;
     }
@@ -1582,7 +1475,7 @@
       width: 100%;
       height: 100%;
       margin-top: 2%;
-      border-radius: 15px 15px 0px 0px;
+      border-radius: 20px 20px 0px 20px;
     }
   }
   
@@ -1590,7 +1483,7 @@
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 600;
     font-size: 1rem;
-    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.75rem;
     border-radius: 10px;
     border-radius: 0px 0px 20px 20px;
   }
@@ -1652,7 +1545,7 @@
     }
 
     .pj-index-num {
-      font-family: "Montserrat", sans-serif;
+      font-family: "Lato", sans-serif;
       font-size: 3.5rem;
       margin-top: 1.5rem;
       margin-left: 3%;
@@ -1662,9 +1555,9 @@
       margin-left: 0.8rem;
       padding: 0.25rem 1rem 0.25rem 1rem;
       font-size: 0.8rem;
-      background: #ddd;
-      color: #a13e3e;
-      border-radius: 25px;
+      background: #3f4c59;
+      color: #ececec;
+      border-radius: 10px 10px 0 10px;
       font-family: 'Noto Sans JP', sans-serif;
       font-weight: 500;
       margin-top: -0.25rem;
@@ -1679,10 +1572,29 @@
   }
   
   @media (min-width: 960px) {
-    .pj-index-1, .pj-index-2, .pj-index-3, .pj-index-4, .pj-index-5, .pj-index-6, .pj-index-7, .pj-index-8, .pj-index-9, .pj-index-10, .s-readmore-index, .pj-index-11, .pj-index-12, .pj-index-13, .pj-index-14, .pj-index-15, .pj-index-16, .pj-index-17, .pj-index-18, .pj-index-19, .pj-index-20, .pj-index-21, .pj-index-22, .pj-index-23, .pj-index-24, .pj-index-25, .pj-index-26, .pj-index-27, .pj-index-28, .pj-index-29, .pj-index-30, .pj-index-31, .pj-index-32, .pj-index-33, .pj-index-34, .pj-index-35, .pj-index-36, .pj-index-37, .pj-index-38, .pj-index-39, .pj-index-40, .pj-index-41, .pj-index-42, .pj-index-43, .pj-index-44, .pj-index-45, .pj-index-46, .pj-index-47, .pj-index-48, .pj-index-49, .pj-index-50, .pj-index-51, .pj-index-52, .pj-index-53, .pj-index-54, .pj-index-55, .pj-index-56, .pj-index-57, .pj-index-58, .pj-index-59, .pj-index-60, .pj-index-61, .pj-index-62, .pj-index-63, .pj-index-64, .pj-index-65, .pj-index-66, .pj-index-67, .pj-index-68, .pj-index-69, .pj-index-70, .pj-index-71, .pj-index-72, .pj-index-73, .pj-index-74, .pj-index-75, .pj-index-76, .pj-index-77, .pj-index-78, .pj-index-79, .pj-index-80, .pj-index-81, .pj-index-82, .pj-index-83, .pj-index-84, .pj-index-85, .pj-index-86, .pj-index-87, .pj-index-88, .pj-index-89, .pj-index-90, .pj-index-91, .pj-index-92, .pj-index-93, .pj-index-94, .pj-index-95, .pj-index-96, .pj-index-97, .pj-index-98, .pj-index-99, .pj-index-100 {
+    .pj-index-1, .pj-index-2, .pj-index-3, .pj-index-4, .pj-index-5, .pj-index-6, .pj-index-7, .pj-index-8, .pj-index-9, .pj-index-10, .pj-index-11, .pj-index-12, .pj-index-13, .pj-index-14, .pj-index-15, .pj-index-16, .pj-index-17, .pj-index-18, .pj-index-19, .pj-index-20, .pj-index-21, .pj-index-22, .pj-index-23, .pj-index-24, .pj-index-25, .pj-index-26, .pj-index-27, .pj-index-28, .pj-index-29, .pj-index-30, .pj-index-31, .pj-index-32, .pj-index-33, .pj-index-34, .pj-index-35, .pj-index-36, .pj-index-37, .pj-index-38, .pj-index-39, .pj-index-40, .pj-index-41, .pj-index-42, .pj-index-43, .pj-index-44, .pj-index-45, .pj-index-46, .pj-index-47, .pj-index-48, .pj-index-49, .pj-index-50, .pj-index-51, .pj-index-52, .pj-index-53, .pj-index-54, .pj-index-55, .pj-index-56, .pj-index-57, .pj-index-58, .pj-index-59, .pj-index-60, .pj-index-61, .pj-index-62, .pj-index-63, .pj-index-64, .pj-index-65, .pj-index-66, .pj-index-67, .pj-index-68, .pj-index-69, .pj-index-70, .pj-index-71, .pj-index-72, .pj-index-73, .pj-index-74, .pj-index-75, .pj-index-76, .pj-index-77, .pj-index-78, .pj-index-79, .pj-index-80, .pj-index-81, .pj-index-82, .pj-index-83, .pj-index-84, .pj-index-85, .pj-index-86, .pj-index-87, .pj-index-88, .pj-index-89, .pj-index-90, .pj-index-91, .pj-index-92, .pj-index-93, .pj-index-94, .pj-index-95, .pj-index-96, .pj-index-97, .pj-index-98, .pj-index-99, .pj-index-100 {
       opacity: 0;
       display: none;
-      border-radius: 40px 40px 0 0 ;
+      border-radius: 50px 50px 0 0 ;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      max-width: 1366px;
+      margin: 0 auto;
+      height: calc(100vh - 71px);
+      z-index: 99;
+      overflow: auto;
+      -webkit-backdrop-filter: blur(30px);
+      backdrop-filter: blur(30px);
+      background: rgba(230, 230, 230, 0.68);
+      animation:fadein 0.2s ease forwards;
+    }
+    .s-readmore-index{
+      opacity: 0;
+      display: none;
+      border-radius: 50px 50px 0 0 ;
       position: fixed;
       bottom: 0;
       left: 0;
@@ -1718,7 +1630,7 @@
 
 
     .pj-index-num {
-      font-family: "Montserrat", sans-serif;
+      font-family: "Lato", sans-serif;
       font-size: 5rem;
       margin-top: -1.8rem;
       margin-left: 3%;
@@ -1735,7 +1647,7 @@
     .pj-index-img {
       height:auto;
       width:100%;
-      border-radius: 10px;
+      border-radius: 15px 15px 0 15px;
     }
   
     .pj-index-map {
@@ -1789,20 +1701,20 @@
   }
   
   .pj-index-date {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Lato", sans-serif;
     margin-left: 3%;
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
   
   .pj-index-date-inplace {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Lato", sans-serif;
     margin-left: 3%;
     margin-top: 2rem;
   }
   
   .pj-index-place {
-    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    font-family: "Lato", "Noto Sans JP", sans-serif;
     margin-left: 3%;
     margin-top: 0.5rem;
   }
@@ -1813,7 +1725,7 @@
     left: 0%;
     width: 100%;
     height: 100%;
-    border-radius: 10px;
+    border-radius: 30px 30px 0 30px;
   }
   
   /* project flex 絞り込み */
@@ -1845,15 +1757,14 @@
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 500;
     transition: 0.2s;
-    border-radius: 20px;
-    background: #ececec;
-    box-shadow: 3px 3px 6px #d2d2d2, -3px -3px 6px #ffffff;
+    border-radius: 10px 10px 0 10px;
+    background: #ddd;
   }
 
   .tag-search:checked + label {
-    background-color: #dddddd;
+    background-color: #3f4c59;
     box-shadow: none;
-    color: #a13e3e;
+    color: #ececec;
   }
 
   input[type=radio]{
@@ -1871,7 +1782,7 @@
   }
   
   label:hover {
-    color: #a13e3e;
+    color: #3f4c59;
   }
   
   .is-hide {
@@ -1916,10 +1827,11 @@
     .pj-index-tag {
       margin-left: 1rem;
       padding: 0.25rem 01rem 0.25rem 1rem;
-      font-size: 1rem;
-      background: #ddd;
-      color: #a13e3e;
-      border-radius: 25px;
+      font-size: 0.9rem;
+      letter-spacing: 0.05rem;
+      background: #3f4c59;
+      color: #ececec;
+      border-radius: 10px 10px 0 10px;
       font-family: 'Noto Sans JP', sans-serif;
       font-weight: 500;
       margin-top: -0.25rem;
@@ -1934,102 +1846,15 @@
     }
   }
   
-  /*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ update-log ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
-
-  @media (min-width: 960px) {
-    .up-date-info {
-      display: grid;
-      grid-template-columns: 1.5fr 9.5fr;
-      width: 100%;
-      margin-top: 1rem;
-      align-content: start;
-    }
-  
-    .up-date {
-      font-family: "Montserrat", sans-serif;
-      line-height: 2rem;
-      padding: 0 1rem 0 1rem;
-      background-color: #ddd;
-      border-radius: 30px;
-      display: inline;
-      font-weight: 500;
-      text-align: center;
-      align-items: flex-start;
-    }
-  }
-  
-  @media (max-width: 959px) {
-    .up-date-info {
-      display: block;
-      width: 100%;
-      margin-top: 1rem;
-    }
-  
-    .up-date {
-      font-family: "Montserrat", sans-serif;
-      line-height: 2rem;
-      padding: 0.4rem 1rem 0.4rem 1rem;
-      margin-bottom: 0.8rem;
-      background-color: #ddd;
-      border-radius: 30px;
-      display: inline;
-      font-weight: 500;
-      text-align: left;
-    }
-  }
-  
-  .up-date-title {
-    font-family: "Montserrat", "Noto Sans JP", sans-serif;
-    line-height: 2rem;
-    display: block;
-    letter-spacing: 0.05rem;
-    font-weight: 600;
-    margin: 0 1rem 0 1rem;
-  }
-
-  .up-date-box {
-    padding: 0.5em 1em;
-    margin:0.5rem 0;
-    border: solid 3px #ddd;
-    border-radius: 15px;
-
-    p {
-    margin: 0; 
-    padding: 0;
-    }
-
-    li {
-      list-style: none;
-      margin:0;
-      padding:0;
-
-      &::before{
-        content:'・';
-        color:#a13e3e;
-        font-weight:bold ;
-        margin-right:0.3rem
-      }
-    }
-  }
-  
-  .up-date-content {
-    font-family: "Montserrat", "Noto Sans JP", sans-serif;
-    line-height: 1.7rem;
-    font-size: 0.9rem;
-    display: inline-block;
-    letter-spacing: 0.05rem;
-    font-weight: 500;
-    margin: 0 1rem 0 1rem;
-  }
-
-  .update-line{
-    width: 100%;
-    height: 2px;
-    background-color: #cdcdcd;
-    margin: 2rem 0 
-  }
-
 /*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ contact ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+
+@media (max-width: 959px) {
+  #contact{
+    background: #fff;
+    width: 90%;
+    padding:0 5%
+  }
+}
 
 @media (min-width: 960px) {
 .co-grid{
@@ -2055,8 +1880,8 @@
 .co-grid-item{
   width: 100%;
   height: 100%;
-  background: #ddd;
-  border-radius: 15px;
+  background: #ececec;
+  border-radius: 20px 20px 0 20px;
   position: relative;
   transition: 0.2s;
 }
@@ -2065,29 +1890,29 @@
   
   .fa-x-twitter{
     position: absolute;
-    top:10px;
-    left:10px
+    top:15px;
+    left:15px
   }
 
   .fa-circle-arrow-right{
     position: absolute;
-    bottom:10px;
-    right:10px
+    bottom:15px;
+    right:15px
   }
 
   .co-dm{
     position: absolute;
-    left:10px;
+    left:15px;
     top:50%;
     transform: translateY(-50%);
-    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    font-family: "Lato", "Noto Sans JP", sans-serif;
     font-size:1.5rem;
     font-weight: 500;
     
   }
   .co-dm::after{
     content:'to @oba_sanz087';
-    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    font-family: "Lato", "Noto Sans JP", sans-serif;
     margin-top:5px;
     font-size:0.8rem;
     font-weight: 500;
@@ -2097,8 +1922,8 @@
 
   .co-dm-caption{
     position: absolute;
-    bottom:10px;
-    left:10px;
+    bottom:15px;
+    left:15px;
     font-family:"Noto Sans JP", sans-serif;
     font-size:0.7rem;
     font-weight: 500;
@@ -2119,27 +1944,27 @@
 }
 .fa-triangle-exclamation{
   position: absolute;
-  top:10px;
-  left:10px
+  top:15px;
+  left:15px
 }
 
 .co-article{
   position: absolute;
   top:50%;
   transform: translateY(-50%);
-  left:10px;
-  right:10px;
+  left:15px;
+  right:15px;
   font-family:"Noto Sans JP", sans-serif;
-  font-size:0.85rem;
+  font-size:0.8rem;
   font-weight: 400;
   line-height: 1.3rem;
   letter-spacing: 0.05rem;
 }
 .co-at{
   position: absolute;
-  top:12px;
-  left:32px;
-  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  top:17px;
+  left:37px;
+  font-family: "Lato", "Noto Sans JP", sans-serif;
   font-weight: 500;
   font-size: 0.8rem;
   letter-spacing: 0.03rem;

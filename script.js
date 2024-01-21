@@ -44,6 +44,16 @@ $(function () {
 
 });
 
+
+//アコーディオン
+$(function() {
+  $('.update-accordion').click(function() {
+      $('.update-content').toggleClass('active');
+      $('.update-arrow').toggleClass('active');
+      $(this).toggleClass('active');
+  })})
+
+
 // projects
 
 $(function(){$('.pj-sam-1').click(function() {$(this).addClass('active');if ($(this).hasClass('active')) {$('.pj-index-1').addClass('active');}else{$('.pj-index-1').removeClass('active');} });});
