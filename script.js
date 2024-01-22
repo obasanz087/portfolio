@@ -34,8 +34,8 @@ $(function () {
       var id = $(this).attr('id');
 
       if (st > tg  - wh + (wh / 2)) {
-        $(".header-link").removeClass("active");
-        var link = $(".header-link[href *= " + id +"]");
+        $(".header-bg").removeClass("active");
+        var link = $(".header-bg[href *= " + id +"]");
         $(link).addClass("active");
       }
     });
@@ -43,17 +43,6 @@ $(function () {
   });
 
 });
-
-
-//アコーディオン
-$(function() {
-  $('.update-accordion').click(function() {
-      $('.update-content').toggleClass('active');
-      $('.update-arrow').toggleClass('active');
-      $(this).toggleClass('active');
-  })})
-
-
 // projects
 
 $(function(){$('.pj-sam-1').click(function() {$(this).addClass('active');if ($(this).hasClass('active')) {$('.pj-index-1').addClass('active');}else{$('.pj-index-1').removeClass('active');} });});
