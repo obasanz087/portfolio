@@ -751,9 +751,9 @@ header .header-link:hover::after {
   .img-frame {
     position: relative;
     width: 88%;
-    height: calc(95dvh - 70px);
+    height: calc(95dvh - 74px);
     overflow: hidden;
-    margin: 70px auto 0;
+    margin: 74px auto 0;
     border-radius: 50px 50px 0 50px;
   }
 }
