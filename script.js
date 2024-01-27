@@ -20,8 +20,10 @@ $(function() {
     });
   });
 
-
+  $(function() {$('.t-i-close').click(function() {$('.topview-info').removeClass('active')})});
+  
 //ページ内リンク
+
 
 $(function () {
   $(window).on("load scroll resize", function () {

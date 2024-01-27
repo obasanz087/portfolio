@@ -900,6 +900,63 @@ header .header-link:hover::after {
     z-index: 91;
   }
 }
+/* ■■■■■■■■■■■■■■■■■ topview info ■■■■■■■■■■■■■■■■■ */
+.topview-info {
+  opacity: 0;
+  position: absolute;
+  right: 1vw;
+  top: 1vw;
+  height: 70vh;
+  width: 500px;
+  background: rgba(236, 236, 236, 0.9);
+  border-radius: 20px 40px 0 20px;
+  overflow: scroll;
+}
+.topview-info img {
+  width: calc(100% - 4vw);
+  margin: 0.5vw 0 0.5vw 2vw;
+  border-radius: 20px 20px 0 20px;
+}
+.topview-info::-webkit-scrollbar {
+  display: none;
+}
+
+.topview-info.active {
+  opacity: 100;
+}
+
+.t-i-title {
+  font-family: "Lato", "Noto Sans JP", sans-serif;
+  letter-spacing: 0.13rem;
+  margin: 1vw 1vw 0 1vw;
+  font-size: 1.3rem;
+}
+.t-i-title span {
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
+  margin-left: 0.8rem;
+  font-weight: 600;
+}
+
+.t-i-article {
+  font-family: "Lato", "Noto Sans JP", sans-serif;
+  letter-spacing: 0.06rem;
+  margin: 0.5vw 1vw 0 1vw;
+  font-size: 0.9rem;
+  line-height: 1.75rem;
+}
+
+.t-i-close {
+  font-size: 2rem;
+  position: absolute;
+  top: 0.8vw;
+  right: 1.2vw;
+  transition: 0.2s;
+}
+.t-i-close:hover {
+  color: #a13e3e;
+}
+
 /* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ about ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ */
 /* ■■■■■■■■■■■■■■■■■ max-width ■■■■■■■■■■■■■■■■■ */
 #about {
