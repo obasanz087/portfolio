@@ -205,6 +205,7 @@ header .header-link:hover::after {
     height: 50px;
     cursor: pointer;
     text-align: center;
+    background: #3f4c59;
   }
   .hamburger span {
     display: block;
@@ -213,13 +214,13 @@ header .header-link:hover::after {
     height: 4px;
     transform: scaleY(0.5) translateY(2px);
     left: 6px;
-    background: #232323;
+    background: #ececec;
     transition: 0.1s ease-in-out;
   }
   .hamburger span:nth-child(1) {
     top: 19.5px;
-    right: 10px;
-    width: 50%;
+    right: 8.5px;
+    width: 25px;
   }
   .hamburger span:nth-child(2) {
     top: 26.5px;
@@ -228,17 +229,17 @@ header .header-link:hover::after {
   }
   .hamburger.active span:nth-child(1) {
     top: 25px;
-    width: 50%;
-    left: 1%;
-    background: #232323;
+    width: 25px;
+    left: 7.6px;
+    background: #ececec;
     transform: rotate(-45deg);
     height: 2px;
   }
   .hamburger.active span:nth-child(2) {
     top: 25px;
-    right: 16px;
-    width: 50%;
-    background: #232323;
+    right: 7.6px;
+    width: 25px;
+    background: #ececec;
     transform: rotate(45deg);
     height: 2px;
   }
@@ -247,13 +248,14 @@ header .header-link:hover::after {
     z-index: 2;
     top: 0;
     left: 0;
-    background: #ececec;
+    background: #fff;
     text-align: center;
     width: 100%;
     opacity: 0;
     pointer-events: none;
     transition: all 0.2s;
     margin-top: 50px;
+    padding-top: -1.5%;
     -webkit-overflow-scrolling: touch;
     margin-bottom: 5rem;
     height: calc(100dvh - 50px);
@@ -283,9 +285,9 @@ header .header-link:hover::after {
   .gm-background {
     position: absolute;
     width: 94%;
-    height: 98.5%;
+    height: 96%;
     left: 3%;
-    top: 0;
+    top: 1.5%;
     background: #383838;
     border-radius: 15px;
     z-index: 301;
