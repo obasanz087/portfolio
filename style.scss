@@ -1781,13 +1781,16 @@
   .pj-img-grid{
     display:grid;
     grid-template-columns: 1fr ;
-    margin:0 3% 0 3%;
+    margin:1vw 3% 0 !important;
     width: 94%;
+    gap:1.5vw;
   }
   .pj-index-img {
     width: 100%;
-    margin-top: 1.5rem;
     border-radius: 10px;
+    @media (max-width: 959px){
+      margin-bottom:1rem
+    }
   }
   .pj-index-map {
     position: relative;
@@ -1803,7 +1806,7 @@
     left: 0%;
     width: 100%;
     height: 100%;
-    border-radius: 30px 30px 0 30px;
+    border-radius: 15px 15px 0 15px;
   }
   @media (min-width: 960px) {
     .pj-img-grid{
@@ -1828,21 +1831,58 @@
     }
   }
   /* ■■■■■■■■■■■■■■■■■ 日付・モデル表示 ■■■■■■■■■■■■■■■■■ */
-  .pj-index-date {
-    font-family: "Lato", sans-serif;
-    margin-left: 3%;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-  .pj-index-date-inplace {
-    font-family: "Lato", sans-serif;
-    margin-left: 3%;
-    margin-top: 2rem;
-  }
-  .pj-index-place {
+  table{
+    margin:1.5vw 3%;
     font-family: "Lato", "Noto Sans JP", sans-serif;
-    margin-left: 3%;
-    margin-top: 0.5rem;
+    border-collapse:collapse;
+  }
+  th{ 
+    letter-spacing: 0.12rem;
+    text-align: left;
+    padding:0.5rem 1.5rem 0.5rem 0 ;
+    border-right:solid 2px #232323;
+    .fa-x-twitter{
+      padding-right:0.3rem
+    }
+    span{
+      display:block;
+      font-size:0.6rem;
+      letter-spacing: 0.1rem;
+      span{
+        margin-right:0.3rem;
+        display:inline-block
+      }
+    }
+    @media (max-width: 960px){
+      font-size:0.9rem;
+      padding:0.5rem 1rem 0.5rem 0 ;
+    }
+  }
+  td{
+    padding-left:1.5rem;
+    letter-spacing: 0.1rem;
+    @media (max-width: 960px){
+      font-size:0.9rem;
+      padding-left:1rem;
+    }
+    a{
+      background: #ececec;
+      color:#232323;
+      padding:0.5rem 1.5rem;
+      border-radius: 10px 10px 0 10px;
+      text-decoration: none;
+      transition: 0.2s;
+      .fa-arrow-right{
+        padding-left:0.6rem
+      }
+      &:visited{
+        color:#232323;
+      }
+      &:hover,&:visited:hover{
+        background: #232323;
+        color:#ececec
+      }
+    }
   }
 
 /*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ contact ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
