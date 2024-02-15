@@ -215,7 +215,7 @@ header .header-link:hover::after {
     transform: scaleY(0.5) translateY(2px);
     left: 6px;
     background: #ececec;
-    transition: 0.1s ease-in-out;
+    transition: 0.2s ease-in-out;
   }
   .hamburger span:nth-child(1) {
     top: 19.5px;
@@ -248,12 +248,13 @@ header .header-link:hover::after {
     z-index: 2;
     top: 0;
     left: 0;
-    background: #fff;
-    text-align: center;
+    -webkit-backdrop-filter: blur(3 0px);
+    backdrop-filter: blur(30px);
+    background: rgba(255, 255, 255, 0.5);
     width: 100%;
     opacity: 0;
     pointer-events: none;
-    transition: all 0.2s;
+    transition: all 0.3s;
     margin-top: 50px;
     padding-top: -1.5%;
     -webkit-overflow-scrolling: touch;
@@ -275,108 +276,107 @@ header .header-link:hover::after {
   nav.globalMenuSp ul li:last-child {
     padding-bottom: 0;
   }
-  .sp-menu-position {
+  nav.globalMenuSp .sp-menu-copy {
     position: absolute;
-    width: 100%;
-    top: calc(50dvh - 50px);
-    left: 0;
-    transform: translate(0, -50%);
-  }
-  .gm-background {
-    position: absolute;
-    width: 94%;
-    height: 96%;
-    left: 3%;
-    top: 1.5%;
-    background: #383838;
-    border-radius: 15px;
-    z-index: 301;
-  }
-  .sp-menu {
-    color: #ddd;
-    font-weight: 500;
-    text-align: left;
-    position: relative;
-    font-family: "Lato", sans-serif;
-    font-size: 1.2rem;
-    letter-spacing: 0.05em;
-    margin-left: 4%;
-    margin-right: 4%;
-    margin-bottom: 1.5rem;
-    background: #383838;
-    border-radius: 15px;
-    box-shadow: 8px 8px 15px #292929, -8px -8px 15px #474747;
-  }
-  .sp-about::after, .sp-projects::after, .sp-update::after, .sp-contact::after {
-    display: block;
-    font-size: 0.5rem;
-    line-height: 0.5rem;
-    font-family: "Noto Sans JP", sans-serif;
-    font-weight: 500;
-    letter-spacing: 0.05rem;
-    margin-top: -10px;
-    padding-bottom: 1rem;
-  }
-  .sp-about::after {
-    content: "おばさんずについて";
-  }
-  .sp-projects::after {
-    content: "つくったものたち";
-  }
-  .sp-update::after {
-    content: "更新情報";
-  }
-  .sp-contact::after {
-    content: "ご連絡";
-  }
-  .sp-menu-p {
-    color: #ddd;
-    font-weight: 500;
-    text-align: left;
-    padding-left: 1rem;
-    position: relative;
-    font-family: "Lato", sans-serif;
-    font-size: 1.2rem;
-    letter-spacing: 0.05em;
-    margin-right: 1rem;
-  }
-  .sp-menu-p i {
-    font-size: 1rem;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translate(0, -50%);
-  }
-  .sp-menu .link2 {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .sp-menu-sns {
-    margin-top: 3rem;
-    margin-top: 5rem;
-  }
-  .sp-menu-sns i {
-    font-size: 1.5rem;
-    color: #ddd;
-  }
-  .sp-menu-sns .slash {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    color: #ddd;
-    font-size: 2rem;
-  }
-  .sp-line {
-    background: #ddd;
-    width: 96%;
-    height: 2.5px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    bottom: 2vw;
+    left: 10vw;
+    font-family: "Lato", "Noto Sans JP", sans-serif;
+    letter-spacing: 0.07rem;
+    font-size: 0.7rem;
   }
 }
+.sp-menu-item {
+  margin: 10px 7vw;
+  position: relative;
+  padding: 3vw;
+}
+.sp-menu-item p {
+  font-family: "Lato", "Noto Sans JP", sans-serif;
+  letter-spacing: 0.13rem;
+  font-size: 1.3rem;
+  line-height: 1.4rem;
+}
+.sp-menu-item p span {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.05rem;
+  line-height: 0.75rem;
+  margin-top: 8px;
+}
+.sp-menu-item p span span {
+  margin-right: 7px;
+  display: inline;
+}
+.sp-menu-item i {
+  position: absolute;
+  right: 3vw;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sp-menu-item a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.sp-menu-item:hover {
+  background: #3f4c59;
+  border-radius: 15px 15px 0 15px;
+  color: #fff;
+}
+
+.sp-menu-line {
+  width: calc(100% - 14vw);
+  margin: 0 7vw;
+  height: 2px;
+  background: #4d4d4d;
+}
+
+.sp-menu-sns {
+  margin: calc(3vw + 10px) 7vw;
+  padding: 0 3vw;
+  font-family: "Lato", "Noto Sans JP", sans-serif;
+  letter-spacing: 0.1rem;
+  line-height: 1rem;
+  font-size: 1.2rem;
+}
+.sp-menu-sns a {
+  line-height: 0px;
+  margin-left: 3vw;
+  color: #000;
+}
+.sp-menu-sns a:visited {
+  color: #000;
+}
+.sp-menu-sns i.fa-brands {
+  font-size: 1.3rem;
+}
+.sp-menu-sns .discord-caption {
+  font-family: "Lato", "Noto Sans JP", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  line-height: 1.3rem;
+  padding: 15px;
+  background: #ddd;
+  border-radius: 20px 20px 0 20px;
+  margin-top: 1rem;
+  opacity: 0;
+  transition: 0.2s;
+}
+.sp-menu-sns .discord-caption span {
+  background: #5567E3;
+  padding: 2px 5px;
+  border-radius: 5px;
+  color: #fff;
+  letter-spacing: 0.075rem;
+}
+
+.discord-caption.active {
+  opacity: 100;
+}
+
 /* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  footer  ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ */
 @media (max-width: 959px) {
   footer {
@@ -727,7 +727,8 @@ header .header-link:hover::after {
 @media (max-width: 959px) {
   .main-topview {
     height: calc(100dvh - 50px);
-    margin-top: 50px;
+    padding-top: 100px;
+    margin-top: -50px;
     position: relative;
     border-radius: 20px;
     border-radius: 20px 20px 0 20px;
@@ -741,12 +742,16 @@ header .header-link:hover::after {
 }
 /* ■■■■■■■■■■■■■■■■■ スライドのフレーム ■■■■■■■■■■■■■■■■■ */
 @media (min-width: 960px) {
+  .main-topview {
+    height: calc(100dvh - 74px);
+    padding-top: 148px;
+    margin-top: -74px;
+  }
   .img-frame {
     position: relative;
     width: 88%;
     height: calc(95dvh - 74px);
     overflow: hidden;
-    margin: 74px auto 0;
     border-radius: 50px 50px 0 50px;
   }
 }
@@ -1409,7 +1414,7 @@ label:hover {
   .pj-flex {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr !important;
-    gap: 1.5rem;
+    gap: 2vw;
     width: 100%;
   }
 }
@@ -1434,22 +1439,16 @@ label:hover {
 /* ■■■■■■■■■■■■■■■■■ サムネイルパーツ・てきすと ■■■■■■■■■■■■■■■■■ */
 @media (min-width: 960px) {
   .pj-sam-1, .pj-sam-2, .pj-sam-3, .pj-sam-4, .pj-sam-5, .pj-sam-6, .pj-sam-7, .pj-sam-8, .pj-sam-9, .pj-sam-10, .pj-sam-11, .pj-sam-12, .pj-sam-13, .pj-sam-14, .pj-sam-15, .pj-sam-16, .pj-sam-17, .pj-sam-18, .pj-sam-19, .pj-sam-20, .pj-sam-21, .pj-sam-22, .pj-sam-23, .pj-sam-24, .pj-sam-25, .pj-sam-26, .pj-sam-27, .pj-sam-28, .pj-sam-29, .pj-sam-30, .pj-sam-31, .pj-sam-32, .pj-sam-33, .pj-sam-34, .pj-sam-35, .pj-sam-36, .pj-sam-37, .pj-sam-38, .pj-sam-39, .pj-sam-40, .pj-sam-41, .pj-sam-42, .pj-sam-43, .pj-sam-44, .pj-sam-45, .pj-sam-46, .pj-sam-47, .pj-sam-48, .pj-sam-49, .pj-sam-50, .pj-sam-51, .pj-sam-52, .pj-sam-53, .pj-sam-54, .pj-sam-55, .pj-sam-56, .pj-sam-57, .pj-sam-58, .pj-sam-59, .pj-sam-60, .pj-sam-61, .pj-sam-62, .pj-sam-63, .pj-sam-64, .pj-sam-65, .pj-sam-66, .pj-sam-67, .pj-sam-68, .pj-sam-69, .pj-sam-70, .pj-sam-71, .pj-sam-72, .pj-sam-73, .pj-sam-74, .pj-sam-75, .pj-sam-76, .pj-sam-77, .pj-sam-78, .pj-sam-79, .pj-sam-80, .pj-sam-81, .pj-sam-82, .pj-sam-83, .pj-sam-84, .pj-sam-85, .pj-sam-86, .pj-sam-87, .pj-sam-88, .pj-sam-89, .pj-sam-90, .pj-sam-91, .pj-sam-92, .pj-sam-93, .pj-sam-94, .pj-sam-95, .pj-sam-96, .pj-sam-97, .pj-sam-98, .pj-sam-99, .pj-sam-100 {
-    width: 1fr;
-    border-radius: 40px 40px 0 20px;
+    border-radius: 20px 20px 0 20px;
     transition: 0.2s;
   }
 }
 @media (max-width: 959px) {
   .pj-sam-1, .pj-sam-2, .pj-sam-3, .pj-sam-4, .pj-sam-5, .pj-sam-6, .pj-sam-7, .pj-sam-8, .pj-sam-9, .pj-sam-10, .pj-sam-11, .pj-sam-12, .pj-sam-13, .pj-sam-14, .pj-sam-15, .pj-sam-16, .pj-sam-17, .pj-sam-18, .pj-sam-19, .pj-sam-20, .pj-sam-21, .pj-sam-22, .pj-sam-23, .pj-sam-24, .pj-sam-25, .pj-sam-26, .pj-sam-27, .pj-sam-28, .pj-sam-29, .pj-sam-30, .pj-sam-31, .pj-sam-32, .pj-sam-33, .pj-sam-34, .pj-sam-35, .pj-sam-36, .pj-sam-37, .pj-sam-38, .pj-sam-39, .pj-sam-40, .pj-sam-41, .pj-sam-42, .pj-sam-43, .pj-sam-44, .pj-sam-45, .pj-sam-46, .pj-sam-47, .pj-sam-48, .pj-sam-49, .pj-sam-50, .pj-sam-51, .pj-sam-52, .pj-sam-53, .pj-sam-54, .pj-sam-55, .pj-sam-56, .pj-sam-57, .pj-sam-58, .pj-sam-59, .pj-sam-60, .pj-sam-61, .pj-sam-62, .pj-sam-63, .pj-sam-64, .pj-sam-65, .pj-sam-66, .pj-sam-67, .pj-sam-68, .pj-sam-69, .pj-sam-70, .pj-sam-71, .pj-sam-72, .pj-sam-73, .pj-sam-74, .pj-sam-75, .pj-sam-76, .pj-sam-77, .pj-sam-78, .pj-sam-79, .pj-sam-80, .pj-sam-81, .pj-sam-82, .pj-sam-83, .pj-sam-84, .pj-sam-85, .pj-sam-86, .pj-sam-87, .pj-sam-88, .pj-sam-89, .pj-sam-90, .pj-sam-91, .pj-sam-92, .pj-sam-93, .pj-sam-94, .pj-sam-95, .pj-sam-96, .pj-sam-97, .pj-sam-98, .pj-sam-99, .pj-sam-100 {
-    width: 1fr;
-    margin-bottom: 2.4rem;
-    border-radius: 40px 40px 0 20px;
+    margin-bottom: 5vw;
+    border-radius: 20px 20px 0 20px;
     transition: 0.2s;
   }
-}
-.pj-sam-1:hover, .pj-sam-2:hover, .pj-sam-3:hover, .pj-sam-4:hover, .pj-sam-5:hover, .pj-sam-6:hover, .pj-sam-7:hover, .pj-sam-8:hover, .pj-sam-9:hover, .pj-sam-10:hover, .pj-sam-11:hover, .pj-sam-12:hover, .pj-sam-13:hover, .pj-sam-14:hover, .pj-sam-15:hover, .pj-sam-16:hover, .pj-sam-17:hover, .pj-sam-18:hover, .pj-sam-19:hover, .pj-sam-20:hover, .pj-sam-21:hover, .pj-sam-22:hover, .pj-sam-23:hover, .pj-sam-24:hover, .pj-sam-25:hover, .pj-sam-26:hover, .pj-sam-27:hover, .pj-sam-28:hover, .pj-sam-29:hover, .pj-sam-30:hover, .pj-sam-31:hover, .pj-sam-32:hover, .pj-sam-33:hover, .pj-sam-34:hover, .pj-sam-35:hover, .pj-sam-36:hover, .pj-sam-37:hover, .pj-sam-38:hover, .pj-sam-39:hover, .pj-sam-40:hover, .pj-sam-41:hover, .pj-sam-42:hover, .pj-sam-43:hover, .pj-sam-44:hover, .pj-sam-45:hover, .pj-sam-46:hover, .pj-sam-47:hover, .pj-sam-48:hover, .pj-sam-49:hover, .pj-sam-50:hover, .pj-sam-51:hover, .pj-sam-52:hover, .pj-sam-53:hover, .pj-sam-54:hover, .pj-sam-55:hover, .pj-sam-56:hover, .pj-sam-57:hover, .pj-sam-58:hover, .pj-sam-59:hover, .pj-sam-60:hover, .pj-sam-61:hover, .pj-sam-62:hover, .pj-sam-63:hover, .pj-sam-64:hover, .pj-sam-65:hover, .pj-sam-66:hover, .pj-sam-67:hover, .pj-sam-68:hover, .pj-sam-69:hover, .pj-sam-70:hover, .pj-sam-71:hover, .pj-sam-72:hover, .pj-sam-73:hover, .pj-sam-74:hover, .pj-sam-75:hover, .pj-sam-76:hover, .pj-sam-77:hover, .pj-sam-78:hover, .pj-sam-79:hover, .pj-sam-80:hover, .pj-sam-81:hover, .pj-sam-82:hover, .pj-sam-83:hover, .pj-sam-84:hover, .pj-sam-85:hover, .pj-sam-86:hover, .pj-sam-87:hover, .pj-sam-88:hover, .pj-sam-89:hover, .pj-sam-90:hover, .pj-sam-91:hover, .pj-sam-92:hover, .pj-sam-93:hover, .pj-sam-94:hover, .pj-sam-95:hover, .pj-sam-96:hover, .pj-sam-97:hover, .pj-sam-98:hover, .pj-sam-99:hover, .pj-sam-100:hover {
-  background: #ddd;
-  box-shadow: none;
 }
 @media (min-width: 960px) {
   .pj-sam-1:hover .pj-img img, .pj-sam-2:hover .pj-img img, .pj-sam-3:hover .pj-img img, .pj-sam-4:hover .pj-img img, .pj-sam-5:hover .pj-img img, .pj-sam-6:hover .pj-img img, .pj-sam-7:hover .pj-img img, .pj-sam-8:hover .pj-img img, .pj-sam-9:hover .pj-img img, .pj-sam-10:hover .pj-img img, .pj-sam-11:hover .pj-img img, .pj-sam-12:hover .pj-img img, .pj-sam-13:hover .pj-img img, .pj-sam-14:hover .pj-img img, .pj-sam-15:hover .pj-img img, .pj-sam-16:hover .pj-img img, .pj-sam-17:hover .pj-img img, .pj-sam-18:hover .pj-img img, .pj-sam-19:hover .pj-img img, .pj-sam-20:hover .pj-img img, .pj-sam-21:hover .pj-img img, .pj-sam-22:hover .pj-img img, .pj-sam-23:hover .pj-img img, .pj-sam-24:hover .pj-img img, .pj-sam-25:hover .pj-img img, .pj-sam-26:hover .pj-img img, .pj-sam-27:hover .pj-img img, .pj-sam-28:hover .pj-img img, .pj-sam-29:hover .pj-img img, .pj-sam-30:hover .pj-img img, .pj-sam-31:hover .pj-img img, .pj-sam-32:hover .pj-img img, .pj-sam-33:hover .pj-img img, .pj-sam-34:hover .pj-img img, .pj-sam-35:hover .pj-img img, .pj-sam-36:hover .pj-img img, .pj-sam-37:hover .pj-img img, .pj-sam-38:hover .pj-img img, .pj-sam-39:hover .pj-img img, .pj-sam-40:hover .pj-img img, .pj-sam-41:hover .pj-img img, .pj-sam-42:hover .pj-img img, .pj-sam-43:hover .pj-img img, .pj-sam-44:hover .pj-img img, .pj-sam-45:hover .pj-img img, .pj-sam-46:hover .pj-img img, .pj-sam-47:hover .pj-img img, .pj-sam-48:hover .pj-img img, .pj-sam-49:hover .pj-img img, .pj-sam-50:hover .pj-img img, .pj-sam-51:hover .pj-img img, .pj-sam-52:hover .pj-img img, .pj-sam-53:hover .pj-img img, .pj-sam-54:hover .pj-img img, .pj-sam-55:hover .pj-img img, .pj-sam-56:hover .pj-img img, .pj-sam-57:hover .pj-img img, .pj-sam-58:hover .pj-img img, .pj-sam-59:hover .pj-img img, .pj-sam-60:hover .pj-img img, .pj-sam-61:hover .pj-img img, .pj-sam-62:hover .pj-img img, .pj-sam-63:hover .pj-img img, .pj-sam-64:hover .pj-img img, .pj-sam-65:hover .pj-img img, .pj-sam-66:hover .pj-img img, .pj-sam-67:hover .pj-img img, .pj-sam-68:hover .pj-img img, .pj-sam-69:hover .pj-img img, .pj-sam-70:hover .pj-img img, .pj-sam-71:hover .pj-img img, .pj-sam-72:hover .pj-img img, .pj-sam-73:hover .pj-img img, .pj-sam-74:hover .pj-img img, .pj-sam-75:hover .pj-img img, .pj-sam-76:hover .pj-img img, .pj-sam-77:hover .pj-img img, .pj-sam-78:hover .pj-img img, .pj-sam-79:hover .pj-img img, .pj-sam-80:hover .pj-img img, .pj-sam-81:hover .pj-img img, .pj-sam-82:hover .pj-img img, .pj-sam-83:hover .pj-img img, .pj-sam-84:hover .pj-img img, .pj-sam-85:hover .pj-img img, .pj-sam-86:hover .pj-img img, .pj-sam-87:hover .pj-img img, .pj-sam-88:hover .pj-img img, .pj-sam-89:hover .pj-img img, .pj-sam-90:hover .pj-img img, .pj-sam-91:hover .pj-img img, .pj-sam-92:hover .pj-img img, .pj-sam-93:hover .pj-img img, .pj-sam-94:hover .pj-img img, .pj-sam-95:hover .pj-img img, .pj-sam-96:hover .pj-img img, .pj-sam-97:hover .pj-img img, .pj-sam-98:hover .pj-img img, .pj-sam-99:hover .pj-img img, .pj-sam-100:hover .pj-img img {
@@ -1459,9 +1458,10 @@ label:hover {
 
 .pj-title {
   font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.05rem;
   font-weight: 600;
-  font-size: 1rem;
-  padding: 0.5rem 0.5rem 0.5rem 20px;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.5rem 0.5rem 0;
   border-radius: 10px;
   border-radius: 0px 0px 20px 20px;
 }
@@ -1470,15 +1470,12 @@ label:hover {
 @media (min-width: 426px) {
   .pj-img {
     transition: 0.2s;
-    border-radius: 30px 30px 0 30px;
-    width: calc(100% - 20px);
-    margin: 10px 10px 0 10px;
-    height: 100%;
+    border-radius: 20px 20px 0 15px;
     overflow: hidden;
   }
   .pj-img img {
     transition: 0.3s;
-    border-radius: 30px 30px 0 30px;
+    border-radius: 20px 20px 0 15px;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -1490,7 +1487,7 @@ label:hover {
     width: 100%;
     height: 100%;
     margin-top: 2%;
-    border-radius: 30px 30px 0 30px;
+    border-radius: 20px 20px 0 15px;
   }
 }
 /* ■■■■■■■■■■■■■■■■■ インデックスフレーム ■■■■■■■■■■■■■■■■■ */

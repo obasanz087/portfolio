@@ -154,6 +154,8 @@ $(function(){$('.pj-sam-99').click(function() {$(this).addClass('active');if ($(
 
 $(function(){$('.s-readmore').click(function() {$(this).addClass('active');if ($(this).hasClass('active')) {$('.s-readmore-index').addClass('active');}else{$('.pj-sam-100').removeClass('active');} });});
 
+$(function(){$('.sp-menu-discord').click(function() {$('.discord-caption').addClass('active');;})});;
+
 // projects - 閉じるときの動作////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 $(function() {$('.pj-index-close').click(function() {$('.pj-index-1').removeClass('active');$('.pj-sam-1').removeClass('active');});});
