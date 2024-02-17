@@ -256,7 +256,7 @@ header .header-link:hover::after {
     pointer-events: none;
     transition: all 0.3s;
     margin-top: 50px;
-    padding-top: -1.5%;
+    padding-top: 7%;
     -webkit-overflow-scrolling: touch;
     margin-bottom: 5rem;
     height: calc(100dvh - 50px);
@@ -278,7 +278,7 @@ header .header-link:hover::after {
   }
   nav.globalMenuSp .sp-menu-copy {
     position: absolute;
-    bottom: 2vw;
+    bottom: 10vw;
     left: 10vw;
     font-family: "Lato", "Noto Sans JP", sans-serif;
     letter-spacing: 0.07rem;
@@ -334,7 +334,7 @@ header .header-link:hover::after {
 }
 
 .sp-menu-sns {
-  margin: calc(3vw + 10px) 7vw;
+  margin: 10% 7vw 0;
   padding: 0 3vw;
   font-family: "Lato", "Noto Sans JP", sans-serif;
   letter-spacing: 0.1rem;
@@ -380,15 +380,13 @@ header .header-link:hover::after {
 /* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  footer  ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ */
 @media (max-width: 959px) {
   footer {
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin: 3rem 5% 1rem 5%;
     font-family: "Lato", sans-serif;
     font-weight: 500;
   }
   .f-copy {
     font-size: 0.8rem;
+    letter-spacing: 0.1rem;
   }
   .f-sns {
     display: none;
@@ -409,7 +407,7 @@ header .header-link:hover::after {
   .f-copy {
     flex: 90;
     margin-bottom: -1.5rem;
-    letter-spacing: 0.13rem;
+    letter-spacing: 0.075rem;
   }
   .f-sns {
     font-size: 1.3rem;
@@ -989,7 +987,7 @@ header .header-link:hover::after {
   gap: 1rem;
 }
 
-@media (max-width: 959px) {
+@media (max-width: 1024px) {
   .about-flex {
     display: block;
   }
@@ -1005,7 +1003,7 @@ header .header-link:hover::after {
   border-radius: 50px 50px 0 50px;
 }
 
-@media (max-width: 959px) {
+@media (max-width: 1024px) {
   .about-flex-item img {
     margin-top: 1rem;
   }
@@ -1160,12 +1158,12 @@ header .header-link:hover::after {
     font-size: 0.9rem;
   }
 }
-@media (min-width: 960px) {
+@media (min-width: 1440px) {
   .about-sns-br {
     display: inline;
   }
 }
-@media (max-width: 959px) {
+@media (max-width: 1439px) {
   .about-sns-br {
     display: block;
   }
@@ -1231,13 +1229,13 @@ header .header-link:hover::after {
 
 @media (max-width: 959px) {
   .pj-about {
-    margin: 2rem 0 3rem 3%;
+    margin: calc(50px + 7%) 0 3rem;
   }
 }
 .readmore-img {
-  width: 50%;
+  width: 75%;
   border-radius: 10px;
-  margin: 1rem 25%;
+  margin: 1rem 12.5%;
 }
 
 @media (max-width: 959px) {
@@ -1253,7 +1251,6 @@ h6 {
   font-size: 1.3rem;
   letter-spacing: 0.1rem;
   margin: 2rem 0 1.5rem 0;
-  padding-left: 3%;
 }
 h6::before {
   content: "";
@@ -1272,8 +1269,8 @@ h6 span {
 .youtube {
   position: relative;
   left: 0;
-  width: 50%;
-  padding-top: 28%;
+  width: 75%;
+  padding-top: 43%;
   margin-top: 1rem;
 }
 .youtube iframe {
@@ -1520,9 +1517,9 @@ label:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    width: 100%;
     max-width: 1440px;
     margin: 0 auto;
+    padding: 0 5%;
     height: calc(100vh - 74px);
     z-index: 99;
     overflow: auto;
@@ -1543,8 +1540,9 @@ label:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    width: 100%;
+    width: 90%;
     height: 100%;
+    padding: 0 5% 10vw;
     z-index: 99;
     overflow: auto;
     animation: fadein 0.2s ease-out forwards;
@@ -1553,12 +1551,6 @@ label:hover {
 .pj-index-1.active, .pj-index-2.active, .pj-index-3.active, .pj-index-4.active, .pj-index-5.active, .pj-index-6.active, .pj-index-7.active, .pj-index-8.active, .pj-index-9.active, .pj-index-10.active, .s-readmore-index.active, .pj-index-11.active, .pj-index-12.active, .pj-index-13.active, .pj-index-14.active, .pj-index-15.active, .pj-index-16.active, .pj-index-17.active, .pj-index-18.active, .pj-index-19.active, .pj-index-20.active, .pj-index-21.active, .pj-index-22.active, .pj-index-23.active, .pj-index-24.active, .pj-index-25.active, .pj-index-26.active, .pj-index-27.active, .pj-index-28.active, .pj-index-29.active, .pj-index-30.active, .pj-index-31.active, .pj-index-32.active, .pj-index-33.active, .pj-index-34.active, .pj-index-35.active, .pj-index-36.active, .pj-index-37.active, .pj-index-38.active, .pj-index-39.active, .pj-index-40.active, .pj-index-41.active, .pj-index-42.active, .pj-index-43.active, .pj-index-44.active, .pj-index-45.active, .pj-index-46.active, .pj-index-47.active, .pj-index-48.active, .pj-index-49.active, .pj-index-50.active, .pj-index-51.active, .pj-index-52.active, .pj-index-53.active, .pj-index-54.active, .pj-index-55.active, .pj-index-56.active, .pj-index-57.active, .pj-index-58.active, .pj-index-59.active, .pj-index-60.active, .pj-index-61.active, .pj-index-62.active, .pj-index-63.active, .pj-index-64.active, .pj-index-65.active, .pj-index-66.active, .pj-index-67.active, .pj-index-68.active, .pj-index-69.active, .pj-index-70.active, .pj-index-71.active, .pj-index-72.active, .pj-index-73.active, .pj-index-74.active, .pj-index-75.active, .pj-index-76.active, .pj-index-77.active, .pj-index-78.active, .pj-index-79.active, .pj-index-80.active, .pj-index-81.active, .pj-index-82.active, .pj-index-83.active, .pj-index-84.active, .pj-index-85.active, .pj-index-86.active, .pj-index-87.active, .pj-index-88.active, .pj-index-89.active, .pj-index-90.active, .pj-index-91.active, .pj-index-92.active, .pj-index-93.active, .pj-index-94.active, .pj-index-95.active, .pj-index-96.active, .pj-index-97.active, .pj-index-98.active, .pj-index-99.active, .pj-index-100.active {
   opacity: 100;
   display: block;
-}
-
-/* ■■■■■■■■■■■■■■■■■ インデックスのマージン ■■■■■■■■■■■■■■■■■ */
-.pj-index-in {
-  margin-left: 3%;
-  margin-right: 3%;
 }
 
 /* ■■■■■■■■■■■■■■■■■ スクロールバー非表示 ■■■■■■■■■■■■■■■■■ */
@@ -1579,7 +1571,6 @@ label:hover {
 /* ■■■■■■■■■■■■■■■■■ ナンバリング・タイトル・タグ・バツボタン ■■■■■■■■■■■■■■■■■ */
 .pj-index-num {
   font-family: "Lato", sans-serif;
-  margin-left: 3%;
 }
 
 .pj-index-title {
@@ -1605,8 +1596,8 @@ label:hover {
 
 .pj-index-close {
   position: sticky;
-  top: calc(50px + 1rem);
-  left: 88vw;
+  top: calc(50px + 1rem + 10vw);
+  left: 100%;
   font-size: 2.5rem;
   line-height: 40px;
   z-index: 101;
@@ -1625,7 +1616,7 @@ label:hover {
 @media (max-width: 959px) {
   .pj-index-num {
     font-size: 4rem;
-    margin-top: 1rem;
+    margin-top: calc(1rem + 10vw);
   }
 }
 @media (min-width: 960px) {
@@ -1639,7 +1630,6 @@ label:hover {
   .pj-index-close {
     position: sticky;
     top: 2.2rem;
-    left: 94%;
     font-size: 2.5rem;
     font-weight: bold;
     border-radius: 50%;
@@ -1665,9 +1655,8 @@ label:hover {
 .pj-img-grid {
   display: grid;
   grid-template-columns: 1fr;
-  margin: 1vw 3% 0 !important;
-  width: 94%;
-  gap: 1.5vw;
+  margin: 1vw 0 0 !important;
+  width: 100%;
 }
 
 .pj-index-img {
@@ -1683,11 +1672,10 @@ label:hover {
 
 .pj-index-map {
   position: relative;
-  width: 94%;
+  width: 100%;
   height: 0;
   padding-top: 80%;
-  margin-top: 1.5rem;
-  margin-bottom: 3rem;
+  margin: calc(1rem + 1.5vw) 0 1.5vw;
 }
 
 .pj-index-map iframe {
@@ -1703,10 +1691,9 @@ label:hover {
   .pj-img-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    -moz-column-gap: 1.3rem;
-         column-gap: 1.3rem;
-    row-gap: 1.3rem;
-    margin: 0 3% 0 3%;
+    -moz-column-gap: 1.5vw;
+         column-gap: 1.5vw;
+    row-gap: 1.5vw;
   }
   .pj-index-img {
     height: auto;
@@ -1715,16 +1702,14 @@ label:hover {
   }
   .pj-index-map {
     position: relative;
-    width: 94%;
-    height: 0;
     padding-top: 35%;
-    margin-top: 1.5rem;
-    margin-bottom: 3rem;
+    margin-top: 1.5vw;
+    margin-bottom: 1.5vw;
   }
 }
 /* ■■■■■■■■■■■■■■■■■ 日付・モデル表示 ■■■■■■■■■■■■■■■■■ */
 table {
-  margin: 1.5vw 3%;
+  margin: 1.5vw 0;
   font-family: "Lato", "Noto Sans JP", sans-serif;
   border-collapse: collapse;
 }
@@ -1746,6 +1731,9 @@ th span {
 th span span {
   margin-right: 0.3rem;
   display: inline-block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 @media (max-width: 960px) {
   th {
