@@ -47,7 +47,7 @@ $(function () {
 });
 // projects
 
-$(function(){$('.pj-sam-1').click(function() {$(this).addClass('active');if ($(this).hasClass('active')) {$('.pj-index-1').addClass('active');}else{$('.pj-index-1').removeClass('active');} });});
+$(function(){$('.pj-sam-1').click(function() {$(this).addClass('active');if ($(this).hasClass('active')) {$('.pj-index-1').addClass('active'),('.section2').addClass('active');}else{$('.pj-index-1').removeClass('active');} });});
 $(function(){$('.pj-sam-2').click(function() {$(this).addClass('active');if ($(this).hasClass('active')) {$('.pj-index-2').addClass('active');}else{$('.pj-index-2').removeClass('active');} });});
 $(function(){$('.pj-sam-3').click(function() {$(this).addClass('active');if ($(this).hasClass('active')) {$('.pj-index-3').addClass('active');}else{$('.pj-index-3').removeClass('active');} });});
 $(function(){$('.pj-sam-4').click(function() {$(this).addClass('active');if ($(this).hasClass('active')) {$('.pj-index-4').addClass('active');}else{$('.pj-index-4').removeClass('active');} });});
@@ -151,10 +151,11 @@ $(function(){$('.pj-sam-99').click(function() {$(this).addClass('active');if ($(
 
 
 
-
 $(function(){$('.s-readmore').click(function() {$(this).addClass('active');if ($(this).hasClass('active')) {$('.s-readmore-index').addClass('active');}else{$('.pj-sam-100').removeClass('active');} });});
 
 $(function(){$('.sp-menu-discord').click(function() {$('.discord-caption').addClass('active');;})});;
+$(function(){$('.f-sns-icon.discord').click(function() {$('.discord_popup').addClass('active');;})});;
+$(function() {$('.fa-solid.fa-circle-xmark').click(function() {$('discord_popup').removeClass('active')})});;
 
 // projects - 閉じるときの動作////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
