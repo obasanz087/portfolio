@@ -6,12 +6,12 @@
 }
 
 * ::-moz-selection {
-  background: #3f4c59;
+  background: rgba(63, 76, 89, 0.9);
   color: #ececec;
 }
 
 * ::selection {
-  background: #3f4c59;
+  background: rgba(63, 76, 89, 0.9);
   color: #ececec;
 }
 
@@ -27,6 +27,7 @@ main {
 .page_head {
   max-width: 1440px;
   margin: 75px 0 1.5rem 0;
+  border-radius: 20px;
   position: relative;
 }
 .page_head .title {
@@ -98,6 +99,12 @@ p {
   font-family: "Lato", "Noto Sans JP", sans-serif;
   letter-spacing: 0.03rem;
   line-height: 2rem;
+}
+p a {
+  color: #3f4c59;
+}
+p a:visited {
+  color: #3f4c59;
 }
 
 .b {

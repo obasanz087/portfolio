@@ -6,11 +6,11 @@
   max-width: 1920px;
 }
 * ::-moz-selection {
-  background: #3f4c59;
+  background: rgba(63, 76, 89,0.9);
   color: #ececec;
 }
 * ::selection {
-  background: #3f4c59;
+  background: rgba(63, 76, 89,0.9);
   color: #ececec;
 }
 
@@ -25,6 +25,7 @@ main{
 .page_head{
     max-width: 1440px;
     margin:75px 0 1.5rem 0 ;
+    border-radius: 20px;
     position: relative;
     .title{
       position: absolute;
@@ -89,6 +90,12 @@ p{
   font-family:"Lato", "Noto Sans JP", sans-serif;
   letter-spacing: 0.03rem;
   line-height: 2rem;
+  a{
+    color:#3f4c59;
+    &:visited{
+      color: #3f4c59;
+    }
+  }
 }
 .b{
   margin-top:1rem;
