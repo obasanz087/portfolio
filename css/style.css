@@ -6,11 +6,11 @@
   max-width: 1920px;
 }
 * ::-moz-selection {
-  background: #3f4c59;
+  background: rgba(63, 76, 89, 0.9);
   color: #ececec;
 }
 * ::selection {
-  background: #3f4c59;
+  background: rgba(63, 76, 89, 0.9);
   color: #ececec;
 }
 
@@ -272,6 +272,7 @@ header .header-link:hover::after {
     margin-bottom: 5rem;
     height: calc(100dvh - 50px);
     overflow: auto;
+    border-radius: 25px 25px 0 0;
   }
   nav.globalMenuSp.active {
     opacity: 100;
@@ -297,9 +298,10 @@ header .header-link:hover::after {
   }
   nav.globalMenuSp .sp-menu-bottom a {
     display: block;
-    line-height: 1.5rem;
+    line-height: 2rem;
     font-weight: 500;
     color: #232323;
+    font-size: 0.9rem;
   }
   nav.globalMenuSp .sp-menu-bottom a:visited {
     color: #232323;

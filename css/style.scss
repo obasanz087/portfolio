@@ -5,7 +5,7 @@
     max-width: 1920px;
 
     ::selection{
-      background:#3f4c59;
+      background: rgba(63, 76, 89,0.9);
       color:#ececec;
     }
   }
@@ -301,6 +301,7 @@ h2 span {
       margin-bottom: 5rem;
       height: calc(100dvh - 50px);
       overflow: auto;
+      border-radius: 25px 25px 0 0 ;
   
       &.active {
         opacity: 100;
@@ -327,9 +328,10 @@ h2 span {
         font-size: 0.7rem;
         a{
           display: block;
-          line-height: 1.5rem;
+          line-height: 2rem;
           font-weight: 500;
           color: #232323;
+          font-size:0.9rem;
           &:visited{
             color:#232323
           }
@@ -1115,6 +1117,7 @@ h2 span {
   .s-readmore {
     transition: 0.2s;
     text-decoration: none;
+    color:#232323;
     &:visited{
       color:#232323
     }
