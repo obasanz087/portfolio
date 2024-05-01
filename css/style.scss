@@ -3,11 +3,6 @@
     margin-right: 0;
     margin: auto;
     max-width: 1920px;
-
-    ::selection{
-      background: rgba(63, 76, 89,0.9);
-      color:#ececec;
-    }
   }
   
   img {
@@ -30,10 +25,10 @@
 }
 
 h2{
-  margin-top:-1rem;
+  margin-top:1rem;
   letter-spacing: 0.15rem;
   font-size: 2em;
-  font-family: "Lato", sans-serif;
+  font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
   margin-bottom: 1.5rem;
   padding-top: 20vh;
   object-fit: cover;
@@ -50,7 +45,7 @@ h2 span {
   line-height: 0.85rem;
   margin-top:0.5rem;
   
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-weight: 600;
   letter-spacing: 0.05rem;
   margin-bottom:1rem;
@@ -66,7 +61,7 @@ h2 span {
   margin-left:0.2rem;
   margin-bottom:-61px;
 
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-weight: 600;
   letter-spacing: 0.05rem;
 }
@@ -92,7 +87,7 @@ h2 span {
 .se-ex {
   letter-spacing: 0.07rem;
   line-height: 1.8rem;
-  font-family: 'Lato','Noto Sans JP', sans-serif;
+  font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
 }
 @media (max-width: 959px) {
   .se-ex{
@@ -104,32 +99,34 @@ h2 span {
   
   header {
     position: fixed;
-    line-height: 70px;
-    width: 90%;
+    width: 95%;
     top: 0px;
-    z-index: 100;
-    padding:0 5%;
-    background:#fff;
+    padding:0 2.5vw 0 ;
+    z-index: 999;
+    @media (max-width: 959px) {
+      background: #fff;
+    }
   
     a {
       text-decoration: none;
-      line-height: 70px;
+      line-height: 100px;
       transition: 0.2s;
       position: relative;
 
       &:hover{
-        color:#3f4c59
+        color: #fff;
       }
     }
     .header-link{
-      padding: 23px 0.5rem 23px 0.5rem ;
+      line-height: 10 0px;
+      padding: 26px 0.5rem 25px 0.5rem ;
     }
     .header-link::after{
         content:" ";
         display: block;
-        background: #3f4c59;
+        background: #ececec;
         position: absolute;
-        top:-5px;
+        top:0px;
         left:0;
         height: 5px;
         width:0%;
@@ -138,9 +135,40 @@ h2 span {
     .header-link:hover::after{
       width: 100%;
     }
-  }
+
+    &.active{
+      .nav-list,.nav-list-item a,.h-logo{
+        color:#232323;
+        background: none;
+        &:hover{
+          color:#3f4c59
+        }
+      }
+      .h-logo span{
+        color:#8b8b8b
+      }
+      .nav-list .pc_hamburger span{
+        background:#232323;
+      }
+      .header-link::after{
+        content:" ";
+        display: block;
+        background: #3f4c59;
+        position: absolute;
+        top:0px;
+        left:0;
+        height: 5px;
+        width:0%;
+        transition: 0.3s;
+      }
+      .header-link:hover::after{
+        width: 100%;
+      }
+      } 
+    }
   .nav-list {
-    margin-top:-70px;
+    margin-top:-100.5px;
+    margin-right: calc(1.5vw + 50px);
     line-height: 70px;
     text-align: right;
     color: #232323;
@@ -148,16 +176,16 @@ h2 span {
   
   .nav-list-item {
     list-style: none;
-    font-family: "Lato", sans-serif;
+    font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
     font-weight: 600;
+    font-weight: 00;
     letter-spacing: 0.13rem;
     display: inline-block;
+    position: relative;
+    z-index: 4;
     margin-left: 1%;
-    
-  
     a {
-      color: #232323;
-
+      color: #ececec;
     }
   }
   
@@ -165,27 +193,234 @@ h2 span {
     font-size: 1.4rem;
     letter-spacing: 0.13rem;
     font-weight: 600;
-    font-family: "LATO", sans-serif;
-    color: #232323;
-
-  
+    font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
+    color: #ececec;
+    position:relative;
+    z-index: 4;
     span {
       font-size: 0.8rem;
       margin-left: 0.5rem;
       font-weight: 500;
-      color: #8b8b8b;
+      color:  #ececec;
       letter-spacing: 0.08rem;
+    }
+    &.white{
+      color:#ececec !important;
+      z-index: 5;
+      margin-left:2.5vw;
+      span{
+        color:#ececec !important;
+      }
     }
   }
 
-  
   @media (min-width: 960px) {
     .globalMenuSp, .hamburger {
       display: none;
     }
+    .pc_hamburger{
+      display: block;
+      position: fixed;
+      z-index: 6;
+      right:2.5vw;
+      top: 0px;
+      width: 50px;
+      height: 100px;
+      cursor: pointer;
+      text-align: center;
+
+      span {
+        display: block;
+        position: absolute;
+        width: 45px;
+        height: 4px;
+        transform: scaleY(0.5) translateY(2px);
+        background: #ececec;
+        -webkit-transition: 0.2s ease-in-out;
+        -moz-transition: 0.2s ease-in-out;
+        transition: 0.2s ease-in-out;
+  
+        &:nth-child(1) {
+          top: 45px;
+          right: 0px;
+          width: 45px;
+        }
+        &:nth-child(2) {
+          bottom: 41px;
+          right: 0px;
+          width: 45px;
+        }
+      }
+      &.active span {
+        &:nth-child(1) {
+          top: 50.75%;
+          width: 45px;
+          right: 0;
+          background: #ececec !important;
+          transform: rotate(-30deg);
+          height: 2px;
+        }
+  
+        &:nth-child(2) {
+          top: 47%;
+          width: 45px;
+          right: 0;
+          background: #ececec !important;
+          transform: rotate(30deg);
+          height: 2px;
+        }
+      }
+    }
+    .pc_globalMenu{
+      position: fixed;
+      top:0;
+      left:0;
+      width:100%;
+      height: 100vh;
+      -webkit-backdrop-filter: blur(30px);
+      backdrop-filter: blur(30px);
+      background:#3f4c59;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 5;
+      transition: 0.3s;
+      overflow: scroll;
+      font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
+      &.active{
+        opacity:100;
+        visibility: visible;
+      }
+      &::-webkit-scrollbar{
+        display:none;
+      }
+    }
+    .pcgm_content{
+      display:flex;
+      gap:2.5vw;
+      padding:2.5vw;
+      border-top:solid 2px #576675;
+    }
+    .pcgm_flex{
+      flex:2;
+      margin-top:0;
+      &.img {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        position: sticky;
+        img{
+          height: calc(100dvh - 102.5px - 2.5vw - 2.5vw);
+          width: 100%;
+          object-fit: cover;
+          border-radius: 50px 50px 0 50px;
+          top:0
+        }
+      }
+      &.right{
+        position: relative;
+        flex:1.5;
+      }
+    }
+    .pcgm_button{
+      display:block;
+      color:#ececec;
+      font-size: 3.5rem;
+      line-height: 3.5rem;
+      letter-spacing: 0.2rem;
+      font-weight: 600;
+      span{
+        display:block;
+        margin-top:0.75rem;
+        font-size:0.8rem;
+        line-height: 0.9rem;
+        letter-spacing: 0.05rem;
+        color:#afafaf;
+      }
+      &:hover{
+        color:#576675;
+      }
+      &.small{
+        font-size: 1.5rem;
+        line-height:1.5rem;
+        font-weight: 500;
+        letter-spacing: 0.05rem;
+        span{
+          font-size:0.6rem;
+          line-height:0.6rem;
+          margin-top:0.5rem;
+        }
+      }
+      &:visited{
+        color: #ececec;
+        &:hover{
+          color:#576675;
+        }
+      }
+      .pcgm_2nd_button{
+        padding-left:3vw;
+        margin-left:1vw;
+        margin-top:1rem;
+        position: relative;
+        &::before{
+          content:'';
+          position: absolute;
+          display:block;
+          left: 0;
+          top:50%;
+          display:inline-block;
+          width: 2vw;
+          background: #576675;
+          height: 2px;
+        }
+      }
+    }
+    .pcgm_line{
+      background: #576675;
+      height: 2px;
+      width: 100%;
+      &.one{
+        margin-bottom:1.5rem;
+      }
+      &.two{
+        margin:1.5rem 0;
+      }
+      &.three{
+        margin-top:1.5rem;
+      }
+    }
+    .social_media_container{
+      a{
+        line-height: 0rem;
+      }
+      i{
+        background: #576675;
+        padding:0.7rem;
+        color:#ececec;
+        border-radius: 50%;
+        margin-right:1rem
+      }
+    }
+    .pcgm_sns{
+      color: #ececec;
+      margin:1rem 0;
+      letter-spacing: 0.125rem;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+    .pcgm_copy{
+      color: #ececec;
+      margin-top:2.5rem;
+      letter-spacing: 0.125rem;
+      font-size: 0.8rem;
+    }
   }
   
   @media (max-width: 959px) {
+
+    .pc_globalMenu{
+      display:none
+    }
+
     header {
       position: fixed;
       height: 50px;
@@ -199,7 +434,7 @@ h2 span {
     .h-logo {
       line-height: 50px;
       font-size: 1.2rem;
-      font-family: "Lato", sans-serif;
+      font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
       font-weight: 500;
       color: #232323;
   
@@ -241,9 +476,7 @@ h2 span {
         transform: scaleY(0.5) translateY(2px);
         left: 6px;
         background: #232323;
-        -webkit-transition: 0.2s ease-in-out;
-        -moz-transition: 0.2s ease-in-out;
-        transition: 0.2s ease-in-out;
+        transition: 0.2s;
   
         &:nth-child(1) {
           top: 19.5px;
@@ -323,7 +556,7 @@ h2 span {
         position: absolute;
         bottom:10vw;
         left:10vw;
-        font-family: "Lato", 'Noto Sans JP', sans-serif;
+        font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
         letter-spacing: 0.07rem;
         font-size: 0.7rem;
         a{
@@ -345,7 +578,7 @@ h2 span {
     position: relative;
     padding:3vw;
     p{
-      font-family: "Lato", 'Noto Sans JP', sans-serif;
+      font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
       letter-spacing: 0.13rem;
       font-size: 1.3rem;
       line-height: 1.4rem;
@@ -386,7 +619,7 @@ h2 span {
   .sp-menu-sns{
     margin:10% 7vw 0;
     padding:0 3vw;
-    font-family: "Lato", 'Noto Sans JP', sans-serif;
+    font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
     letter-spacing: 0.1rem;
     line-height: 1rem;
     font-size:1.2rem;
@@ -404,7 +637,7 @@ h2 span {
 
     }
     .discord-caption{
-      font-family: "Lato", 'Noto Sans JP', sans-serif;
+      font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
       font-size:0.8rem;
       font-weight: 500;
       letter-spacing: 0.05rem;
@@ -434,7 +667,7 @@ h2 span {
   @media (max-width: 959px) {
     footer {
       margin:3rem 5% 1rem 5%;
-      font-family: "Lato", sans-serif;
+      font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
       font-weight: 500;
     }
   
@@ -458,7 +691,7 @@ h2 span {
     footer {
       position: relative;
       margin: 1rem 6%;
-      font-family: "Lato", sans-serif;
+      font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
       font-weight: 500;
     }
   
@@ -476,7 +709,7 @@ h2 span {
     .f-item{
       font-size:0.9rem;
       margin-right:1rem;
-      font-family: "Lato", 'Noto Sans JP', sans-serif;
+      font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
       font-weight: 500;
       transform: translateY(-50%);
       padding-bottom: 0.25rem;
@@ -496,7 +729,8 @@ h2 span {
       text-align: right;
   
       .fa-brands {
-        padding: 0.6rem 0.65rem 0.35rem 0.6rem;
+        padding: 0.6rem 0.65rem 0.375rem 0.6rem;
+        padding-bottom:0.375rem;
         color: #232323;
       }
     }
@@ -862,16 +1096,13 @@ h2 span {
 
   @media (min-width: 960px) {
     .main-topview{
-      height: calc(100dvh - 74px);
-      padding-top:148px;
-      margin-top:-74px;
+      height:100vh;
     }
     .img-frame {
       position: relative;
-      width: 90%;
-      height: calc(95dvh - 74px);
+      width: 100%;
+      height: 100dvh;
       overflow: hidden;
-      border-radius: 50px 50px 0 50px;
     }
   }
   @media (max-width: 959px) {
@@ -913,18 +1144,20 @@ h2 span {
     position: absolute;
     bottom:0;
     left:0;
-    height: 200px;
+    height: 100%;
     width: 100%;
-    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0), 50%, rgba(0, 0, 0, 0.53) 80%);
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2), 50%, rgba(0, 0, 0, 0.2) 80%);
+    @media (max-width: 959px) {
     border-radius: 20px 20px 0 20px;
+    }
   }
   /* ■■■■■■■■■■■■■■■■■ キャプション・カウンター ■■■■■■■■■■■■■■■■■ */
   @media (min-width: 960px) {
     .m-topview-text-jp{
       position: absolute;
       left:2.5vw;
-      bottom:3vw;
-      font-family: "Lato", 'Noto Sans JP', sans-serif;
+      bottom:calc(2.5vw + 2rem);
+      font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
       font-size:1.3rem;
       font-weight: 500;
       color: #ddd;
@@ -933,8 +1166,8 @@ h2 span {
     .m-topview-text-en{
       position: absolute;
       left:2.5vw;
-      bottom:2vw;
-      font-family: "Lato", 'Noto Sans JP', sans-serif;
+      bottom:calc(2.5vw + 1rem);
+      font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
       font-size:0.8rem;
       letter-spacing: 0.05rem;
       font-weight: 500;
@@ -944,8 +1177,8 @@ h2 span {
     .m-topview-count{
       position: absolute;
       right:2.5vw;
-      bottom:2vw;
-      font-family: "Lato", sans-serif;
+      bottom:calc(2.5vw + 1rem);
+      font-family: "Plus Jakarta Sans", sans-serif;
       font-weight: 500;
       color: #ddd;
       z-index: 91;
@@ -956,7 +1189,7 @@ h2 span {
       position: absolute;
       left:4%;
       bottom:2.4rem;
-      font-family: "Lato", 'Noto Sans JP', sans-serif;
+      font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
       font-size:1.3rem;
       font-weight: 500;
       color: #ddd;
@@ -966,7 +1199,7 @@ h2 span {
       position: absolute;
       left:4%;
       bottom:1.45rem;
-      font-family: "Lato", 'Noto Sans JP', sans-serif;
+      font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
       font-size:0.8rem;
       font-weight: 500;
       color: #ddd;
@@ -976,7 +1209,7 @@ h2 span {
       position: absolute;
       right:4%;
       bottom:1.45rem;
-      font-family: "Lato", sans-serif;
+      font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
       font-weight: 500;
       color: #ddd;
       z-index: 91;
@@ -1001,9 +1234,8 @@ h2 span {
       position:relative;
       overflow: hidden;
       position: absolute;
-      bottom:1vw;
+      bottom:2.25vw;
       left:2.5vw;
-      right:2.2vw;
       z-index: 91;
     } 
   }
@@ -1044,7 +1276,7 @@ h2 span {
     opacity: 100;
   }
   .t-i-title{
-    font-family: "Lato", 'Noto Sans JP', sans-serif;
+    font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
     letter-spacing: 0.13rem;
     margin:1vw 1vw 0 1vw;
     font-size:1.3rem;
@@ -1056,7 +1288,7 @@ h2 span {
     }
   }
   .t-i-article{
-    font-family: "Lato", 'Noto Sans JP', sans-serif;
+    font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
     letter-spacing: 0.06rem;
     margin:0.5vw 1vw 0 1vw;
     font-size:0.9rem;
@@ -1125,7 +1357,7 @@ h2 span {
     display: inline-block;
     padding: 1rem 2rem;
     font-size:1.1rem;
-    font-family: "Lato", sans-serif;
+    font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
     font-weight: 500;
     border-radius: 20px 20px 0 20px;
     margin: 2rem 0;
@@ -1243,7 +1475,7 @@ h2 span {
       top:50%;
       transform: translateY(-50%);
       left:15px;
-      font-family: "Lato",sans-serif;
+      font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
       font-weight: 500;
       letter-spacing: 0.04rem;
   
@@ -1263,7 +1495,7 @@ h2 span {
       top:50%;
       transform: translateY(-50%);
       left:15px;
-      font-family: "Lato",sans-serif;
+      font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
       font-weight: 500;
       letter-spacing: 0.04rem;
   
@@ -1292,7 +1524,7 @@ h2 span {
       position: absolute;
       bottom:15px;
       left:15px;
-      font-family: "Lato", "Noto Sans JP", sans-serif;
+      font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
       font-weight: 500;
   
       &.normal{
@@ -1309,7 +1541,7 @@ h2 span {
       position: absolute;
       bottom:15px;
       left:15px;
-      font-family: "Lato", "Noto Sans JP", sans-serif;
+      font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
       font-weight: 500;
   
       &.normal{
@@ -1330,7 +1562,7 @@ h2 span {
   }
   .search-box{
     span{
-      font-family: 'Noto Sans JP', sans-serif;
+      font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
       font-weight: 600;
       font-size:0.85rem;
       letter-spacing: 0.05rem;
@@ -1344,7 +1576,7 @@ h2 span {
     margin: 0.5rem 0.25rem 0.5rem 0.25rem;
     font-size: 0.85rem;
     cursor: pointer;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
     font-weight: 500;
     transition: 0.2s;
     border-radius: 10px 10px 0 10px;
@@ -1373,7 +1605,7 @@ h2 span {
       padding: 0.3rem 1rem 0.4rem 1rem;
       margin: 1rem 0.25rem 2rem 0.25rem;
       cursor: pointer;
-      font-family: 'Noto Sans JP', sans-serif;
+      font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
       font-weight: 500;
       transition: 0.2s;
       border-radius: 20px;
@@ -1460,7 +1692,7 @@ h2 span {
       }
   }
   .pj-title {
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
     letter-spacing: 0.05rem;
     font-weight: 600;
     font-size: 0.9rem;
@@ -1522,15 +1754,15 @@ h2 span {
     .pj-index-1, .pj-index-2, .pj-index-3, .pj-index-4, .pj-index-5, .pj-index-6, .pj-index-7, .pj-index-8, .pj-index-9, .pj-index-10, .pj-index-11, .pj-index-12, .pj-index-13, .pj-index-14, .pj-index-15, .pj-index-16, .pj-index-17, .pj-index-18, .pj-index-19, .pj-index-20, .pj-index-21, .pj-index-22, .pj-index-23, .pj-index-24, .pj-index-25, .pj-index-26, .pj-index-27, .pj-index-28, .pj-index-29, .pj-index-30, .pj-index-31, .pj-index-32, .pj-index-33, .pj-index-34, .pj-index-35, .pj-index-36, .pj-index-37, .pj-index-38, .pj-index-39, .pj-index-40, .pj-index-41, .pj-index-42, .pj-index-43, .pj-index-44, .pj-index-45, .pj-index-46, .pj-index-47, .pj-index-48, .pj-index-49, .pj-index-50, .pj-index-51, .pj-index-52, .pj-index-53, .pj-index-54, .pj-index-55, .pj-index-56, .pj-index-57, .pj-index-58, .pj-index-59, .pj-index-60, .pj-index-61, .pj-index-62, .pj-index-63, .pj-index-64, .pj-index-65, .pj-index-66, .pj-index-67, .pj-index-68, .pj-index-69, .pj-index-70, .pj-index-71, .pj-index-72, .pj-index-73, .pj-index-74, .pj-index-75, .pj-index-76, .pj-index-77, .pj-index-78, .pj-index-79, .pj-index-80, .pj-index-81, .pj-index-82, .pj-index-83, .pj-index-84, .pj-index-85, .pj-index-86, .pj-index-87, .pj-index-88, .pj-index-89, .pj-index-90, .pj-index-91, .pj-index-92, .pj-index-93, .pj-index-94, .pj-index-95, .pj-index-96, .pj-index-97, .pj-index-98, .pj-index-99, .pj-index-100 {
       opacity: 0;
       display: none;
-      border-radius: 50px 50px 0 0 ;
+      border-radius: 75px 75px 0 0 ;
       position: fixed;
       bottom: 0;
       left: 0;
       right: 0;
       max-width: 100%;
       margin: 0 auto;
-      padding:0 5%;
-      height: calc(100vh - 74px);
+      padding:140px 5% 0;
+      height: 100%;
       z-index: 99;
       overflow: auto;
       -webkit-backdrop-filter: blur(30px);
@@ -1579,10 +1811,10 @@ h2 span {
     }
   /* ■■■■■■■■■■■■■■■■■ ナンバリング・タイトル・タグ・バツボタン ■■■■■■■■■■■■■■■■■ */
   .pj-index-num {
-    font-family: "Lato", sans-serif;
+    font-family: "Plus Jakarta Sans", sans-serif;
   }
   .pj-index-title {
-    font-family: 'Lato','Noto Sans JP', sans-serif;
+    font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
     font-size: 2.5rem;
     top: calc(70px + 97px);
     font-weight: 500;
@@ -1595,7 +1827,7 @@ h2 span {
     background: #3f4c59;
     color: #ececec;
     border-radius: 10px 10px 0 10px;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
     font-weight: 500;
     margin-top: -0.25rem;
     display: inline-block;
@@ -1615,7 +1847,7 @@ h2 span {
   @media (min-width: 960px) {
     .pj-index-num {
       font-size: 5rem;
-      margin-top: -0.2rem;
+      margin-top: 3rem;
     }
   }
   @media (max-width: 959px) {
@@ -1625,7 +1857,7 @@ h2 span {
   }
   @media (min-width: 960px) {
     .pj-index-title {
-      font-family: 'Noto Sans JP', sans-serif;
+      font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
       font-size: 3rem;
       top: calc(70px + 97px);
     }
@@ -1633,7 +1865,7 @@ h2 span {
   @media (min-width: 960px) {
     .pj-index-close {
       position: sticky;
-      top: 2.2rem;
+      top: 6rem;
       font-size: 2.5rem;
       font-weight: bold;
       border-radius: 50%;
@@ -1645,7 +1877,7 @@ h2 span {
 
   /* ■■■■■■■■■■■■■■■■■ 文章・画像グリッド・モデル・地図 ■■■■■■■■■■■■■■■■■ */
   .pj-index-explain {
-    font-family: 'Lato', 'Noto Sans JP', sans-serif;
+    font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
     margin-top:1rem;
     line-height: 1.85rem;
     span {
@@ -1707,7 +1939,7 @@ h2 span {
   /* ■■■■■■■■■■■■■■■■■ 日付・モデル表示 ■■■■■■■■■■■■■■■■■ */
   table{
     margin:1.5vw 0;
-    font-family: "Lato", "Noto Sans JP", sans-serif;
+    font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
     border-collapse:collapse;
   }
   th{ 
@@ -1816,14 +2048,14 @@ h2 span {
     left:15px;
     top:50%;
     transform: translateY(-50%);
-    font-family: "Lato", "Noto Sans JP", sans-serif;
+    font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
     font-size:1.5rem;
     font-weight: 500;
     
   }
   .co-dm::after{
     content:'to @oba_sanz087';
-    font-family: "Lato", "Noto Sans JP", sans-serif;
+    font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
     margin-top:5px;
     font-size:0.8rem;
     font-weight: 500;
@@ -1835,7 +2067,7 @@ h2 span {
     position: absolute;
     bottom:15px;
     left:15px;
-    font-family:"Noto Sans JP", sans-serif;
+    font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
     font-size:0.7rem;
     font-weight: 500;
   }
@@ -1864,7 +2096,7 @@ h2 span {
   transform: translateY(-50%);
   left:15px;
   right:15px;
-  font-family:"Noto Sans JP", sans-serif;
+  font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
   font-size:0.8rem;
   font-weight: 400;
   line-height: 1.3rem;
@@ -1874,7 +2106,7 @@ h2 span {
   position: absolute;
   top:17px;
   left:37px;
-  font-family: "Lato", "Noto Sans JP", sans-serif;
+  font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
   font-weight: 500;
   font-size: 0.8rem;
   letter-spacing: 0.03rem;
