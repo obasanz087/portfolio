@@ -21,7 +21,46 @@ $(function() {
   });
 
   $(function() {$('.t-i-close').click(function() {$('.topview-info').removeClass('active')})});
-  
+
+
+// ハンバーガー2
+
+$(function() {
+  $('.pc_hamburger').click(function() {
+      $(this).toggleClass('active');
+
+      if ($(this).hasClass('active')) {
+          $('.pc_globalMenu').addClass('active');
+      } else {
+          $('.pc_globalMenu').removeClass('active');
+      } 
+    
+  });
+});
+$(function() {
+  $('.pc_globalMenu a[href]').click(function() {
+      $('.pc_globalMenu').removeClass('active');
+     $('.pc_hamburger').removeClass('active');
+
+  });
+});
+
+if ($('.pc_hamburger').hasClass('active')) {$(".nav-list-item").addClass('active2');}
+
+
+
+//ヘッダー色変更
+jQuery(window).scroll(function() {
+	let scrollTop = jQuery(window).scrollTop(); // スクロール上部の位置
+	let areaTop = jQuery(".contents").offset().top; // 対象エリアの上部の位置
+	let areaBottom = areaTop + jQuery(".contents").innerHeight(); // 対象エリアの下部の位置
+
+	if (scrollTop > areaTop && scrollTop < areaBottom) {
+		jQuery("header").addClass("active"); // スクロールが対象エリアに入った場合
+	} else {
+		jQuery("header").removeClass("active"); // スクロールが対象エリアから出ている場合
+	}
+});
 //ページ内リンク
 
 
