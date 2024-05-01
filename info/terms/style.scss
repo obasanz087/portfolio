@@ -5,15 +5,12 @@
   margin: auto;
   max-width: 1920px;
 }
-* ::-moz-selection {
-  background: rgba(63, 76, 89,0.9);
-  color: #ececec;
+header a{
+  color: #232323 !important;
 }
-* ::selection {
-  background: rgba(63, 76, 89,0.9);
-  color: #ececec;
+.header-link::after{
+  background: #3f4c59!important;
 }
-
 img {
   vertical-align: top;
 }
@@ -24,7 +21,7 @@ main{
 }
 .page_head{
     max-width: 1440px;
-    margin:75px 0 1.5rem 0 ;
+    margin:102px 0 1.5rem 0 ;
     border-radius: 20px;
     position: relative;
     .title{
@@ -40,7 +37,7 @@ main{
       }
     }
     p{
-      font-family: "Lato", sans-serif;
+      font-family: "Plus Jakarta Sans", sans-serif;
       position: absolute;
       line-height: 2.5rem;
       left:3vw;
@@ -87,7 +84,7 @@ main{
     }
 }
 p{
-  font-family:"Lato", "Noto Sans JP", sans-serif;
+  font-family:"Plus Jakarta Sans", "Noto Sans JP", sans-serif;
   letter-spacing: 0.03rem;
   line-height: 2rem;
   a{
@@ -114,7 +111,7 @@ p{
   }
 }
 h3{
-  font-family:"Lato", "Noto Sans JP", sans-serif;
+  font-family:"Plus Jakarta Sans", "Noto Sans JP", sans-serif;
   letter-spacing: 0.1rem;
   font-size: 2rem;
   margin-bottom:1rem;
