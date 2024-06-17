@@ -116,15 +116,15 @@ h3{
   font-size: 2rem;
   margin-bottom:1rem;
   margin-top:2rem;
-  span{
-    font-size:0.8rem;
-    display:block;
-    padding-right:0.25rem;
-    margin-left:0.5rem;
-    span{
-      display:inline
-    }
-  }
+}
+h4{
+  font-family:"Plus Jakarta Sans", "Noto Sans JP", sans-serif;
+  letter-spacing: 0.1rem;
+  font-size: 1.35rem;
+  margin-bottom:1rem;
+  margin-top:2rem;
+  padding-left:.65rem;
+  border-left: solid #232323 5px;
 }
 .img-grid{
   width: 100%;
@@ -150,4 +150,10 @@ h3{
 }
 section{
   max-width: 800px;
+}
+.line{
+  height: 2px;
+  width: 100%;
+  background: #ddd;
+  margin:4rem 0 2rem
 }
