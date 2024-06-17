@@ -43,24 +43,8 @@ h2 span {
   display:block;
   font-size:0.85rem;
   line-height: 0.85rem;
-  margin-top:0.5rem;
+  margin:0.5rem 0 1rem 0.1rem;
   
-  font-family: "Noto Sans JP", sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.05rem;
-  margin-bottom:1rem;
-  margin-left:1.5rem
-}
-
-.about-caption::before, .projects-caption::before, .update-caption::before, .contact-caption::before{
-  content: 'ー';
-  color:#3f4c59;
-  display:block;
-  font-size:0.85rem;
-  line-height: 0.85rem;
-  margin-left:0.2rem;
-  margin-bottom:-61px;
-
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 600;
   letter-spacing: 0.05rem;
@@ -1133,7 +1117,7 @@ h2 span {
       top:0;
       left: 3%;
       width: 94%;
-      height: 97.5%;
+      height: 98.5%;
       background-size: cover;
       background-repeat: no-repeat;
       border-radius: 20px 20px 0 20px;
@@ -1155,8 +1139,8 @@ h2 span {
   @media (min-width: 960px) {
     .m-topview-text-jp{
       position: absolute;
-      left:2.5vw;
-      bottom:calc(2.5vw + 2rem);
+      left:6.5vw;
+      bottom:3.5vw;
       font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
       font-size:1.3rem;
       font-weight: 500;
@@ -1165,8 +1149,8 @@ h2 span {
     }
     .m-topview-text-en{
       position: absolute;
-      left:2.5vw;
-      bottom:calc(2.5vw + 1rem);
+      left:6.5vw;
+      bottom:2.5vw;
       font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
       font-size:0.8rem;
       letter-spacing: 0.05rem;
@@ -1177,7 +1161,7 @@ h2 span {
     .m-topview-count{
       position: absolute;
       right:2.5vw;
-      bottom:calc(2.5vw + 1rem);
+      bottom:2.5vw;
       font-family: "Plus Jakarta Sans", sans-serif;
       font-weight: 500;
       color: #ddd;
@@ -1219,7 +1203,7 @@ h2 span {
   .progBar .bar{
     position:absolute;
     height:100%;
-    background-color:#fff;
+    background-color:#576675;
     animation: progress 10s -1.5s linear infinite;
   }
   @keyframes progress {
@@ -1228,16 +1212,25 @@ h2 span {
   }
   @media (min-width: 960px) {
     .progBar{
-      width:calc(100% - 5vw);
-      height:2px;
+      width:calc(100% - 4vw);
+      height:5px;
       background-color:none;
       position:relative;
       overflow: hidden;
       position: absolute;
-      bottom:2.25vw;
-      left:2.5vw;
+      bottom:0;
+      left:4vw;
       z-index: 91;
-    } 
+    }
+    .progBar_bg{
+      height: 5px;
+      width: 95vw;
+      background: #ddd;
+      position: absolute;
+      bottom:0;
+      right:0;
+      z-index: 50;
+    }
   }
   @media (max-width: 959px) {
     .progBar{
@@ -1252,16 +1245,91 @@ h2 span {
       z-index: 91;
     } 
   }
+
+/* ■■■■■■■■■■■■■■■■■ スクロールダウン ■■■■■■■■■■■■■■■■■ */ 
+.scrolldown_wrapper{
+  position: absolute;
+  left:0;
+  bottom:0;
+  height: 16vh;
+  width: 4vw;
+  background: #fff;
+  border-radius: 0 25px 0 0;
+}
+.scrolldown{
+  position:absolute;
+  height:13vh;
+  padding-left:1vw;
+  width: 3vw;
+  bottom:0;
+  background: #fff;
+}
+  
+
+.scrolldown span{
+  position: absolute;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  bottom:9vh;
+
+  font-family:'Lato', sans-serif;
+  transform: rotate(90deg)
+}
+  
+
+.scrolldown::after{
+  content: "";
+  position: absolute;
+  bottom:0;
+  width: 7.5px;
+  height:13vh;
+  background: #3f4c59;
+  animation: pathmove 2.5s ease-in-out infinite;
+}
+.scrolldown::before{
+  content: "";
+  position: absolute;
+  bottom:0;
+  width: 7.5px;
+  height:13vh;
+  background: #ddd;
+}
+
+@keyframes pathmove{
+  0%{
+      height:0;
+      top:0;
+      opacity: 1;
+  }
+  25%{
+      height:13vh;
+      top:0;
+      opacity: 1;
+  }
+  50%{
+      height:0;
+      top:13vh;
+      opacity: 1;
+  }
+  100%{
+      height:0;
+      top:0px;
+      opacity: 0;
+  }
+  }
+
   /* ■■■■■■■■■■■■■■■■■ topview info ■■■■■■■■■■■■■■■■■ */ 
   .topview-info{
     opacity: 0;
     position: absolute;
-    right:1vw;
-    top:1vw;
-    height: 70vh;
-    width: 500px;
+    right:2%;
+    padding-bottom:1rem;
+    top:103px;
+    height: auto;
+    width: 410px;
     background:rgba(236, 236, 236, 0.9);
-    border-radius: 20px 40px 0 20px ;
+    border-radius: 20px 20px 0 20px ;
     overflow: scroll;
     img{
       width: calc(100% - 4vw);
@@ -1302,6 +1370,27 @@ h2 span {
     transition: 0.2s;
     &:hover{
       color:#a13e3e
+    }
+  }
+
+  @media (max-width: 959px) {
+    .topview-info{
+      position: absolute;
+      right:3%;
+      top:0;
+      width: calc(100% - 6%);
+    }
+    .t-i-title{
+      padding:3vw 3vw 0 3vw;
+      font-size:1.3rem;
+    }
+    .t-i-article{
+      padding:3vw 3vw 0 2vw;
+    }
+    .t-i-close{
+      position: absolute;
+      top:3vw;
+      right:3vw;
     }
   }
   /* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ about ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ */ 
@@ -1641,7 +1730,8 @@ h2 span {
   .pj-flex {
     margin-left: -40px;
     list-style: none;
-    padding-bottom:3rem
+    padding-bottom:3rem;
+    position: relative;
   }
   @media (min-width: 960px) {
     .pj-flex {
@@ -1772,6 +1862,7 @@ h2 span {
     }
     .index-max{
       max-width: 1440px;
+      padding-bottom:10vh;
     }
   }
   @media (max-width: 959px) {
@@ -1797,6 +1888,9 @@ h2 span {
   .pj-index-1.active, .pj-index-2.active, .pj-index-3.active, .pj-index-4.active, .pj-index-5.active, .pj-index-6.active, .pj-index-7.active, .pj-index-8.active, .pj-index-9.active, .pj-index-10.active, .s-readmore-index.active, .pj-index-11.active, .pj-index-12.active, .pj-index-13.active, .pj-index-14.active, .pj-index-15.active, .pj-index-16.active, .pj-index-17.active, .pj-index-18.active, .pj-index-19.active, .pj-index-20.active, .pj-index-21.active, .pj-index-22.active, .pj-index-23.active, .pj-index-24.active, .pj-index-25.active, .pj-index-26.active, .pj-index-27.active, .pj-index-28.active, .pj-index-29.active, .pj-index-30.active, .pj-index-31.active, .pj-index-32.active, .pj-index-33.active, .pj-index-34.active, .pj-index-35.active, .pj-index-36.active, .pj-index-37.active, .pj-index-38.active, .pj-index-39.active, .pj-index-40.active, .pj-index-41.active, .pj-index-42.active, .pj-index-43.active, .pj-index-44.active, .pj-index-45.active, .pj-index-46.active, .pj-index-47.active, .pj-index-48.active, .pj-index-49.active, .pj-index-50.active, .pj-index-51.active, .pj-index-52.active, .pj-index-53.active, .pj-index-54.active, .pj-index-55.active, .pj-index-56.active, .pj-index-57.active, .pj-index-58.active, .pj-index-59.active, .pj-index-60.active, .pj-index-61.active, .pj-index-62.active, .pj-index-63.active, .pj-index-64.active, .pj-index-65.active, .pj-index-66.active, .pj-index-67.active, .pj-index-68.active, .pj-index-69.active, .pj-index-70.active, .pj-index-71.active, .pj-index-72.active, .pj-index-73.active, .pj-index-74.active, .pj-index-75.active, .pj-index-76.active, .pj-index-77.active, .pj-index-78.active, .pj-index-79.active, .pj-index-80.active, .pj-index-81.active, .pj-index-82.active, .pj-index-83.active, .pj-index-84.active, .pj-index-85.active, .pj-index-86.active, .pj-index-87.active, .pj-index-88.active, .pj-index-89.active, .pj-index-90.active, .pj-index-91.active, .pj-index-92.active, .pj-index-93.active, .pj-index-94.active, .pj-index-95.active, .pj-index-96.active, .pj-index-97.active, .pj-index-98.active, .pj-index-99.active, .pj-index-100.active {
     opacity: 100;
     display: block;
+    body{
+      overflow: hidden;
+    }
   }
   /* ■■■■■■■■■■■■■■■■■ スクロールバー非表示 ■■■■■■■■■■■■■■■■■ */
   @media (min-width: 960px) {
@@ -1834,7 +1928,7 @@ h2 span {
   }
   .pj-index-close {
     position: sticky;
-    top: 15px;
+    top: 0px;
     left:100%;
     font-size: 2.5rem;
     line-height: 40px;
@@ -1843,11 +1937,60 @@ h2 span {
     &:hover {
       color: #a13e3e;
     }
+    @media screen and (min-width: 1921px){
+      .fixed_2 {
+        right: calc(50% - 550px);
+      }
+    }
   }
+    .pj_index_close {
+    position: sticky;
+    top: calc(103px + 1rem);
+    left:100%;
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    z-index: 101;
+    transition: 0.2s;
+    border-radius: 25px;
+    &:hover{
+      background: #a13e3e;
+      span{
+        background: #fff;
+      }
+    }
+    span {
+      display: block;
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      transform: scaleY(0.5) translateY(2px);
+      background: #232323;
+      -webkit-transition: 0.2s ease-in-out;
+      -moz-transition: 0.2s ease-in-out;
+      transition: 0.2s ease-in-out;
+
+      &:nth-child(1) {
+        top: 50%;
+        right: 28%;
+        transform: translate(-50%,-50%);
+        width: 30px;
+        transform: rotate(45deg);
+      }
+      &:nth-child(2) {
+        top: 50%;
+        right: 28%;
+        transform: translate(-50%,-50%);
+        width: 30px;
+        transform: rotate(135deg);
+      }
+    }
+  }
+
   @media (min-width: 960px) {
     .pj-index-num {
       font-size: 5rem;
-      margin-top: 3rem;
+      margin-top:3rem;
     }
   }
   @media (max-width: 959px) {
@@ -1898,6 +2041,10 @@ h2 span {
     width: 100%;
     height: auto;
     border-radius: 10px;
+    background-color: #ddd;
+    background-image: url("../img/loading.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
     @media (max-width: 959px){
       margin-bottom:1rem
     }
