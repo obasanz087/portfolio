@@ -1788,6 +1788,9 @@ label:hover {
     animation: fadein 0.2s ease-out forwards;
     border-radius: 25px 25px 0 0;
   }
+  .index-max {
+    padding-bottom: 10vh;
+  }
 }
 .pj-index-1.active, .pj-index-2.active, .pj-index-3.active, .pj-index-4.active, .pj-index-5.active, .pj-index-6.active, .pj-index-7.active, .pj-index-8.active, .pj-index-9.active, .pj-index-10.active, .s-readmore-index.active, .pj-index-11.active, .pj-index-12.active, .pj-index-13.active, .pj-index-14.active, .pj-index-15.active, .pj-index-16.active, .pj-index-17.active, .pj-index-18.active, .pj-index-19.active, .pj-index-20.active, .pj-index-21.active, .pj-index-22.active, .pj-index-23.active, .pj-index-24.active, .pj-index-25.active, .pj-index-26.active, .pj-index-27.active, .pj-index-28.active, .pj-index-29.active, .pj-index-30.active, .pj-index-31.active, .pj-index-32.active, .pj-index-33.active, .pj-index-34.active, .pj-index-35.active, .pj-index-36.active, .pj-index-37.active, .pj-index-38.active, .pj-index-39.active, .pj-index-40.active, .pj-index-41.active, .pj-index-42.active, .pj-index-43.active, .pj-index-44.active, .pj-index-45.active, .pj-index-46.active, .pj-index-47.active, .pj-index-48.active, .pj-index-49.active, .pj-index-50.active, .pj-index-51.active, .pj-index-52.active, .pj-index-53.active, .pj-index-54.active, .pj-index-55.active, .pj-index-56.active, .pj-index-57.active, .pj-index-58.active, .pj-index-59.active, .pj-index-60.active, .pj-index-61.active, .pj-index-62.active, .pj-index-63.active, .pj-index-64.active, .pj-index-65.active, .pj-index-66.active, .pj-index-67.active, .pj-index-68.active, .pj-index-69.active, .pj-index-70.active, .pj-index-71.active, .pj-index-72.active, .pj-index-73.active, .pj-index-74.active, .pj-index-75.active, .pj-index-76.active, .pj-index-77.active, .pj-index-78.active, .pj-index-79.active, .pj-index-80.active, .pj-index-81.active, .pj-index-82.active, .pj-index-83.active, .pj-index-84.active, .pj-index-85.active, .pj-index-86.active, .pj-index-87.active, .pj-index-88.active, .pj-index-89.active, .pj-index-90.active, .pj-index-91.active, .pj-index-92.active, .pj-index-93.active, .pj-index-94.active, .pj-index-95.active, .pj-index-96.active, .pj-index-97.active, .pj-index-98.active, .pj-index-99.active, .pj-index-100.active {
   opacity: 100;
@@ -1838,27 +1841,8 @@ label:hover {
   display: inline-block;
 }
 
-.pj-index-close {
-  position: sticky;
-  top: 0px;
-  left: 100%;
-  font-size: 2.5rem;
-  line-height: 40px;
-  z-index: 101;
-  transition: 0.2s;
-}
-.pj-index-close:hover {
-  color: #a13e3e;
-}
-@media screen and (min-width: 1921px) {
-  .pj-index-close .fixed_2 {
-    right: calc(50% - 550px);
-  }
-}
-
 .pj_index_close {
   position: sticky;
-  top: calc(103px + 1rem);
   left: 100%;
   width: 70px;
   height: 70px;
@@ -1897,6 +1881,16 @@ label:hover {
   transform: rotate(135deg);
 }
 
+@media (max-width: 959px) {
+  .pj_index_close {
+    top: 1rem;
+  }
+}
+@media (min-width: 960px) {
+  .pj_index_close {
+    top: calc(103px + 1rem);
+  }
+}
 @media (min-width: 960px) {
   .pj-index-num {
     font-size: 5rem;
@@ -1906,6 +1900,7 @@ label:hover {
 @media (max-width: 959px) {
   .pj-index-num {
     font-size: 4rem;
+    margin-top: -1rem;
   }
 }
 @media (min-width: 960px) {
@@ -1913,18 +1908,6 @@ label:hover {
     font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
     font-size: 3rem;
     top: 167px;
-  }
-}
-@media (min-width: 960px) {
-  .pj-index-close {
-    position: sticky;
-    top: 6rem;
-    font-size: 2.5rem;
-    font-weight: bold;
-    border-radius: 50%;
-    z-index: 101;
-    color: #4d4d4d;
-    transition: 0.2s;
   }
 }
 /* ■■■■■■■■■■■■■■■■■ 文章・画像グリッド・モデル・地図 ■■■■■■■■■■■■■■■■■ */
