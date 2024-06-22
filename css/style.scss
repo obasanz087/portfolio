@@ -1644,6 +1644,19 @@ h2 span {
   }
  
   /* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ projects ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ */ 
+
+  .update_wrapper{
+    margin:1rem 0 0;
+    span{
+      font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
+      width: auto;
+      letter-spacing: 0.1rem;
+      font-size: 0.9rem;
+      span{
+        margin-left:1rem
+      }
+    }
+  }
   /* ■■■■■■■■■■■■■■■■■ 絞り込み ■■■■■■■■■■■■■■■■■ */
   .tag-search {
     display:none;
