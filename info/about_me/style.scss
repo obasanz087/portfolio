@@ -1,0 +1,74 @@
+p{
+  font-family:"Plus Jakarta Sans", "Noto Sans JP", sans-serif;
+  letter-spacing: 0.03rem;
+  line-height: 2rem;
+  a{
+    color:#3f4c59;
+    &:visited{
+      color: #3f4c59;
+    }
+  }
+}
+.b{
+  margin-top:1rem;
+}
+.article_img{
+  position: relative;
+  img{
+    position: absolute;
+    right:1vw;
+    top:0;
+    height:150px;
+    opacity: 0.3;
+    @media (max-width: 959px) {
+      display:none
+    }
+  }
+}
+h3{
+  font-family:"Plus Jakarta Sans", "Noto Sans JP", sans-serif;
+  letter-spacing: 0.1rem;
+  font-size: 2rem;
+  margin-bottom:1rem;
+  margin-top:2rem;
+}
+h4{
+  font-family:"Plus Jakarta Sans", "Noto Sans JP", sans-serif;
+  letter-spacing: 0.1rem;
+  font-size: 1.35rem;
+  margin-bottom:1rem;
+  margin-top:2rem;
+  padding-left:.65rem;
+  border-left: solid #232323 5px;
+}
+.img-grid{
+  width: 100%;
+  margin:1rem 0;
+  div{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap:1.5rem;
+    @media (max-width: 959px) {
+      grid-template-columns: 1fr;
+      gap:1.5rem;
+    }
+  }
+  img{
+    width: 100%;
+    border-radius: 15px 15px 0 15px;
+  }
+  p{
+    font-size:0.8rem;
+    line-height: 1.1rem;
+    margin-top:0.5rem
+  }
+}
+section{
+  max-width: 800px;
+}
+.line{
+  height: 2px;
+  width: 100%;
+  background: #ddd;
+  margin:4rem 0 2rem
+}

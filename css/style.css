@@ -248,7 +248,7 @@ header.active .header-link:hover::after {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
     background: #3f4c59;
@@ -380,7 +380,9 @@ header.active .header-link:hover::after {
   }
   .pcgm_copy {
     color: #ececec;
-    margin-top: 2.5rem;
+    position: fixed;
+    bottom: 2vw;
+    right: 3vw;
     letter-spacing: 0.125rem;
     font-size: 0.8rem;
   }
@@ -1133,6 +1135,11 @@ header.active .header-link:hover::after {
   }
 }
 /* ■■■■■■■■■■■■■■■■■ スクロールダウン ■■■■■■■■■■■■■■■■■ */
+@media (max-width: 959px) {
+  .scrolldown_wrapper {
+    display: none;
+  }
+}
 .scrolldown_wrapper {
   position: absolute;
   left: 0;
@@ -1328,35 +1335,46 @@ header.active .header-link:hover::after {
   }
 }
 /* ■■■■■■■■■■■■■■■■■ readmoreボタン ■■■■■■■■■■■■■■■■■ */
-.s-readmore {
+.about_button {
   transition: 0.2s;
   text-decoration: none;
   color: #232323;
+  margin-bottom: 1.1rem;
   background: #ececec;
   display: inline-block;
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
+  padding: 0.95rem 0 1rem 2rem;
+  font-size: 1rem;
+  width: calc(100% - 2.2rem);
   font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
   font-weight: 500;
   border-radius: 20px 20px 0 20px;
-  margin: 2rem 0;
   letter-spacing: 0.13rem;
+  position: relative;
 }
-.s-readmore:visited {
+.about_button:visited {
   color: #232323;
 }
-.s-readmore:hover {
+.about_button:hover {
   color: #ececec;
   background: #3f4c59;
   box-shadow: none;
 }
-.s-readmore i {
-  margin: 0 0 0 1rem;
+.about_button i {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 @media (max-width: 959px) {
-  .s-readmore {
-    margin: 1.5rem 0;
+  .about_button {
+    font-size: 0.9rem;
+    padding-left: 1rem;
+    width: calc(100% - 1.1rem);
+    margin: 1rem 0 5vw;
+  }
+  .about_button i {
+    right: 1rem;
   }
 }
 /* ■■■■■■■■■■■■■■■■■ SNSグリッド ■■■■■■■■■■■■■■■■■ */
@@ -1364,20 +1382,21 @@ header.active .header-link:hover::after {
   .about-sns-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100px 100px;
+    grid-template-rows: calc(50px + 1.1rem) 100px 100px;
     -moz-column-gap: 1.1rem;
          column-gap: 1.1rem;
     row-gap: 1.1rem;
+    margin-top: 1.1rem;
   }
 }
 @media (max-width: 800px) {
   .about-sns-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 130px 90px;
+    grid-template-rows: calc(50px + 1rem + 5vw) 130px 90px;
     -moz-column-gap: 3%;
          column-gap: 3%;
-    row-gap: 1.1rem;
+    row-gap: 3vw;
   }
 }
 /* ■■■■■■■■■■■■■■■■■ SNSグリッド - ベース・大きさ・色 ■■■■■■■■■■■■■■■■■ */
@@ -1410,19 +1429,31 @@ header.active .header-link:hover::after {
 @media (min-width: 801px) {
   .item1 {
     grid-column: 1/2;
-    grid-row: 1/3;
+    grid-row: 1/2;
   }
   .item2 {
     grid-column: 2/3;
-    grid-row: 1/3;
+    grid-row: 1/2;
   }
   .item3 {
     grid-column: 3/4;
     grid-row: 1/2;
   }
   .item4 {
+    grid-column: 1/2;
+    grid-row: 2/4;
+  }
+  .item5 {
+    grid-column: 2/3;
+    grid-row: 2/4;
+  }
+  .item6 {
     grid-column: 3/4;
     grid-row: 2/3;
+  }
+  .item7 {
+    grid-column: 3/4;
+    grid-row: 3/4;
   }
 }
 .x:hover {
@@ -1481,6 +1512,10 @@ header.active .header-link:hover::after {
     font-size: 0.9rem;
   }
 }
+.item3 {
+  display: none;
+}
+
 @media (min-width: 1440px) {
   .about-sns-br {
     display: inline;
@@ -1524,7 +1559,8 @@ header.active .header-link:hover::after {
 }
 /* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ projects ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ */
 .update_wrapper {
-  margin: 1rem 0 0;
+  margin: 0 0 1rem;
+  text-align: right;
 }
 .update_wrapper span {
   font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
@@ -1574,7 +1610,7 @@ input[type=radio] {
 }
 
 .label-box {
-  margin: 2vw 0;
+  margin: 2vw 0 0;
 }
 
 label:hover {
@@ -1725,7 +1761,7 @@ label:hover {
 }
 /* ■■■■■■■■■■■■■■■■■ インデックスフレーム ■■■■■■■■■■■■■■■■■ */
 @media (min-width: 960px) {
-  .s-readmore-index {
+  .about_button-index {
     opacity: 0;
     display: none;
     border-radius: 50px 50px 0 0;
@@ -1770,7 +1806,7 @@ label:hover {
   }
 }
 @media (max-width: 959px) {
-  .pj-index-1, .pj-index-2, .pj-index-3, .pj-index-4, .pj-index-5, .pj-index-6, .pj-index-7, .pj-index-8, .pj-index-9, .pj-index-10, .s-readmore-index, .pj-index-11, .pj-index-12, .pj-index-13, .pj-index-14, .pj-index-15, .pj-index-16, .pj-index-17, .pj-index-18, .pj-index-19, .pj-index-20, .pj-index-21, .pj-index-22, .pj-index-23, .pj-index-24, .pj-index-25, .pj-index-26, .pj-index-27, .pj-index-28, .pj-index-29, .pj-index-30, .pj-index-31, .pj-index-32, .pj-index-33, .pj-index-34, .pj-index-35, .pj-index-36, .pj-index-37, .pj-index-38, .pj-index-39, .pj-index-40, .pj-index-41, .pj-index-42, .pj-index-43, .pj-index-44, .pj-index-45, .pj-index-46, .pj-index-47, .pj-index-48, .pj-index-49, .pj-index-50, .pj-index-51, .pj-index-52, .pj-index-53, .pj-index-54, .pj-index-55, .pj-index-56, .pj-index-57, .pj-index-58, .pj-index-59, .pj-index-60, .pj-index-61, .pj-index-62, .pj-index-63, .pj-index-64, .pj-index-65, .pj-index-66, .pj-index-67, .pj-index-68, .pj-index-69, .pj-index-70, .pj-index-71, .pj-index-72, .pj-index-73, .pj-index-74, .pj-index-75, .pj-index-76, .pj-index-77, .pj-index-78, .pj-index-79, .pj-index-80, .pj-index-81, .pj-index-82, .pj-index-83, .pj-index-84, .pj-index-85, .pj-index-86, .pj-index-87, .pj-index-88, .pj-index-89, .pj-index-90, .pj-index-91, .pj-index-92, .pj-index-93, .pj-index-94, .pj-index-95, .pj-index-96, .pj-index-97, .pj-index-98, .pj-index-99, .pj-index-100 {
+  .pj-index-1, .pj-index-2, .pj-index-3, .pj-index-4, .pj-index-5, .pj-index-6, .pj-index-7, .pj-index-8, .pj-index-9, .pj-index-10, .about_button-index, .pj-index-11, .pj-index-12, .pj-index-13, .pj-index-14, .pj-index-15, .pj-index-16, .pj-index-17, .pj-index-18, .pj-index-19, .pj-index-20, .pj-index-21, .pj-index-22, .pj-index-23, .pj-index-24, .pj-index-25, .pj-index-26, .pj-index-27, .pj-index-28, .pj-index-29, .pj-index-30, .pj-index-31, .pj-index-32, .pj-index-33, .pj-index-34, .pj-index-35, .pj-index-36, .pj-index-37, .pj-index-38, .pj-index-39, .pj-index-40, .pj-index-41, .pj-index-42, .pj-index-43, .pj-index-44, .pj-index-45, .pj-index-46, .pj-index-47, .pj-index-48, .pj-index-49, .pj-index-50, .pj-index-51, .pj-index-52, .pj-index-53, .pj-index-54, .pj-index-55, .pj-index-56, .pj-index-57, .pj-index-58, .pj-index-59, .pj-index-60, .pj-index-61, .pj-index-62, .pj-index-63, .pj-index-64, .pj-index-65, .pj-index-66, .pj-index-67, .pj-index-68, .pj-index-69, .pj-index-70, .pj-index-71, .pj-index-72, .pj-index-73, .pj-index-74, .pj-index-75, .pj-index-76, .pj-index-77, .pj-index-78, .pj-index-79, .pj-index-80, .pj-index-81, .pj-index-82, .pj-index-83, .pj-index-84, .pj-index-85, .pj-index-86, .pj-index-87, .pj-index-88, .pj-index-89, .pj-index-90, .pj-index-91, .pj-index-92, .pj-index-93, .pj-index-94, .pj-index-95, .pj-index-96, .pj-index-97, .pj-index-98, .pj-index-99, .pj-index-100 {
     display: none;
     transition: 0.2s;
     -webkit-backdrop-filter: blur(30px);
@@ -1792,17 +1828,17 @@ label:hover {
     padding-bottom: 10vh;
   }
 }
-.pj-index-1.active, .pj-index-2.active, .pj-index-3.active, .pj-index-4.active, .pj-index-5.active, .pj-index-6.active, .pj-index-7.active, .pj-index-8.active, .pj-index-9.active, .pj-index-10.active, .s-readmore-index.active, .pj-index-11.active, .pj-index-12.active, .pj-index-13.active, .pj-index-14.active, .pj-index-15.active, .pj-index-16.active, .pj-index-17.active, .pj-index-18.active, .pj-index-19.active, .pj-index-20.active, .pj-index-21.active, .pj-index-22.active, .pj-index-23.active, .pj-index-24.active, .pj-index-25.active, .pj-index-26.active, .pj-index-27.active, .pj-index-28.active, .pj-index-29.active, .pj-index-30.active, .pj-index-31.active, .pj-index-32.active, .pj-index-33.active, .pj-index-34.active, .pj-index-35.active, .pj-index-36.active, .pj-index-37.active, .pj-index-38.active, .pj-index-39.active, .pj-index-40.active, .pj-index-41.active, .pj-index-42.active, .pj-index-43.active, .pj-index-44.active, .pj-index-45.active, .pj-index-46.active, .pj-index-47.active, .pj-index-48.active, .pj-index-49.active, .pj-index-50.active, .pj-index-51.active, .pj-index-52.active, .pj-index-53.active, .pj-index-54.active, .pj-index-55.active, .pj-index-56.active, .pj-index-57.active, .pj-index-58.active, .pj-index-59.active, .pj-index-60.active, .pj-index-61.active, .pj-index-62.active, .pj-index-63.active, .pj-index-64.active, .pj-index-65.active, .pj-index-66.active, .pj-index-67.active, .pj-index-68.active, .pj-index-69.active, .pj-index-70.active, .pj-index-71.active, .pj-index-72.active, .pj-index-73.active, .pj-index-74.active, .pj-index-75.active, .pj-index-76.active, .pj-index-77.active, .pj-index-78.active, .pj-index-79.active, .pj-index-80.active, .pj-index-81.active, .pj-index-82.active, .pj-index-83.active, .pj-index-84.active, .pj-index-85.active, .pj-index-86.active, .pj-index-87.active, .pj-index-88.active, .pj-index-89.active, .pj-index-90.active, .pj-index-91.active, .pj-index-92.active, .pj-index-93.active, .pj-index-94.active, .pj-index-95.active, .pj-index-96.active, .pj-index-97.active, .pj-index-98.active, .pj-index-99.active, .pj-index-100.active {
+.pj-index-1.active, .pj-index-2.active, .pj-index-3.active, .pj-index-4.active, .pj-index-5.active, .pj-index-6.active, .pj-index-7.active, .pj-index-8.active, .pj-index-9.active, .pj-index-10.active, .about_button-index.active, .pj-index-11.active, .pj-index-12.active, .pj-index-13.active, .pj-index-14.active, .pj-index-15.active, .pj-index-16.active, .pj-index-17.active, .pj-index-18.active, .pj-index-19.active, .pj-index-20.active, .pj-index-21.active, .pj-index-22.active, .pj-index-23.active, .pj-index-24.active, .pj-index-25.active, .pj-index-26.active, .pj-index-27.active, .pj-index-28.active, .pj-index-29.active, .pj-index-30.active, .pj-index-31.active, .pj-index-32.active, .pj-index-33.active, .pj-index-34.active, .pj-index-35.active, .pj-index-36.active, .pj-index-37.active, .pj-index-38.active, .pj-index-39.active, .pj-index-40.active, .pj-index-41.active, .pj-index-42.active, .pj-index-43.active, .pj-index-44.active, .pj-index-45.active, .pj-index-46.active, .pj-index-47.active, .pj-index-48.active, .pj-index-49.active, .pj-index-50.active, .pj-index-51.active, .pj-index-52.active, .pj-index-53.active, .pj-index-54.active, .pj-index-55.active, .pj-index-56.active, .pj-index-57.active, .pj-index-58.active, .pj-index-59.active, .pj-index-60.active, .pj-index-61.active, .pj-index-62.active, .pj-index-63.active, .pj-index-64.active, .pj-index-65.active, .pj-index-66.active, .pj-index-67.active, .pj-index-68.active, .pj-index-69.active, .pj-index-70.active, .pj-index-71.active, .pj-index-72.active, .pj-index-73.active, .pj-index-74.active, .pj-index-75.active, .pj-index-76.active, .pj-index-77.active, .pj-index-78.active, .pj-index-79.active, .pj-index-80.active, .pj-index-81.active, .pj-index-82.active, .pj-index-83.active, .pj-index-84.active, .pj-index-85.active, .pj-index-86.active, .pj-index-87.active, .pj-index-88.active, .pj-index-89.active, .pj-index-90.active, .pj-index-91.active, .pj-index-92.active, .pj-index-93.active, .pj-index-94.active, .pj-index-95.active, .pj-index-96.active, .pj-index-97.active, .pj-index-98.active, .pj-index-99.active, .pj-index-100.active {
   opacity: 100;
   display: block;
 }
-.pj-index-1.active body, .pj-index-2.active body, .pj-index-3.active body, .pj-index-4.active body, .pj-index-5.active body, .pj-index-6.active body, .pj-index-7.active body, .pj-index-8.active body, .pj-index-9.active body, .pj-index-10.active body, .s-readmore-index.active body, .pj-index-11.active body, .pj-index-12.active body, .pj-index-13.active body, .pj-index-14.active body, .pj-index-15.active body, .pj-index-16.active body, .pj-index-17.active body, .pj-index-18.active body, .pj-index-19.active body, .pj-index-20.active body, .pj-index-21.active body, .pj-index-22.active body, .pj-index-23.active body, .pj-index-24.active body, .pj-index-25.active body, .pj-index-26.active body, .pj-index-27.active body, .pj-index-28.active body, .pj-index-29.active body, .pj-index-30.active body, .pj-index-31.active body, .pj-index-32.active body, .pj-index-33.active body, .pj-index-34.active body, .pj-index-35.active body, .pj-index-36.active body, .pj-index-37.active body, .pj-index-38.active body, .pj-index-39.active body, .pj-index-40.active body, .pj-index-41.active body, .pj-index-42.active body, .pj-index-43.active body, .pj-index-44.active body, .pj-index-45.active body, .pj-index-46.active body, .pj-index-47.active body, .pj-index-48.active body, .pj-index-49.active body, .pj-index-50.active body, .pj-index-51.active body, .pj-index-52.active body, .pj-index-53.active body, .pj-index-54.active body, .pj-index-55.active body, .pj-index-56.active body, .pj-index-57.active body, .pj-index-58.active body, .pj-index-59.active body, .pj-index-60.active body, .pj-index-61.active body, .pj-index-62.active body, .pj-index-63.active body, .pj-index-64.active body, .pj-index-65.active body, .pj-index-66.active body, .pj-index-67.active body, .pj-index-68.active body, .pj-index-69.active body, .pj-index-70.active body, .pj-index-71.active body, .pj-index-72.active body, .pj-index-73.active body, .pj-index-74.active body, .pj-index-75.active body, .pj-index-76.active body, .pj-index-77.active body, .pj-index-78.active body, .pj-index-79.active body, .pj-index-80.active body, .pj-index-81.active body, .pj-index-82.active body, .pj-index-83.active body, .pj-index-84.active body, .pj-index-85.active body, .pj-index-86.active body, .pj-index-87.active body, .pj-index-88.active body, .pj-index-89.active body, .pj-index-90.active body, .pj-index-91.active body, .pj-index-92.active body, .pj-index-93.active body, .pj-index-94.active body, .pj-index-95.active body, .pj-index-96.active body, .pj-index-97.active body, .pj-index-98.active body, .pj-index-99.active body, .pj-index-100.active body {
+.pj-index-1.active body, .pj-index-2.active body, .pj-index-3.active body, .pj-index-4.active body, .pj-index-5.active body, .pj-index-6.active body, .pj-index-7.active body, .pj-index-8.active body, .pj-index-9.active body, .pj-index-10.active body, .about_button-index.active body, .pj-index-11.active body, .pj-index-12.active body, .pj-index-13.active body, .pj-index-14.active body, .pj-index-15.active body, .pj-index-16.active body, .pj-index-17.active body, .pj-index-18.active body, .pj-index-19.active body, .pj-index-20.active body, .pj-index-21.active body, .pj-index-22.active body, .pj-index-23.active body, .pj-index-24.active body, .pj-index-25.active body, .pj-index-26.active body, .pj-index-27.active body, .pj-index-28.active body, .pj-index-29.active body, .pj-index-30.active body, .pj-index-31.active body, .pj-index-32.active body, .pj-index-33.active body, .pj-index-34.active body, .pj-index-35.active body, .pj-index-36.active body, .pj-index-37.active body, .pj-index-38.active body, .pj-index-39.active body, .pj-index-40.active body, .pj-index-41.active body, .pj-index-42.active body, .pj-index-43.active body, .pj-index-44.active body, .pj-index-45.active body, .pj-index-46.active body, .pj-index-47.active body, .pj-index-48.active body, .pj-index-49.active body, .pj-index-50.active body, .pj-index-51.active body, .pj-index-52.active body, .pj-index-53.active body, .pj-index-54.active body, .pj-index-55.active body, .pj-index-56.active body, .pj-index-57.active body, .pj-index-58.active body, .pj-index-59.active body, .pj-index-60.active body, .pj-index-61.active body, .pj-index-62.active body, .pj-index-63.active body, .pj-index-64.active body, .pj-index-65.active body, .pj-index-66.active body, .pj-index-67.active body, .pj-index-68.active body, .pj-index-69.active body, .pj-index-70.active body, .pj-index-71.active body, .pj-index-72.active body, .pj-index-73.active body, .pj-index-74.active body, .pj-index-75.active body, .pj-index-76.active body, .pj-index-77.active body, .pj-index-78.active body, .pj-index-79.active body, .pj-index-80.active body, .pj-index-81.active body, .pj-index-82.active body, .pj-index-83.active body, .pj-index-84.active body, .pj-index-85.active body, .pj-index-86.active body, .pj-index-87.active body, .pj-index-88.active body, .pj-index-89.active body, .pj-index-90.active body, .pj-index-91.active body, .pj-index-92.active body, .pj-index-93.active body, .pj-index-94.active body, .pj-index-95.active body, .pj-index-96.active body, .pj-index-97.active body, .pj-index-98.active body, .pj-index-99.active body, .pj-index-100.active body {
   overflow: hidden;
 }
 
 /* ■■■■■■■■■■■■■■■■■ スクロールバー非表示 ■■■■■■■■■■■■■■■■■ */
 @media (min-width: 960px) {
-  .pj-index-1::-webkit-scrollbar, .pj-index-2::-webkit-scrollbar, .pj-index-3::-webkit-scrollbar, .pj-index-4::-webkit-scrollbar, .pj-index-5::-webkit-scrollbar, .pj-index-6::-webkit-scrollbar, .pj-index-7::-webkit-scrollbar, .pj-index-8::-webkit-scrollbar, .pj-index-9::-webkit-scrollbar, .pj-index-10::-webkit-scrollbar, .s-readmore-index::-webkit-scrollbar, .pj-index-11::-webkit-scrollbar, .pj-index-12::-webkit-scrollbar, .pj-index-13::-webkit-scrollbar, .pj-index-14::-webkit-scrollbar, .pj-index-15::-webkit-scrollbar, .pj-index-16::-webkit-scrollbar, .pj-index-17::-webkit-scrollbar, .pj-index-18::-webkit-scrollbar, .pj-index-19::-webkit-scrollbar, .pj-index-20::-webkit-scrollbar, .pj-index-21::-webkit-scrollbar, .pj-index-22::-webkit-scrollbar, .pj-index-23::-webkit-scrollbar, .pj-index-24::-webkit-scrollbar, .pj-index-25::-webkit-scrollbar, .pj-index-26::-webkit-scrollbar, .pj-index-27::-webkit-scrollbar, .pj-index-28::-webkit-scrollbar, .pj-index-29::-webkit-scrollbar, .pj-index-30::-webkit-scrollbar, .pj-index-31::-webkit-scrollbar, .pj-index-32::-webkit-scrollbar, .pj-index-33::-webkit-scrollbar, .pj-index-34::-webkit-scrollbar, .pj-index-35::-webkit-scrollbar, .pj-index-36::-webkit-scrollbar, .pj-index-37::-webkit-scrollbar, .pj-index-38::-webkit-scrollbar, .pj-index-39::-webkit-scrollbar, .pj-index-40::-webkit-scrollbar, .pj-index-41::-webkit-scrollbar, .pj-index-42::-webkit-scrollbar, .pj-index-43::-webkit-scrollbar, .pj-index-44::-webkit-scrollbar, .pj-index-45::-webkit-scrollbar, .pj-index-46::-webkit-scrollbar, .pj-index-47::-webkit-scrollbar, .pj-index-48::-webkit-scrollbar, .pj-index-49::-webkit-scrollbar, .pj-index-50::-webkit-scrollbar, .pj-index-51::-webkit-scrollbar, .pj-index-52::-webkit-scrollbar, .pj-index-53::-webkit-scrollbar, .pj-index-54::-webkit-scrollbar, .pj-index-55::-webkit-scrollbar, .pj-index-56::-webkit-scrollbar, .pj-index-57::-webkit-scrollbar, .pj-index-58::-webkit-scrollbar, .pj-index-59::-webkit-scrollbar, .pj-index-60::-webkit-scrollbar, .pj-index-61::-webkit-scrollbar, .pj-index-62::-webkit-scrollbar, .pj-index-63::-webkit-scrollbar, .pj-index-64::-webkit-scrollbar, .pj-index-65::-webkit-scrollbar, .pj-index-66::-webkit-scrollbar, .pj-index-67::-webkit-scrollbar, .pj-index-68::-webkit-scrollbar, .pj-index-69::-webkit-scrollbar, .pj-index-70::-webkit-scrollbar, .pj-index-71::-webkit-scrollbar, .pj-index-72::-webkit-scrollbar, .pj-index-73::-webkit-scrollbar, .pj-index-74::-webkit-scrollbar, .pj-index-75::-webkit-scrollbar, .pj-index-76::-webkit-scrollbar, .pj-index-77::-webkit-scrollbar, .pj-index-78::-webkit-scrollbar, .pj-index-79::-webkit-scrollbar, .pj-index-80::-webkit-scrollbar, .pj-index-81::-webkit-scrollbar, .pj-index-82::-webkit-scrollbar, .pj-index-83::-webkit-scrollbar, .pj-index-84::-webkit-scrollbar, .pj-index-85::-webkit-scrollbar, .pj-index-86::-webkit-scrollbar, .pj-index-87::-webkit-scrollbar, .pj-index-88::-webkit-scrollbar, .pj-index-89::-webkit-scrollbar, .pj-index-90::-webkit-scrollbar, .pj-index-91::-webkit-scrollbar, .pj-index-92::-webkit-scrollbar, .pj-index-93::-webkit-scrollbar, .pj-index-94::-webkit-scrollbar, .pj-index-95::-webkit-scrollbar, .pj-index-96::-webkit-scrollbar, .pj-index-97::-webkit-scrollbar, .pj-index-98::-webkit-scrollbar, .pj-index-99::-webkit-scrollbar, .pj-index-100::-webkit-scrollbar {
+  .pj-index-1::-webkit-scrollbar, .pj-index-2::-webkit-scrollbar, .pj-index-3::-webkit-scrollbar, .pj-index-4::-webkit-scrollbar, .pj-index-5::-webkit-scrollbar, .pj-index-6::-webkit-scrollbar, .pj-index-7::-webkit-scrollbar, .pj-index-8::-webkit-scrollbar, .pj-index-9::-webkit-scrollbar, .pj-index-10::-webkit-scrollbar, .about_button-index::-webkit-scrollbar, .pj-index-11::-webkit-scrollbar, .pj-index-12::-webkit-scrollbar, .pj-index-13::-webkit-scrollbar, .pj-index-14::-webkit-scrollbar, .pj-index-15::-webkit-scrollbar, .pj-index-16::-webkit-scrollbar, .pj-index-17::-webkit-scrollbar, .pj-index-18::-webkit-scrollbar, .pj-index-19::-webkit-scrollbar, .pj-index-20::-webkit-scrollbar, .pj-index-21::-webkit-scrollbar, .pj-index-22::-webkit-scrollbar, .pj-index-23::-webkit-scrollbar, .pj-index-24::-webkit-scrollbar, .pj-index-25::-webkit-scrollbar, .pj-index-26::-webkit-scrollbar, .pj-index-27::-webkit-scrollbar, .pj-index-28::-webkit-scrollbar, .pj-index-29::-webkit-scrollbar, .pj-index-30::-webkit-scrollbar, .pj-index-31::-webkit-scrollbar, .pj-index-32::-webkit-scrollbar, .pj-index-33::-webkit-scrollbar, .pj-index-34::-webkit-scrollbar, .pj-index-35::-webkit-scrollbar, .pj-index-36::-webkit-scrollbar, .pj-index-37::-webkit-scrollbar, .pj-index-38::-webkit-scrollbar, .pj-index-39::-webkit-scrollbar, .pj-index-40::-webkit-scrollbar, .pj-index-41::-webkit-scrollbar, .pj-index-42::-webkit-scrollbar, .pj-index-43::-webkit-scrollbar, .pj-index-44::-webkit-scrollbar, .pj-index-45::-webkit-scrollbar, .pj-index-46::-webkit-scrollbar, .pj-index-47::-webkit-scrollbar, .pj-index-48::-webkit-scrollbar, .pj-index-49::-webkit-scrollbar, .pj-index-50::-webkit-scrollbar, .pj-index-51::-webkit-scrollbar, .pj-index-52::-webkit-scrollbar, .pj-index-53::-webkit-scrollbar, .pj-index-54::-webkit-scrollbar, .pj-index-55::-webkit-scrollbar, .pj-index-56::-webkit-scrollbar, .pj-index-57::-webkit-scrollbar, .pj-index-58::-webkit-scrollbar, .pj-index-59::-webkit-scrollbar, .pj-index-60::-webkit-scrollbar, .pj-index-61::-webkit-scrollbar, .pj-index-62::-webkit-scrollbar, .pj-index-63::-webkit-scrollbar, .pj-index-64::-webkit-scrollbar, .pj-index-65::-webkit-scrollbar, .pj-index-66::-webkit-scrollbar, .pj-index-67::-webkit-scrollbar, .pj-index-68::-webkit-scrollbar, .pj-index-69::-webkit-scrollbar, .pj-index-70::-webkit-scrollbar, .pj-index-71::-webkit-scrollbar, .pj-index-72::-webkit-scrollbar, .pj-index-73::-webkit-scrollbar, .pj-index-74::-webkit-scrollbar, .pj-index-75::-webkit-scrollbar, .pj-index-76::-webkit-scrollbar, .pj-index-77::-webkit-scrollbar, .pj-index-78::-webkit-scrollbar, .pj-index-79::-webkit-scrollbar, .pj-index-80::-webkit-scrollbar, .pj-index-81::-webkit-scrollbar, .pj-index-82::-webkit-scrollbar, .pj-index-83::-webkit-scrollbar, .pj-index-84::-webkit-scrollbar, .pj-index-85::-webkit-scrollbar, .pj-index-86::-webkit-scrollbar, .pj-index-87::-webkit-scrollbar, .pj-index-88::-webkit-scrollbar, .pj-index-89::-webkit-scrollbar, .pj-index-90::-webkit-scrollbar, .pj-index-91::-webkit-scrollbar, .pj-index-92::-webkit-scrollbar, .pj-index-93::-webkit-scrollbar, .pj-index-94::-webkit-scrollbar, .pj-index-95::-webkit-scrollbar, .pj-index-96::-webkit-scrollbar, .pj-index-97::-webkit-scrollbar, .pj-index-98::-webkit-scrollbar, .pj-index-99::-webkit-scrollbar, .pj-index-100::-webkit-scrollbar {
     display: none;
   }
 }

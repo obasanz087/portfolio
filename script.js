@@ -62,9 +62,8 @@ jQuery(window).scroll(function() {
 		jQuery("header").removeClass("active"); // スクロールが対象エリアから出ている場合
 	}
 });
+
 //ページ内リンク
-
-
 $(function () {
   $(window).on("load scroll resize", function () {
 
@@ -187,11 +186,6 @@ $(function(){$('.pj-sam-97').click(function() {$(this).addClass('active');if ($(
 $(function(){$('.pj-sam-98').click(function() {$(this).addClass('active');if ($(this).hasClass('active')) {$('.pj-index-98').addClass('active');}else{$('.pj-index-98').removeClass('active');} });});
 $(function(){$('.pj-sam-99').click(function() {$(this).addClass('active');if ($(this).hasClass('active')) {$('.pj-index-99').addClass('active');}else{$('.pj-index-99').removeClass('active');} });});
 
-
-
-
-
-$(function(){$('.s-readmore').click(function() {$(this).addClass('active');if ($(this).hasClass('active')) {$('.s-readmore-index').addClass('active');}else{$('.pj-sam-100').removeClass('active');} });});
 
 $(function(){$('.sp-menu-discord').click(function() {$('.discord-caption').addClass('active');;})});;
 $(function(){$('.f-sns-icon.discord').click(function() {$('.discord_popup').addClass('active');;})});;
