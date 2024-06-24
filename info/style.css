@@ -29,9 +29,36 @@ main {
   padding: 0 5%;
 }
 
+.page_point {
+  margin-top: 103px;
+  font-size: 0.85rem;
+}
+@media (max-width: 959px) {
+  .page_point {
+    margin-top: 52.5px;
+    font-size: 0.65rem;
+  }
+}
+.page_point a {
+  text-decoration: none;
+  font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
+  color: #777;
+  font-weight: 500;
+}
+.page_point a:hover {
+  color: #232323;
+}
+.page_point a:visited {
+  color: #777;
+}
+.page_point i {
+  padding: 0 0.5rem;
+  color: #777777;
+}
+
 .page_head {
   max-width: 1440px;
-  margin: 102px 0 1.5rem 0;
+  margin: 1rem 0 1.5rem;
   border-radius: 20px;
   position: relative;
 }
