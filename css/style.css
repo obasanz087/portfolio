@@ -103,19 +103,20 @@ header .header-link {
   line-height: 10 0px;
   padding: 26px 0.5rem 25px 0.5rem;
 }
-header .header-link::after {
-  content: " ";
+header .header-link::before {
+  content: "●";
   display: block;
-  background: #ececec;
+  color: rgba(255, 255, 255, 0);
+  font-size: 0.7rem;
   position: absolute;
-  top: 0px;
-  left: 0;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
   height: 5px;
-  width: 0%;
-  transition: 0.3s;
+  transition: 0.2s;
 }
-header .header-link:hover::after {
-  width: 100%;
+header .header-link:hover::before {
+  color: #3f4c59;
 }
 header.active .nav-list, header.active .nav-list-item a, header.active .h-logo {
   color: #232323;
@@ -129,20 +130,6 @@ header.active .h-logo span {
 }
 header.active .nav-list .pc_hamburger span {
   background: #232323;
-}
-header.active .header-link::after {
-  content: " ";
-  display: block;
-  background: #3f4c59;
-  position: absolute;
-  top: 0px;
-  left: 0;
-  height: 5px;
-  width: 0%;
-  transition: 0.3s;
-}
-header.active .header-link:hover::after {
-  width: 100%;
 }
 
 .nav-list {
@@ -381,7 +368,7 @@ header.active .header-link:hover::after {
   .pcgm_copy {
     color: #ececec;
     position: fixed;
-    bottom: 2vw;
+    bottom: 1.5vw;
     right: 3vw;
     letter-spacing: 0.125rem;
     font-size: 0.8rem;

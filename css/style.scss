@@ -105,19 +105,20 @@ h2 span {
       line-height: 10 0px;
       padding: 26px 0.5rem 25px 0.5rem ;
     }
-    .header-link::after{
-        content:" ";
+    .header-link::before{
+        content:"●";
         display: block;
-        background: #ececec;
+        color:rgba(255,255,255,0);
+        font-size:0.7rem;
         position: absolute;
-        top:0px;
-        left:0;
+        top:-40px;
+        left:50%;
+        transform: translateX(-50%);
         height: 5px;
-        width:0%;
-        transition: 0.3s;
+        transition: 0.2s;
       }
-    .header-link:hover::after{
-      width: 100%;
+    .header-link:hover::before{
+      color:#3f4c59;
     }
 
     &.active{
@@ -133,20 +134,6 @@ h2 span {
       }
       .nav-list .pc_hamburger span{
         background:#232323;
-      }
-      .header-link::after{
-        content:" ";
-        display: block;
-        background: #3f4c59;
-        position: absolute;
-        top:0px;
-        left:0;
-        height: 5px;
-        width:0%;
-        transition: 0.3s;
-      }
-      .header-link:hover::after{
-        width: 100%;
       }
       } 
     }
@@ -394,7 +381,7 @@ h2 span {
     .pcgm_copy{
       color: #ececec;
       position: fixed;
-      bottom:2vw;
+      bottom:1.5vw;
       right:3vw;
       letter-spacing: 0.125rem;
       font-size: 0.8rem;
