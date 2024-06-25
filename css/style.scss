@@ -24,7 +24,7 @@
   }
 }
 
-h2{
+h1{
   margin-top:1rem;
   letter-spacing: 0.15rem;
   font-size: 2em;
@@ -32,11 +32,6 @@ h2{
   margin-bottom: 1.5rem;
   padding-top: 20vh;
   object-fit: cover;
-}
-
-
-h2 span {
-  color: #a13e3e;
 }
 
 .about-caption::after, .projects-caption::after, .update-caption::after, .contact-caption::after{
@@ -68,7 +63,7 @@ h2 span {
   content: 'ご連絡';
 }
 
-.se-ex {
+.main_text {
   letter-spacing: 0.07rem;
   line-height: 1.8rem;
   font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
@@ -96,83 +91,83 @@ h2 span {
       line-height: 100px;
       transition: 0.2s;
       position: relative;
-
       &:hover{
         color: #fff;
       }
     }
-    .header-link{
-      line-height: 10 0px;
-      padding: 26px 0.5rem 25px 0.5rem ;
-    }
-    .header-link::before{
-        content:"●";
-        display: block;
-        color:rgba(255,255,255,0);
-        font-size:0.7rem;
-        position: absolute;
-        top:-40px;
-        left:50%;
-        transform: translateX(-50%);
-        height: 5px;
-        transition: 0.2s;
-      }
-    .header-link:hover::before{
-      color:#3f4c59;
-    }
 
     &.active{
-      .nav-list,.nav-list-item a,.h-logo{
+      .header_list,.header_list li a,.header_logo{
         color:#232323;
         background: none;
         &:hover{
           color:#3f4c59
         }
       }
-      .h-logo span{
+      .header_logo span{
         color:#8b8b8b
       }
-      .nav-list .pc_hamburger span{
+      .header_list .pc_hamburger span{
         background:#232323;
       }
-      } 
-    }
-  .nav-list {
+      .header_list li a:hover::before{
+        color:#3f4c59;
+      }
+    } 
+  }
+  .header_list {
     margin-top:-100.5px;
     margin-right: calc(1.5vw + 50px);
     line-height: 70px;
     text-align: right;
     color: #232323;
-  }
-  
-  .nav-list-item {
-    list-style: none;
-    font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
-    font-weight: 600;
-    font-weight: 00;
-    letter-spacing: 0.13rem;
-    display: inline-block;
-    position: relative;
-    z-index: 4;
-    margin-left: 1%;
-    a {
-      color: #ececec;
+    li {
+      list-style: none;
+      font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
+      font-weight: 600;
+      font-weight: 00;
+      letter-spacing: 0.13rem;
+      display: inline-block;
+      position: relative;
+      z-index: 4;
+      margin-left: 1%;
+      a{
+        line-height: 10 0px;
+        padding: 26px 0.5rem 25px 0.5rem ;
+        color: #fff;
+        &::before{
+          content:"●";
+          display: block;
+          color:rgba(255,255,255,0);
+          font-size:0.7rem;
+          position: absolute;
+          top:-40px;
+          left:50%;
+          transform: translateX(-50%);
+          height: 5px;
+          transition: 0.2s;
+        }
+        &:hover::before{
+          color:#fff;
+        }
+      }
     }
   }
   
-  .h-logo {
+  
+  .header_logo {
     font-size: 1.4rem;
     letter-spacing: 0.13rem;
     font-weight: 600;
     font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
-    color: #ececec;
+    color: #fff;
     position:relative;
     z-index: 4;
     span {
       font-size: 0.8rem;
       margin-left: 0.5rem;
       font-weight: 500;
-      color:  #ececec;
+      color:  #fff;
       letter-spacing: 0.08rem;
     }
     &.white{
@@ -349,13 +344,8 @@ h2 span {
       background: #576675;
       height: 2px;
       width: 100%;
-      &.one{
-        margin-bottom:1.5rem;
-      }
-      &.two{
-        margin:1.5rem 0;
-      }
-      &.three{
+      margin:1.5rem 0;
+      &.padding_top{
         margin-top:1.5rem;
       }
     }
@@ -402,32 +392,27 @@ h2 span {
       top: 0;
       padding-left: 5%;
       z-index: 1000;
-    }
-  
-    .h-logo {
-      line-height: 50px;
-      font-size: 1.2rem;
-      font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
-      font-weight: 500;
-      color: #232323;
-  
-      span {
-        font-size: 0.8rem;
-        margin-left: 0.75rem;
-        letter-spacing: 0.02em;
+      .header_logo {
+        line-height: 50px;
+        font-size: 1.2rem;
+        font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
         font-weight: 500;
-        color: #8b8b8b;
+        color: #232323;
+        span {
+          font-size: 0.8rem;
+          margin-left: 0.75rem;
+          letter-spacing: 0.02em;
+          font-weight: 500;
+          color: #8b8b8b;
+        }
       }
-    }
-  
-    .nav-list {
-      display: none;
-    }
-  
-    .nav-list-sp a, .nav-list-item-sp, .header1 a {
-      color: #232323;
-    }
-  
+      .header_list {
+        display: none;
+      }
+      .nav-list-sp a, .nav-list-item-sp, .header1 a {
+        color: #232323;
+      }
+    }  
     /* ■■■■■■■■■■■■■■■■■ ハンバーガー ■■■■■■■■■■■■■■■■■ */
   
     .hamburger {
@@ -546,7 +531,7 @@ h2 span {
     }
   }
 
-  .sp-menu-item{
+  .mgm_wrapper{
     margin:10px 7vw;
     position: relative;
     padding:3vw;
@@ -719,338 +704,149 @@ h2 span {
     }
   }
   /*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ main ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
-  .img-01 {
+  .img_01 {
     background-image: url('../img/scroll/6.jpg');
     animation: slide-animation-01 100s infinite;
     background-position: center;
   }
 
-  .img-02 {
+  .img_02 {
     background-image: url('../img/scroll/7.jpg');
     animation: slide-animation-02 100s infinite;
     background-position: center;
   }
 
-  .img-03 {
+  .img_03 {
     background-image: url('../img/scroll/8.jpg');
     animation: slide-animation-03 100s infinite;
     background-position: center;
   }
 
-  .img-04 {
+  .img_04 {
     background-image: url('../img/scroll/15.jpg');
     animation: slide-animation-04 100s infinite;
     background-position: center;
   }
 
-  .img-05 {
+  .img_05 {
     background-image: url('../img/scroll/11.jpg');
     animation: slide-animation-05 100s infinite;
     background-position: center;
   }
 
-  .img-06 {
+  .img_06 {
     background-image: url('../img/scroll/12.jpg');
     animation: slide-animation-06 100s infinite;
     background-position: center;
   }
   
-  .img-07 {
+  .img_07 {
     background-image: url('../img/scroll/14.jpg');
     animation: slide-animation-07 100s infinite;
     background-position: center;
   }
 
-  .img-08 {
+  .img_08 {
     background-image: url('../img/scroll/4.jpg');
     animation: slide-animation-08 100s infinite;
     background-position: center;
   }
 
-  .img-09 {
+  .img_09 {
     background-image: url('../img/scroll/9.jpg');
     animation: slide-animation-09 100s infinite;
     background-position: center;
   }
 
-  .img-10 {
+  .img_10 {
     background-image: url('../img/scroll/10.jpg');
     animation: slide-animation-10 100s infinite;
     background-position: center;
   }
 
   @keyframes slide-animation-01 {
-    0% {
-      opacity: 1;
-           }
-
-    8% {
-      opacity: 1;
-    }
-
-    10% {
-      opacity: 0;
-      ;
-    }
-
-    90% {
-      opacity: 0;
-    }
-
-    98% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-           }
+    0% {opacity: 1;}
+    8% {opacity: 1;}
+    10% {opacity: 0;}
+    90% {opacity: 0;}
+    98% {opacity: 0;}
+    100% {opacity: 1;}
   }
-
   @keyframes slide-animation-02 {
-    0% {
-      opacity: 0;
-    }
-
-    8% {
-      opacity: 0;
-    }
-
-    10% {
-      opacity: 1;
-      
-    }
-
-    18% {
-      opacity: 1;
-    }
-
-    20% {
-      opacity: 0;
-           }
-
-    70% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 0;
-    }
+    0% {opacity: 0;}
+    8% {opacity: 0;}
+    10% {opacity: 1;}
+    18% {opacity: 1;}
+    20% {opacity: 0;}
+    70% {opacity: 0;}
+    100% {opacity: 0;}
   }
-
   @keyframes slide-animation-03 {
-    0% {
-      opacity: 0;
-    }
-
-    18% {
-      opacity: 0;
-    }
-
-    20% {
-      opacity: 1;
-           }
-
-    28% {
-      opacity: 1;
-    }
-
-    30% {
-      opacity: 0;
-      
-    }
-
-    100% {
-      opacity: 0;
-    }
+    0% {opacity: 0;}
+    18% {opacity: 0;}
+    20% {opacity: 1;}
+    28% {opacity: 1;}
+    30% {opacity: 0;}
+    100% {opacity: 0;}
   }
-
   @keyframes slide-animation-04 {
-    0% {
-      opacity: 0;
-    }
-
-    28% {
-      opacity: 0;
-    }
-
-    30% {
-      opacity: 1;
-      
-    }
-
-    38% {
-      opacity: 1;
-    }
-
-    40% {
-      opacity: 0;
-           }
-
-    100% {
-      opacity: 0;
-    }
+    0% {opacity: 0;}
+    28% {opacity: 0;}
+    30% {opacity: 1; }
+    38% {opacity: 1;}
+    40% {opacity: 0;}
+    100% {opacity: 0;}
   }
-
   @keyframes slide-animation-05 {
-    0% {
-      opacity: 0;
-    }
-
-    38% {
-      opacity: 0;
-    }
-
-    40% {
-      opacity: 1;
-           }
-
-    48% {
-      opacity: 1;
-    }
-
-    50% {
-      opacity: 0;
-      
-    }
-
-    100% {
-      opacity: 0;
-    }
+    0% {opacity: 0;}
+    38% {opacity: 0;}
+    40% {opacity: 1;}
+    48% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 0;}
   }
-
   @keyframes slide-animation-06 {
-    0% {
-      opacity: 0;
-    }
-
-    48% {
-      opacity: 0;
-    }
-
-    50% {
-      opacity: 1;
-      
-    }
-
-    58% {
-      opacity: 1;
-    }
-
-    60% {
-      opacity: 0;
-           }
-
-    100% {
-      opacity: 0;
-    }
+    0% {opacity: 0;}
+    48% {opacity: 0;}
+    50% {opacity: 1;}
+    58% {opacity: 1;}
+    60% {opacity: 0;}
+    100% {opacity: 0;}
   }
-
   @keyframes slide-animation-07 {
-    0% {
-      opacity: 0;
-    }
-
-    58% {
-      opacity: 0;
-    }
-
-    60% {
-      opacity: 1;
-           }
-
-    68% {
-      opacity: 1;
-    }
-
-    70% {
-      opacity: 0;
-      
-    }
-
-    100% {
-      opacity: 0;
-    }
+    0% {opacity: 0;}
+    58% {opacity: 0;}
+    60% {opacity: 1;}
+    68% {opacity: 1;}
+    70% {opacity: 0;}
+    100% {opacity: 0;}
   }
-
   @keyframes slide-animation-08 {
-    0% {
-      opacity: 0;
-    }
-
-    68% {
-      opacity: 0;
-    }
-
-    70% {
-      opacity: 1;
-      
-    }
-
-    78% {
-      opacity: 1;
-    }
-
-    80% {
-      opacity: 0;
-           }
-
-    100% {
-      opacity: 0;
-    }
+    0% {opacity: 0;}
+    68% {opacity: 0;}
+    70% {opacity: 1;}
+    78% {opacity: 1;}
+    80% {opacity: 0;}
+    100% {opacity: 0;}
   }
-
   @keyframes slide-animation-09 {
-    0% {
-      opacity: 0;
-    }
-
-    78% {
-      opacity: 0;
-    }
-
-    80% {
-      opacity: 1;
-      
-    }
-
-    88% {
-      opacity: 1;
-    }
-
-    90% {
-      opacity: 0;
-           }
-
-    100% {
-      opacity: 0;
-    }
+    0% {opacity: 0;}
+    78% {opacity: 0;}
+    80% {opacity: 1;}
+    88% {opacity: 1;}
+    90% {opacity: 0;}
+    100% {opacity: 0;}
   }
-
   @keyframes slide-animation-10 {
-    0% {
-      opacity: 0;
-    }
-
-    88% {
-      opacity: 0;
-    }
-
-    90% {
-      opacity: 1;
-           }
-
-    98% {
-      opacity: 1;
-    }
-
-    100% {
-      opacity: 0;
-      
-    }
+    0% {opacity: 0;}
+    88% {opacity: 0;}
+    90% {opacity: 1;}
+    98% {opacity: 1;}
+    100% {opacity: 0;}
   }
   /* ■■■■■■■■■■■■■■■■■ スマホ用トップ画面 ■■■■■■■■■■■■■■■■■ */ 
   @media (max-width: 959px) {
-    .main-topview{
+    .topview{
       height: calc(100dvh - 50px);
       padding-top:100px;
       margin-top:-50px;
@@ -1058,17 +854,11 @@ h2 span {
       border-radius: 20px;
       border-radius: 20px 20px 0 20px;
     }
-    .m-topview {
-      width: 100%;
-      height: 100vh;
-      z-index: 90;
-      margin-top: 50px;
-    }
   }
   /* ■■■■■■■■■■■■■■■■■ スライドのフレーム ■■■■■■■■■■■■■■■■■ */ 
 
   @media (min-width: 960px) {
-    .main-topview{
+    .topview{
       height:100vh;
     }
     .img-frame {
@@ -1088,110 +878,79 @@ h2 span {
     }
   }
   /* ■■■■■■■■■■■■■■■■■ スライドの画像たち ■■■■■■■■■■■■■■■■■ */ 
-  @media (min-width: 960px) {
-    .img-01, .img-02, .img-03, .img-04, .img-05, .img-06, .img-07, .img-08, .img-09, .img-10{
-      position: absolute;
-      bottom: 0%;
-      left: 0%;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-  }
-  @media (max-width: 959px) {
-    .img-01, .img-02, .img-03, .img-04, .img-05, .img-06, .img-07, .img-08, .img-09, .img-10{
-      position: absolute;
+  .img_01, .img_02, .img_03, .img_04, .img_05, .img_06, .img_07, .img_08, .img_09, .img_10{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media (max-width: 959px) {
       bottom: 1.5%;
       top:0;
       left: 3%;
       width: 94%;
       height: 98.5%;
-      background-size: cover;
-      background-repeat: no-repeat;
       border-radius: 20px 20px 0 20px;
     }
-  }
-  /* ■■■■■■■■■■■■■■■■■ 黒色グラデーション ■■■■■■■■■■■■■■■■■ */ 
-  .m-topview-gradient {
-    position: absolute;
-    bottom:0;
-    left:0;
-    height: 100%;
-    width: 100%;
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2), 50%, rgba(0, 0, 0, 0.2) 80%);
-    @media (max-width: 959px) {
-    border-radius: 20px 20px 0 20px;
-    }
-  }
-  /* ■■■■■■■■■■■■■■■■■ キャプション・カウンター ■■■■■■■■■■■■■■■■■ */
-  @media (min-width: 960px) {
-    .m-topview-text-jp{
+    .gradient {
       position: absolute;
-      left:6.5vw;
-      bottom:3.5vw;
-      font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
-      font-size:1.3rem;
-      font-weight: 500;
-      color: #ddd;
-      z-index: 91;
+      bottom:0;
+      left:0;
+      height: 100%;
+      width: 100%;
+      background:rgba(0,0,0,0.2) ;
+      @media (max-width: 959px) {
+      border-radius: 20px 20px 0 20px;
+      }
     }
-    .m-topview-text-en{
+    .topview_text{
       position: absolute;
       left:6.5vw;
       bottom:2.5vw;
       font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
-      font-size:0.8rem;
-      letter-spacing: 0.05rem;
+      font-size:1.3rem;
       font-weight: 500;
-      color: #ddd;
+      color: #fff;
       z-index: 91;
+      span{
+        display:block;
+        font-size:0.8rem;
+        margin-top:0.5rem;
+        line-height: 0.8rem;
+        letter-spacing: 0.05rem;
+      }
+      @media (max-width: 959px) {
+          left:4%;
+          bottom:1.45rem;
+          font-size:1.3rem;
+          span{
+            display:block;
+            font-size:0.8rem;
+            margin-top:0.3rem;
+            line-height: 0.8rem;
+          }
+        }
     }
-    .m-topview-count{
+    .topview_count{
       position: absolute;
       right:2.5vw;
       bottom:2.5vw;
       font-family: "Plus Jakarta Sans", sans-serif;
       font-weight: 500;
-      color: #ddd;
+      color: #fff;
       z-index: 91;
-    }
-  }
-  @media (max-width: 959px) {
-    .m-topview-text-jp{
-      position: absolute;
-      left:4%;
-      bottom:2.4rem;
-      font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
-      font-size:1.3rem;
-      font-weight: 500;
-      color: #ddd;
-      z-index: 91;
-    }
-    .m-topview-text-en{
-      position: absolute;
-      left:4%;
-      bottom:1.45rem;
-      font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
-      font-size:0.8rem;
-      font-weight: 500;
-      color: #ddd;
-      z-index: 91;
-    }
-    .m-topview-count{
-      position: absolute;
-      right:4%;
-      bottom:1.45rem;
-      font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
-      font-weight: 500;
-      color: #ddd;
-      z-index: 91;
+      @media (max-width: 959px) {
+        right:4%;
+        bottom:1.45rem;
+      }
     }
   }
   /* ■■■■■■■■■■■■■■■■■ プログレスバー ■■■■■■■■■■■■■■■■■ */
   .progBar .bar{
     position:absolute;
-    height:100%;
+    height:100%; 
     background-color:#576675;
     animation: progress 10s -1.5s linear infinite;
   }
@@ -1210,29 +969,22 @@ h2 span {
       bottom:0;
       left:4vw;
       z-index: 91;
+      @media (max-width: 959px) {
+        width:90%;
+        height:2px;
+        bottom:1.75rem;
+        left:7%;
+      } 
     }
     .progBar_bg{
       height: 5px;
       width: 95vw;
-      background: #ddd;
+      background: #ececec;
       position: absolute;
       bottom:0;
       right:0;
       z-index: 50;
     }
-  }
-  @media (max-width: 959px) {
-    .progBar{
-      width:90%;
-      height:2px;
-      background-color:none;
-      position:relative;
-      overflow: hidden;
-      position: absolute;
-      bottom:1.75rem;
-      left:7%;
-      z-index: 91;
-    } 
   }
 
 /* ■■■■■■■■■■■■■■■■■ スクロールダウン ■■■■■■■■■■■■■■■■■ */ 
@@ -1249,48 +1001,44 @@ h2 span {
   width: 4vw;
   background: #fff;
   border-radius: 0 25px 0 0;
-}
-.scrolldown{
-  position:absolute;
-  height:13vh;
-  padding-left:1vw;
-  width: 3vw;
-  bottom:0;
-  background: #fff;
-}
-  
-
-.scrolldown span{
-  position: absolute;
-  font-size: 0.8rem;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  bottom:9vh;
-
-  font-family:'Lato', sans-serif;
-  transform: rotate(90deg)
-}
-  
-
-.scrolldown::after{
-  content: "";
-  position: absolute;
-  bottom:0;
-  width: 7.5px;
-  height:13vh;
-  background: #3f4c59;
-  animation: pathmove 2.5s ease-in-out infinite;
-}
-.scrolldown::before{
-  content: "";
-  position: absolute;
-  bottom:0;
-  width: 7.5px;
-  height:13vh;
-  background: #ddd;
+  .scrolldown{
+    position:absolute;
+    height:13vh;
+    padding-left:1vw;
+    width: 3vw;
+    bottom:0;
+    background: #fff;
+    span{
+      position: absolute;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      bottom:9vh;
+    
+      font-family:'Lato', sans-serif;
+      transform: rotate(90deg)
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      bottom:0;
+      width: 7.5px;
+      height:13vh;
+      background: #3f4c59;
+      animation: scrolldown 2.5s ease-in-out infinite;
+    }
+    &::before{
+      content: "";
+      position: absolute;
+      bottom:0;
+      width: 7.5px;
+      height:13vh;
+      background: #ddd;
+    }
+  }
 }
 
-@keyframes pathmove{
+@keyframes scrolldown{
   0%{
       height:0;
       top:0;
@@ -1366,7 +1114,6 @@ h2 span {
       color:#a13e3e
     }
   }
-
   @media (max-width: 959px) {
     .topview-info{
       position: absolute;
@@ -1388,46 +1135,58 @@ h2 span {
     }
   }
   /* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ about ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ */ 
-  /* ■■■■■■■■■■■■■■■■■ max-width ■■■■■■■■■■■■■■■■■ */
-  #about{
-    background: #fff;
-    width: 90%;
-    padding:0 5%
-  }
-  @media (max-width: 959px) {
-    #about{
-      background: #fff;
-      width: 90%;
-    }
-  }
   .section1{
     max-width: 1366px;
     margin:0 auto
   }
-  /* ■■■■■■■■■■■■■■■■■ about-flex ■■■■■■■■■■■■■■■■■ */
-  .about-flex{
-    display:flex;
-    gap:2rem
-  }
-  @media (max-width: 1024px) {
-    .about-flex{
-      display: block;
+  #about{
+    background: #fff;
+    width: 90%;
+    padding:0 5%;
+    @media (max-width: 959px) {
+      width: 90%;
+    }
+    .flex{
+      display:flex;
+      gap:2rem;
+      @media (max-width: 1024px) {
+        display: block;
+      }
+      .flex_item{
+        flex:1;
+        img{
+          height: 100%;
+          width:100%;
+          object-fit: cover;
+          border-radius: 50px 50px 0 50px;
+        }
+        @media (max-width: 1024px) {
+          margin-top:1rem
+        }
+      }
     }
   }
-  .about-flex-item{
-    flex:1;
-    img{
-      height: 100%;
-      width:100%;
-      object-fit: cover;
-      border-radius: 50px 50px 0 50px;
+  /* ■■■■■■■■■■■■■■■■■ SNSグリッド ■■■■■■■■■■■■■■■■■ */
+    @media (min-width: 801px) {
+      .sns_grid{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows:calc(50px + 1.1rem) 100px 100px;
+        column-gap: 1.1rem;
+        row-gap:1.1rem;
+        margin-top:1.5rem;
+      }
     }
-  }
-  @media (max-width: 1024px) {
-    .about-flex-item img{
-      margin-top:1rem
+    @media (max-width: 800px) {
+      .sns_grid{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:calc(50px + 1rem + 5vw ) 130px 90px;
+        column-gap: 3%;
+        row-gap:3vw;
+      }
     }
-  }
+
   /* ■■■■■■■■■■■■■■■■■ readmoreボタン ■■■■■■■■■■■■■■■■■ */
   .about_button {
     transition: 0.2s;
@@ -1473,47 +1232,24 @@ h2 span {
       }
     }
   }
-  /* ■■■■■■■■■■■■■■■■■ SNSグリッド ■■■■■■■■■■■■■■■■■ */
-  @media (min-width: 801px) {
-    .about-sns-grid{
-      display:grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows:calc(50px + 1.1rem) 100px 100px;
-      column-gap: 1.1rem;
-      row-gap:1.1rem;
-      margin-top:1.1rem;
-    }
-  }
-  @media (max-width: 800px) {
-    .about-sns-grid{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows:calc(50px + 1rem + 5vw ) 130px 90px;
-      column-gap: 3%;
-      row-gap:3vw;
-    }
-  }
   /* ■■■■■■■■■■■■■■■■■ SNSグリッド - ベース・大きさ・色 ■■■■■■■■■■■■■■■■■ */
-  .about-sns{
+  .sns_wrapper{
     width:100%;
     height: 100%;
     background: #ececec; 
     border-radius: 20px 20px 0 20px;
     position: relative;
     transition: 0.2s;
-
     .fa-x-twitter, .fa-youtube, .fa-github{
       position: absolute;
       top:15px;
       left:15px;
     }
-
     .fa-circle-arrow-right{
       position: absolute;
       bottom:15px;
       right:15px;
       }
-    
     a{
       position: absolute;
       top:0;
@@ -1521,46 +1257,83 @@ h2 span {
       width:100%;
       height: 100%;
       }
+    .id{
+      position: absolute;
+      top:50%;
+      transform: translateY(-50%);
+      left:15px;
+      font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.04rem;
+      &.normal{
+      font-size:1.2rem;
+      }
+      &.small{
+      font-size:1.1rem;
+      letter-spacing: 0.11rem;
+      }
+      @media (max-width: 800px) {     
+      &.normal{
+        font-size:1rem;
+        }
+        &.small{
+        font-size:0.9rem;
+        }
+      }
+    }
+    .caption{
+      position: absolute;
+      bottom:15px;
+      left:15px;
+      font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
+      font-weight: 500;
+      &.normal{
+        font-size:0.7rem
+      }
+      &.small{
+        font-size:0.6rem
+      }
+      @media (max-width: 800px) {
+        &.normal{
+          font-size:0.65rem
+        }
+        &.small{
+          font-size:0.65rem
+        }
+      }
+    }
   }
-
   @media (min-width: 801px) {
-
     .item1{
       grid-column: 1 / 2;
       grid-row: 1 / 2
     }
-    
     .item2{
       grid-column: 2 / 3;
       grid-row: 1 / 2
     }
-    
     .item3{
       grid-column:3 / 4;
       grid-row:1 / 2
     }
-    
     .item4{
       grid-column:1 / 2;
       grid-row:2 / 4
     }
-    
     .item5{
       grid-column:2 / 3;
       grid-row:2 / 4
     }
-
     .item6{
       grid-column:3 / 4;
       grid-row:2 / 3
     }
-
     .item7{
       grid-column:3 / 4;
       grid-row:3 / 4
     }
   }
-  .x:hover{
+  .x:hover, .item7:hover{
     background: #4e4e4e;
     color: #dddddd;
   }
@@ -1574,97 +1347,13 @@ h2 span {
     background: #99ac5c;
     color:#ddd
   }
-
-  .item4:hover{
-    background: #4e4e4e;
-    color:#ddd
-  }
-  /* ■■■■■■■■■■■■■■■■■ SNSグリッド - id ■■■■■■■■■■■■■■■■■ */
-  @media (min-width: 801px) {
-    .about-sns-id{
-      position: absolute;
-      top:50%;
-      transform: translateY(-50%);
-      left:15px;
-      font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
-      font-weight: 500;
-      letter-spacing: 0.04rem;
-  
-      &.normal{
-        font-size:1.2rem;
-      }
-  
-      &.small{
-        font-size:1.1rem;
-        letter-spacing: 0.11rem;
-      }
-    }
-  }
-  @media (max-width: 800px) {
-    .about-sns-id{
-      position: absolute;
-      top:50%;
-      transform: translateY(-50%);
-      left:15px;
-      font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
-      font-weight: 500;
-      letter-spacing: 0.04rem;
-  
-      &.normal{
-        font-size:1rem;
-      }
-  
-      &.small{
-        font-size:0.9rem;
-      }
-    }
-  }
   .item3{
     display:none;
   }
-  @media (min-width: 1440px) {
-    .about-sns-br{
-      display:inline
-    }
-  }
-  @media (max-width: 1439px) {
-    .about-sns-br{
-      display:block
-    }
-  }
-  /* ■■■■■■■■■■■■■■■■■ SNSグリッド - キャプション ■■■■■■■■■■■■■■■■■ */
-  @media (min-width: 801px) {
-    .about-sns-caption{
-      position: absolute;
-      bottom:15px;
-      left:15px;
-      font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
-      font-weight: 500;
-  
-      &.normal{
-        font-size:0.7rem
-      }
-  
-      &.small{
-        font-size:0.6rem
-      }
-    }
-  }
-  @media (max-width: 800px) {
-    .about-sns-caption{
-      position: absolute;
-      bottom:15px;
-      left:15px;
-      font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
-      font-weight: 500;
-  
-      &.normal{
-        font-size:0.65rem
-      }
-  
-      &.small{
-        font-size:0.65rem
-      }
+  .br{
+    display:inline;
+    @media (max-width: 1439px) {
+    display:block
     }
   }
 
@@ -2179,118 +1868,97 @@ h2 span {
 
   #contact{
     width: 90%;
-    padding:0 5%
+    padding:0 5%;
+    .grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows:170px 100px;
+      column-gap: 1.1rem;
+      row-gap:1.1rem;
+      margin-top:2rem;
+      @media (max-width: 959px) {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .grid_wrapper{
+      width: 100%;
+      height: 100%;
+      background: #ececec;
+      border-radius: 20px 20px 0 20px;
+      position: relative;
+      transition: 0.2s;
+      &.contact_X{
+        .fa-x-twitter{
+          position: absolute;
+          top:15px;
+          left:15px
+        }
+        .fa-circle-arrow-right{
+          position: absolute;
+          bottom:15px;
+          right:15px
+        }
+        .dm{
+          position: absolute;
+          left:15px;
+          top:50%;
+          transform: translateY(-50%);
+          font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
+          font-size:1.5rem;
+          font-weight: 500;
+          &::after{
+            content:'to @oba_sanz087';
+            margin-top:5px;
+            font-size:0.8rem;
+            display:block;
+            color:#8b8b8b
+          }
+        }
+        .caption{
+          position: absolute;
+          bottom:15px;
+          left:15px;
+          font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
+          font-size:0.7rem;
+          font-weight: 500;
+        }
+        a{
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top:0;
+          left:0;
+        }
+        &:hover{
+          color:#ececec;
+          background:#4e4e4e ;
+        }
+      }
+      .fa-triangle-exclamation{
+        position: absolute;
+        top:15px;
+        left:15px
+      }
+      .article{
+        position: absolute;
+        top:50%;
+        transform: translateY(-50%);
+        left:15px;
+        right:15px;
+        font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
+        font-size:0.8rem;
+        font-weight: 400;
+        line-height: 1.3rem;
+        letter-spacing: 0.05rem;
+      }
+      .attention{
+        position: absolute;
+        top:17px;
+        left:37px;
+        font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
+        font-weight: 500;
+        font-size: 0.8rem;
+        letter-spacing: 0.03rem;
+      }
+    }
   }
-
-@media (min-width: 960px) {
-.co-grid{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows:170px 100px;
-  column-gap: 1.1rem;
-  row-gap:1.1rem;
-  margin-top:2rem
-}
-}
-@media (max-width: 959px) {
-  .co-grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows:170px 100px;
-    column-gap: 1.1rem;
-    row-gap:1.1rem;
-    margin-top:2rem
-  }
-  }
-
-.co-grid-item{
-  width: 100%;
-  height: 100%;
-  background: #ececec;
-  border-radius: 20px 20px 0 20px;
-  position: relative;
-  transition: 0.2s;
-}
-
-.co-item1{
-  
-  .fa-x-twitter{
-    position: absolute;
-    top:15px;
-    left:15px
-  }
-
-  .fa-circle-arrow-right{
-    position: absolute;
-    bottom:15px;
-    right:15px
-  }
-
-  .co-dm{
-    position: absolute;
-    left:15px;
-    top:50%;
-    transform: translateY(-50%);
-    font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
-    font-size:1.5rem;
-    font-weight: 500;
-    
-  }
-  .co-dm::after{
-    content:'to @oba_sanz087';
-    font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
-    margin-top:5px;
-    font-size:0.8rem;
-    font-weight: 500;
-    display:block;
-    color:#8b8b8b
-  }
-
-  .co-dm-caption{
-    position: absolute;
-    bottom:15px;
-    left:15px;
-    font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
-    font-size:0.7rem;
-    font-weight: 500;
-  }
-
-  a{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top:0;
-    left:0;
-  }
-
-  &:hover{
-    color:#ececec;
-    background:#4e4e4e ;
-  }
-}
-.fa-triangle-exclamation{
-  position: absolute;
-  top:15px;
-  left:15px
-}
-.co-article{
-  position: absolute;
-  top:50%;
-  transform: translateY(-50%);
-  left:15px;
-  right:15px;
-  font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
-  font-size:0.8rem;
-  font-weight: 400;
-  line-height: 1.3rem;
-  letter-spacing: 0.05rem;
-}
-.co-at{
-  position: absolute;
-  top:17px;
-  left:37px;
-  font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
-  font-weight: 500;
-  font-size: 0.8rem;
-  letter-spacing: 0.03rem;
-}
