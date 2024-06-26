@@ -670,7 +670,10 @@ main {
   width: 20%;
   height: 100%;
   background: #ececec;
-  border-radius: 20px 0 0 20px;
+  border-radius: 20px 20px 0 20px;
+}
+.page_head .background.error_404 {
+  width: 100%;
 }
 @media (max-width: 959px) {
   .page_head .background {
@@ -719,6 +722,9 @@ main {
     height: 25vh;
   }
 }
+.page_head .info_img.error_404 {
+  height: 20vh;
+}
 .page_head .img_back {
   position: absolute;
   top: 0;
@@ -757,6 +763,9 @@ p a {
 }
 p a:visited {
   color: #3f4c59;
+}
+p.gray {
+  color: #ddd;
 }
 
 .b {
