@@ -499,6 +499,7 @@ header a:hover {
     font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
     font-weight: 500;
     position: relative;
+    margin-top: 20vw;
   }
   .f-copy {
     font-size: 1rem;
