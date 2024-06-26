@@ -99,6 +99,9 @@ header a:hover {
   color: #8b8b8b;
   letter-spacing: 0.08rem;
 }
+.header_logo.white {
+  color: #ececec !important;
+}
 
 @media (min-width: 960px) {
   .globalMenuSp, .hamburger {

@@ -11,7 +11,7 @@
 /* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 共通要素 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ */ 
 
 #about,#works,#contact{
-  max-width: 1366px;
+  max-width: 1440px;
   padding:0 5%
 }
 @media (max-width: 959px) {
@@ -473,7 +473,6 @@ h1{
         }
       }
     }
- 
     nav.globalMenuSp {
       position: fixed;
       z-index: 2;
@@ -624,9 +623,10 @@ h1{
   
   @media (max-width: 959px) {
     footer {
-      margin:3rem 5% 1rem 5%;
+      padding:2.5rem 5% 5vw 5%;
       font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
       font-weight: 500;
+      position: relative;
     }
   
     .f-copy {
@@ -635,74 +635,101 @@ h1{
     }
   
     .f-sns {
-      display: none;
+      position: absolute;
+      top:0px;
+      width: 70%;
+
       a {
         transition: 0.2s;
         border-radius: 50%;
-        padding-right: 4%;
+        padding:1rem 1rem 1rem 0 ;
         color: #232323;
+        text-decoration: none;
       }
     }
   }
   
   @media (min-width: 960px) {
     footer {
-      position: relative;
-      margin: 1rem 6%;
       font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
       font-weight: 500;
-    }
-  
+      max-width: 1440px;
+      margin:7.5vw auto 2.5vw ;
+      padding:0 5vw;
+      position: relative;
+      a{
+        text-decoration: none;
+        position: relative;
+        margin:0 0 0 1.5rem;
+        padding:1rem 0;
+        .fa-brands{
+          padding:0.75rem 0;
+          transition: 0.2s;
+          color: #232323;
+          font-size: 0.9rem!important; 
+        } 
+        &::before{
+          content:'●';
+          display:block;
+          position: absolute;
+          top:0px;
+          left:calc(50%);
+          transform: translateX(-50%);
+          font-size:0.4rem;
+          color: #fff;
+          transition: 0.2s;
+        }
+        &:hover,&:hover::before{
+        color:#3f4c59;
+        }
+        &:visited {
+          color: #232323;
+        }
+      }
     .f-copy {
       flex: 90;
-      margin-bottom:-1.5rem;
+      font-size:0.9rem;
       letter-spacing: 0.075rem;
       position: absolute;
-      left:0;
       top:50%;
       transform: translateY(-50%);
-
     }
-
     .f-item{
       font-size:0.9rem;
-      margin-right:1rem;
       font-family: "Plus Jakarta Sans","Noto Sans JP", sans-serif;
       font-weight: 500;
-      transform: translateY(-50%);
-      padding-bottom: 0.25rem;
+      line-height: 0.9rem;
+      letter-spacing: 0.075rem;
       color: #000;
       text-decoration: none;
-      &:visited{
-        color: #000;
+      display:inline-block;
+      position: relative;
+      &::before{
+        content:'●';
+        display:block;
+        position: absolute;
+        top:-7.5px;
+        left:50%;
+        transform: translateX(-50%);
+        font-size:0.4rem;
+        color: #fff;
+        transition: 0.2s;
       }
       &:hover{
         color:#3f4c59;
-        border-bottom:solid 2px #3f4c59 ;
+        &::before{
+          color: #3f4c59;
+        }
       }
+      &:visited{
+        color: #000;
       }
-  
-    .f-sns {
-      padding-left: 1rem;
+    }
+    .f-sns{
       text-align: right;
-  
-      .fa-brands {
-        padding: 0.6rem 0.65rem 0.375rem 0.6rem;
-        padding-bottom:0.375rem;
-        color: #232323;
-      }
     }
   }
-  
-  .f-sns {
-    .fa-brands:hover {
-      color:#3f4c59;
-      border-bottom:solid 2px #3f4c59 ;
-    }
-    a:visited {
-      color: #232323;
-    }
-  }
+}
   /*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ main ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
   .img_01 {
     background-image: url('../img/scroll/6.jpg');

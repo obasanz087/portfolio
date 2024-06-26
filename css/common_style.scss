@@ -95,6 +95,9 @@ h1{
       color:  #8b8b8b;
       letter-spacing: 0.08rem;
     }
+    &.white{ 
+      color: #ececec!important;
+    }
   }
 
   @media (min-width: 960px) {
