@@ -645,6 +645,9 @@ main {
 .page_point a:visited {
   color: #777;
 }
+.page_point a:visited:hover {
+  color: var(--accent_color);
+}
 .page_point i {
   padding: 0 0.5rem;
   color: #777777;

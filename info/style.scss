@@ -676,6 +676,9 @@ main{
     }
     &:visited{
       color:#777;
+      &:hover{
+        color: var(--accent_color);
+      }
     }
   }
   i{
