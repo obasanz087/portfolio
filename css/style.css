@@ -10,6 +10,39 @@ img {
   vertical-align: top;
 }
 
+body {
+  transition: 0.5s;
+}
+
+:root {
+  --hover_text_color:#ececec;
+  --text_color:#232323;
+  --pagetop_text_color:#fff;
+  --wrapper_bg_color:#ececec;
+  --accent_color:#3f4c59;
+  --accent_color2:#3f4c59;
+  --index_bg_color:rgba(230, 230, 230, 0.68);
+  --weak_bg_color:#ddd;
+  --bg_color:#fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --hover_text_color:#232323;
+    --text_color:#ececec;
+    --pagetop_text_color:#fff;
+    --wrapper_bg_color:#545454;
+    --accent_color:#e8aa14;
+    --accent_color2:#70623c;
+    --index_bg_color:rgba(84, 84, 84, 0.678);
+    --weak_bg_color:#898989;
+    --bg_color:#3a3a3a;
+  }
+  :root body {
+    background-color: #3a3a3a;
+    color: #ececec;
+  }
+}
 /* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ 共通要素 ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ */
 #about, #works, #contact {
   max-width: 1440px;
@@ -76,66 +109,63 @@ h1 {
 /* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ ヘッダー ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ */
 header {
   position: fixed;
-  width: 95%;
+  width: 95vw;
   top: 0px;
   padding: 0 2.5vw 0;
   z-index: 999;
-}
-@media (max-width: 959px) {
-  header {
-    background: #fff;
-  }
+  font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
+  /*■■■　スマホ用ヘッダー　■■■*/
+  /*■■■　pagetopより下のヘッダー　■■■*/
 }
 header a {
   text-decoration: none;
   line-height: 100px;
-  transition: 0.2s;
   position: relative;
 }
-header a:hover {
+header .header_logo {
+  font-size: 1.4rem;
+  letter-spacing: 0.13rem;
+  font-weight: 600;
+  color: var(--pagetop_text_color);
+  position: relative;
+  z-index: 4;
+}
+header .header_logo span {
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+  font-weight: 500;
   color: #fff;
+  letter-spacing: 0.08rem;
 }
-header.active .header_list, header.active .header_list li a, header.active .header_logo {
-  color: #232323;
-  background: none;
+header .header_logo.white {
+  color: #ececec !important;
+  z-index: 5;
+  margin-left: 2.5vw;
 }
-header.active .header_list:hover, header.active .header_list li a:hover, header.active .header_logo:hover {
-  color: #3f4c59;
+header .header_logo.white span {
+  color: #ececec !important;
 }
-header.active .header_logo span {
-  color: #8b8b8b;
-}
-header.active .header_list .pc_hamburger span {
-  background: #232323;
-}
-header.active .header_list li a:hover::before {
-  color: #3f4c59;
-}
-
-.header_list {
+header .header_list {
   margin-top: -100.5px;
   margin-right: calc(1.5vw + 50px);
-  line-height: 70px;
   text-align: right;
-  color: #232323;
+  color: var(--text_color);
 }
-.header_list li {
+header .header_list li {
   list-style: none;
-  font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
   font-weight: 600;
   font-weight: 0;
   letter-spacing: 0.13rem;
   display: inline-block;
   position: relative;
   z-index: 4;
-  margin-left: 1%;
+  margin-right: 1%;
 }
-.header_list li a {
-  line-height: 10 0px;
+header .header_list li a {
   padding: 26px 0.5rem 25px 0.5rem;
-  color: #fff;
+  color: var(--pagetop_text_color);
 }
-.header_list li a::before {
+header .header_list li a::before {
   content: "●";
   display: block;
   color: rgba(255, 255, 255, 0);
@@ -147,33 +177,51 @@ header.active .header_list li a:hover::before {
   height: 5px;
   transition: 0.2s;
 }
-.header_list li a:hover::before {
-  color: #fff;
+header .header_list li a:hover::before {
+  color: var(--pagetop_text_color);
 }
-
-.header_logo {
-  font-size: 1.4rem;
-  letter-spacing: 0.13rem;
-  font-weight: 600;
-  font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
-  color: #fff;
-  position: relative;
-  z-index: 4;
+@media (max-width: 959px) {
+  header {
+    background: var(--bg_color);
+    height: 50px;
+    line-height: 50px;
+    width: 97%;
+    top: 0;
+    padding-left: 5%;
+    z-index: 1000;
+  }
+  header .header_logo {
+    line-height: 50px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text_color);
+  }
+  header .header_logo span {
+    font-size: 0.8rem;
+    margin-left: 0.75rem;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    color: #8b8b8b;
+  }
+  header .header_list {
+    display: none;
+  }
+  header .nav-list-sp a, header .nav-list-item-sp, header .header1 a {
+    color: var(--text_color);
+  }
 }
-.header_logo span {
-  font-size: 0.8rem;
-  margin-left: 0.5rem;
-  font-weight: 500;
-  color: #fff;
-  letter-spacing: 0.08rem;
+header.active .header_list, header.active .header_list li a, header.active .header_logo {
+  color: var(--text_color);
+  background: none;
 }
-.header_logo.white {
-  color: #ececec !important;
-  z-index: 5;
-  margin-left: 2.5vw;
+header.active .header_logo span {
+  color: #8b8b8b;
 }
-.header_logo.white span {
-  color: #ececec !important;
+header.active .header_list .pc_hamburger span {
+  background: var(--text_color);
+}
+header.active .header_list li a:hover::before {
+  color: var(--accent_color);
 }
 
 @media (min-width: 960px) {
@@ -197,7 +245,7 @@ header.active .header_list li a:hover::before {
     width: 45px;
     height: 4px;
     transform: scaleY(0.5) translateY(2px);
-    background: #ececec;
+    background: var(--pagetop_text_color);
     transition: 0.2s ease-in-out;
   }
   .pc_hamburger span:nth-child(1) {
@@ -238,9 +286,8 @@ header.active .header_list li a:hover::before {
     opacity: 0;
     visibility: hidden;
     z-index: 5;
-    transition: 0.3s;
+    transition: 0.2s;
     overflow: scroll;
-    font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
   }
   .pc_globalMenu.active {
     opacity: 100;
@@ -294,7 +341,7 @@ header.active .header_list li a:hover::before {
     color: #afafaf;
   }
   .pcgm_button:hover {
-    color: #576675;
+    color: #576675 !important;
   }
   .pcgm_button.small {
     font-size: 1.5rem;
@@ -369,35 +416,6 @@ header.active .header_list li a:hover::before {
   .pc_globalMenu {
     display: none;
   }
-  header {
-    position: fixed;
-    height: 50px;
-    line-height: 50px;
-    width: 97%;
-    top: 0;
-    padding-left: 5%;
-    z-index: 1000;
-  }
-  header .header_logo {
-    line-height: 50px;
-    font-size: 1.2rem;
-    font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
-    font-weight: 500;
-    color: #232323;
-  }
-  header .header_logo span {
-    font-size: 0.8rem;
-    margin-left: 0.75rem;
-    letter-spacing: 0.02em;
-    font-weight: 500;
-    color: #8b8b8b;
-  }
-  header .header_list {
-    display: none;
-  }
-  header .nav-list-sp a, header .nav-list-item-sp, header .header1 a {
-    color: #232323;
-  }
   /* ■■■■■■■■■■■■■■■■■ ハンバーガー ■■■■■■■■■■■■■■■■■ */
   .hamburger {
     display: block;
@@ -417,7 +435,7 @@ header.active .header_list li a:hover::before {
     height: 4px;
     transform: scaleY(0.5) translateY(2px);
     left: 6px;
-    background: #232323;
+    background: var(--text_color);
     transition: 0.2s;
   }
   .hamburger span:nth-child(1) {
@@ -434,7 +452,7 @@ header.active .header_list li a:hover::before {
     top: 25px;
     width: 25px;
     left: 7.6px;
-    background: #232323;
+    background: var(--text_color);
     transform: rotate(-45deg);
     height: 2px;
   }
@@ -442,7 +460,7 @@ header.active .header_list li a:hover::before {
     top: 25px;
     right: 7.6px;
     width: 25px;
-    background: #232323;
+    background: var(--text_color);
     transform: rotate(45deg);
     height: 2px;
   }
@@ -484,7 +502,6 @@ header.active .header_list li a:hover::before {
     position: absolute;
     bottom: 10vw;
     left: 10vw;
-    font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
     letter-spacing: 0.07rem;
     font-size: 0.7rem;
   }
@@ -492,11 +509,11 @@ header.active .header_list li a:hover::before {
     display: block;
     line-height: 2rem;
     font-weight: 500;
-    color: #232323;
+    color: var(--text_color);
     font-size: 0.9rem;
   }
   nav.globalMenuSp .sp-menu-bottom a:visited {
-    color: #232323;
+    color: var(--text_color);
   }
 }
 .mgm_wrapper {
@@ -505,7 +522,6 @@ header.active .header_list li a:hover::before {
   padding: 3vw;
 }
 .mgm_wrapper p {
-  font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
   letter-spacing: 0.13rem;
   font-size: 1.3rem;
   line-height: 1.4rem;
@@ -545,7 +561,6 @@ header.active .header_list li a:hover::before {
 .sp-menu-sns {
   margin: 10% 7vw 0;
   padding: 0 3vw;
-  font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
   letter-spacing: 0.1rem;
   line-height: 1rem;
   font-size: 1.2rem;
@@ -553,16 +568,15 @@ header.active .header_list li a:hover::before {
 .sp-menu-sns a {
   line-height: 0px;
   margin-left: 3vw;
-  color: #000;
+  color: var(--text_color);
 }
 .sp-menu-sns a:visited {
-  color: #000;
+  color: var(--text_color);
 }
 .sp-menu-sns i.fa-brands {
   font-size: 1.3rem;
 }
 .sp-menu-sns .discord-caption {
-  font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.05rem;
@@ -590,6 +604,7 @@ header.active .header_list li a:hover::before {
 @media (max-width: 959px) {
   footer {
     padding: 2.5rem 5% 5vw 5%;
+    margin-top: 10vw;
     font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
     font-weight: 500;
     position: relative;
@@ -607,7 +622,7 @@ header.active .header_list li a:hover::before {
     transition: 0.2s;
     border-radius: 50%;
     padding: 1rem 1rem 1rem 0;
-    color: #232323;
+    color: var(--text_color);
     text-decoration: none;
   }
 }
@@ -629,7 +644,7 @@ header.active .header_list li a:hover::before {
   footer a .fa-brands {
     padding: 0.75rem 0;
     transition: 0.2s;
-    color: #232323;
+    color: var(--text_color);
     font-size: 0.9rem !important;
   }
   footer a::before {
@@ -640,14 +655,14 @@ header.active .header_list li a:hover::before {
     left: 50%;
     transform: translateX(-50%);
     font-size: 0.4rem;
-    color: #fff;
+    color: rgba(255, 255, 255, 0);
     transition: 0.2s;
   }
-  footer a:hover, footer a:hover::before {
-    color: #3f4c59;
+  footer a:hover::before {
+    color: var(--accent_color);
   }
   footer a:visited {
-    color: #232323;
+    color: var(--text_color);
   }
   footer .f-copy {
     flex: 90;
@@ -663,7 +678,7 @@ header.active .header_list li a:hover::before {
     font-weight: 500;
     line-height: 0.9rem;
     letter-spacing: 0.075rem;
-    color: #000;
+    color: var(--text_color);
     text-decoration: none;
     display: inline-block;
     position: relative;
@@ -676,17 +691,14 @@ header.active .header_list li a:hover::before {
     left: 50%;
     transform: translateX(-50%);
     font-size: 0.4rem;
-    color: #fff;
+    color: rgba(255, 255, 255, 0);
     transition: 0.2s;
   }
-  footer .f-item:hover {
-    color: #3f4c59;
-  }
   footer .f-item:hover::before {
-    color: #3f4c59;
+    color: var(--accent_color);
   }
   footer .f-item:visited {
-    color: #000;
+    color: var(--text_color);
   }
   footer .f-sns {
     text-align: right;
@@ -1068,8 +1080,13 @@ header.active .header_list li a:hover::before {
 .progBar .bar {
   position: absolute;
   height: 100%;
-  background-color: #576675;
+  background-color: var(--weak_bg_color);
   animation: progress 10s -1.5s linear infinite;
+}
+@media (max-width: 959px) {
+  .progBar .bar {
+    display: none;
+  }
 }
 
 @keyframes progress {
@@ -1105,7 +1122,7 @@ header.active .header_list li a:hover::before {
   .progBar_bg {
     height: 5px;
     width: 95vw;
-    background: #ececec;
+    background: var(--wrapper_bg_color);
     position: absolute;
     bottom: 0;
     right: 0;
@@ -1124,7 +1141,7 @@ header.active .header_list li a:hover::before {
   bottom: 0;
   height: 16vh;
   width: 4vw;
-  background: #fff;
+  background: var(--bg_color);
   border-radius: 0 25px 0 0;
 }
 .scrolldown_wrapper .scrolldown {
@@ -1133,7 +1150,7 @@ header.active .header_list li a:hover::before {
   padding-left: 1vw;
   width: 3vw;
   bottom: 0;
-  background: #fff;
+  background: var(--bg_color);
 }
 .scrolldown_wrapper .scrolldown span {
   position: absolute;
@@ -1150,7 +1167,7 @@ header.active .header_list li a:hover::before {
   bottom: 0;
   width: 7.5px;
   height: 13vh;
-  background: #3f4c59;
+  background: var(--weak_bg_color);
   animation: scrolldown 2.5s ease-in-out infinite;
 }
 .scrolldown_wrapper .scrolldown::before {
@@ -1159,7 +1176,7 @@ header.active .header_list li a:hover::before {
   bottom: 0;
   width: 7.5px;
   height: 13vh;
-  background: #ddd;
+  background: var(--wrapper_bg_color);
 }
 
 @keyframes scrolldown {
@@ -1193,7 +1210,9 @@ header.active .header_list li a:hover::before {
   top: 103px;
   height: auto;
   width: 410px;
-  background: rgba(236, 236, 236, 0.9);
+  background: var(--index_bg_color);
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
   border-radius: 20px 20px 0 20px;
   overflow: scroll;
 }
@@ -1269,7 +1288,6 @@ header.active .header_list li a:hover::before {
 }
 
 #about {
-  background: #fff;
   width: 90%;
   padding: 0 5%;
 }
@@ -1329,9 +1347,9 @@ header.active .header_list li a:hover::before {
 .about_button {
   transition: 0.2s;
   text-decoration: none;
-  color: #232323;
+  color: var(--text_color);
   margin-bottom: 1.1rem;
-  background: #ececec;
+  background: var(--wrapper_bg_color);
   display: inline-block;
   padding: 0.95rem 0 1rem 2rem;
   font-size: 1rem;
@@ -1343,11 +1361,11 @@ header.active .header_list li a:hover::before {
   position: relative;
 }
 .about_button:visited {
-  color: #232323;
+  color: var(--text_color);
 }
 .about_button:hover {
-  color: #ececec;
-  background: #3f4c59;
+  color: var(--hover_text_color);
+  background: var(--accent_color);
   box-shadow: none;
 }
 .about_button i {
@@ -1372,7 +1390,7 @@ header.active .header_list li a:hover::before {
 .sns_wrapper {
   width: 100%;
   height: 100%;
-  background: #ececec;
+  background: var(--wrapper_bg_color);
   border-radius: 20px 20px 0 20px;
   position: relative;
   transition: 0.2s;
@@ -1537,13 +1555,12 @@ label {
   font-weight: 500;
   transition: 0.2s;
   border-radius: 10px 10px 0 10px;
-  background: #ececec;
+  background: var(--wrapper_bg_color);
 }
 
 .tag-search:checked + label {
-  background-color: #3f4c59;
-  box-shadow: none;
-  color: #ececec;
+  background: var(--accent_color);
+  color: var(--hover_text_color);
 }
 
 input[type=radio] {
@@ -1555,7 +1572,7 @@ input[type=radio] {
 }
 
 label:hover {
-  color: #3f4c59;
+  color: var(--accent_color);
 }
 
 .is-hide {
@@ -1572,7 +1589,7 @@ label:hover {
     font-weight: 500;
     transition: 0.2s;
     border-radius: 20px;
-    background: #ececec;
+    background: var(--wrapper_bg_color);
     box-shadow: 3px 3px 6px #d2d2d2, -3px -3px 6px #ffffff;
   }
   .search-box {
@@ -1587,7 +1604,7 @@ label:hover {
   .line {
     width: 100%;
     height: 2px;
-    background: #ddd;
+    background: var(--weak_bg_color);
     margin: 0.5rem 0 0.5rem 0;
   }
 }
@@ -1595,7 +1612,7 @@ label:hover {
   .line {
     width: 50%;
     height: 2px;
-    background: #ddd;
+    background: var(--weak_bg_color);
     margin: 0.5rem 0 0.5rem 0;
   }
 }
@@ -1635,19 +1652,11 @@ label:hover {
   }
 }
 /* ■■■■■■■■■■■■■■■■■ サムネイルパーツ・てきすと ■■■■■■■■■■■■■■■■■ */
-@media (min-width: 960px) {
-  .pj-sam-1, .pj-sam-2, .pj-sam-3, .pj-sam-4, .pj-sam-5, .pj-sam-6, .pj-sam-7, .pj-sam-8, .pj-sam-9, .pj-sam-10, .pj-sam-11, .pj-sam-12, .pj-sam-13, .pj-sam-14, .pj-sam-15, .pj-sam-16, .pj-sam-17, .pj-sam-18, .pj-sam-19, .pj-sam-20, .pj-sam-21, .pj-sam-22, .pj-sam-23, .pj-sam-24, .pj-sam-25, .pj-sam-26, .pj-sam-27, .pj-sam-28, .pj-sam-29, .pj-sam-30, .pj-sam-31, .pj-sam-32, .pj-sam-33, .pj-sam-34, .pj-sam-35, .pj-sam-36, .pj-sam-37, .pj-sam-38, .pj-sam-39, .pj-sam-40, .pj-sam-41, .pj-sam-42, .pj-sam-43, .pj-sam-44, .pj-sam-45, .pj-sam-46, .pj-sam-47, .pj-sam-48, .pj-sam-49, .pj-sam-50, .pj-sam-51, .pj-sam-52, .pj-sam-53, .pj-sam-54, .pj-sam-55, .pj-sam-56, .pj-sam-57, .pj-sam-58, .pj-sam-59, .pj-sam-60, .pj-sam-61, .pj-sam-62, .pj-sam-63, .pj-sam-64, .pj-sam-65, .pj-sam-66, .pj-sam-67, .pj-sam-68, .pj-sam-69, .pj-sam-70, .pj-sam-71, .pj-sam-72, .pj-sam-73, .pj-sam-74, .pj-sam-75, .pj-sam-76, .pj-sam-77, .pj-sam-78, .pj-sam-79, .pj-sam-80, .pj-sam-81, .pj-sam-82, .pj-sam-83, .pj-sam-84, .pj-sam-85, .pj-sam-86, .pj-sam-87, .pj-sam-88, .pj-sam-89, .pj-sam-90, .pj-sam-91, .pj-sam-92, .pj-sam-93, .pj-sam-94, .pj-sam-95, .pj-sam-96, .pj-sam-97, .pj-sam-98, .pj-sam-99, .pj-sam-100 {
-    border-radius: 20px 20px 0 20px;
-    transition: 0.2s;
-  }
+.works_button_wrapper {
+  border-radius: 20px 20px 0 20px;
+  transition: 0.2s;
 }
-@media (max-width: 959px) {
-  .pj-sam-1, .pj-sam-2, .pj-sam-3, .pj-sam-4, .pj-sam-5, .pj-sam-6, .pj-sam-7, .pj-sam-8, .pj-sam-9, .pj-sam-10, .pj-sam-11, .pj-sam-12, .pj-sam-13, .pj-sam-14, .pj-sam-15, .pj-sam-16, .pj-sam-17, .pj-sam-18, .pj-sam-19, .pj-sam-20, .pj-sam-21, .pj-sam-22, .pj-sam-23, .pj-sam-24, .pj-sam-25, .pj-sam-26, .pj-sam-27, .pj-sam-28, .pj-sam-29, .pj-sam-30, .pj-sam-31, .pj-sam-32, .pj-sam-33, .pj-sam-34, .pj-sam-35, .pj-sam-36, .pj-sam-37, .pj-sam-38, .pj-sam-39, .pj-sam-40, .pj-sam-41, .pj-sam-42, .pj-sam-43, .pj-sam-44, .pj-sam-45, .pj-sam-46, .pj-sam-47, .pj-sam-48, .pj-sam-49, .pj-sam-50, .pj-sam-51, .pj-sam-52, .pj-sam-53, .pj-sam-54, .pj-sam-55, .pj-sam-56, .pj-sam-57, .pj-sam-58, .pj-sam-59, .pj-sam-60, .pj-sam-61, .pj-sam-62, .pj-sam-63, .pj-sam-64, .pj-sam-65, .pj-sam-66, .pj-sam-67, .pj-sam-68, .pj-sam-69, .pj-sam-70, .pj-sam-71, .pj-sam-72, .pj-sam-73, .pj-sam-74, .pj-sam-75, .pj-sam-76, .pj-sam-77, .pj-sam-78, .pj-sam-79, .pj-sam-80, .pj-sam-81, .pj-sam-82, .pj-sam-83, .pj-sam-84, .pj-sam-85, .pj-sam-86, .pj-sam-87, .pj-sam-88, .pj-sam-89, .pj-sam-90, .pj-sam-91, .pj-sam-92, .pj-sam-93, .pj-sam-94, .pj-sam-95, .pj-sam-96, .pj-sam-97, .pj-sam-98, .pj-sam-99, .pj-sam-100 {
-    border-radius: 20px 20px 0 20px;
-    transition: 0.2s;
-  }
-}
-.pj-sam-1:hover .pj-img img, .pj-sam-2:hover .pj-img img, .pj-sam-3:hover .pj-img img, .pj-sam-4:hover .pj-img img, .pj-sam-5:hover .pj-img img, .pj-sam-6:hover .pj-img img, .pj-sam-7:hover .pj-img img, .pj-sam-8:hover .pj-img img, .pj-sam-9:hover .pj-img img, .pj-sam-10:hover .pj-img img, .pj-sam-11:hover .pj-img img, .pj-sam-12:hover .pj-img img, .pj-sam-13:hover .pj-img img, .pj-sam-14:hover .pj-img img, .pj-sam-15:hover .pj-img img, .pj-sam-16:hover .pj-img img, .pj-sam-17:hover .pj-img img, .pj-sam-18:hover .pj-img img, .pj-sam-19:hover .pj-img img, .pj-sam-20:hover .pj-img img, .pj-sam-21:hover .pj-img img, .pj-sam-22:hover .pj-img img, .pj-sam-23:hover .pj-img img, .pj-sam-24:hover .pj-img img, .pj-sam-25:hover .pj-img img, .pj-sam-26:hover .pj-img img, .pj-sam-27:hover .pj-img img, .pj-sam-28:hover .pj-img img, .pj-sam-29:hover .pj-img img, .pj-sam-30:hover .pj-img img, .pj-sam-31:hover .pj-img img, .pj-sam-32:hover .pj-img img, .pj-sam-33:hover .pj-img img, .pj-sam-34:hover .pj-img img, .pj-sam-35:hover .pj-img img, .pj-sam-36:hover .pj-img img, .pj-sam-37:hover .pj-img img, .pj-sam-38:hover .pj-img img, .pj-sam-39:hover .pj-img img, .pj-sam-40:hover .pj-img img, .pj-sam-41:hover .pj-img img, .pj-sam-42:hover .pj-img img, .pj-sam-43:hover .pj-img img, .pj-sam-44:hover .pj-img img, .pj-sam-45:hover .pj-img img, .pj-sam-46:hover .pj-img img, .pj-sam-47:hover .pj-img img, .pj-sam-48:hover .pj-img img, .pj-sam-49:hover .pj-img img, .pj-sam-50:hover .pj-img img, .pj-sam-51:hover .pj-img img, .pj-sam-52:hover .pj-img img, .pj-sam-53:hover .pj-img img, .pj-sam-54:hover .pj-img img, .pj-sam-55:hover .pj-img img, .pj-sam-56:hover .pj-img img, .pj-sam-57:hover .pj-img img, .pj-sam-58:hover .pj-img img, .pj-sam-59:hover .pj-img img, .pj-sam-60:hover .pj-img img, .pj-sam-61:hover .pj-img img, .pj-sam-62:hover .pj-img img, .pj-sam-63:hover .pj-img img, .pj-sam-64:hover .pj-img img, .pj-sam-65:hover .pj-img img, .pj-sam-66:hover .pj-img img, .pj-sam-67:hover .pj-img img, .pj-sam-68:hover .pj-img img, .pj-sam-69:hover .pj-img img, .pj-sam-70:hover .pj-img img, .pj-sam-71:hover .pj-img img, .pj-sam-72:hover .pj-img img, .pj-sam-73:hover .pj-img img, .pj-sam-74:hover .pj-img img, .pj-sam-75:hover .pj-img img, .pj-sam-76:hover .pj-img img, .pj-sam-77:hover .pj-img img, .pj-sam-78:hover .pj-img img, .pj-sam-79:hover .pj-img img, .pj-sam-80:hover .pj-img img, .pj-sam-81:hover .pj-img img, .pj-sam-82:hover .pj-img img, .pj-sam-83:hover .pj-img img, .pj-sam-84:hover .pj-img img, .pj-sam-85:hover .pj-img img, .pj-sam-86:hover .pj-img img, .pj-sam-87:hover .pj-img img, .pj-sam-88:hover .pj-img img, .pj-sam-89:hover .pj-img img, .pj-sam-90:hover .pj-img img, .pj-sam-91:hover .pj-img img, .pj-sam-92:hover .pj-img img, .pj-sam-93:hover .pj-img img, .pj-sam-94:hover .pj-img img, .pj-sam-95:hover .pj-img img, .pj-sam-96:hover .pj-img img, .pj-sam-97:hover .pj-img img, .pj-sam-98:hover .pj-img img, .pj-sam-99:hover .pj-img img, .pj-sam-100:hover .pj-img img {
+.works_button_wrapper:hover .pj-img img {
   transform: scale(1.2);
   border-radius: 20px 20px 0 15px;
 }
@@ -1675,7 +1684,7 @@ label:hover {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-color: #ececec;
+    background-color: var(--wrapper_bg_color);
     background-image: url("../img/loading.svg");
     background-size: 60px;
     background-repeat: no-repeat;
@@ -1693,7 +1702,7 @@ label:hover {
     height: 100%;
     margin-top: 2%;
     border-radius: 20px 20px 0 15px;
-    background-color: #ececec;
+    background-color: var(--wrapper_bg_color);
     background-image: url("../img/loading.svg");
     background-size: 60px;
     background-repeat: no-repeat;
@@ -1702,27 +1711,7 @@ label:hover {
 }
 /* ■■■■■■■■■■■■■■■■■ インデックスフレーム ■■■■■■■■■■■■■■■■■ */
 @media (min-width: 960px) {
-  .about_button-index {
-    opacity: 0;
-    display: none;
-    border-radius: 50px 50px 0 0;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    margin: 0 auto;
-    height: calc(100vh - 74px);
-    z-index: 99;
-    overflow: auto;
-    -webkit-backdrop-filter: blur(30px);
-    backdrop-filter: blur(30px);
-    background: rgba(230, 230, 230, 0.68);
-    animation: fadein 0.2s ease forwards;
-  }
-}
-@media (min-width: 960px) {
-  .pj-index-1, .pj-index-2, .pj-index-3, .pj-index-4, .pj-index-5, .pj-index-6, .pj-index-7, .pj-index-8, .pj-index-9, .pj-index-10, .pj-index-11, .pj-index-12, .pj-index-13, .pj-index-14, .pj-index-15, .pj-index-16, .pj-index-17, .pj-index-18, .pj-index-19, .pj-index-20, .pj-index-21, .pj-index-22, .pj-index-23, .pj-index-24, .pj-index-25, .pj-index-26, .pj-index-27, .pj-index-28, .pj-index-29, .pj-index-30, .pj-index-31, .pj-index-32, .pj-index-33, .pj-index-34, .pj-index-35, .pj-index-36, .pj-index-37, .pj-index-38, .pj-index-39, .pj-index-40, .pj-index-41, .pj-index-42, .pj-index-43, .pj-index-44, .pj-index-45, .pj-index-46, .pj-index-47, .pj-index-48, .pj-index-49, .pj-index-50, .pj-index-51, .pj-index-52, .pj-index-53, .pj-index-54, .pj-index-55, .pj-index-56, .pj-index-57, .pj-index-58, .pj-index-59, .pj-index-60, .pj-index-61, .pj-index-62, .pj-index-63, .pj-index-64, .pj-index-65, .pj-index-66, .pj-index-67, .pj-index-68, .pj-index-69, .pj-index-70, .pj-index-71, .pj-index-72, .pj-index-73, .pj-index-74, .pj-index-75, .pj-index-76, .pj-index-77, .pj-index-78, .pj-index-79, .pj-index-80, .pj-index-81, .pj-index-82, .pj-index-83, .pj-index-84, .pj-index-85, .pj-index-86, .pj-index-87, .pj-index-88, .pj-index-89, .pj-index-90, .pj-index-91, .pj-index-92, .pj-index-93, .pj-index-94, .pj-index-95, .pj-index-96, .pj-index-97, .pj-index-98, .pj-index-99, .pj-index-100 {
+  .works_index_wrapper {
     opacity: 0;
     display: none;
     border-radius: 75px 75px 0 0;
@@ -1738,7 +1727,7 @@ label:hover {
     overflow: auto;
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
-    background: rgba(230, 230, 230, 0.68);
+    background: var(--index_bg_color);
     animation: fadein 0.2s ease forwards;
   }
   .index-max {
@@ -1747,12 +1736,12 @@ label:hover {
   }
 }
 @media (max-width: 959px) {
-  .pj-index-1, .pj-index-2, .pj-index-3, .pj-index-4, .pj-index-5, .pj-index-6, .pj-index-7, .pj-index-8, .pj-index-9, .pj-index-10, .about_button-index, .pj-index-11, .pj-index-12, .pj-index-13, .pj-index-14, .pj-index-15, .pj-index-16, .pj-index-17, .pj-index-18, .pj-index-19, .pj-index-20, .pj-index-21, .pj-index-22, .pj-index-23, .pj-index-24, .pj-index-25, .pj-index-26, .pj-index-27, .pj-index-28, .pj-index-29, .pj-index-30, .pj-index-31, .pj-index-32, .pj-index-33, .pj-index-34, .pj-index-35, .pj-index-36, .pj-index-37, .pj-index-38, .pj-index-39, .pj-index-40, .pj-index-41, .pj-index-42, .pj-index-43, .pj-index-44, .pj-index-45, .pj-index-46, .pj-index-47, .pj-index-48, .pj-index-49, .pj-index-50, .pj-index-51, .pj-index-52, .pj-index-53, .pj-index-54, .pj-index-55, .pj-index-56, .pj-index-57, .pj-index-58, .pj-index-59, .pj-index-60, .pj-index-61, .pj-index-62, .pj-index-63, .pj-index-64, .pj-index-65, .pj-index-66, .pj-index-67, .pj-index-68, .pj-index-69, .pj-index-70, .pj-index-71, .pj-index-72, .pj-index-73, .pj-index-74, .pj-index-75, .pj-index-76, .pj-index-77, .pj-index-78, .pj-index-79, .pj-index-80, .pj-index-81, .pj-index-82, .pj-index-83, .pj-index-84, .pj-index-85, .pj-index-86, .pj-index-87, .pj-index-88, .pj-index-89, .pj-index-90, .pj-index-91, .pj-index-92, .pj-index-93, .pj-index-94, .pj-index-95, .pj-index-96, .pj-index-97, .pj-index-98, .pj-index-99, .pj-index-100 {
+  .works_index_wrapper {
     display: none;
     transition: 0.2s;
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
-    background: rgba(230, 230, 230, 0.68);
+    background: var(--index_bg_color);
     position: fixed;
     top: 50px;
     left: 0;
@@ -1769,17 +1758,17 @@ label:hover {
     padding-bottom: 10vh;
   }
 }
-.pj-index-1.active, .pj-index-2.active, .pj-index-3.active, .pj-index-4.active, .pj-index-5.active, .pj-index-6.active, .pj-index-7.active, .pj-index-8.active, .pj-index-9.active, .pj-index-10.active, .about_button-index.active, .pj-index-11.active, .pj-index-12.active, .pj-index-13.active, .pj-index-14.active, .pj-index-15.active, .pj-index-16.active, .pj-index-17.active, .pj-index-18.active, .pj-index-19.active, .pj-index-20.active, .pj-index-21.active, .pj-index-22.active, .pj-index-23.active, .pj-index-24.active, .pj-index-25.active, .pj-index-26.active, .pj-index-27.active, .pj-index-28.active, .pj-index-29.active, .pj-index-30.active, .pj-index-31.active, .pj-index-32.active, .pj-index-33.active, .pj-index-34.active, .pj-index-35.active, .pj-index-36.active, .pj-index-37.active, .pj-index-38.active, .pj-index-39.active, .pj-index-40.active, .pj-index-41.active, .pj-index-42.active, .pj-index-43.active, .pj-index-44.active, .pj-index-45.active, .pj-index-46.active, .pj-index-47.active, .pj-index-48.active, .pj-index-49.active, .pj-index-50.active, .pj-index-51.active, .pj-index-52.active, .pj-index-53.active, .pj-index-54.active, .pj-index-55.active, .pj-index-56.active, .pj-index-57.active, .pj-index-58.active, .pj-index-59.active, .pj-index-60.active, .pj-index-61.active, .pj-index-62.active, .pj-index-63.active, .pj-index-64.active, .pj-index-65.active, .pj-index-66.active, .pj-index-67.active, .pj-index-68.active, .pj-index-69.active, .pj-index-70.active, .pj-index-71.active, .pj-index-72.active, .pj-index-73.active, .pj-index-74.active, .pj-index-75.active, .pj-index-76.active, .pj-index-77.active, .pj-index-78.active, .pj-index-79.active, .pj-index-80.active, .pj-index-81.active, .pj-index-82.active, .pj-index-83.active, .pj-index-84.active, .pj-index-85.active, .pj-index-86.active, .pj-index-87.active, .pj-index-88.active, .pj-index-89.active, .pj-index-90.active, .pj-index-91.active, .pj-index-92.active, .pj-index-93.active, .pj-index-94.active, .pj-index-95.active, .pj-index-96.active, .pj-index-97.active, .pj-index-98.active, .pj-index-99.active, .pj-index-100.active {
+.works_index_wrapper.active {
   opacity: 100;
   display: block;
 }
-.pj-index-1.active body, .pj-index-2.active body, .pj-index-3.active body, .pj-index-4.active body, .pj-index-5.active body, .pj-index-6.active body, .pj-index-7.active body, .pj-index-8.active body, .pj-index-9.active body, .pj-index-10.active body, .about_button-index.active body, .pj-index-11.active body, .pj-index-12.active body, .pj-index-13.active body, .pj-index-14.active body, .pj-index-15.active body, .pj-index-16.active body, .pj-index-17.active body, .pj-index-18.active body, .pj-index-19.active body, .pj-index-20.active body, .pj-index-21.active body, .pj-index-22.active body, .pj-index-23.active body, .pj-index-24.active body, .pj-index-25.active body, .pj-index-26.active body, .pj-index-27.active body, .pj-index-28.active body, .pj-index-29.active body, .pj-index-30.active body, .pj-index-31.active body, .pj-index-32.active body, .pj-index-33.active body, .pj-index-34.active body, .pj-index-35.active body, .pj-index-36.active body, .pj-index-37.active body, .pj-index-38.active body, .pj-index-39.active body, .pj-index-40.active body, .pj-index-41.active body, .pj-index-42.active body, .pj-index-43.active body, .pj-index-44.active body, .pj-index-45.active body, .pj-index-46.active body, .pj-index-47.active body, .pj-index-48.active body, .pj-index-49.active body, .pj-index-50.active body, .pj-index-51.active body, .pj-index-52.active body, .pj-index-53.active body, .pj-index-54.active body, .pj-index-55.active body, .pj-index-56.active body, .pj-index-57.active body, .pj-index-58.active body, .pj-index-59.active body, .pj-index-60.active body, .pj-index-61.active body, .pj-index-62.active body, .pj-index-63.active body, .pj-index-64.active body, .pj-index-65.active body, .pj-index-66.active body, .pj-index-67.active body, .pj-index-68.active body, .pj-index-69.active body, .pj-index-70.active body, .pj-index-71.active body, .pj-index-72.active body, .pj-index-73.active body, .pj-index-74.active body, .pj-index-75.active body, .pj-index-76.active body, .pj-index-77.active body, .pj-index-78.active body, .pj-index-79.active body, .pj-index-80.active body, .pj-index-81.active body, .pj-index-82.active body, .pj-index-83.active body, .pj-index-84.active body, .pj-index-85.active body, .pj-index-86.active body, .pj-index-87.active body, .pj-index-88.active body, .pj-index-89.active body, .pj-index-90.active body, .pj-index-91.active body, .pj-index-92.active body, .pj-index-93.active body, .pj-index-94.active body, .pj-index-95.active body, .pj-index-96.active body, .pj-index-97.active body, .pj-index-98.active body, .pj-index-99.active body, .pj-index-100.active body {
+.works_index_wrapper.active body {
   overflow: hidden;
 }
 
 /* ■■■■■■■■■■■■■■■■■ スクロールバー非表示 ■■■■■■■■■■■■■■■■■ */
 @media (min-width: 960px) {
-  .pj-index-1::-webkit-scrollbar, .pj-index-2::-webkit-scrollbar, .pj-index-3::-webkit-scrollbar, .pj-index-4::-webkit-scrollbar, .pj-index-5::-webkit-scrollbar, .pj-index-6::-webkit-scrollbar, .pj-index-7::-webkit-scrollbar, .pj-index-8::-webkit-scrollbar, .pj-index-9::-webkit-scrollbar, .pj-index-10::-webkit-scrollbar, .about_button-index::-webkit-scrollbar, .pj-index-11::-webkit-scrollbar, .pj-index-12::-webkit-scrollbar, .pj-index-13::-webkit-scrollbar, .pj-index-14::-webkit-scrollbar, .pj-index-15::-webkit-scrollbar, .pj-index-16::-webkit-scrollbar, .pj-index-17::-webkit-scrollbar, .pj-index-18::-webkit-scrollbar, .pj-index-19::-webkit-scrollbar, .pj-index-20::-webkit-scrollbar, .pj-index-21::-webkit-scrollbar, .pj-index-22::-webkit-scrollbar, .pj-index-23::-webkit-scrollbar, .pj-index-24::-webkit-scrollbar, .pj-index-25::-webkit-scrollbar, .pj-index-26::-webkit-scrollbar, .pj-index-27::-webkit-scrollbar, .pj-index-28::-webkit-scrollbar, .pj-index-29::-webkit-scrollbar, .pj-index-30::-webkit-scrollbar, .pj-index-31::-webkit-scrollbar, .pj-index-32::-webkit-scrollbar, .pj-index-33::-webkit-scrollbar, .pj-index-34::-webkit-scrollbar, .pj-index-35::-webkit-scrollbar, .pj-index-36::-webkit-scrollbar, .pj-index-37::-webkit-scrollbar, .pj-index-38::-webkit-scrollbar, .pj-index-39::-webkit-scrollbar, .pj-index-40::-webkit-scrollbar, .pj-index-41::-webkit-scrollbar, .pj-index-42::-webkit-scrollbar, .pj-index-43::-webkit-scrollbar, .pj-index-44::-webkit-scrollbar, .pj-index-45::-webkit-scrollbar, .pj-index-46::-webkit-scrollbar, .pj-index-47::-webkit-scrollbar, .pj-index-48::-webkit-scrollbar, .pj-index-49::-webkit-scrollbar, .pj-index-50::-webkit-scrollbar, .pj-index-51::-webkit-scrollbar, .pj-index-52::-webkit-scrollbar, .pj-index-53::-webkit-scrollbar, .pj-index-54::-webkit-scrollbar, .pj-index-55::-webkit-scrollbar, .pj-index-56::-webkit-scrollbar, .pj-index-57::-webkit-scrollbar, .pj-index-58::-webkit-scrollbar, .pj-index-59::-webkit-scrollbar, .pj-index-60::-webkit-scrollbar, .pj-index-61::-webkit-scrollbar, .pj-index-62::-webkit-scrollbar, .pj-index-63::-webkit-scrollbar, .pj-index-64::-webkit-scrollbar, .pj-index-65::-webkit-scrollbar, .pj-index-66::-webkit-scrollbar, .pj-index-67::-webkit-scrollbar, .pj-index-68::-webkit-scrollbar, .pj-index-69::-webkit-scrollbar, .pj-index-70::-webkit-scrollbar, .pj-index-71::-webkit-scrollbar, .pj-index-72::-webkit-scrollbar, .pj-index-73::-webkit-scrollbar, .pj-index-74::-webkit-scrollbar, .pj-index-75::-webkit-scrollbar, .pj-index-76::-webkit-scrollbar, .pj-index-77::-webkit-scrollbar, .pj-index-78::-webkit-scrollbar, .pj-index-79::-webkit-scrollbar, .pj-index-80::-webkit-scrollbar, .pj-index-81::-webkit-scrollbar, .pj-index-82::-webkit-scrollbar, .pj-index-83::-webkit-scrollbar, .pj-index-84::-webkit-scrollbar, .pj-index-85::-webkit-scrollbar, .pj-index-86::-webkit-scrollbar, .pj-index-87::-webkit-scrollbar, .pj-index-88::-webkit-scrollbar, .pj-index-89::-webkit-scrollbar, .pj-index-90::-webkit-scrollbar, .pj-index-91::-webkit-scrollbar, .pj-index-92::-webkit-scrollbar, .pj-index-93::-webkit-scrollbar, .pj-index-94::-webkit-scrollbar, .pj-index-95::-webkit-scrollbar, .pj-index-96::-webkit-scrollbar, .pj-index-97::-webkit-scrollbar, .pj-index-98::-webkit-scrollbar, .pj-index-99::-webkit-scrollbar, .pj-index-100::-webkit-scrollbar {
+  .works_index_wrapper::-webkit-scrollbar {
     display: none;
   }
 }
@@ -1809,8 +1798,8 @@ label:hover {
   margin-left: 0.8rem;
   padding: 0.25rem 1rem 0.25rem 1rem;
   font-size: 0.8rem;
-  background: #3f4c59;
-  color: #ececec;
+  background: var(--accent_color);
+  color: var(--hover_text_color);
   border-radius: 10px 10px 0 10px;
   font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
   font-weight: 500;
@@ -1823,7 +1812,7 @@ label:hover {
   left: 100%;
   width: 70px;
   height: 70px;
-  background: #fff;
+  background: var(--weak_bg_color);
   z-index: 101;
   transition: 0.2s;
   border-radius: 25px;
@@ -1840,7 +1829,7 @@ label:hover {
   width: 30px;
   height: 2px;
   transform: scaleY(0.5) translateY(2px);
-  background: #232323;
+  background: var(--text_color);
   transition: 0.2s ease-in-out;
 }
 .pj_index_close span:nth-child(1) {
@@ -1912,7 +1901,7 @@ label:hover {
   width: 100%;
   height: auto;
   border-radius: 10px;
-  background-color: #ececec;
+  background-color: var(--wrapper_bg_color);
   background-image: url("../img/loading.svg");
   background-size: 60px;
   background-repeat: no-repeat;
@@ -1972,7 +1961,7 @@ th {
   letter-spacing: 0.12rem;
   text-align: left;
   padding: 0.5rem 1.5rem 0.5rem 0;
-  border-right: solid 2px #232323;
+  border-right: solid 2px var(--text_color);
 }
 th .fa-x-twitter {
   padding-right: 0.3rem;
@@ -2007,8 +1996,8 @@ td {
   }
 }
 td a {
-  background: #ececec;
-  color: #232323;
+  background: var(--wrapper_bg_color);
+  color: var(--text_color);
   padding: 0.5rem 1.5rem;
   border-radius: 10px 10px 0 10px;
   text-decoration: none;
@@ -2018,11 +2007,11 @@ td a .fa-arrow-right {
   padding-left: 0.6rem;
 }
 td a:visited {
-  color: #232323;
+  color: var(--text_color);
 }
 td a:hover, td a:visited:hover {
-  background: #232323;
-  color: #ececec;
+  background: var(--text_color);
+  color: var(--hover_text_color);
 }
 
 /*■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ contact ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
@@ -2047,7 +2036,7 @@ td a:hover, td a:visited:hover {
 #contact .grid_wrapper {
   width: 100%;
   height: 100%;
-  background: #ececec;
+  background: var(--wrapper_bg_color);
   border-radius: 20px 20px 0 20px;
   position: relative;
   transition: 0.2s;
