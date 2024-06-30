@@ -1,5 +1,10 @@
  /* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ loading ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
-  
+  @media (prefers-color-scheme: dark) {
+    #loading {
+      background-color: #3a3a3a!important;
+      color:#ececec; 
+    }
+  }
   #loading {
     width: 100vw;
     height: 100dvh;
