@@ -1,51 +1,87 @@
 @charset "UTF-8";
+:root {
+  --text_color:#232323;
+  --wrapper_bg_color:#ececec;
+  --accent_color:#3f4c59;
+  --accent_color2:#3f4c59;
+  --index_bg_color:rgba(230, 230, 230, 0.68);
+  --weak_bg_color:#ddd;
+  --bg_color:#fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #3a3a3a;
+    color: #ececec;
+  }
+  :root {
+    --text_color:#ececec;
+    --wrapper_bg_color:#545454;
+    --accent_color:#e8aa14;
+    --index_bg_color:rgba(84, 84, 84, 0.678);
+    --weak_bg_color:#898989;
+    --bg_color:#3a3a3a;
+  }
+}
 /* ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ ヘッダー ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ */
 header {
   position: fixed;
-  width: 95%;
+  width: 95vw;
   top: 0px;
   padding: 0 2.5vw 0;
   z-index: 999;
-}
-@media (max-width: 959px) {
-  header {
-    background: #fff;
-  }
+  font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
+  /*■■■　スマホ用ヘッダー　■■■*/
 }
 header a {
   text-decoration: none;
   line-height: 100px;
-  transition: 0.2s;
   position: relative;
 }
-header a:hover {
-  color: #3f4c59;
+header .header_logo {
+  font-size: 1.4rem;
+  letter-spacing: 0.13rem;
+  font-weight: 600;
+  color: var(--text_color);
+  position: relative;
+  z-index: 4;
 }
-
-.header_list {
+header .header_logo span {
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+  font-weight: 500;
+  color: #8b8b8b;
+  letter-spacing: 0.08rem;
+}
+header .header_logo.white {
+  color: #ececec !important;
+  z-index: 5;
+  margin-left: 2.5vw;
+}
+header .header_logo.white span {
+  color: #ececec !important;
+}
+header .header_list {
   margin-top: -100.5px;
   margin-right: calc(1.5vw + 50px);
-  line-height: 70px;
   text-align: right;
-  color: #232323;
+  color: var(--text_color);
 }
-.header_list li {
+header .header_list li {
   list-style: none;
-  font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
   font-weight: 600;
   font-weight: 0;
   letter-spacing: 0.13rem;
   display: inline-block;
   position: relative;
   z-index: 4;
-  margin-left: 1%;
+  margin-right: 1%;
 }
-.header_list li a {
-  line-height: 10 0px;
+header .header_list li a {
   padding: 26px 0.5rem 25px 0.5rem;
-  color: #232323;
+  color: var(--text_color);
 }
-.header_list li a::before {
+header .header_list li a::before {
   content: "●";
   display: block;
   color: rgba(255, 255, 255, 0);
@@ -57,29 +93,38 @@ header a:hover {
   height: 5px;
   transition: 0.2s;
 }
-.header_list li a:hover::before {
-  color: #3f4c59;
+header .header_list li a:hover::before {
+  color: var(--accent_color);
 }
-
-.header_logo {
-  font-size: 1.4rem;
-  letter-spacing: 0.13rem;
-  font-weight: 600;
-  font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
-  color: #232323;
-  position: relative;
-  z-index: 4;
-}
-.header_logo span {
-  font-size: 0.8rem;
-  margin-left: 0.5rem;
-  font-weight: 500;
-  color: #8b8b8b;
-  letter-spacing: 0.08rem;
-}
-.header_logo.white {
-  color: #ececec !important;
-  padding-left: 2.5vw;
+@media (max-width: 959px) {
+  header {
+    background: var(--bg_color);
+    height: 50px;
+    line-height: 50px;
+    width: 97%;
+    top: 0;
+    padding-left: 5%;
+    z-index: 1000;
+  }
+  header .header_logo {
+    line-height: 50px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text_color);
+  }
+  header .header_logo span {
+    font-size: 0.8rem;
+    margin-left: 0.75rem;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    color: #8b8b8b;
+  }
+  header .header_list {
+    display: none;
+  }
+  header .nav-list-sp a, header .nav-list-item-sp, header .header1 a {
+    color: var(--text_color);
+  }
 }
 
 @media (min-width: 960px) {
@@ -103,7 +148,7 @@ header a:hover {
     width: 45px;
     height: 4px;
     transform: scaleY(0.5) translateY(2px);
-    background: #ececec;
+    background: var(--text_color);
     transition: 0.2s ease-in-out;
   }
   .pc_hamburger span:nth-child(1) {
@@ -144,9 +189,8 @@ header a:hover {
     opacity: 0;
     visibility: hidden;
     z-index: 5;
-    transition: 0.3s;
+    transition: 0.2s;
     overflow: scroll;
-    font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
   }
   .pc_globalMenu.active {
     opacity: 100;
@@ -200,7 +244,7 @@ header a:hover {
     color: #afafaf;
   }
   .pcgm_button:hover {
-    color: #576675;
+    color: #576675 !important;
   }
   .pcgm_button.small {
     font-size: 1.5rem;
@@ -275,35 +319,6 @@ header a:hover {
   .pc_globalMenu {
     display: none;
   }
-  header {
-    position: fixed;
-    height: 50px;
-    line-height: 50px;
-    width: 97%;
-    top: 0;
-    padding-left: 5%;
-    z-index: 1000;
-  }
-  header .header_logo {
-    line-height: 50px;
-    font-size: 1.2rem;
-    font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
-    font-weight: 500;
-    color: #232323;
-  }
-  header .header_logo span {
-    font-size: 0.8rem;
-    margin-left: 0.75rem;
-    letter-spacing: 0.02em;
-    font-weight: 500;
-    color: #8b8b8b;
-  }
-  header .header_list {
-    display: none;
-  }
-  header .nav-list-sp a, header .nav-list-item-sp, header .header1 a {
-    color: #232323;
-  }
   /* ■■■■■■■■■■■■■■■■■ ハンバーガー ■■■■■■■■■■■■■■■■■ */
   .hamburger {
     display: block;
@@ -323,7 +338,7 @@ header a:hover {
     height: 4px;
     transform: scaleY(0.5) translateY(2px);
     left: 6px;
-    background: #232323;
+    background: var(--text_color);
     transition: 0.2s;
   }
   .hamburger span:nth-child(1) {
@@ -340,7 +355,7 @@ header a:hover {
     top: 25px;
     width: 25px;
     left: 7.6px;
-    background: #232323;
+    background: var(--text_color);
     transform: rotate(-45deg);
     height: 2px;
   }
@@ -348,7 +363,7 @@ header a:hover {
     top: 25px;
     right: 7.6px;
     width: 25px;
-    background: #232323;
+    background: var(--text_color);
     transform: rotate(45deg);
     height: 2px;
   }
@@ -390,7 +405,6 @@ header a:hover {
     position: absolute;
     bottom: 10vw;
     left: 10vw;
-    font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
     letter-spacing: 0.07rem;
     font-size: 0.7rem;
   }
@@ -398,11 +412,11 @@ header a:hover {
     display: block;
     line-height: 2rem;
     font-weight: 500;
-    color: #232323;
+    color: var(--text_color);
     font-size: 0.9rem;
   }
   nav.globalMenuSp .sp-menu-bottom a:visited {
-    color: #232323;
+    color: var(--text_color);
   }
 }
 .mgm_wrapper {
@@ -411,7 +425,6 @@ header a:hover {
   padding: 3vw;
 }
 .mgm_wrapper p {
-  font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
   letter-spacing: 0.13rem;
   font-size: 1.3rem;
   line-height: 1.4rem;
@@ -451,7 +464,6 @@ header a:hover {
 .sp-menu-sns {
   margin: 10% 7vw 0;
   padding: 0 3vw;
-  font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
   letter-spacing: 0.1rem;
   line-height: 1rem;
   font-size: 1.2rem;
@@ -459,16 +471,15 @@ header a:hover {
 .sp-menu-sns a {
   line-height: 0px;
   margin-left: 3vw;
-  color: #000;
+  color: var(--text_color);
 }
 .sp-menu-sns a:visited {
-  color: #000;
+  color: var(--text_color);
 }
 .sp-menu-sns i.fa-brands {
   font-size: 1.3rem;
 }
 .sp-menu-sns .discord-caption {
-  font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.05rem;
@@ -496,10 +507,10 @@ header a:hover {
 @media (max-width: 959px) {
   footer {
     padding: 2.5rem 5% 5vw 5%;
+    margin-top: 10vw;
     font-family: "Plus Jakarta Sans", "Noto Sans JP", sans-serif;
     font-weight: 500;
     position: relative;
-    margin-top: 20vw;
   }
   .f-copy {
     font-size: 1rem;
@@ -514,7 +525,7 @@ header a:hover {
     transition: 0.2s;
     border-radius: 50%;
     padding: 1rem 1rem 1rem 0;
-    color: #232323;
+    color: var(--text_color);
     text-decoration: none;
   }
 }
@@ -536,7 +547,7 @@ header a:hover {
   footer a .fa-brands {
     padding: 0.75rem 0;
     transition: 0.2s;
-    color: #232323;
+    color: var(--text_color);
     font-size: 0.9rem !important;
   }
   footer a::before {
@@ -547,14 +558,14 @@ header a:hover {
     left: 50%;
     transform: translateX(-50%);
     font-size: 0.4rem;
-    color: #fff;
+    color: rgba(255, 255, 255, 0);
     transition: 0.2s;
   }
-  footer a:hover, footer a:hover::before {
-    color: #3f4c59;
+  footer a:hover::before {
+    color: var(--accent_color);
   }
   footer a:visited {
-    color: #232323;
+    color: var(--text_color);
   }
   footer .f-copy {
     flex: 90;
@@ -570,7 +581,7 @@ header a:hover {
     font-weight: 500;
     line-height: 0.9rem;
     letter-spacing: 0.075rem;
-    color: #000;
+    color: var(--text_color);
     text-decoration: none;
     display: inline-block;
     position: relative;
@@ -583,17 +594,14 @@ header a:hover {
     left: 50%;
     transform: translateX(-50%);
     font-size: 0.4rem;
-    color: #fff;
+    color: rgba(255, 255, 255, 0);
     transition: 0.2s;
   }
-  footer .f-item:hover {
-    color: #3f4c59;
-  }
   footer .f-item:hover::before {
-    color: #3f4c59;
+    color: var(--accent_color);
   }
   footer .f-item:visited {
-    color: #000;
+    color: var(--text_color);
   }
   footer .f-sns {
     text-align: right;
@@ -604,21 +612,6 @@ header a:hover {
   margin-right: 0;
   margin: auto;
   max-width: 1920px;
-}
-
-.nav-list-item a, .h-logo {
-  color: #232323;
-}
-.nav-list-item a:hover, .h-logo:hover {
-  color: #3f4c59;
-}
-
-.header-link::after {
-  background: #3f4c59 !important;
-}
-
-.pc_hamburger span {
-  background: #232323;
 }
 
 img {
@@ -647,7 +640,7 @@ main {
   font-weight: 500;
 }
 .page_point a:hover {
-  color: #232323;
+  color: var(--accent_color);
 }
 .page_point a:visited {
   color: #777;
@@ -669,7 +662,7 @@ main {
   left: 0;
   width: 20%;
   height: 100%;
-  background: #ececec;
+  background: var(--wrapper_bg_color);
   border-radius: 20px 0px 0 20px;
 }
 .page_head .background.error_404 {
@@ -691,7 +684,7 @@ main {
   z-index: 50;
   font-size: 2.5rem;
   letter-spacing: 0.12rem;
-  color: #000;
+  color: var(--text_color);
   font-weight: 400;
 }
 .page_head .title span {
@@ -751,7 +744,7 @@ h4 {
   margin-bottom: 1rem;
   margin-top: 2rem;
   padding-left: 0.65rem;
-  border-left: solid #232323 5px;
+  border-left: solid var(--accent_color) 5px;
 }
 
 p {
@@ -760,15 +753,22 @@ p {
   line-height: 2rem;
 }
 p a {
-  color: #3f4c59;
+  color: var(--accent_color);
 }
 p a:visited {
-  color: #3f4c59;
+  color: var(--accent_color);
 }
-p.gray {
-  color: #ddd;
+p.weak {
+  color: var(--weak_bg_color);
 }
 
 .b {
   margin-top: 1rem;
+}
+
+.line {
+  height: 2px;
+  width: 100%;
+  background: var(--weak_bg_color);
+  margin: 4rem 0 2rem;
 }/*# sourceMappingURL=style.css.map */
