@@ -1,126 +1,135 @@
 <!DOCTYPE html>
 <html>
-          <head>
+  <head>
         
-            <!---Google用-->
-        
-            <meta charset="UTF-8">
-            <link rel="shortcut icon" href="img/favicon1.ico">
-            <link rel="apple-touch-icon" href="img/favicon2.ico">
-            <title>おばさんず</title>
-            <meta name="viewport" content="width=device-width" />
-            <link rel="stylesheet" href="css/style.css">
-            <link rel="stylesheet" href="css/loading.css">
-            <!--Google Font-->
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=Noto+Sans+JP:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-            
-            <!--Fontawesome-->
-            <script src="https://kit.fontawesome.com/d9c51249f5.js" crossorigin="anonymous"></script>
-            <!--CDN-->
-            <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-            <script src="script.js"></script>
-          </head>
-        <body>
-          <div id="loading"></div>
-        
-          <header>
-            <a class="header_logo" href="/index.html">OBASANZ087<span>Minecraft</span></a>
-            <ul class="header_list">
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#works">WORKS</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-                <div class="pc_hamburger">
-                  <span></span>
-                  <span></span>
-                </div>         
-            </ul>
-            <div class="pc_globalMenu">
-              <a class="header_logo white" href="/index.html">OBASANZ087<span>Minecraft</span></a>
-              <div class="pcgm_content">
-                <div class="pcgm_flex img">
-                  <img src="img/other_photos/1.png">
-                </div>
-                <div class="pcgm_flex right">
-                  <div class="pcgm_button">
-                    <a class="pcgm_button top" href="/index.html">TOP<span>トップに戻る</span></a>
-                  </div>
-                  <div class="pcgm_line"></div>
-                  <div class="pcgm_button">
-                    <a class="pcgm_button about" href="/#about">ABOUT<span>おばさんずについて</span></a>
-                    <div class="pcgm_2nd_button">
-                      <a class="pcgm_button small" href="/info/about_me/index.html">About this pages<span>このサイトについて</span></a>
-                    </div>
-                    <div class="pcgm_2nd_button">
-                      <a class="pcgm_button small" href="/info/notes/index.html">Notes<span>雑記帳</span></a>
-                    </div>
-                  </div>
-                  <div class="pcgm_line"></div>
-                  <div class="pcgm_button">
-                    <a class="pcgm_button works" href="/#works">WORKS<span>つくったものたち</span></a>
-                  </div>
-                  <div class="pcgm_line"></div>
-                  <div class="pcgm_button">
-                    <a class="pcgm_button contact" href="/#contact">CONTACT<span>ご連絡</span></a>
-                  </div>
-                  <div class="pcgm_line padding_top"></div>
-                  <div class="social_media_container">
-                  <p class="pcgm_sns">SOCIAL MEDIA</p>
-                  <a href="https://twitter.com/oba_sanz087" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://youtube.com/obasanz087" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                      <a href=""><i class="fa-brands fa-discord" target="_blank"></i></a>
-                  <p class="pcgm_copy">© 2024 OBASANZ087.</p>
-                  </div>
-                </div>
+    <!---Google用-->
+    <script>
+      // セッションストレージの判定を行う
+      if (sessionStorage.getItem('colorMode') === 'invert') {
+        const colorMode = sessionStorage.getItem("colorMode");
+        document.documentElement.classList.add(colorMode)
+      }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+
+
+    <link rel="shortcut icon" href="img/favicon1.ico">
+    <link rel="apple-touch-icon" href="img/favicon2.ico">
+    <title>おばさんず</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/loading.css">
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=Noto+Sans+JP:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">            
+    <!--Fontawesome-->
+    <script src="https://kit.fontawesome.com/d9c51249f5.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="loading"></div>
+  
+    <header>
+      <a class="header_logo" href="/index.html">OBASANZ087<span>Minecraft</span></a>
+      <ul class="header_list">
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#works">WORKS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+          <div class="pc_hamburger">
+            <span></span>
+            <span></span>
+          </div>         
+      </ul>
+      <div class="pc_globalMenu">
+        <a class="header_logo white" href="/index.html">OBASANZ087<span>Minecraft</span></a>
+        <div class="pcgm_content">
+          <div class="pcgm_flex img">
+            <img src="img/other_photos/1.png">
+          </div>
+          <div class="pcgm_flex right">
+            <div class="pcgm_button">
+              <a class="pcgm_button top" href="/index.html">TOP<span>トップに戻る</span></a>
+            </div>
+            <div class="pcgm_line"></div>
+            <div class="pcgm_button">
+              <a class="pcgm_button about" href="/#about">ABOUT<span>おばさんずについて</span></a>
+              <div class="pcgm_2nd_button">
+                <a class="pcgm_button small" href="/info/about_me/index.html">About this pages<span>このサイトについて</span></a>
+              </div>
+              <div class="pcgm_2nd_button">
+                <a class="pcgm_button small" href="/info/notes/index.html">Notes<span>雑記帳</span></a>
               </div>
             </div>
-          
-            <div class="hamburger">
-              <span></span>
-              <span></span>
+            <div class="pcgm_line"></div>
+            <div class="pcgm_button">
+              <a class="pcgm_button works" href="/#works">WORKS<span>つくったものたち</span></a>
             </div>
-            <nav class="globalMenuSp">
-              <div class="mgm_wrapper">
-                <p>TOP<span>トップに戻る</span></p>
-                <i class="fa-solid fa-arrow-right"></i>
-                <a href="/index.html"></a>
-              </div>
-              <div class="mgm_wrapper">
-                <p>ABOUT<span>おばさんずについて</span></p>
-                <i class="fa-solid fa-arrow-right"></i>
-                <a href="/#about"></a>
-              </div>
-              <div class="mgm_wrapper">
-                <p>WORKS<span>つくったものたち</span></p>
-                <i class="fa-solid fa-arrow-right"></i>
-                <a href="/#works"></a>
-              </div>
-              <div class="mgm_wrapper">
-                <p>CONTACT<span>ご連絡など</span></p>
-                <i class="fa-solid fa-arrow-right"></i>
-                <a href="/#contact"></a>
-              </div>
-              <div class="sp-menu-sns">
-                SNS
-                <a target="_blank" href="https://twitter.com/oba_sanz087">
-                  <i class="fa-brands fa-fw fa-x-twitter"></i>
-                </a>
-                <a class="sp-menu-discord">
-                  <i class="fa-brands fa-fw fa-discord"></i>
-                </a>
-                <a target="_blank" href="https://github.com/obasanz087">
-                  <i class="fa-brands fa-fw fa-github"></i>
-                </a>
-                <p class="discord-caption">ユーザー名：<span>obasanz087</span><br>申請はご自由にどうぞ。気がついたら承認します、多分</p>
-              </div>
-              <div class="sp-menu-bottom">
-                <a href="info/about_me/index.html">このサイトについて</a>
-                <p class="globalMenuSp_copy">© 2024 OBASANZ087.</p>
-              </div>
-            </nav>
-  </header>
+            <div class="pcgm_line"></div>
+            <div class="pcgm_button">
+              <a class="pcgm_button contact" href="/#contact">CONTACT<span>ご連絡</span></a>
+            </div>
+            <div class="pcgm_line padding_top"></div>
+            <div class="social_media_container">
+            <p class="pcgm_sns">SOCIAL MEDIA</p>
+            <a href="https://twitter.com/oba_sanz087" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="https://youtube.com/obasanz087" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <a href="works_index_wrapper index_"><i class="fa-brands fa-discord" target="_blank"></i></a>
+            <p class="pcgm_copy">© 2024 OBASANZ087.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="globalMenuSp">
+        <div class="mgm_wrapper">
+          <p>TOP<span>トップに戻る</span></p>
+          <i class="fa-solid fa-arrow-right"></i>
+          <a href="/index.html"></a>
+        </div>
+        <div class="mgm_wrapper">
+          <p>ABOUT<span>おばさんずについて</span></p>
+          <i class="fa-solid fa-arrow-right"></i>
+          <a href="/#about"></a>
+        </div>
+        <div class="mgm_wrapper">
+          <p>WORKS<span>つくったものたち</span></p>
+          <i class="fa-solid fa-arrow-right"></i>
+          <a href="/#works"></a>
+        </div>
+        <div class="mgm_wrapper">
+          <p>CONTACT<span>ご連絡など</span></p>
+          <i class="fa-solid fa-arrow-right"></i>
+          <a href="/#contact"></a>
+        </div>
+        <div class="sp-menu-sns">
+          SNS
+          <a target="_blank" href="https://twitter.com/oba_sanz087">
+            <i class="fa-brands fa-fw fa-x-twitter"></i>
+          </a>
+          <a class="sp-menu-discord">
+            <i class="fa-brands fa-fw fa-discord"></i>
+          </a>
+          <a target="_blank" href="https://github.com/obasanz087">
+            <i class="fa-brands fa-fw fa-github"></i>
+          </a>
+          <p class="discord-caption">ユーザー名：<span>obasanz087</span><br>申請はご自由にどうぞ。気がついたら承認します、多分</p>
+        </div>
+        <div class="sp-menu-bottom">
+          <a href="info/about_me/index.html">このサイトについて</a>
+          <p class="globalMenuSp_copy">© 2024 OBASANZ087.</p>
+        </div>
+      </nav>
+    </header>
 
   <main>
     <section class="topview" id="top">
@@ -147,7 +156,9 @@
           <p class="t-i-title">INFORMATION<span></span></p>
           <div class="t-i-close"><i class="fa-solid fa-circle-xmark"></i></div>
           <p class="t-i-article">サイトを少し調整しています。レイアウトが崩れていたり、バツボタンが押せなかったりするかもしれないです。ごめんね🙇‍♂️</p>
-          <img class="t-i-img" src="">
+          <!--
+          <img class="t-i-img" src="works_index_wrapper index_">
+          -->
         
         </div>
       </div>
@@ -226,13 +237,13 @@
 
           <ul class="pj-flex">
 
-            <li class="pj-sam-98 tag-item"  data-group="sayama" data-build="store">
+            <li class="works_button_wrapper button_98"  data-group="sayama" data-build="store">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/302.jpg">
               </div>
               <p class="pj-title">表参道ヒルズ</p>
             </li>
-            <div class="pj-index-98">
+            <div class="works_index_wrapper index_98">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -268,18 +279,18 @@
                 </tr>
               </table>
               <div class="pj-index-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.394331420895!2d139.70603591178693!3d35.667291230624485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca182a31e0b%3A0x99d7a9865079f0a5!2z6KGo5Y-C6YGT44OS44Or44K6!5e0!3m2!1sja!2sjp!4v1719034737475!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.394331420895!2d139.70603591178693!3d35.667291230624485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca182a31e0b%3A0x99d7a9865079f0a5!2z6KGo5Y-C6YGT44OS44Or44K6!5e0!3m2!1sja!2sjp!4v1719034737475!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>
             </div>
 
-            <li class="pj-sam-97 tag-item"  data-group="sayama" data-build="house">
+            <li class="works_button_wrapper button_97"  data-group="sayama" data-build="house">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/297.jpg">
               </div>
               <p class="pj-title">住宅</p>
             </li>
-            <div class="pj-index-97">
+            <div class="works_index_wrapper index_97">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -312,13 +323,13 @@
             </div>
             </div>
 
-            <li class="pj-sam-96 tag-item"  data-group="futayama" data-build="office">
+            <li class="works_button_wrapper button_96"  data-group="futayama" data-build="office">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/294.jpg">
               </div>
               <p class="pj-title">雑居ビル</p>
             </li>
-            <div class="pj-index-96">
+            <div class="works_index_wrapper index_96">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -351,13 +362,13 @@
             </div>
             </div>
 
-            <li class="pj-sam-94 tag-item"  data-group="w-sayama" data-build="b-house">
+            <li class="works_button_wrapper button_94"  data-group="w-sayama" data-build="b-house">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/286.jpg">
               </div>
               <p class="pj-title">住宅</p>
             </li>
-            <div class="pj-index-94">
+            <div class="works_index_wrapper index_94">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -389,13 +400,13 @@
             </div>
             </div>
 
-            <li class="pj-sam-93 tag-item"  data-group="sayama" data-build="other">
+            <li class="works_button_wrapper button_93"  data-group="sayama" data-build="other">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/274.jpg">
               </div>
               <p class="pj-title">立体駐車場</p>
             </li>
-            <div class="pj-index-93">
+            <div class="works_index_wrapper index_93">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -427,18 +438,18 @@
                 </tr>
               </table>
               <div class="pj-index-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1131.0892752509967!2d137.21447801648367!3d36.69364540814025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff791c248f68b09%3A0x3e443e35de7d8cbe!2zRC1QYXJraW5nIOWvjOWxseahnOacqOeUug!5e0!3m2!1sja!2sjp!4v1710473512696!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1131.0892752509967!2d137.21447801648367!3d36.69364540814025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5ff791c248f68b09%3A0x3e443e35de7d8cbe!2zRC1QYXJraW5nIOWvjOWxseahnOacqOeUug!5e0!3m2!1sja!2sjp!4v1710473512696!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>
             </div>
 
-            <li class="pj-sam-92 tag-item"  data-group="sayama" data-build="office">
+            <li class="works_button_wrapper button_92"  data-group="sayama" data-build="office">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/270.jpg">
               </div>
               <p class="pj-title">雑居ビル</p>
             </li>
-            <div class="pj-index-92">
+            <div class="works_index_wrapper index_92">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -468,18 +479,18 @@
                 </tr>
               </table>
               <div class="pj-index-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d839.4978948435098!2d136.90240998513292!3d35.146741008045645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600370b2c9abce21%3A0xcbde73a1f2d297aa!2z5LqU6Jek44OT44Or!5e0!3m2!1sja!2sjp!4v1710473274910!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d839.4978948435098!2d136.90240998513292!3d35.146741008045645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600370b2c9abce21%3A0xcbde73a1f2d297aa!2z5LqU6Jek44OT44Or!5e0!3m2!1sja!2sjp!4v1710473274910!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>
             </div>
 
-            <li class="pj-sam-91 tag-item"  data-group="sayama" data-build="apart">
+            <li class="works_button_wrapper button_91"  data-group="sayama" data-build="apart">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/283.jpg">
               </div>
               <p class="pj-title">マンション</p>
             </li>
-            <div class="pj-index-91">
+            <div class="works_index_wrapper index_91">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -510,19 +521,19 @@
                 </tr>
               </table>
               <div class="pj-index-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d698.498481779552!2d136.95261734749042!3d35.19502949614893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600371b2da792a5f%3A0x632ff4edc8f24e42!2z44CSNDYzLTAwNjYg5oSb55-l55yM5ZCN5Y-k5bGL5biC5a6I5bGx5Yy655S65Y2X77yS77yS4oiS77yS77ySIOODpuODvOODj-OCpuOCueesrO-8lOWuiOWxsQ!5e0!3m2!1sja!2sjp!4v1710472998265!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d698.498481779552!2d136.95261734749042!3d35.19502949614893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600371b2da792a5f%3A0x632ff4edc8f24e42!2z44CSNDYzLTAwNjYg5oSb55-l55yM5ZCN5Y-k5bGL5biC5a6I5bGx5Yy655S65Y2X77yS77yS4oiS77yS77ySIOODpuODvOODj-OCpuOCueesrO-8lOWuiOWxsQ!5e0!3m2!1sja!2sjp!4v1710472998265!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             
             </div>
             </div>
 
-            <li class="pj-sam-90 tag-item"  data-group="sayama" data-build="store">
+            <li class="works_button_wrapper button_90"  data-group="sayama" data-build="store">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/280.jpg">
               </div>
               <p class="pj-title">サ◯ゼリヤ</p>
             </li>
-            <div class="pj-index-90">
+            <div class="works_index_wrapper index_90">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -551,19 +562,19 @@
                 </tr>
               </table>
               <div class="pj-index-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d816.160030683569!2d136.9306792459059!3d35.09072359855914!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60037b974875c6b1%3A0x214e1b9db9f94987!2z44K144Kk44K844Oq44OkIOWQjeWPpOWxi-esoOWvuuW6lw!5e0!3m2!1sja!2sjp!4v1710472367057!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d816.160030683569!2d136.9306792459059!3d35.09072359855914!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60037b974875c6b1%3A0x214e1b9db9f94987!2z44K144Kk44K844Oq44OkIOWQjeWPpOWxi-esoOWvuuW6lw!5e0!3m2!1sja!2sjp!4v1710472367057!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             
             </div>
             </div>
 
-            <li class="pj-sam-80 tag-item"  data-group="sayama" data-build="apart">
+            <li class="works_button_wrapper button_80"  data-group="sayama" data-build="apart">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/264.jpg">
               </div>
               <p class="pj-title">アパート</p>
             </li>
-            <div class="pj-index-80">
+            <div class="works_index_wrapper index_80">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -597,13 +608,13 @@
             </div> 
             </div>
 
-            <li class="pj-sam-79 tag-item"  data-group="sayama" data-build="apart">
+            <li class="works_button_wrapper button_79"  data-group="sayama" data-build="apart">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/260.jpg">
               </div>
               <p class="pj-title">マンション</p>
             </li>
-            <div class="pj-index-79">
+            <div class="works_index_wrapper index_79">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -632,20 +643,20 @@
                 </tr>
               </table>
               <div class="pj-index-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d407.54749085511827!2d136.9328548928579!3d35.19700435610428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003716acc73b72d%3A0x15e6a287e68ce219!2z44OX44Os44K144Oz44K5IOODreOCuOOCp-W5s-WuiemAmuOCu-ODquOCqA!5e0!3m2!1sja!2sjp!4v1703321895224!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d407.54749085511827!2d136.9328548928579!3d35.19700435610428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003716acc73b72d%3A0x15e6a287e68ce219!2z44OX44Os44K144Oz44K5IOODreOCuOOCp-W5s-WuiemAmuOCu-ODquOCqA!5e0!3m2!1sja!2sjp!4v1703321895224!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             
             </div>
             </div>
 
-            <li class="pj-sam-78 tag-item"  data-group="sayama" data-build="house">
+            <li class="works_button_wrapper button_78"  data-group="sayama" data-build="house">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/255.jpg">
               </div>
               <p class="pj-title">家</p>
             </li>
   
-            <div class="pj-index-78">
+            <div class="works_index_wrapper index_78">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -677,14 +688,14 @@
             </div>  
             </div>
 
-            <li class="pj-sam-77 tag-item"  data-group="sayama" data-build="store">
+            <li class="works_button_wrapper button_77"  data-group="sayama" data-build="store">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/250.jpg">
               </div>
               <p class="pj-title">西友</p>
             </li>
   
-            <div class="pj-index-77">
+            <div class="works_index_wrapper index_77">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -714,19 +725,19 @@
                 </tr>
               </table>
               <div class="pj-index-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1622.3006992352432!2d139.72902023387917!3d35.58822899485017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018603290a755f5%3A0xeccadcadc937d955!2z6KW_5Y-L5aSn5qOu5bqX!5e0!3m2!1sja!2sjp!4v1700333479111!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1622.3006992352432!2d139.72902023387917!3d35.58822899485017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018603290a755f5%3A0xeccadcadc937d955!2z6KW_5Y-L5aSn5qOu5bqX!5e0!3m2!1sja!2sjp!4v1700333479111!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>  
             </div>
 
-            <li class="pj-sam-76 tag-item"  data-group="sayama" data-build="office">
+            <li class="works_button_wrapper button_76"  data-group="sayama" data-build="office">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/249.jpg">
               </div>
               <p class="pj-title">雑居ビル</p>
             </li>
   
-            <div class="pj-index-76">
+            <div class="works_index_wrapper index_76">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -754,17 +765,17 @@
                 </tr>
               </table>
               <div class="pj-index-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d405.5764627515782!2d139.72930934519928!3d35.587974741124356!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018603289304607%3A0x8dd4655c92b98146!2z44CSMTQwLTAwMTMg5p2x5Lqs6YO95ZOB5bed5Yy65Y2X5aSn5LqV77yW5LiB55uu77yS77yY4oiS77yYIOesrO-8ku-8leadseODk-ODqw!5e0!3m2!1sja!2sjp!4v1700333257995!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d405.5764627515782!2d139.72930934519928!3d35.587974741124356!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018603289304607%3A0x8dd4655c92b98146!2z44CSMTQwLTAwMTMg5p2x5Lqs6YO95ZOB5bed5Yy65Y2X5aSn5LqV77yW5LiB55uu77yS77yY4oiS77yYIOesrO-8ku-8leadseODk-ODqw!5e0!3m2!1sja!2sjp!4v1700333257995!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>  
             </div>
 
-            <li class="pj-sam-75 tag-item"  data-group="sayama" data-build="other">
+            <li class="works_button_wrapper button_75"  data-group="sayama" data-build="other">
               <div class="pj-img"><img loading="lazy" src="img/project/237.jpg"></div>
               <p class="pj-title">競馬場</p>
             </li>
   
-            <div class="pj-index-75">
+            <div class="works_index_wrapper index_75">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -802,17 +813,17 @@
                 </tr>
               </table>
               <div class="pj-index-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3940.818583893945!2d130.8692204630715!3d33.842746671787445!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3543c72966bbada5%3A0x89b678adaf65f537!2z5bCP5YCJ56u26aas5aC0!5e0!3m2!1sja!2sjp!4v1699846610187!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3940.818583893945!2d130.8692204630715!3d33.842746671787445!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3543c72966bbada5%3A0x89b678adaf65f537!2z5bCP5YCJ56u26aas5aC0!5e0!3m2!1sja!2sjp!4v1699846610187!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div> 
             </div>
 
-            <li class="pj-sam-67 tag-item" data-group="sayama" data-build="apart">
+            <li class="works_button_wrapper button_67" data-group="sayama" data-build="apart">
               <div class="pj-img"><img loading="lazy" src="img/project/154.jpg"></div>
               <p class="pj-title">マンション</p>
             </li>
   
-            <div class="pj-index-67">
+            <div class="works_index_wrapper index_67">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -842,19 +853,19 @@
                 </tr>
               </table>
               <div class="pj-index-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d203.81143048968426!2d136.93803295341522!3d35.181979049376494!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600370f915ab3e19%3A0xc7580d6db789f40e!2z44CSNDYxLTAwMzIg5oSb55-l55yM5ZCN5Y-k5bGL5biC5p2x5Yy65Ye65p2l55S677yT5LiB55uu77yR!5e0!3m2!1sja!2sjp!4v1696816025557!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d203.81143048968426!2d136.93803295341522!3d35.181979049376494!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600370f915ab3e19%3A0xc7580d6db789f40e!2z44CSNDYxLTAwMzIg5oSb55-l55yM5ZCN5Y-k5bGL5biC5p2x5Yy65Ye65p2l55S677yT5LiB55uu77yR!5e0!3m2!1sja!2sjp!4v1696816025557!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div> 
             </div>
 
-            <li class="pj-sam-64 tag-item"  data-group="oda" data-build="office">
+            <li class="works_button_wrapper button_64"  data-group="oda" data-build="office">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/147.jpg">
               </div>
               <p class="pj-title">オフィスビル</p>
             </li>
   
-            <div class="pj-index-64">
+            <div class="works_index_wrapper index_64">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -886,19 +897,19 @@
                 </tr>
               </table>
               <div class="pj-index-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d815.3475499054781!2d136.89636506603395!3d35.17182600083582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600376d6f5b66681%3A0x4b577bea8d242d24!2z44CSNDYwLTAwMDMg5oSb55-l55yM5ZCN5Y-k5bGL5biC5Lit5Yy66Yym77yR5LiB55uu77yV4oiS77yR77yRIOWQjeWPpOWxi-S8iuiXpOW_oOODk-ODqw!5e0!3m2!1sja!2sjp!4v1695061203362!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d815.3475499054781!2d136.89636506603395!3d35.17182600083582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600376d6f5b66681%3A0x4b577bea8d242d24!2z44CSNDYwLTAwMDMg5oSb55-l55yM5ZCN5Y-k5bGL5biC5Lit5Yy66Yym77yR5LiB55uu77yV4oiS77yR77yRIOWQjeWPpOWxi-S8iuiXpOW_oOODk-ODqw!5e0!3m2!1sja!2sjp!4v1695061203362!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>  
             </div>
 
-            <li class="pj-sam-65 tag-item"  data-group="sayama" data-build="store">
+            <li class="works_button_wrapper button_65"  data-group="sayama" data-build="store">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/146.jpg">
               </div>
               <p class="pj-title">ココカラファイン</p>
             </li>
   
-            <div class="pj-index-65">
+            <div class="works_index_wrapper index_65">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -926,19 +937,19 @@
                 </tr>
               </table>
               <div class="pj-index-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d769.2733744989881!2d136.90235060391055!3d35.204799506913595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600371c0c40695c1%3A0xe724134d9ae269cf!2z44Kz44Kz44Kr44Op44OV44Kh44Kk44OzIOW_l-izgOWFrOWckuWJjeW6lw!5e0!3m2!1sja!2sjp!4v1695060987440!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d769.2733744989881!2d136.90235060391055!3d35.204799506913595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600371c0c40695c1%3A0xe724134d9ae269cf!2z44Kz44Kz44Kr44Op44OV44Kh44Kk44OzIOW_l-izgOWFrOWckuWJjeW6lw!5e0!3m2!1sja!2sjp!4v1695060987440!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>
             </div>
 
-            <li class="pj-sam-62 tag-item"  data-group="myworld" data-build="store">
+            <li class="works_button_wrapper button_62"  data-group="myworld" data-build="store">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/142.jpg">
               </div>
               <p class="pj-title">◯ッグモーター</p>
             </li>
   
-              <div class="pj-index-62">
+              <div class="works_index_wrapper index_62">
             <div class="index-max">
                 <div class="pj_index_close">
                 <span></span>
@@ -969,19 +980,19 @@
                 </tr>
               </table>
               <div class="pj-index-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1160.1122598344568!2d137.70616735189162!3d34.672554317622485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601adc3f05458c91%3A0xfd6daf72a4d8d377!2z44OT44OD44Kw44Oi44O844K_44O8IOa1nOadvuWNl-W6lw!5e0!3m2!1sja!2sjp!4v1695060681709!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1160.1122598344568!2d137.70616735189162!3d34.672554317622485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601adc3f05458c91%3A0xfd6daf72a4d8d377!2z44OT44OD44Kw44Oi44O844K_44O8IOa1nOadvuWNl-W6lw!5e0!3m2!1sja!2sjp!4v1695060681709!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div> 
             </div>
             </div>
 
-            <li class="pj-sam-63 tag-item"  data-group="sayama" data-build="apart">
+            <li class="works_button_wrapper button_63"  data-group="sayama" data-build="apart">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/140.jpg">
               </div>
               <p class="pj-title">マンション</p>
             </li>
   
-            <div class="pj-index-63">
+            <div class="works_index_wrapper index_63">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -1012,13 +1023,13 @@
             </div>
             </div>
 
-            <li class="pj-sam-66 tag-item"  data-group="oda" data-build="store">
+            <li class="works_button_wrapper button_66"  data-group="oda" data-build="store">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/137.jpg">
               </div>
               <p class="pj-title">ABCマート</p>
             </li>
-            <div class="pj-index-66">
+            <div class="works_index_wrapper index_66">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -1048,13 +1059,13 @@
             </div>
             </div>
 
-            <li class="pj-sam-61 tag-item"  data-group="sayama" data-build="office">
+            <li class="works_button_wrapper button_61"  data-group="sayama" data-build="office">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/136.jpg">
               </div>
               <p class="pj-title">モブビル</p>
             </li>
-            <div class="pj-index-61">
+            <div class="works_index_wrapper index_61">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -1083,14 +1094,14 @@
             </div>
             </div>
 
-            <li class="pj-sam-60 tag-item"  data-group="myworld" data-build="apart">
+            <li class="works_button_wrapper button_60"  data-group="myworld" data-build="apart">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/133.jpg">
               </div>
               <p class="pj-title">マンション</p>
             </li>
   
-            <div class="pj-index-60">
+            <div class="works_index_wrapper index_60">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -1122,13 +1133,13 @@
             </div>  
             </div>
 
-            <li class="pj-sam-59 tag-item"  data-group="sayama" data-build="house">
+            <li class="works_button_wrapper button_59"  data-group="sayama" data-build="house">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/129.jpg">
               </div>
               <p class="pj-title">住宅</p>
             </li>
-            <div class="pj-index-59">
+            <div class="works_index_wrapper index_59">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -1161,14 +1172,14 @@
             </div>
             </div>
 
-            <li class="pj-sam-58 tag-item"  data-group="sayama" data-build="other">
+            <li class="works_button_wrapper button_58"  data-group="sayama" data-build="other">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/126.jpg">
               </div>
               <p class="pj-title">図書館</p>
             </li>
   
-              <div class="pj-index-58">
+              <div class="works_index_wrapper index_58">
             <div class="index-max">
                 <div class="pj_index_close">
                 <span></span>
@@ -1203,18 +1214,18 @@
                 </tr>
               </table>
               <div class="pj-index-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d972.1417272743328!2d137.15858286935085!3d34.95956675585926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004bd34c733e5bf%3A0xbaca56551166cbdc!2z5bKh5bSO5biC5Zuz5pu46aSo5Lqk5rWB44OX44Op44K2IOOCiuOBtuOCiQ!5e0!3m2!1sja!2sjp!4v1695059226251!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d972.1417272743328!2d137.15858286935085!3d34.95956675585926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004bd34c733e5bf%3A0xbaca56551166cbdc!2z5bKh5bSO5biC5Zuz5pu46aSo5Lqk5rWB44OX44Op44K2IOOCiuOBtuOCiQ!5e0!3m2!1sja!2sjp!4v1695059226251!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             </div>
             </div>
 
-            <li class="pj-sam-86 tag-item"  data-group="myworld" data-build="office">
+            <li class="works_button_wrapper button_86"  data-group="myworld" data-build="office">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/121.jpg">
               </div>
               <p class="pj-title">雑居ビル</p>
             </li>
-            <div class="pj-index-86">
+            <div class="works_index_wrapper index_86">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -1243,18 +1254,18 @@
                 </tr>
               </table>
               <div class="pj-index-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d407.7021618458104!2d136.93663364254135!3d35.16616409835242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003708b89e5a7e5%3A0xd556555d00f713f8!2z44CSNDY0LTA4NTAg5oSb55-l55yM5ZCN5Y-k5bGL5biC5Y2D56iu5Yy65LuK5rGg77yV5LiB55uu77yT77yY4oiS77yS77yTIE15eeODk-ODqw!5e0!3m2!1sja!2sjp!4v1695049922770!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d407.7021618458104!2d136.93663364254135!3d35.16616409835242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003708b89e5a7e5%3A0xd556555d00f713f8!2z44CSNDY0LTA4NTAg5oSb55-l55yM5ZCN5Y-k5bGL5biC5Y2D56iu5Yy65LuK5rGg77yV5LiB55uu77yT77yY4oiS77yS77yTIE15eeODk-ODqw!5e0!3m2!1sja!2sjp!4v1695049922770!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
             </div>
 
-            <li class="pj-sam-85 tag-item"  data-group="myworld" data-build="office">
+            <li class="works_button_wrapper button_85"  data-group="myworld" data-build="office">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/115.jpg">
               </div>
               <p class="pj-title">なにかの店</p>
             </li>
-            <div class="pj-index-85">
+            <div class="works_index_wrapper index_85">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -1281,18 +1292,18 @@
                 </tr>
               </table>
                 <div class="pj-index-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d419.6264930449756!2d136.9186848639852!3d35.17047592301864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600370dccc669ab9%3A0x1332e434963d4585!2z5ZCN5Y-k5bGL5ZyS6Iq4!5e0!3m2!1sja!2sjp!4v1695049529127!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d419.6264930449756!2d136.9186848639852!3d35.17047592301864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600370dccc669ab9%3A0x1332e434963d4585!2z5ZCN5Y-k5bGL5ZyS6Iq4!5e0!3m2!1sja!2sjp!4v1695049529127!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
             </div>
 
-            <li class="pj-sam-84 tag-item"  data-group="myworld" data-build="office">
+            <li class="works_button_wrapper button_84"  data-group="myworld" data-build="office">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/114.jpg">
               </div>
               <p class="pj-title">雑居ビル</p>
             </li>
-            <div class="pj-index-84">
+            <div class="works_index_wrapper index_84">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -1318,19 +1329,19 @@
                 </tr>
               </table>
               <div class="pj-index-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d203.83682656923793!2d136.919940953309!3d35.17185029556616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600370dd1f5f7dbf%3A0x837eaf271777a54f!2z44CSNDYxLTAwMDQg5oSb55-l55yM5ZCN5Y-k5bGL5biC5p2x5Yy66JG177yR5LiB55uu77yR77yZ4oiS77yUIOOCteODg-OCteOCpuOCqOOCueOCv-ODs-ODk-ODqw!5e0!3m2!1sja!2sjp!4v1695049953547!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d203.83682656923793!2d136.919940953309!3d35.17185029556616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600370dd1f5f7dbf%3A0x837eaf271777a54f!2z44CSNDYxLTAwMDQg5oSb55-l55yM5ZCN5Y-k5bGL5biC5p2x5Yy66JG177yR5LiB55uu77yR77yZ4oiS77yUIOOCteODg-OCteOCpuOCqOOCueOCv-ODs-ODk-ODqw!5e0!3m2!1sja!2sjp!4v1695049953547!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>
 
             </div>
 
-            <li class="pj-sam-83 tag-item"  data-group="myworld" data-build="office">
+            <li class="works_button_wrapper button_83"  data-group="myworld" data-build="office">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/113.jpg">
               </div>
               <p class="pj-title">雑居ビル</p>
             </li>
-            <div class="pj-index-83">
+            <div class="works_index_wrapper index_83">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -1359,18 +1370,18 @@
               <p class="pj-index-date-inplace">Date built : 2023/03/11</p>
               <p class="pj-index-place">Model : 名古屋平成看護医療専門学校</p>
               <div class="pj-index-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d431.9281070381793!2d136.9329850943778!3d35.169419197122096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003712c99b73409%3A0xda469cec61c0132c!2z5ZCN5Y-k5bGL5bmz5oiQ55yL6K235Yy755mC5bCC6ZaA5a2m5qCh!5e0!3m2!1sja!2sjp!4v1695049348045!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d431.9281070381793!2d136.9329850943778!3d35.169419197122096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003712c99b73409%3A0xda469cec61c0132c!2z5ZCN5Y-k5bGL5bmz5oiQ55yL6K235Yy755mC5bCC6ZaA5a2m5qCh!5e0!3m2!1sja!2sjp!4v1695049348045!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>
             </div>
 
-            <li class="pj-sam-82 tag-item"  data-group="myworld" data-build="office">
+            <li class="works_button_wrapper button_82"  data-group="myworld" data-build="office">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/110.jpg">
               </div>
               <p class="pj-title">駅前の商業施設</p>
             </li>
-            <div class="pj-index-82">
+            <div class="works_index_wrapper index_82">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -1400,18 +1411,18 @@
                 </tr>
               </table>
               <div class="pj-index-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d769.8398642357076!2d136.89996612593106!3d35.144950966562305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003774d76d621a1%3A0xedd6fe9d989cf51!2z44Kk44Kq44Oz6YeR5bGx5bqX!5e0!3m2!1sja!2sjp!4v1695049241581!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d769.8398642357076!2d136.89996612593106!3d35.144950966562305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003774d76d621a1%3A0xedd6fe9d989cf51!2z44Kk44Kq44Oz6YeR5bGx5bqX!5e0!3m2!1sja!2sjp!4v1695049241581!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>
             </div>
 
-            <li class="pj-sam-81 tag-item"  data-group="myworld" data-build="office">
+            <li class="works_button_wrapper button_81"  data-group="myworld" data-build="office">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/108.jpg">
               </div>
               <p class="pj-title">病院</p>
             </li>
-            <div class="pj-index-81">
+            <div class="works_index_wrapper index_81">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -1440,18 +1451,18 @@
               <p class="pj-index-date-inplace">Date built : 2023/02/26</p>
               <p class="pj-index-place">Model : 眼科三宅病院</p>
               <div class="pj-index-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d314.2813050753804!2d136.9356189773135!3d35.19203204429336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60037104461498a9%3A0x49dc1fa2d1c218a4!2z55y856eR5LiJ5a6F55eF6Zmi!5e0!3m2!1sja!2sjp!4v1695049136923!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d314.2813050753804!2d136.9356189773135!3d35.19203204429336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60037104461498a9%3A0x49dc1fa2d1c218a4!2z55y856eR5LiJ5a6F55eF6Zmi!5e0!3m2!1sja!2sjp!4v1695049136923!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>
             </div>
 
-          <li class="pj-sam-57 tag-item"  data-group="myworld" data-build="office">
+          <li class="works_button_wrapper button_57"  data-group="myworld" data-build="office">
             <div class="pj-img">
               <img loading="lazy" src="img/project/107.jpg">
             </div>
             <p class="pj-title">雑居ビル</p>
           </li>
-          <div class="pj-index-57">
+          <div class="works_index_wrapper index_57">
           <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -1478,19 +1489,19 @@
               </tr>
             </table>
             <div class="pj-index-map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d288.1947366954144!2d136.93665216402115!3d35.19273588944812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60037106a03b8451%3A0xa53312ed38e8effd!2z44CSNDYxLTAwNDAg5oSb55-l55yM5ZCN5Y-k5bGL5biC5p2x5Yy655-i55Sw77yR5LiB55uu77yR4oiS77yR77yVIOODoeOCpOODleOCo-OCueWkp-abveagueODk-ODqw!5e0!3m2!1sja!2sjp!4v1695049031669!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d288.1947366954144!2d136.93665216402115!3d35.19273588944812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60037106a03b8451%3A0xa53312ed38e8effd!2z44CSNDYxLTAwNDAg5oSb55-l55yM5ZCN5Y-k5bGL5biC5p2x5Yy655-i55Sw77yR5LiB55uu77yR4oiS77yR77yVIOODoeOCpOODleOCo-OCueWkp-abveagueODk-ODqw!5e0!3m2!1sja!2sjp!4v1695049031669!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             </div>
             </div>
           
-          <li class="pj-sam-56 tag-item"  data-group="sayama" data-build="house">
+          <li class="works_button_wrapper button_56"  data-group="sayama" data-build="house">
             <div class="pj-img">
               <img loading="lazy" src="img/project/106.jpg">
             </div>
             <p class="pj-title">住宅</p>
           </li>
 
-          <div class="pj-index-56">
+          <div class="works_index_wrapper index_56">
           <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -1519,14 +1530,14 @@
           </div>  
           </div>
 
-          <li class="pj-sam-55 tag-item"  data-group="myworld" data-build="office">
+          <li class="works_button_wrapper button_55"  data-group="myworld" data-build="office">
             <div class="pj-img">
                 <img loading="lazy" g src="img/project/105.jpg">
             </div>
             <p class="pj-title">でかいビル</p>
           </li>
 
-          <div class="pj-index-55">
+          <div class="works_index_wrapper index_55">
           <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -1559,19 +1570,19 @@
             <p class="pj-index-date-inplace">Date built : 2023/03/06</p>
             <p class="pj-index-place">Model : 三菱UFJ銀行 名古屋ビル</p>
             <div class="pj-index-map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d815.3741439044627!2d136.90152521481522!3d35.16917394913333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003772b2d758c61%3A0xd047bd68cc729eae!2z5LiJ6I-xVUZK6YqA6KGM5ZCN5Y-k5bGL5Za25qWt6YOo!5e0!3m2!1sja!2sjp!4v1695048701843!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d815.3741439044627!2d136.90152521481522!3d35.16917394913333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003772b2d758c61%3A0xd047bd68cc729eae!2z5LiJ6I-xVUZK6YqA6KGM5ZCN5Y-k5bGL5Za25qWt6YOo!5e0!3m2!1sja!2sjp!4v1695048701843!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div> 
           </div>
           </div>
 
-            <li class="pj-sam-54 tag-item"  data-group="myworld" data-build="house">
+            <li class="works_button_wrapper button_54"  data-group="myworld" data-build="house">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/102.jpg">
               </div>
               <p class="pj-title">住宅</p>
             </li>
   
-              <div class="pj-index-54">
+              <div class="works_index_wrapper index_54">
             <div class="index-max">
                 <div class="pj_index_close">
                 <span></span>
@@ -1601,14 +1612,14 @@
             </div>    
             </div>
 
-          <li class="pj-sam-53 tag-item"  data-group="myworld" data-build="other">
+          <li class="works_button_wrapper button_53"  data-group="myworld" data-build="other">
             <div class="pj-img">
               <img loading="lazy" src="img/project/97.jpg">
             </div>
             <p class="pj-title">駅</p>
           </li>
 
-          <div class="pj-index-53">
+          <div class="works_index_wrapper index_53">
           <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -1641,14 +1652,14 @@
           </div>
           </div>
 
-          <li class="pj-sam-52 tag-item"  data-group="myworld" data-build="apart">
+          <li class="works_button_wrapper button_52"  data-group="myworld" data-build="apart">
             <div class="pj-img">
               <img loading="lazy" src="img/project/94.jpg">
             </div>
             <p class="pj-title">巨大マンション</p>
           </li>
 
-          <div class="pj-index-52">
+          <div class="works_index_wrapper index_52">
           <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -1678,19 +1689,19 @@
               </tr>
             </table>
             <div class="pj-index-map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d650.969120426707!2d136.9202563407923!3d35.17000597642771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003717c49c74427%3A0x830d194e20143bd7!2z44OX44Os44K144Oz44K544K444Kn44ON5paw5qCE55S66aeF5YmN6JG1!5e0!3m2!1sja!2sjp!4v1695006138159!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d650.969120426707!2d136.9202563407923!3d35.17000597642771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003717c49c74427%3A0x830d194e20143bd7!2z44OX44Os44K144Oz44K544K444Kn44ON5paw5qCE55S66aeF5YmN6JG1!5e0!3m2!1sja!2sjp!4v1695006138159!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div> 
           </div>
           </div>
 
-          <li class="pj-sam-51 tag-item"  data-group="myworld" data-build="office">
+          <li class="works_button_wrapper button_51"  data-group="myworld" data-build="office">
             <div class="pj-img">
               <img loading="lazy" src="img/project/90.jpg">
             </div>
             <p class="pj-title">超高層ビル</p>
           </li>
 
-          <div class="pj-index-51">
+          <div class="works_index_wrapper index_51">
           <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -1724,18 +1735,18 @@
             <p class="pj-index-date-inplace">Date built : 2023/02/07</p>
             <p class="pj-index-place">Model : マザックアートプラザ・ヤマザキマザック美術館</p>
             <div class="pj-index-map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d792.141189146519!2d136.91895106341389!3d35.17131321465426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600370dd2745484d%3A0x5c94bbac905600e!2z44Oe44K244OD44Kv44Ki44O844OI44OX44Op44K2!5e0!3m2!1sja!2sjp!4v1695005557703!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d792.141189146519!2d136.91895106341389!3d35.17131321465426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600370dd2745484d%3A0x5c94bbac905600e!2z44Oe44K244OD44Kv44Ki44O844OI44OX44Op44K2!5e0!3m2!1sja!2sjp!4v1695005557703!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div> 
           </div>
           </div>
-            <li class="pj-sam-50 tag-item"  data-group="sayama" data-build="store">
+            <li class="works_button_wrapper button_50"  data-group="sayama" data-build="store">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/86.jpg">
               </div>
               <p class="pj-title">コストコ</p>
             </li>
   
-              <div class="pj-index-50">
+              <div class="works_index_wrapper index_50">
             <div class="index-max">
                 <div class="pj_index_close">
                 <span></span>
@@ -1765,18 +1776,18 @@
                 </tr>
               </table>
               <div class="pj-index-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1363.9645458702053!2d139.37483568720816!3d35.60127359071528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60191d56ffb10001%3A0xdb0fd35c4c864528!2z44Kz44K544OI44Kz44Ob44O844Or44K744O844OrIOWkmuaRqeWig-WAieW6q-W6lw!5e0!3m2!1sja!2sjp!4v1695005182319!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1363.9645458702053!2d139.37483568720816!3d35.60127359071528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60191d56ffb10001%3A0xdb0fd35c4c864528!2z44Kz44K544OI44Kz44Ob44O844Or44K744O844OrIOWkmuaRqeWig-WAieW6q-W6lw!5e0!3m2!1sja!2sjp!4v1695005182319!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>  
             </div>
             </div>       
-          <li  class="pj-sam-49 tag-item"   data-group="sayama" data-build="other">
+          <li  class="works_button_wrapper button_49"   data-group="sayama" data-build="other">
             <div class="pj-img">
               <img loading="lazy" src="img/project/82.jpg">
             </div>
             <p class="pj-title">物流センター</p>
           </li>
 
-          <div class="pj-index-49">
+          <div class="works_index_wrapper index_49">
           <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -1806,19 +1817,19 @@
               </tr>
             </table>
             <div class="pj-index-map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2302.972109687447!2d136.888279868683!3d35.28375190367023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60030b89b6dc8b27%3A0x35abeb3a1d811fbb!2z5pel5pys6YCa6YGLKOagqinlsI_niafnrKzvvJPkuovmpa3miYA!5e0!3m2!1sja!2sjp!4v1695004620549!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2302.972109687447!2d136.888279868683!3d35.28375190367023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60030b89b6dc8b27%3A0x35abeb3a1d811fbb!2z5pel5pys6YCa6YGLKOagqinlsI_niafnrKzvvJPkuovmpa3miYA!5e0!3m2!1sja!2sjp!4v1695004620549!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div> 
           </div>      
           </div>
 
-          <li class="pj-sam-48 tag-item"  data-group="sayama" data-build="house">
+          <li class="works_button_wrapper button_48"  data-group="sayama" data-build="house">
             <div class="pj-img">
               <img loading="lazy" src="img/project/81.jpg">
             </div>
             <p class="pj-title">住宅</p>
           </li>
 
-          <div class="pj-index-48">
+          <div class="works_index_wrapper index_48">
           <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -1849,14 +1860,14 @@
           </div>  
           </div>
         
-          <li class="pj-sam-47 tag-item"  data-group="sayama" data-build="store">
+          <li class="works_button_wrapper button_47"  data-group="sayama" data-build="store">
             <div class="pj-img">
               <img loading="lazy" src="img/project/79.jpg">
             </div>
             <p class="pj-title">ほっともっと</p>
           </li>
 
-          <div class="pj-index-47">
+          <div class="works_index_wrapper index_47">
           <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -1886,14 +1897,14 @@
           </div>
           </div>
 
-          <li class="pj-sam-46 tag-item"  data-group="sayama" data-build="house">
+          <li class="works_button_wrapper button_46"  data-group="sayama" data-build="house">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/70.jpg">
               </div>
               <p class="pj-title">住宅</p>
             </li>
   
-              <div class="pj-index-46">
+              <div class="works_index_wrapper index_46">
             <div class="index-max">
                 <div class="pj_index_close">
                 <span></span>
@@ -1923,14 +1934,14 @@
             </div>
             </div>
 
-              <li class="pj-sam-43 tag-item"  data-group="sayama" data-build="house">
+              <li class="works_button_wrapper button_43"  data-group="sayama" data-build="house">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/77.jpg">
               </div>
               <p class="pj-title">住宅</p>
             </li>
   
-            <div class="pj-index-43">
+            <div class="works_index_wrapper index_43">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -1960,14 +1971,14 @@
             </div>     
             </div>
             
-            <li class="pj-sam-42 tag-item"  data-group="myworld" data-build="other">
+            <li class="works_button_wrapper button_42"  data-group="myworld" data-build="other">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/72.jpg">
               </div>
               <p class="pj-title">名城大学</p>
             </li>
   
-            <div class="pj-index-42">
+            <div class="works_index_wrapper index_42">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -1999,19 +2010,19 @@
                 </tr>
               </table>
               <div class="pj-index-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1630.343736918804!2d136.94276944933372!3d35.18934122861096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003119bbc4c9fc5%3A0xd5c643a8df7fc59!2z5ZCN5Z-O5aSn5a2mIOODiuOCtOODpOODieODvOODoOWJjeOCreODo-ODs-ODkeOCuQ!5e0!3m2!1sja!2sjp!4v1695002439536!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1630.343736918804!2d136.94276944933372!3d35.18934122861096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003119bbc4c9fc5%3A0xd5c643a8df7fc59!2z5ZCN5Z-O5aSn5a2mIOODiuOCtOODpOODieODvOODoOWJjeOCreODo-ODs-ODkeOCuQ!5e0!3m2!1sja!2sjp!4v1695002439536!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>
             </div>
 
-            <li class="pj-sam-41 tag-item"  data-group="sayama" data-build="office">
+            <li class="works_button_wrapper button_41"  data-group="sayama" data-build="office">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/67.jpg">
               </div>
               <p class="pj-title">オフィスビル</p>
             </li>
   
-            <div class="pj-index-41">
+            <div class="works_index_wrapper index_41">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -2041,19 +2052,19 @@
                 </tr>
               </table>
               <div class="pj-index-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d560.1695711882954!2d136.90961089023338!3d35.16533561917176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600370ce356e8d2d%3A0xaceee4c2b16ef41!2z55y856eR5p2J55Sw55eF6Zmi!5e0!3m2!1sja!2sjp!4v1695000480329!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d560.1695711882954!2d136.90961089023338!3d35.16533561917176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600370ce356e8d2d%3A0xaceee4c2b16ef41!2z55y856eR5p2J55Sw55eF6Zmi!5e0!3m2!1sja!2sjp!4v1695000480329!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>
             </div>
 
-            <li class="pj-sam-40 tag-item"  data-group="sayama" data-build="house">
+            <li class="works_button_wrapper button_40"  data-group="sayama" data-build="house">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/66.jpg">
               </div>
               <p class="pj-title">住宅</p>
             </li>
   
-              <div class="pj-index-40">
+              <div class="works_index_wrapper index_40">
             <div class="index-max">
                 <div class="pj_index_close">
                 <span></span>
@@ -2086,14 +2097,14 @@
           <!--10-->        
           </div>
 
-          <li class="pj-sam-39 tag-item"  data-group="sayama" data-build="other">
+          <li class="works_button_wrapper button_39"  data-group="sayama" data-build="other">
             <div class="pj-img">
               <img loading="lazy" src="img/project/64.jpg">
             </div>
             <p class="pj-title">幼稚園</p>
           </li>
 
-          <div class="pj-index-39">
+          <div class="works_index_wrapper index_39">
           <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -2123,19 +2134,19 @@
               </tr>
             </table>
             <div class="pj-index-map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d666.6005714197152!2d136.9303162810852!3d35.11122669828688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60037bb2c2a468b9%3A0xbc1b8f19deb450fa!2z5bGx5bSO5bm856ia5ZyS!5e0!3m2!1sja!2sjp!4v1694999763375!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d666.6005714197152!2d136.9303162810852!3d35.11122669828688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60037bb2c2a468b9%3A0xbc1b8f19deb450fa!2z5bGx5bSO5bm856ia5ZyS!5e0!3m2!1sja!2sjp!4v1694999763375!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
           </div>
 
-          <li class="pj-sam-45 tag-item"  data-group="myworld" data-build="apart">
+          <li class="works_button_wrapper button_45"  data-group="myworld" data-build="apart">
             <div class="pj-img">
               <img loading="lazy" src="img/project/74.jpg">
             </div>
             <p class="pj-title">マンション</p>
           </li>
 
-          <div class="pj-index-45">
+          <div class="works_index_wrapper index_45">
           <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -2163,19 +2174,19 @@
               </tr>
             </table>
             <div class="pj-index-map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d576.4064026518037!2d136.94355883404268!3d35.1903495892914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600371a1f24d5027%3A0xd13fe390d81c1c0f!2z44OV44Os44K544OI44K344OG44Kj55-i55Sw5Y2X!5e0!3m2!1sja!2sjp!4v1695001968273!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d576.4064026518037!2d136.94355883404268!3d35.1903495892914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600371a1f24d5027%3A0xd13fe390d81c1c0f!2z44OV44Os44K544OI44K344OG44Kj55-i55Sw5Y2X!5e0!3m2!1sja!2sjp!4v1695001968273!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
           </div>
 
-          <li class="pj-sam-70 tag-item"  data-group="myworld" data-build="other">
+          <li class="works_button_wrapper button_70"  data-group="myworld" data-build="other">
             <div class="pj-img">
               <img loading="lazy" src="img/project/208.jpg">
             </div>
             <p class="pj-title">山下市の整備</p>
           </li>
 
-          <div class="pj-index-70">
+          <div class="works_index_wrapper index_70">
           <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -2204,7 +2215,7 @@
               </tr>
             </table>
             <div class="pj-index-map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d576.4087802414348!2d136.94309472102077!3d35.190014439777585!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600370552c5b5d27%3A0x7dbe5c89b4feaa12!2z5ZCN5Y-k5bGL5biC5raI6Ziy5bGAIOadsea2iOmYsue9siDnn6LnlLDlh7rlvLXmiYA!5e0!3m2!1sja!2sjp!4v1698761471985!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d576.4087802414348!2d136.94309472102077!3d35.190014439777585!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600370552c5b5d27%3A0x7dbe5c89b4feaa12!2z5ZCN5Y-k5bGL5biC5raI6Ziy5bGAIOadsea2iOmYsue9siDnn6LnlLDlh7rlvLXmiYA!5e0!3m2!1sja!2sjp!4v1698761471985!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="pj-img-grid">
               <img class="pj-index-img" loading="lazy" src="img/project/213.jpg">
@@ -2228,14 +2239,14 @@
           </div>
           </div>
 
-          <li class="pj-sam-38 tag-item"  data-group="sayama" data-build="apart">
+          <li class="works_button_wrapper button_38"  data-group="sayama" data-build="apart">
             <div class="pj-img">
               <img loading="lazy" src="img/project/60.jpg">
             </div>
             <p class="pj-title">マンション</p>
           </li>
 
-          <div class="pj-index-38">
+          <div class="works_index_wrapper index_38">
           <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -2268,14 +2279,14 @@
           </div>
           </div>
 
-            <li class="pj-sam-37 tag-item"  data-group="sayama" data-build="house">
+            <li class="works_button_wrapper button_37"  data-group="sayama" data-build="house">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/58.jpg">
               </div>
               <p class="pj-title">住宅</p>
             </li>
   
-            <div class="pj-index-37">
+            <div class="works_index_wrapper index_37">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -2305,14 +2316,14 @@
             </div>
 
           <!--9-->        
-          <li class="pj-sam-36 tag-item"  data-group="sayama" data-build="house">
+          <li class="works_button_wrapper button_36"  data-group="sayama" data-build="house">
             <div class="pj-img">
               <img loading="lazy" src="img/project/57.jpg">
             </div>
             <p class="pj-title">斜め住宅</p>
           </li>
 
-            <div class="pj-index-36">
+            <div class="works_index_wrapper index_36">
           <div class="index-max">
                 <div class="pj_index_close">
                 <span></span>
@@ -2342,14 +2353,14 @@
           </div> 
           </div>
 
-          <li class="pj-sam-34 tag-item"  data-group="myworld" data-build="office">
+          <li class="works_button_wrapper button_34"  data-group="myworld" data-build="office">
             <div class="pj-img">
               <img loading="lazy" src="img/project/54.jpg">
             </div>
             <p class="pj-title">任天堂 本社開発棟</p>
           </li>
 
-          <div class="pj-index-34">
+          <div class="works_index_wrapper index_34">
           <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -2379,19 +2390,19 @@
               </tr>
             </table>
             <div class="pj-index-map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1634.6810886297212!2d135.75442479949933!3d34.97259180804623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z5Lu75aSp5aCC44CA5pys56S-6ZaL55m65qOf!5e0!3m2!1sja!2sjp!4v1694998239890!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1634.6810886297212!2d135.75442479949933!3d34.97259180804623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z5Lu75aSp5aCC44CA5pys56S-6ZaL55m65qOf!5e0!3m2!1sja!2sjp!4v1694998239890!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>     
           </div>
 
-          <li class="pj-sam-35 tag-item"  data-group="sayama" data-build="house">
+          <li class="works_button_wrapper button_35"  data-group="sayama" data-build="house">
             <div class="pj-img">
               <img loading="lazy" src="img/project/56.jpg">
             </div>
             <p class="pj-title">住宅</p>
           </li>
 
-          <div class="pj-index-35">
+          <div class="works_index_wrapper index_35">
           <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -2421,14 +2432,14 @@
     
           </div>
 
-            <li class="pj-sam-33 tag-item"  data-group="sayama" data-build="store">
+            <li class="works_button_wrapper button_33"  data-group="sayama" data-build="store">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/51.jpg">
               </div>
               <p class="pj-title">信用金庫</p>
             </li>
   
-            <div class="pj-index-33">
+            <div class="works_index_wrapper index_33">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -2458,19 +2469,19 @@
                 </tr>
               </table>
               <div class="pj-index-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d405.27860575153704!2d139.38244100000003!3d35.646733!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018e266c319bbaf%3A0xb75f1bdcff42d3b5!2z5aSa5pGp5L-h55So6YeR5bqrIOW5s-WxseaUr-W6lw!5e0!3m2!1sja!2sjp!4v1695000243478!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d405.27860575153704!2d139.38244100000003!3d35.646733!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018e266c319bbaf%3A0xb75f1bdcff42d3b5!2z5aSa5pGp5L-h55So6YeR5bqrIOW5s-WxseaUr-W6lw!5e0!3m2!1sja!2sjp!4v1695000243478!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>
   
             </div>
          <!--8-->        
-         <li class="pj-sam-32 tag-item"  data-group="sayama" data-build="house">
+         <li class="works_button_wrapper button_32"  data-group="sayama" data-build="house">
           <div class="pj-img">
             <img loading="lazy" src="img/project/49.jpg">
           </div>
           <p class="pj-title">住宅</p>
         </li>
-          <div class="pj-index-32">
+          <div class="works_index_wrapper index_32">
         <div class="index-max">
                 <div class="pj_index_close">
                 <span></span>
@@ -2500,13 +2511,13 @@
         </div>
         </div>
 
-        <li class="pj-sam-31 tag-item"  data-group="sayama" data-build="house">
+        <li class="works_button_wrapper button_31"  data-group="sayama" data-build="house">
           <div class="pj-img">
             <img loading="lazy" src="img/project/47.jpg">
           </div>
           <p class="pj-title">住宅</p>
         </li>
-        <div class="pj-index-31">
+        <div class="works_index_wrapper index_31">
         <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -2535,13 +2546,13 @@
         </div>  
         </div>
 
-        <li class="pj-sam-30 tag-item"  data-group="sayama" data-build="office">
+        <li class="works_button_wrapper button_30"  data-group="sayama" data-build="office">
           <div class="pj-img">
             <img loading="lazy" src="img/project/45.jpg">
           </div>
           <p class="pj-title">オフィスビル</p>
         </li>
-        <div class="pj-index-30">
+        <div class="works_index_wrapper index_30">
         <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -2571,19 +2582,19 @@
             </tr>
           </table>
           <div class="pj-index-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d471.0114172769905!2d136.89183696299673!3d35.171063223278814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600376d99336c39b%3A0xc6e6dbefad5c984b!2z44CSNDUwLTAwMDIg5oSb55-l55yM5ZCN5Y-k5bGL5biC5Lit5p2R5Yy65ZCN6aeF77yV5LiB55uu77yS77yS4oiS77yZIOWQjemnheS4reWfnOODk-ODqw!5e0!3m2!1sja!2sjp!4v1694976994927!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d471.0114172769905!2d136.89183696299673!3d35.171063223278814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600376d99336c39b%3A0xc6e6dbefad5c984b!2z44CSNDUwLTAwMDIg5oSb55-l55yM5ZCN5Y-k5bGL5biC5Lit5p2R5Yy65ZCN6aeF77yV5LiB55uu77yS77yS4oiS77yZIOWQjemnheS4reWfnOODk-ODqw!5e0!3m2!1sja!2sjp!4v1694976994927!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>   
         </div>
 
-            <li class="pj-sam-29 tag-item"  data-group="sayama" data-build="house">
+            <li class="works_button_wrapper button_29"  data-group="sayama" data-build="house">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/43.jpg">
               </div>
               <p class="pj-title">住宅</p>
             </li>
   
-            <div class="pj-index-29">
+            <div class="works_index_wrapper index_29">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -2616,13 +2627,13 @@
 
             </div>
         <!--7-->        
-        <li class="pj-sam-28 tag-item"  data-group="sayama" data-build="house">
+        <li class="works_button_wrapper button_28"  data-group="sayama" data-build="house">
           <div class="pj-img">
             <img loading="lazy" src="img/project/42.jpg">
           </div>
           <p class="pj-title">モデルハウス</p>
         </li>
-          <div class="pj-index-28">
+          <div class="works_index_wrapper index_28">
         <div class="index-max">
                 <div class="pj_index_close">
                 <span></span>
@@ -2652,18 +2663,18 @@
             </tr>
           </table>
           <div class="pj-index-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d576.8281883344791!2d137.0110850571116!3d35.13085031032108!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60036559752839f5%3A0x63ecaeee83783958!2z44OA44Kk44Ov44OP44Km44K55pel6YCyeGV2b86jUFJFTUlVTeWxleekuuWgtA!5e0!3m2!1sja!2sjp!4v1695000154922!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d576.8281883344791!2d137.0110850571116!3d35.13085031032108!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60036559752839f5%3A0x63ecaeee83783958!2z44OA44Kk44Ov44OP44Km44K55pel6YCyeGV2b86jUFJFTUlVTeWxleekuuWgtA!5e0!3m2!1sja!2sjp!4v1695000154922!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
         </div>
 
-        <li class="pj-sam-27 tag-item"  data-group="sayama" data-build="house">
+        <li class="works_button_wrapper button_27"  data-group="sayama" data-build="house">
           <div class="pj-img">
             <img loading="lazy" src="img/project/40.jpg">
           </div>
           <p class="pj-title">斜め住宅</p>
         </li>
-        <div class="pj-index-27">
+        <div class="works_index_wrapper index_27">
         <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -2692,13 +2703,13 @@
         </div> 
         </div>
 
-        <li class="pj-sam-26 tag-item"  data-group="sayama" data-build="house">
+        <li class="works_button_wrapper button_26"  data-group="sayama" data-build="house">
           <div class="pj-img">
             <img loading="lazy" src="img/project/39.jpg">
           </div>
           <p class="pj-title">住宅</p>
         </li>
-        <div class="pj-index-26">
+        <div class="works_index_wrapper index_26">
         <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -2729,14 +2740,14 @@
         </div>
         </div>
 
-            <li class="pj-sam-25 tag-item"  data-group="sayama" data-build="store">
+            <li class="works_button_wrapper button_25"  data-group="sayama" data-build="store">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/38.jpg">
               </div>
               <p class="pj-title">コーナン</p>
             </li>
   
-            <div class="pj-index-25">
+            <div class="works_index_wrapper index_25">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -2765,22 +2776,20 @@
                 </tr>
               </table>
               <div class="pj-index-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d941.5827619563067!2d136.91868419333684!3d35.20902949098065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003715c50155555%3A0x274a84b02545a7bf!2z44Kz44O844OK44Oz5ZCN5Y-k5bGL5YyX5bqX!5e0!3m2!1sja!2sjp!4v1695000015582!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d941.5827619563067!2d136.91868419333684!3d35.20902949098065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003715c50155555%3A0x274a84b02545a7bf!2z44Kz44O844OK44Oz5ZCN5Y-k5bGL5YyX5bqX!5e0!3m2!1sja!2sjp!4v1695000015582!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>
-           
-   
-    
-         <!--6-->        
-         </div>
 
-         <li class="pj-sam-24 tag-item"  data-group="sayama" data-build="house" >
+         <!--6-->        
+        </div>
+
+        <li class="works_button_wrapper button_24"  data-group="sayama" data-build="house" >
           <div class="pj-img">
             <img loading="lazy" src="img/project/35.jpg">
           </div>
           <p class="pj-title">住宅</p>
         </li>
-          <div class="pj-index-24">
+          <div class="works_index_wrapper index_24">
         <div class="index-max">
                 <div class="pj_index_close">
                 <span></span>
@@ -2810,13 +2819,13 @@
         </div> 
         </div>
 
-        <li class="pj-sam-23 tag-item"  data-group="sayama" data-build="store">
+        <li class="works_button_wrapper button_23"  data-group="sayama" data-build="store">
           <div class="pj-img">
             <img loading="lazy" src="img/project/33.jpg">
           </div>
           <p class="pj-title">ラーメン屋</p>
         </li>
-        <div class="pj-index-23">
+        <div class="works_index_wrapper index_23">
         <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -2848,13 +2857,13 @@
         </div> 
         </div>
       
-        <li class="pj-sam-22 tag-item"  data-group="sayama" data-build="apart">
+        <li class="works_button_wrapper button_22"  data-group="sayama" data-build="apart">
           <div class="pj-img">
             <img loading="lazy" src="img/project/31.jpg">
           </div>
           <p class="pj-title">マンション</p>
         </li>
-        <div class="pj-index-22">
+        <div class="works_index_wrapper index_22">
         <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -2888,14 +2897,14 @@
         </div> 
         </div>
 
-            <li class="pj-sam-21 tag-item"  data-group="myworld" data-build="store">
+            <li class="works_button_wrapper button_21"  data-group="myworld" data-build="store">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/30.jpg">
               </div>
               <p class="pj-title">イオンモール</p>
             </li>
   
-            <div class="pj-index-21">
+            <div class="works_index_wrapper index_21">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -2925,20 +2934,20 @@
               <p class="pj-index-date-inplace">Date built : 2022/06/04</p>
               <p class="pj-index-place">Model : イオンモールナゴヤドーム前</p>
               <div class="pj-index-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1938.8575947088746!2d136.94196635914045!3d35.18761357887472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600370544a5bf46d%3A0xfdfae83106984f28!2z44Kk44Kq44Oz44Oi44O844Or44OK44K044Ok44OJ44O844Og5YmN!5e0!3m2!1sja!2sjp!4v1695000087678!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1938.8575947088746!2d136.94196635914045!3d35.18761357887472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600370544a5bf46d%3A0xfdfae83106984f28!2z44Kk44Kq44Oz44Oi44O844Or44OK44K044Ok44OJ44O844Og5YmN!5e0!3m2!1sja!2sjp!4v1695000087678!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="works_index_wrapper index_" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>
 
         <!--5-->        
         </div>
 
-        <li class="pj-sam-20 tag-item"  data-group="sayama" data-build="house">
+        <li class="works_button_wrapper button_20"  data-group="sayama" data-build="house">
           <div class="pj-img">
             <img loading="lazy" src="img/project/29.jpg">
           </div>
           <p class="pj-title">住宅</p>
         </li>
-          <div class="pj-index-20">
+          <div class="works_index_wrapper index_20">
         <div class="index-max">
                 <div class="pj_index_close">
                 <span></span>
@@ -2968,13 +2977,13 @@
         </div>  
         </div>
 
-        <li class="pj-sam-19 tag-item"  data-group="sayama" data-build="house">
+        <li class="works_button_wrapper button_19"  data-group="sayama" data-build="house">
           <div class="pj-img">
             <img loading="lazy" src="img/project/28.jpg">
           </div>
           <p class="pj-title">住宅</p>
         </li>
-        <div class="pj-index-19">
+        <div class="works_index_wrapper index_19">
         <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -3003,13 +3012,13 @@
         </div> 
         </div>
 
-        <li class="pj-sam-18 tag-item"  data-group="sayama" data-build="house">
+        <li class="works_button_wrapper button_18"  data-group="sayama" data-build="house">
           <div class="pj-img">
             <img loading="lazy" src="img/project/27.jpg">
           </div>
           <p class="pj-title">住宅</p>
         </li>
-        <div class="pj-index-18">
+        <div class="works_index_wrapper index_18">
         <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -3038,13 +3047,13 @@
         </div>
         </div>
 
-        <li class="pj-sam-69 tag-item"  data-group="sayama" data-build="house">
+        <li class="works_button_wrapper button_69"  data-group="sayama" data-build="house">
           <div class="pj-img">
             <img loading="lazy" src="img/project/181.jpg">
           </div>
           <p class="pj-title">住宅</p>
         </li>
-        <div class="pj-index-69">
+        <div class="works_index_wrapper index_69">
         <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -3074,13 +3083,13 @@
         </div>
         </div>
 
-            <li class="pj-sam-17 tag-item"  data-group="sayama" data-build="house">
+            <li class="works_button_wrapper button_17"  data-group="sayama" data-build="house">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/25.jpg">
               </div>
               <p class="pj-title">住宅</p>
             </li>
-            <div class="pj-index-17">
+            <div class="works_index_wrapper index_17">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -3111,13 +3120,13 @@
         <!--4-->        
         </div>
 
-        <li class="pj-sam-16 tag-item"  data-group="sayama" data-build="house">
+        <li class="works_button_wrapper button_16"  data-group="sayama" data-build="house">
           <div class="pj-img">
             <img loading="lazy" src="img/project/24.jpg">
           </div>
           <p class="pj-title">住宅</p>
         </li>
-          <div class="pj-index-16">
+          <div class="works_index_wrapper indes_16">
         <div class="index-max">
                 <div class="pj_index_close">
                 <span></span>
@@ -3148,13 +3157,13 @@
         </div>  
         </div>
 
-        <li class="pj-sam-15 tag-item"  data-group="sayama" data-build="house">
+        <li class="works_button_wrapper button_15"  data-group="sayama" data-build="house">
           <div class="pj-img">
             <img loading="lazy" src="img/project/23.jpg">
           </div>
           <p class="pj-title">住宅</p>
         </li>
-        <div class="pj-index-15">
+        <div class="works_index_wrapper index_15">
         <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -3186,13 +3195,13 @@
         </div>  
         </div>
 
-        <li class="pj-sam-14 tag-item"  data-group="sayama" data-build="house">
+        <li class="works_button_wrapper button_14"  data-group="sayama" data-build="house">
           <div class="pj-img">
             <img loading="lazy" src="img/project/22.jpg">
           </div>
           <p class="pj-title">住宅</p>
         </li>
-        <div class="pj-index-14">
+        <div class="works_index_wrapper index_14">
         <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -3221,14 +3230,14 @@
         </div>         
         </div>
 
-            <li class="pj-sam-13 tag-item"  data-group="sayama" data-build="house">
+            <li class="works_button_wrapper button_13"  data-group="sayama" data-build="house">
               <div class="pj-img">
                 <img loading="lazy" src="img/project/21.jpg">
               </div>
               <p class="pj-title">住宅</p>
             </li>
   
-            <div class="pj-index-13">
+            <div class="works_index_wrapper index_13">
             <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -3260,13 +3269,13 @@
         <!--3-->      
         </div>
         
-        <li class="pj-sam-12 tag-item"  data-group="sayama" data-build="house">
+        <li class="works_button_wrapper button_12"  data-group="sayama" data-build="house">
           <div class="pj-img">
             <img loading="lazy" src="img/project/20.jpg">
           </div>
           <p class="pj-title">住宅</p>
         </li>
-          <div class="pj-index-12">
+          <div class="works_index_wrapper index_12">
         <div class="index-max">
                 <div class="pj_index_close">
                 <span></span>
@@ -3298,13 +3307,13 @@
         </div> 
         </div>
 
-        <li class="pj-sam-11 tag-item"  data-group="sayama" data-build="house">
+        <li class="works_button_wrapper button_11"  data-group="sayama" data-build="house">
           <div class="pj-img">
             <img loading="lazy" src="img/project/18.jpg">
           </div>
           <p class="pj-title">住宅</p>
         </li>
-        <div class="pj-index-11">
+        <div class="works_index_wrapper index_">
         <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -3334,13 +3343,13 @@
         </div>  
         </div>
 
-        <li class="pj-sam-10 tag-item"  data-group="sayama" data-build="house">
+        <li class="works_button_wrapper button_10"  data-group="sayama" data-build="house">
           <div class="pj-img">
             <img loading="lazy" src="img/project/17.jpg">
           </div>
           <p class="pj-title">住宅</p>
         </li>
-        <div class="pj-index-10">
+        <div class="works_index_wrapper index_10">
         <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -3370,13 +3379,13 @@
         </div>         
         </div>
 
-        <li class="pj-sam-68 tag-item"  data-group="sayama" data-build="house">
+        <li class="works_button_wrapper button_68"  data-group="sayama" data-build="house">
           <div class="pj-img">
             <img loading="lazy" src="img/project/169.jpg">
           </div>
           <p class="pj-title">住宅</p>
         </li>
-        <div class="pj-index-68">
+        <div class="works_index_wrapper index_68">
         <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -3408,13 +3417,13 @@
         </div>
         </div>
 
-        <li class="pj-sam-9 tag-item"  data-group="sayama" data-build="house">
+        <li class="works_button_wrapper button_9"  data-group="sayama" data-build="house">
           <div class="pj-img">
             <img loading="lazy" src="img/project/13.jpg">
           </div>
           <p class="pj-title">住宅</p>
         </li>
-          <div class="pj-index-9">
+          <div class="works_index_wrapper index_9">
           <div class="index-max">
             <div class="pj_index_close">
               <span></span>
@@ -3447,13 +3456,13 @@
         <!--2-->     
         </div>
         
-        <li class="pj-sam-8 tag-item"  data-group="sayama" data-build="house" >
+        <li class="works_button_wrapper button_8"  data-group="sayama" data-build="house" >
           <div class="pj-img">
             <img loading="lazy" src="img/project/12.jpg">
           </div>
           <p class="pj-title">住宅</p>
         </li>
-        <div class="pj-index-8">
+        <div class="works_index_wrapper index_8">
         <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -3483,13 +3492,13 @@
         </div>  
         </div>
 
-        <li class="pj-sam-7 tag-item"  data-group="sayama" data-build="house" >
+        <li class="works_button_wrapper button_7"  data-group="sayama" data-build="house" >
           <div class="pj-img">
             <img loading="lazy" src="img/project/10.jpg">
           </div>
           <p class="pj-title">住宅</p>
         </li>
-        <div class="pj-index-7">
+        <div class="works_index_wrapper index_7">
         <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -3519,13 +3528,13 @@
         </div>  
         </div>
 
-        <li class="pj-sam-6 tag-item"  data-group="sayama" data-build="house" >
+        <li class="works_button_wrapper button_6"  data-group="sayama" data-build="house" >
           <div class="pj-img">
             <img loading="lazy" src="img/project/9.jpg">
           </div>
           <p class="pj-title">住宅</p>
         </li>
-        <div class="pj-index-6">
+        <div class="works_index_wrapper index_6">
         <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -3556,13 +3565,13 @@
         </div>
         </div>
 
-        <li class="pj-sam-5 tag-item"  data-group="sayama" data-build="house" >
+        <li class="works_button_wrapper button_5"  data-group="sayama" data-build="house" >
           <div class="pj-img">
             <img loading="lazy" src="img/project/7.jpg">
           </div>
           <p class="pj-title">住宅</p>
         </li>
-        <div class="pj-index-5">
+        <div class="works_index_wrapper index_5">
         <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -3597,13 +3606,13 @@
         <!--１-->    
         </div>
         
-        <li class="pj-sam-4 tag-item"  data-group="sayama" data-build="house" >
+        <li class="works_button_wrapper button_4"  data-group="sayama" data-build="house" >
           <div class="pj-img">
             <img loading="lazy" src="img/project/6.jpg">
           </div>
           <p class="pj-title">住宅</p>
         </li>
-      <div class="pj-index-4">
+      <div class="works_index_wrapper index_4">
       <div class="index-max">
         <div class="pj_index_close">
           <span></span>
@@ -3632,13 +3641,13 @@
         </div>  
         </div>
 
-        <li class="pj-sam-3 tag-item"  data-group="sayama" data-build="hosue" >
+        <li class="works_button_wrapper button_3"  data-group="sayama" data-build="hosue" >
           <div class="pj-img">
             <img loading="lazy" src="img/project/4.jpg">
           </div>
           <p class="pj-title">住宅</p>
         </li>
-        <div class="pj-index-3">
+        <div class="works_index_wrapper index_3">
         <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -3668,13 +3677,13 @@
         </div> 
         </div>
 
-        <li class="pj-sam-2 tag-item"  data-group="sayama" data-build="house" >
+        <li class="works_button_wrapper button_2"  data-group="sayama" data-build="house" >
           <div class="pj-img">
             <img loading="lazy" src="img/project/3.jpg">
           </div>
           <p class="pj-title">住宅</p>
         </li>
-        <div class="pj-index-2">
+        <div class="works_index_wrapper index_2">
         <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -3704,13 +3713,13 @@
         </div>  
         </div>
 
-          <li class="pj-sam-1 tag-item"  data-group="sayama" data-build="house">
+          <li class="works_button_wrapper button_1"  data-group="sayama" data-build="house">
             <div class="pj-img">
               <img loading="lazy" src="img/project/1.jpg">
             </div>
             <p class="pj-title">住宅</p>
           </li>
-          <div class="pj-index-1">
+          <div class="works_index_wrapper index_1">
           <div class="index-max">
               <div class="pj_index_close">
                 <span></span>
@@ -3765,11 +3774,11 @@
     <p class="f-copy">© 2024 OBASANZ087. </p>
     <div class="f-sns">
       <a class="f-item" href="info/about_me/index.html">ABOUT</a>
-      <a class="f-item" href="info/about_me/index.html">NOTES</a>
+      <a class="f-item" href="/info/notes/index.html">NOTES</a>
       <a target="_blank" href="https://twitter.com/oba_sanz087"><i class="fa-brands fa-x-twitter"></i></a>
       <a target="_blank" href="https://youtube.com/obasanz_087"><i class="fa-brands fa-youtube"></i></a>
       <a target="_blank" href="https://github.com/obasanz087"><i class="fa-brands fa-github"></i></a>
-    </div>
+    </div>    
   </footer>
   </body>
   </html>
